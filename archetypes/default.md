@@ -7,8 +7,9 @@ hideToc: false
 enableToc: true
 enableTocContent: false
 tocPosition: inner
-author: Kim
+author: Victor
 authorEmoji: 👻
+image:
 tags:
 -
 series:

@@ -10,7 +10,8 @@ series:
 -
 categories:
 -
-images: # when mode is one-by-one, images front-matter variable works
+images:
+image: images/feature2/gallery.png
 
 ---
 

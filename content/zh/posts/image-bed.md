@@ -1,28 +1,24 @@
 ---
-title: "Image Bed"
-date: 2020-02-11T17:01:45+08:00
+title: "配置基于Github的PicGo图床"
+date: 2020-02-04T23:51:21+09:00
 description:
 draft: false
 hideToc: false
 enableToc: true
-enableTocContent: false
+enableTocContent: true
 tocPosition: inner
-author: Victor
-authorEmoji: 👻
-image: https://molunerfinn.com/PicGo/imgs/256x256--icons.png
 tags:
-- Github
 - PicGo
+- Github
 - 图床
 series:
-- Blog
+-
 categories:
 -
+image: https://gitee.com/wujiahong1998/MyBed/raw/master/img/20200211185516.png
 ---
 
-
-
-使用Github+PicGo搭建一个免费个人图床<span><code>😄</code></span>
+使用Github+PicGo建立一个免费的个人图床。
 
 <!--more-->
 
