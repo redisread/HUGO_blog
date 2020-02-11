@@ -7,11 +7,16 @@ draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
-author: Kim
+author: Victor
 authorEmoji: 👻
+image: https://d33wubrfki0l68.cloudfront.net/c38c7334cc3f23585738e40334284fddcaf03d5e/2e17c/images/hugo-logo-wide.svg
 tags: 
 - Hugo
 - Github
+series:
+- Blog
+categories:
+-
 ---
 
 HUGO + Github + Github Action持续集成部署个人博客

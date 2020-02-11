@@ -2,7 +2,7 @@
 title: "My Hugo Item"
 date: 2020-01-19T21:13:42+09:00
 description: my github blog Item
-weight: 1
+weight: 2
 link: https://github.com/redisread/HUGO_blog
 repo: https://github.com/redisread/HUGO_blog
 pinned: true
