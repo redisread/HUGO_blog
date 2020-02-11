@@ -11,6 +11,7 @@ series:
 categories:
 -
 images: # when mode is one-by-one, images front-matter variable works
-
+image: images/feature2/bam.png
 ---
 
+Sample images about life.

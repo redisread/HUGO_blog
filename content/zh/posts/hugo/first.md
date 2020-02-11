@@ -1,6 +1,17 @@
 ---
-title: "First"
+author: "Victor Hong"
+title: "Hugo配置"
 date: 2020-02-10T20:50:09+08:00
+description: "Guide to set Hugo site."
+draft: false
+hideToc: false
+enableToc: true
+enableTocContent: false
+author: Kim
+authorEmoji: 👻
+tags: 
+- Hugo
+- Github
 ---
 
 HUGO + Github + Github Action持续集成部署个人博客
@@ -90,7 +101,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2.2.2
         with:
-          hugo-version: '0.59.1'
+          hugo-version: '0.64.1'
           extended: true
       - name: Build
         run: hugo -D

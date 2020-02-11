@@ -37,7 +37,7 @@ bioImageUrl = ""
 useGravatar = false
 location = "ShenZhen, China"
 organization = "Hugo"
-link = "https://redisread.github.io/zh"
+link = "https://github.com/redisread/HUGO_blog"
 
 # sidebar
 enableBio = true
