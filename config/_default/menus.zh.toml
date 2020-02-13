@@ -1,63 +1,63 @@
 [[main]]
   identifier = "about"
-  name = "关于"
+  name = "🤓\n关于"
   url = "about"
   weight = 1
 
 [[main]]
   identifier = "archive"
-  name = "归档"
+  name = "📦归档"
   url = "archive"
   weight = 2
 
 [[main]]
   identifier = "pt"
-  name = "Pt"
+  name = "🤪Pt"
   url = "pt"
   weight = 3
 
 [[main]]
   identifier = "gallery"
-  name = "相册"
+  name = "🎨相册"
   url = "gallery"
   weight = 4
     
 [[main]]
   parent = "gallery"
-  name = "Life"
+  name = "🌱Life"
   url = "gallery/life"
 
 [[main]]
   parent = "gallery"
-  name = "Movie"
+  name = "🎬Movie"
   url = "gallery/movie"
 
 [[main]]
   identifier = "posts"
-  name = "Posts"
+  name = "🧱Posts"
   url = "posts"
   weight = 5
 
 [[main]]
   identifier = "talks"
-  name = "talks"
+  name = "🌎talks"
   url = "talks"
   weight = 6
 
 [[main]]
   identifier = "resume"
-  name = "whatever"
+  name = "📝resume"
   url = "resume"
   weight = 7
 
 [[main]]
   identifier = "showcase"
-  name = "Showcase"
+  name = "🔗Showcase"
   url = "showcase"
   weight = 8
 
 [[main]]
   identifier = "contact"
-  name = "contact"
+  name = "📧contact"
   url = "contact"
   weight = 9

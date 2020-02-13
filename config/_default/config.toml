@@ -1,5 +1,5 @@
 baseURL = "https://vhope.cf"
-title = "Victor's Blog"
+title  =  "✏️Victor Blog"
 theme = "zzo"
 
 # `hugo new` 新建文章自动打开的文本编辑器
@@ -20,6 +20,9 @@ rssLimit = 100
 
 enableGitInfo = false
 googleAnalytics = ""
+
+# 是否生成 robots.txt 文件
+enableRobotsTXT = true
 
 [markup]
   [markup.goldmark]
