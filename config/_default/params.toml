@@ -63,7 +63,7 @@ enableLangChange = true
 enableThemeChange = true
 
 # service
-baiduAnalytics = ""
+baiduAnalytics = "fd051507caad40b5e1cc04fdc7a47342"
 enableBusuanzi = false
 busuanziSiteUV = true
 busuanziSitePV = true
