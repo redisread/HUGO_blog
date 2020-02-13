@@ -2,6 +2,9 @@ baseURL = "https://vhope.cf"
 title = "Victor's Blog"
 theme = "zzo"
 
+# `hugo new` 新建文章自动打开的文本编辑器
+newContentEditor = "C:\\Program Files\\Typora\\Typora.exe"
+
 defaultContentLanguage = "zh"
 defaultContentLanguageInSubdir = true
 hasCJKLanguage = true
