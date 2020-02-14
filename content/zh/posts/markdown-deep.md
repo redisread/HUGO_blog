@@ -5,7 +5,7 @@ description:
 draft: false
 hideToc: false
 enableToc: true
-enableTocContent: false
+enableTocContent: true
 tocPosition: inner
 author: Victor
 authorEmoji: 👻
@@ -19,9 +19,9 @@ categories:
 - 写作
 ---
 
+:blonde_woman:介绍一些markdown中比较实用的一些写作方法。
 
-
-[toc]
+<!--more-->
 
 ### 任务列表✍
 
@@ -44,13 +44,13 @@ categories:
 ### 数学公式:triangular_ruler:
 
 使用MathJax渲染LaTeX数学表达式。
-$$
-\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix}
+
+$$\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix}
 \mathbf{i} & \mathbf{j} & \mathbf{k} \\
 \frac{\partial X}{\partial u} &  \frac{\partial Y}{\partial u} & 0 \\
 \frac{\partial X}{\partial v} &  \frac{\partial Y}{\partial v} & 0 \\
-\end{vmatrix}
-$$
+\end{vmatrix}$$
+
 上面的代码如下：
 
 ```markdown
@@ -63,16 +63,14 @@ $$
 $$
 ```
 
-$$
-\begin{align*}
+$$\begin{align*}
 y = y(x,t) &= A e^{i\theta} \\
 &= A (\cos \theta + i \sin \theta) \\
 &= A (\cos(kx - \omega t) + i \sin(kx - \omega t)) \\
 &= A\cos(kx - \omega t) + i A\sin(kx - \omega t)  \\
 &= A\cos \Big(\frac{2\pi}{\lambda}x - \frac{2\pi v}{\lambda} t \Big) + i A\sin \Big(\frac{2\pi}{\lambda}x - \frac{2\pi v}{\lambda} t \Big)  \\
 &= A\cos \frac{2\pi}{\lambda} (x - v t) + i A\sin \frac{2\pi}{\lambda} (x - v t)
-\end{align*}
-$$
+\end{align*}$$
 
 上面的代码如下：
 
