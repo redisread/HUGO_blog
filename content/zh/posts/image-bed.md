@@ -15,7 +15,7 @@ series:
 -
 categories:
 -
-image: https://gitee.com/wujiahong1998/MyBed/raw/master/img/20200211185516.png
+image: https://i.loli.net/2020/02/14/jbMKRxsOIZT1Uc6.png
 ---
 
 使用Github+PicGo建立一个免费的个人图床。
