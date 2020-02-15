@@ -10,6 +10,8 @@ tocPosition: inner
 author: Victor
 authorEmoji: 👻
 image: https://i.loli.net/2020/02/14/Qgcb4yzqUEYC3Of.png
+libraries:
+- katex
 tags:
 - markdown
 - Typora
@@ -17,8 +19,7 @@ series:
 - Blog
 categories:
 - 写作
-libraries:
-- katex
+
 ---
 
 :blonde_woman:介绍一些markdown中比较实用的一些写作方法。
