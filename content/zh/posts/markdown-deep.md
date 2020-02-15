@@ -12,6 +12,7 @@ authorEmoji: 👻
 image: https://i.loli.net/2020/02/14/Qgcb4yzqUEYC3Of.png
 libraries:
 - katex
+- mathjax
 tags:
 - markdown
 - Typora
