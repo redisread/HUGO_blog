@@ -9,7 +9,7 @@ enableTocContent: false
 tocPosition: inner
 author: Victor
 authorEmoji: 👻
-image: https://gitee.com/wujiahong1998/MyBed/raw/master/img/press0.png
+image: https://i.loli.net/2020/02/15/hifGyj65CEsR4D8.png
 tags:
 -
 series:
