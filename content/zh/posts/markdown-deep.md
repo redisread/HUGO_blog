@@ -70,7 +70,7 @@ y = y(x,t) &= A e^{i\theta} \\
 &= A\cos \frac{2\pi}{\lambda} (x - v t) + i A\sin \frac{2\pi}{\lambda} (x - v t)
 \end{align*} $$
 
-上面的代码如下：
+代码如下：
 
 ```markdown
 $$
