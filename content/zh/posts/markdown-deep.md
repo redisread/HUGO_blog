@@ -80,7 +80,7 @@ y = y(x,t) &= A e^{i\theta} \\
 \end{align*}
 $$
 
-代码如下：
+上面代码如下：
 
 ```markdown
 $$
