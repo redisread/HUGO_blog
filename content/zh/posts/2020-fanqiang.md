@@ -35,7 +35,6 @@ categories:
 - 谷歌访问助手 插件(可以现在极简插件中下载）
 - Astar VPN 插件
 - SSR
-- V2Ray
 
   {{< /tab >}}
   {{< tab >}}
@@ -113,10 +112,6 @@ ShadowsSocks是一款在github上的开源软件，可以用来进行连接节�
 
 之后就可以:call_me_hand::call_me_hand::call_me_hand:!
 
-
-
-
-
 ## Mobile端
 
 {{< notice warning >}}
@@ -125,9 +120,19 @@ ShadowsSocks是一款在github上的开源软件，可以用来进行连接节�
 
 ### 云帆VPN
 
+下载地址：[https://apkpure.com/store/apps/details?id=cc.dingnet.yunfangp](https://apkpure.com/store/apps/details?id=cc.dingnet.yunfangp)
 
-
-
+虽然每天只能使用1小时，但是基本够了。
 
 ### 老王VPN
 
+下载地址：[https://apkpure.com/wang-vpn-%E2%9D%A4%EF%B8%8F-free-fast-stable-best-vpn-just-try-it/com.findtheway](https://apkpure.com/wang-vpn-%E2%9D%A4%EF%B8%8F-free-fast-stable-best-vpn-just-try-it/com.findtheway)
+
+老王的东西永远免费！
+
+---
+
+**参考链接**
+
+1. [2020年Android高速稳定翻墙方法](https://lures2019.github.io/2020/02/11/2020%E5%B9%B4Android%E9%AB%98%E9%80%9F%E7%A8%B3%E5%AE%9A%E7%BF%BB%E5%A2%99%E6%96%B9%E6%B3%95/#more)
+2. [Windows上长期有效的免费且高速稳定翻墙法！](https://lures2019.github.io/2020/02/04/Windows%E4%B8%8A%E9%95%BF%E6%9C%9F%E6%9C%89%E6%95%88%E7%9A%84%E5%85%8D%E8%B4%B9%E4%B8%94%E9%AB%98%E9%80%9F%E7%A8%B3%E5%AE%9A%E7%BF%BB%E5%A2%99%E6%B3%95%EF%BC%81/#more)
