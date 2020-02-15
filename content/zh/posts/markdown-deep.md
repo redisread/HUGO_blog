@@ -17,6 +17,8 @@ series:
 - Blog
 categories:
 - 写作
+libraries:
+- katex
 ---
 
 :blonde_woman:介绍一些markdown中比较实用的一些写作方法。
@@ -44,11 +46,9 @@ categories:
 ### 数学公式:triangular_ruler:
 
 使用MathJax渲染LaTeX数学表达式。:bulb:
-
-$$ \mathbf{V}_1\times\mathbf{V}_2=\begin{vmatrix}\mathbf{i}&mathbf{j} & \mathbf{k} \\\frac{\partial X}{\partial u}&\frac{\partial Y}{\partial u} & 0 \\\frac{\partial X}{\partial v} &\frac{\partial Y}{\partial v} & 0 \\\end{vmatrix} $$
-
-$$ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } $$
-
+$$
+\mathbf{V}_1\times\mathbf{V}_2=\begin{vmatrix}\mathbf{i}&mathbf{j} & \mathbf{k} \\\frac{\partial X}{\partial u}&\frac{\partial Y}{\partial u} & 0 \\\frac{\partial X}{\partial v} &\frac{\partial Y}{\partial v} & 0 \\\end{vmatrix}
+$$
 上面的代码如下：
 
 ```markdown
