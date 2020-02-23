@@ -1,5 +1,5 @@
 ---
-title: "Mxnet Begin"
+title: "MXNet回顾"
 date: 2020-02-23T15:49:10+08:00
 description:
 draft: false
@@ -9,7 +9,10 @@ enableTocContent: false
 tocPosition: inner
 author: Victor
 authorEmoji: 👻
-image: http://mxnet.incubator.apache.org/assets/img/mxnet_logo.png
+image: https://i.loli.net/2020/02/23/NASIuoQYPCpW18x.png
+libraries:
+- katex
+- mathjax
 tags:
 - python
 - MXNet
@@ -296,4 +299,3 @@ true_b, b
      
      [4.19921]
      <NDArray 1 @cpu(0)>)
-
