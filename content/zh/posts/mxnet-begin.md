@@ -166,7 +166,7 @@ plt.scatter(features[:, 1].asnumpy(), labels.asnumpy(), 1);  # 加分号只显�
 ```
 
 
-![svg](../../../../../google下载/test/output_39_0.svg)
+![](https://i.loli.net/2020/02/23/pmgrCV7WMUP6Gij.png)
 
 
 data_iter函数作用:
