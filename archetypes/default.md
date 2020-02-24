@@ -10,6 +10,8 @@ tocPosition: inner
 author: Victor
 authorEmoji: 👻
 image:
+libraries:
+- 
 tags:
 -
 series:
