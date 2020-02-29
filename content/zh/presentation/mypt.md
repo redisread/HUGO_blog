@@ -2,7 +2,7 @@
 title: "Mypt"
 date: 2020-02-29T23:45:17+08:00
 description: "My first presentation"
-type: pt
+type: presentation
 tags:
 -
 series:
