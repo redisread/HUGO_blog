@@ -76,7 +76,7 @@ busuanziSitePV = true
 busuanziPagePV = true
 
 # comment
-enableComment = false
+enableComment = true
 disqus_shortname = ""
 commento = false
 
