@@ -6,12 +6,19 @@ custom_js = ["js/custom.js"]
 useFaviconGenerator = true # https://www.favicon-generator.org/
 
 themeOptions = ["solarized", "dark", "light", "hacker", "kimbie"]
-notAllowedTypesInHome = ["contact", "talks", "about", "showcase", "publication", "presentation"]
-notAllowedTypesInHomeSidebar = ["about", "archive", "showcase", "publication", "presentation"]
-notAllowedTypesInArchive = ["about", "talks", "showcase", "publication", "presentation"]
+notAllowedTypesInHome = ["contact", "talks", "about", "showcase", "publication", "presentation", "resume"]
+notAllowedTypesInHomeSidebar = ["about", "archive", "showcase", "publication", "presentation", "resume"]
+notAllowedTypesInArchive = ["about", "talks", "showcase", "publication", "presentation", "resume"]
+notAllowedTypesInHomeFeed = ["about", "archive", "contact", "talks", "showcase", "publication", "presentation", "resume", "gallery"]
+
+enableUiAnimation = true
+hideSingleContentsWhenJSDisabled = false
 
 # header
 homeHeaderType = "text" # text, img, slide
+
+# menu
+showMobileMenuTerms = ["tags", "categories", "series"]
 
 # body
 enableBreadcrumb = true
@@ -72,7 +79,7 @@ busuanziPagePV = true
 # comment
 enableComment = true
 disqus_shortname = ""
-commento = false
+commento = true
 
 [gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
   owner = ""              # Your GitHub ID
@@ -160,3 +167,7 @@ commento = false
   username = ""
 [[share]]
   name = "twitter"
+[[share]]
+  name = "reddit"
+[[share]]
+  name = "weibo"
