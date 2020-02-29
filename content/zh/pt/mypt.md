@@ -1,15 +1,21 @@
 ---
-title: "Second"
-date: 2019-10-30T20:45:24+09:00
-description: "My second presentation"
-type: pt
+title: "Mypt"
+date: 2020-02-29T23:45:17+08:00
+description: 
+type: presentation
 tags:
 -
 series:
 -
 categories:
 -
-image: images/feature1/number-two.png
+plugins:
+- highlight
+- zoom
+- notes
+- math
+highlightTheme: monokai # monokai, zenburn
+revealTheme: beige # beige, black, blood, league, monokai, moon, night, serif, simple, sky, solarized, white
 revealBackgroundColor: "" # #fff or rgba() or hsl()
 revealBackgroundImage: "" # /images/myImage.png   <= static folder path
 revealBackgroundPosition: "" # left top, left center, left bottom, right top, right center ...
@@ -22,10 +28,13 @@ revealBackgroundSize: "" # cover, contain, ...
 reveal: 
   - main:
     - sub: 
-      - |
-        test 1
+      - | 
+
+    - sub: 
+      - | 
+      
   - main:
     - sub: 
       - |
-        test 2
+      
 ---
