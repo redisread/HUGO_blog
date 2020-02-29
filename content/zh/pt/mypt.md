@@ -2,7 +2,7 @@
 title: "Mypt"
 date: 2020-03-01T00:24:52+08:00
 description: 
-type: presentation
+type: pt
 tags:
 -
 series:
