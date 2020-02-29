@@ -168,3 +168,28 @@ And then define the link:
 ==highlight==
 ```
 
+### 插入视频:video_camera:
+
+<video poster="https://i.loli.net/2020/02/29/S4oN2djFDZYiqAx.png" src="https://files.catbox.moe/bqrntc.flv" style="max-height :100%; max-width: 100%; display: block; margin-left: auto; margin-right: auto;" controls="controls" loop="loop" preload="meta">Your browser does not support the video tag.</video>
+
+上面的代码即：
+
+```html
+<video poster="https://i.loli.net/2020/02/29/S4oN2djFDZYiqAx.png" src="https://files.catbox.moe/bqrntc.flv" style="max-height :100%; max-width: 100%; display: block; margin-left: auto; margin-right: auto;" controls="controls" loop="loop" preload="meta">Your browser does not support the video tag.</video>
+```
+
+### 插入音乐:musical_score:
+
+<audio src="https://files.catbox.moe/wjiywu.mp3" style="max-height :100%; max-width: 100%; display: block; margin-left: auto; margin-right: auto;" controls="controls" loop="loop" preload="meta">Your browser does not support the audio tag.</audio>
+
+上面的代码即：
+
+```html
+<audio src="https://files.catbox.moe/wjiywu.mp3" style="max-height :100%; max-width: 100%; display: block; margin-left: auto; margin-right: auto;" controls="controls" loop="loop" preload="meta">Your browser does not support the audio tag.</audio>
+```
+
+### 随机图片:deciduous_tree:
+
+网址:https://picsum.photos/1920/1080
+
+![random](https://picsum.photos/1920/1080)
