@@ -1,6 +1,6 @@
 ---
-title: "Mypt"
-date: 2020-02-29T23:45:17+08:00
+title: "First"
+date: 2019-10-30T19:45:20+09:00
 description: "My first presentation"
 type: pt
 tags:
@@ -10,13 +10,6 @@ series:
 categories:
 -
 image: images/feature1/number-one.png
-plugins:
-- highlight
-- zoom
-- notes
-- math
-highlightTheme: monokai # monokai, zenburn
-revealTheme: beige # beige, black, blood, league, monokai, moon, night, serif, simple, sky, solarized, white
 revealBackgroundColor: "" # #fff or rgba() or hsl()
 revealBackgroundImage: "" # /images/myImage.png   <= static folder path
 revealBackgroundPosition: "" # left top, left center, left bottom, right top, right center ...
@@ -29,15 +22,10 @@ revealBackgroundSize: "" # cover, contain, ...
 reveal: 
   - main:
     - sub: 
-      - | 
-		test 1
-
-    - sub: 
-      - | 
-		test 2
-      
+      - |
+        test 1
   - main:
     - sub: 
       - |
-      	test 3
+        test 2
 ---
