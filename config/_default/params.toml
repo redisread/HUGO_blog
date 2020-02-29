@@ -12,7 +12,7 @@ notAllowedTypesInArchive = ["about", "talks", "showcase", "publication", "presen
 notAllowedTypesInHomeFeed = ["about", "archive", "contact", "talks", "showcase", "publication", "presentation", "resume", "gallery"]
 
 # enableUiAnimation = true
-hideSingleContentsWhenJSDisabled = false
+# hideSingleContentsWhenJSDisabled = false
 
 # header
 homeHeaderType = "text" # text, img, slide
