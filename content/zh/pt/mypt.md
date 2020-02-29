@@ -2,13 +2,14 @@
 title: "Mypt"
 date: 2020-02-29T23:45:17+08:00
 description: 
-type: presentation
+type: pt
 tags:
 -
 series:
 -
 categories:
 -
+image: images/feature1/number-one.png
 plugins:
 - highlight
 - zoom
@@ -29,12 +30,14 @@ reveal:
   - main:
     - sub: 
       - | 
+		test1
 
     - sub: 
       - | 
+		test2
       
   - main:
     - sub: 
       - |
-      
+      	test3
 ---

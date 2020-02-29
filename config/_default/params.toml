@@ -76,9 +76,9 @@ busuanziSitePV = true
 busuanziPagePV = true
 
 # comment
-enableComment = true
+enableComment = false
 disqus_shortname = ""
-commento = true
+commento = false
 
 [gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
   owner = ""              # Your GitHub ID
@@ -125,8 +125,8 @@ commento = true
 [socialOptions]
   email = "mailto:1427298682@qq.com"
   phone = "+8617318062050"
-  facebook = "http://example.org/"
-  twitter = "http://example.org/"
+  facebook = ""
+  twitter = ""
   github = "https://github.com/VictorHongDream/"
   stack-overflow = ""
   instagram = ""
