@@ -6,7 +6,7 @@ custom_js = ["js/custom.js"]
 useFaviconGenerator = true # https://www.favicon-generator.org/
 
 themeOptions = ["solarized", "dark", "light", "hacker", "kimbie"]
-notAllowedTypesInHome = ["contact", "talks", "about", "showcase", "publication", "presentation", "resume"]
+notAllowedTypesInHome = ["contact", "talks", "about", "showcase", "publication", "pt", "resume"]
 notAllowedTypesInHomeSidebar = ["about", "archive", "showcase", "publication", "presentation", "resume"]
 notAllowedTypesInArchive = ["about", "talks", "showcase"] # not allowed page types in archive page
 
