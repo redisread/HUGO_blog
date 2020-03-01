@@ -18,9 +18,7 @@ categories:
 
 **A Short Video**：
 
-
-<video poster="https://files.catbox.moe/e7ymab.jpg" src="https://share.dmca.gripe/3yw3lyKzfX2XY8tW.flv" style="max-height :100%; max-width: 100%; display: block; margin-left: auto; margin-right: auto;" controls="controls" loop="loop" preload="meta">Your browser does not support the video tag.</video>
-
+<video poster="https://files.catbox.moe/e7ymab.jpg" src="https://f.video.weibocdn.com/001TrRDDgx07BkFP00Bq0104120026hB0E010.mp4?label=mp4_hd&template=640x368.25.0&trans_finger=1d826f6f1a11607b0eef762fee9b15cd&Expires=1583073436&ssig=yUyYAwuPRm&KID=unistore,video" style="max-height :100%; max-width: 100%; display: block; margin-left: auto; margin-right: auto;" controls="controls" loop="loop" preload="meta">Your browser does not support the video tag.</video>
 
 
 ——以下 Aaron Swartz的宣言，我想这才是信息革命的真谛——
