@@ -1,20 +1,21 @@
 ---
 title: "Resume"
-date: 2020-02-09T20:13:59+09:00
+date: 2020-02-29T20:13:59+09:00
 description: My awesome resume
 type: resume
 enableToc: false
 header:
   image: 
-    src: http://localhost:1313/images/whoami/avatar.jpg
+    src: https://i.loli.net/2020/02/15/Nn1vG3azEMjUyCZ.jpg
     height: 100
     alt: resume image
   infos:
-    name: choi
-    email: cshl0ve@naver.com
-    phone: 000-0000-0000
-    website: https://www.exampleSite.com
-    addr: my address
+    name: Jiahong Wu
+    email: 1427298682@qq.com
+    phone: +86 17318062050
+    website: https://victor.vhope.cf
+    addr: ShenZhen China
+    data: test
 items:
   - title: myTitle
     sections:
@@ -25,17 +26,8 @@ items:
         endDate: 2020-02-10T20:13:59+09:00
         contents: | 
           # h1
-          ## h2A
-          ### h3
-          1. hele
-          2. dasg
-          3. 125
-          - bbb
-          - eee
-          - qqq
           > asdignasg
-
-          [heeeee](https://google.com)
+          [link](https://google.com)
 
       - title: sectionTitle2
         subtitle: sectionSubtitle2
