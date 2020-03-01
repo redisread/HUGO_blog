@@ -4,7 +4,6 @@ date: 2020-02-09T20:13:59+09:00
 description: My awesome resume
 type: resume
 enableToc: false
-image: images/feature0/resume.png
 header:
   image: 
     src: images/whoami/avatar.png
@@ -67,3 +66,4 @@ items:
         date: 2020-02-05T20:13:59+09:00
         contents: | 
 ---
+
