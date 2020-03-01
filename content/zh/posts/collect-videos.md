@@ -23,7 +23,7 @@ categories:
 -
 ---
 
-:biking_man:一些手机视频的方法:hammer_and_pick:
+:biking_man:一些收集视频的方法:hammer_and_pick:
 
 <!--more-->
 
@@ -40,7 +40,6 @@ categories:
 然后复制代码到Markdown文件就可以得到如下显示效果：
 
 <iframe src="//player.bilibili.com/player.html?aid=6731067&cid=10959711&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" marginwidth="50" width="650px" height="360px"> </iframe>
-
 代码如下:
 
 ```HTML
@@ -60,7 +59,6 @@ categories:
 接下来直接在Markdown中添加代码
 
 <video poster="https://i.loli.net/2020/03/02/GabXC4JmfN6H2hE.png" src="https://f.video.weibocdn.com/00393mgEgx07BmNCEF4j01041200eeW00E010.mp4?label=mp4_720p&template=1280x720.25.0&trans_finger=721584770189073627c6ee9d880087b3&Expires=1583079687&ssig=%2BAmJANwAPn&KID=unistore,video" style="max-height :100%; max-width: 100%; display: block; margin-left: auto; margin-right: auto;" controls="controls" preload="meta">Your browser does not support the video tag.</video>
-
 代码如下:
 
 ```HTML
@@ -82,7 +80,6 @@ categories:
 接下来直接在Markdown中添加代码
 
 <video poster="https://i.loli.net/2020/03/02/GabXC4JmfN6H2hE.png" src="http://photovideo.photo.qq.com/1075_0b53zeiu6vidieapa3kya5pdbsiej6zqhfsa.f20.mp4?dis_k=97f710c26b204f7f2312614fbcf8f897&dis_t=1583082992&vuin=1427298682&save=1&d=1" style="max-height :100%; max-width: 100%; display: block; margin-left: auto; margin-right: auto;" controls="controls" preload="meta">Your browser does not support the video tag.</video>
-
 代码如下:
 
 ```html
