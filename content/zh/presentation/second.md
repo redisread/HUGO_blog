@@ -10,6 +10,7 @@ series:
 categories:
 -
 image: images/feature1/number-two.png
+revealTheme: moon # beige, black, blood, league, monokai, moon, night, serif, simple, sky, solarized, white
 revealBackgroundColor: "" # #fff or rgba() or hsl()
 revealBackgroundImage: "" # /images/myImage.png   <= static folder path
 revealBackgroundPosition: "" # left top, left center, left bottom, right top, right center ...

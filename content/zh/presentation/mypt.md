@@ -16,8 +16,8 @@ plugins:
 - notes
 - math
 highlightTheme: monokai # monokai, zenburn
-revealTheme: sky # beige, black, blood, league, monokai, moon, night, serif, simple, sky, solarized, white
-revealBackgroundColor: "" # #fff or rgba() or hsl()
+revealTheme: serif # beige, black, blood, league, monokai, moon, night, serif, simple, sky, solarized, white
+revealBackgroundColor: "" # #fff or rgba() or hsl() #5e4fc5
 revealBackgroundImage: "" # /images/myImage.png   <= static folder path
 revealBackgroundPosition: "" # left top, left center, left bottom, right top, right center ...
 revealBackgroundRepeat: "" # repeat, repeat-x, repeat-y, no-repeat, inherit
@@ -26,18 +26,20 @@ revealBackgroundVideo: "" # /videos/myVideo.mp4 <= static folder path, A single 
 revealBackgroundVideoLoop: false # true, false
 revealBackgroundVideoMuted: false # true, false
 revealBackgroundSize: "" # cover, contain, ...
+transition: zoom  # none/fade/slide/convex/concave/zoom
 reveal: 
   - main:
     - sub: 
-      - | 
-
+      - |
+        # Hello World
+        ```python
+        print("Hello World!")
+        ```
     - sub: 
       - | 
-		## This is next page!
       
   - main:
     - sub: 
-      - |
-		revealBackgroundColor: "#fff"
-      	Test2
+      - | 
 ---
+
