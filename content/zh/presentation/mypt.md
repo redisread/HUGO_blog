@@ -41,7 +41,6 @@ reveal:
       
   - main:
     - sub: 
-	revealBackgroundColor: "#fff"
       - |
 		revealBackgroundColor: "#fff"
       	Test2
