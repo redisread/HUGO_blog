@@ -78,3 +78,16 @@ Will you join us?
 Aaron Swartz
 
 July 2008, Eremo, Italy
+
+
+
+
+
+```
+<video poster="https://files.catbox.moe/e7ymab.jpg" src="" style="max-height :100%; max-width: 100%; display: block; margin-left: auto; margin-right: auto;" controls="controls" loop="loop" preload="meta">Your browser does not support the video tag.</video>
+```
+
+
+
+<video poster="https://files.catbox.moe/e7ymab.jpg" src="https://photovideo.photo.qq.com/1075_0b53zeiu6vidieapa3kya5pdbsiej6zqhfsa.f20.mp4?dis_k=27d2dc19d51a574aa568498133c62224&dis_t=1583073105&vuin=1427298682" style="max-height :100%; max-width: 100%; display: block; margin-left: auto; margin-right: auto;" controls="controls" loop="loop" preload="meta">Your browser does not support the video tag.</video>
+
