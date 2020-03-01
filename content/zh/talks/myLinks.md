@@ -16,10 +16,9 @@ categories:
 
 
 
-**A Short Video**：
+#### **A Short Video**：
 
 <video poster="https://files.catbox.moe/e7ymab.jpg" src="https://f.video.weibocdn.com/001TrRDDgx07BkFP00Bq0104120026hB0E010.mp4?label=mp4_hd&template=640x368.25.0&trans_finger=1d826f6f1a11607b0eef762fee9b15cd&Expires=1583073436&ssig=yUyYAwuPRm&KID=unistore,video" style="max-height :100%; max-width: 100%; display: block; margin-left: auto; margin-right: auto;" controls="controls" loop="loop" preload="meta">Your browser does not support the video tag.</video>
-
 
 ——以下 Aaron Swartz的宣言，我想这才是信息革命的真谛——
 
@@ -81,13 +80,6 @@ July 2008, Eremo, Italy
 
 
 
+<video poster="https://files.catbox.moe/e7ymab.jpg" src="https://f.video.weibocdn.com/00393mgEgx07BmNCEF4j01041200eeW00E010.mp4?label=mp4_720p&template=1280x720.25.0&trans_finger=721584770189073627c6ee9d880087b3&Expires=1583079687&ssig=%2BAmJANwAPn&KID=unistore,video" style="max-height :100%; max-width: 100%; display: block; margin-left: auto; margin-right: auto;" controls="controls" preload="meta">Your browser does not support the video tag.</video>
 
-
-```
-<video poster="https://files.catbox.moe/e7ymab.jpg" src="" style="max-height :100%; max-width: 100%; display: block; margin-left: auto; margin-right: auto;" controls="controls" loop="loop" preload="meta">Your browser does not support the video tag.</video>
-```
-
-
-
-<video poster="https://files.catbox.moe/e7ymab.jpg" src="https://photovideo.photo.qq.com/1075_0b53zeiu6vidieapa3kya5pdbsiej6zqhfsa.f20.mp4?dis_k=27d2dc19d51a574aa568498133c62224&dis_t=1583073105&vuin=1427298682" style="max-height :100%; max-width: 100%; display: block; margin-left: auto; margin-right: auto;" controls="controls" loop="loop" preload="meta">Your browser does not support the video tag.</video>
-
+<video poster="https://files.catbox.moe/e7ymab.jpg" src="http://f.video.weibocdn.com/002a67P6gx07BmNQrXSw010412007ax40E010.mp4?label=mp4_hd&template=852x480.25.0&trans_finger=1d826f6f1a11607b0eef762fee9b15cd&Expires=1583079905&ssig=sHtQ1oiIA%2B&KID=unistore,video&media_id=1034:4477808445947929&tp=YTkl0eM8:YTkl0eM8&us=2Svijz&ori=0&ctb=0&ot=h&ps=4pdsh0&ab=540-g1,1326-g1,1410-g1,966-g1,1055-g0,878-g1,495-g2,1493-g0,1277-g1,1192-g0,1091-g1,1191-g0,1046-g2,1258-g0,1887-g2" style="max-height :100%; max-width: 100%; display: block; margin-left: auto; margin-right: auto;" controls="controls" preload="meta">Your browser does not support the video tag.</video>
