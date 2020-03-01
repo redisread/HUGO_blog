@@ -30,10 +30,6 @@ reveal:
   - main:
     - sub: 
       - | 
-		# Hello World
-		'''python
-		print("Hello World")
-		'''
 
     - sub: 
       - | 
