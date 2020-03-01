@@ -17,45 +17,45 @@ header:
     addr: ShenZhen China
     data: test
 items:
-  - title: myTitle
+  - title: 经历
     sections:
-      - title: sectionTitle1
-        subtitle: sectionSubtitle1
-        startDate: 2020-02-09T20:13:59+09:00
-        endDateText: current
-        endDate: 2020-02-10T20:13:59+09:00
+      - title: 学历
+        subtitle: Education
+        startDate: 2017-09-01T20:13:59+09:00
+        endDateText: Others
+        endDate: 2021-06-10T20:13:59+09:00
         contents: | 
-          # h1
-          > asdignasg
-          [link](https://google.com)
+           2017-2021年   就读深圳大学计算机系
 
-      - title: sectionTitle2
-        subtitle: sectionSubtitle2
-        date: 2020-02-07T20:13:59+09:00
+      - title: 成长
+        subtitle: Grow up
+        date: 2020-03-01T20:13:59+09:00
         contents: | 
-          Describe your role here lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo.
-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-      - title: sectionTitle3
-        subtitle: sectionSubtitle3
-        date: 2020-02-05T20:13:59+09:00
+          曾经也是干部
+      - title: 其他
+        subtitle: Others
+        date: 2020-03-01T20:13:59+09:00
         contents: | 
+          其他的一些描述
         
-  - title: myTitle2
+  - title: 想法
     sections:
-      - title: sectionTitle2-1
-        subtitle: sectionSubtitle2-1
-        date: 2020-02-09T20:13:59+09:00
+      - title: idea1
+        subtitle: about learning
+        date: 2020-03-01T20:13:59+09:00
         contents: | 
+           Always try to see the best in people.
         
-      - title: sectionTitle2-2
-        subtitle: sectionSubtitle2-2
-        date: 2020-02-07T20:13:59+09:00
+      - title: idea2
+        subtitle: think
+        date: 2020-03-01T20:13:59+09:00
         contents: | 
+           We need to exert our imagination.
         
-      - title: sectionTitle2-3
-        subtitle: sectionSubtitle2-3
-        date: 2020-02-05T20:13:59+09:00
+      - title: idea3
+        subtitle: about value
+        date: 2020-03-01T20:13:59+09:00
         contents: | 
+           Do something meaningful.
 ---
 
