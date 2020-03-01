@@ -40,8 +40,9 @@ reveal:
 		## This is next page!
       
   - main:
-	revealBackgroundColor: "#fff"
     - sub: 
+	revealBackgroundColor: "#fff"
       - |
+		revealBackgroundColor: "#fff"
       	Test2
 ---
