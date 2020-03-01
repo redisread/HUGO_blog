@@ -77,4 +77,4 @@ Will you join us?
 
 Aaron Swartz
 
-July 2008, Eremo, Italy
+July 2008, Eremo, Italy:arrow_right:
