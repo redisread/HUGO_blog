@@ -17,7 +17,7 @@ notAllowedTypesInArchive = ["about", "talks", "showcase"] # not allowed page typ
 homeHeaderType = "text" # text, img, slide
 
 # menu
-showMobileMenuTerms = ["tags", "categories", "series"]
+# showMobileMenuTerms = ["tags", "categories", "series"]
 
 # body
 enableBreadcrumb = true

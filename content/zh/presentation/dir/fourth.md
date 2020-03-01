@@ -10,12 +10,12 @@ series:
 categories:
 -
 image: images/feature1/number-four.png
-plugins:
-- highlight
-- zoom
-- notes
-- math
-highlightTheme: monokai
+plugins:	# 拓展库
+- highlight	# 代码高亮
+- zoom		# 滑动风格
+- notes		# 
+- math		# 数学公式
+highlightTheme: monokai		# 代码风格主题
 revealTheme: bagie
 revealBackgroundColor: "" # #fff or rgba() or hsl()
 revealBackgroundImage: "" # /images/myImage.png   <= static folder path

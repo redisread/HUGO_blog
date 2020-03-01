@@ -16,7 +16,7 @@ plugins:
 - notes
 - math
 highlightTheme: monokai # monokai, zenburn
-revealTheme: beige # beige, black, blood, league, monokai, moon, night, serif, simple, sky, solarized, white
+revealTheme: sky # beige, black, blood, league, monokai, moon, night, serif, simple, sky, solarized, white
 revealBackgroundColor: "" # #fff or rgba() or hsl()
 revealBackgroundImage: "" # /images/myImage.png   <= static folder path
 revealBackgroundPosition: "" # left top, left center, left bottom, right top, right center ...
@@ -30,12 +30,18 @@ reveal:
   - main:
     - sub: 
       - | 
+		# Hello World
+		'''python
+		print("Hello World")
+		'''
 
     - sub: 
       - | 
+		## This is next page!
       
   - main:
+	revealBackgroundColor: "#fff"
     - sub: 
       - |
-      
+      	Test2
 ---
