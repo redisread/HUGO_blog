@@ -6,7 +6,7 @@ type: resume
 enableToc: false
 header:
   image: 
-    src: images/whoami/avatar.png
+    src: http://localhost:1313/images/whoami/avatar.jpg
     height: 100
     alt: resume image
   infos:
