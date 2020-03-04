@@ -1,7 +1,7 @@
 ---
-title: "First"
-date: 2019-10-30T19:45:20+09:00
-description: "My first presentation"
+title: "好的搜索引擎"
+date: 2020-13-03T19:45:20+09:00
+description: "什么是好的搜索引擎"
 type: presentation
 tags:
 -
@@ -9,8 +9,8 @@ series:
 -
 categories:
 -
-image: images/feature1/number-one.png
-revealTheme: beige # beige, black, blood, league, monokai, moon, night, serif, simple, sky, solarized, white
+image: https://i.loli.net/2020/03/03/VLzJH7yf2cKeEgu.png
+revealTheme: monokai # beige, black, blood, league, monokai, moon, night, serif, simple, sky, solarized, white
 revealBackgroundColor: "" # #fff or rgba() or hsl()
 revealBackgroundImage: "" # /images/myImage.png   <= static folder path
 revealBackgroundPosition: "" # left top, left center, left bottom, right top, right center ...
@@ -24,9 +24,12 @@ reveal:
   - main:
     - sub: 
       - |
-        test 1
+        # 什么是好的搜索引擎？
+        ![](https://i.loli.net/2020/03/03/CyvuoHedPwqIa3M.png)
   - main:
     - sub: 
       - |
-        test 2
+        应该像这样
+        [多吉搜索](https://www.dogedoge.com/)
+        ![](https://i.loli.net/2020/03/03/feTPrAEnYwsIUMm.png)
 ---
