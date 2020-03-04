@@ -1,5 +1,5 @@
 ---
-title: "Scrapy 1"
+title: "Scrapy框架"
 date: 2020-03-04T16:35:09+08:00
 description:
 draft: false
@@ -9,7 +9,7 @@ enableTocContent: false
 tocPosition: inner
 author: Victor
 authorEmoji: 👻
-image: https://i.loli.net/2020/03/04/k8KU5LnrW7PlCgd.png
+image: https://i.loli.net/2020/03/04/VDPQo3qaGYrCTd1.png
 libraries:
 - 
 tags:

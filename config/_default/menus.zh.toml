@@ -33,6 +33,11 @@
   url = "gallery/movie"
 
 [[main]]
+  parent = "gallery"
+  name = "🕶Hero"
+  url = "gallery/hero"
+
+[[main]]
   identifier = "posts"
   name = "🧱Posts"
   url = "posts"

@@ -1,7 +1,7 @@
 {{ define "main" }}
-<header class="header">
+<header class="header basicflex-column">
   <h3 class="terms__title h3">{{ .Title }}</h3>
-  <div class="gallery__contents">
+  <div class="px py p2 terms__content">
     {{ .Content }}
   </div>
 </header>
@@ -28,8 +28,25 @@
   {{ partial "pagination/pagination-single" . }}
 </main>
 
-{{ else }}
+{{ else if eq (lower .Params.mode) "remote" }}
+<main class="gallery main">
+  <div class="grid gallery__container">
+    <div class="grid-sizer"></div>
+    {{ range .Params.Images }}
+    <div class="grid-item">
+      <img src="{{ .image }}" alt="{{ print .caption }}" />
+      <div class="grid-item__desc hide">
+        <span class="grid-item__desc--text">
+          {{ .caption }}
+        </span>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+  {{ partial "pagination/pagination-single" . }}
+</main>
 
+{{ else }}
 <main class="gallery main">
   <div class="grid gallery__container">
     <div class="grid-sizer"></div>
