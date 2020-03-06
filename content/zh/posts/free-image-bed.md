@@ -57,7 +57,7 @@ categories:
 
 速度：亚太服务器 ❤ ❤ ❤ ❤
 
-![](https://ibb.co/y6pnh7Q)
+![](https://i.loli.net/2020/03/05/JTGXlAYCawR3yun.png)
 
 ### [meotu](https://moetu.org/)
 
