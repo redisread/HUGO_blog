@@ -1,0 +1,291 @@
+---
+title: "排序算法总结"
+date: 2020-03-11T22:07:13+08:00
+description:
+draft: false
+hideToc: false
+enableToc: true
+enableTocContent: false
+tocPosition: inner
+author: Victor
+authorEmoji: 👻
+image: https://i.loli.net/2020/03/11/OtNP7dmlk6y8cMY.png
+libraries:
+- 
+tags:
+- 算法
+- 排序
+- C++
+series:
+- 算法与数据结构
+categories:
+-
+---
+
+
+
+
+
+排序是最基本的算法，里面包含了最基础的思想。一个简单的优化可以让排序快很多。
+
+<!--more-->
+
+
+
+### $O(n^2)$的排序算法
+
+![](https://i.loli.net/2020/03/10/VLfqhUWP8dEboyA.png)
+
+
+
+#### 冒泡排序
+
+```C++
+//冒泡排序
+template <typename T>
+void bubbleSort(T *arr, int size)
+{
+    for (int i = 0; i < size; ++i)
+    {
+        for (int j = 0; j < size - i - 1; ++j)
+        {
+            if (arr[j] > arr[j + 1])
+                swap(arr[j], arr[j + 1]);
+        }
+    }
+}
+```
+
+
+
+#### 插入排序
+
+​	
+
+```C++
+template<typename T>
+void insertSort(T *arr,int size)
+{
+    for(int i = 0;i < size;++i)
+    {
+        int j;  
+        for(j = i;j > 0 && arr[j] < arr[j-1];--j){swap(arr[j],arr[j-1]);}
+    }
+}
+```
+
+
+
+#### 选择排序
+
+```c++
+//选择排序 复杂度O(n^2)
+template<typename T>
+void selectionSort(T *arr,int size)
+{
+    int k;
+    for(int i = 0;i < size-1; ++i)
+    {
+        k = i;
+        for(int j = i+1;j < size;++j)
+        if(arr[j] < arr[k])
+            k = j;    
+        if(k != i) mySwap(arr[k],arr[i]);
+    }
+}
+```
+
+测试排序使用时间的时候，总是选择排序快于插入排序，按理说，插入排序应该比选择排序要快啊，因为插入排序可以提前终止循环，这是为什么呢？
+
+![](https://i.loli.net/2020/03/10/Ymcw1fX3ge8pPhq.png)
+
+> 原因是选择排序比较的是下标，而插入排序每一次比较都要交换，而交换所耗费的时间是高于简单的比较的。
+
+插入排序优化-将交换变成赋值
+
+```C++
+template<typename T>
+void insertSort(T *arr,int size)
+{
+    for(int i = 0;i < size;++i)
+    {
+        T e = arr[i];
+        int j;  
+        for(j = i;j > 0 && arr[j-1] > e;--j){arr[j] = arr[j-1];}
+        arr[j] = e;
+    }
+}
+```
+
+运行时间明显变快了
+
+![](https://i.loli.net/2020/03/10/VhB69LnXso8tHIJ.png)
+
+
+
+> 对于近乎有序的数据来说，插入排序的速度要快很多，近乎$O (n)$。而插入排序的实际应用有很多，比如日志，日志的时间是近乎有序的，但是生成日志可能会出错，需要进行时间排序处理，这个时候使用插入排序会更好；还有银行的一些流水单等等
+
+
+
+
+
+
+
+#### 拓展：
+
+**C++运算符重载**
+
+> 一般在类中实现，有两种可以实现的方法
+
+> 运算符重载例子，使用在一个类中
+>
+> ```c++
+> class Student
+> {
+> public:
+>     string name;
+>     int score;
+>     bool operator<(const Student &otherStudent)
+>     {
+>         return this->score < otherStudent.score;
+>     }
+>     friend ostream &operator<<(ostream &os, const Student &student)
+>     {
+>         os << "Student:" << student.name << " "<<student.score<<endl;
+>         return os;
+>     }
+> };
+> ```
+
+1. 使用友元函数
+
+   ```C++
+   返回值类型 operator 运算符(形参表)
+   {
+   ...
+   }
+   //例Complex是一个复数类
+   friend Complex operator+(const Complex &c1,const Complex &c2){
+       return Complex(c1.i + c2.i,c1.j + c2.j);
+   }
+   ```
+
+2. 使用类里面的函数
+
+   ```c++
+   返回值类型 operator 运算符(形参表)
+   {
+   ...
+   }
+   //例Complex是一个复数类
+   Complex operator+(const Complex &complex){
+       return Complex(this->i + complex.i,this->j + complex.j);
+   }
+   ```
+
+   
+
+*它们的区别就是参数的个数不同以及需不需要加上`fridend`这个关键字*
+
+
+
+### $O(n\log (n))$的排序算法
+
+#### 归并排序
+
+代码实现
+
+```C++
+template <typename T>
+void __merge(T *arr, int l, int middle, int r)
+{
+    T aux[r - l + 1];
+    for (int i = l; i <= r; ++i)
+        aux[i - l] = arr[i];
+    int i = l, j = middle + 1;
+    for (int k = l; k <= r; ++k)
+    {
+        if (i > middle)
+        {
+            arr[k] = aux[j - l];
+            j++;
+        }
+        else if (j > r)
+        {
+            arr[k] = aux[i - l];
+            i++;
+        }
+        else if (aux[i - l] < aux[j - l])
+        {
+            arr[k] = aux[i - l];
+            i++;
+        }
+        else
+        {
+            arr[k] = aux[j - l];
+            j++;
+        }
+    }
+}
+
+template <typename T>
+void __mergeSort(T *arr, int l, int r)
+{
+    if (l >= r)
+        return;
+    int middle = (l + r) / 2;
+    __mergeSort(arr, l, middle);
+    __mergeSort(arr, middle+1, r);
+    if(arr[middle] > arr[middle+1])
+        __merge(arr, l, middle, r);
+}
+
+//归并排序
+template <typename T>
+void mergeSort(T *arr, int size)
+{
+    __mergeSort(arr, 0, size - 1);
+}
+```
+
+下面这段代码的标记部分需要考虑溢出的问题
+
+![](https://i.loli.net/2020/03/11/9GStd4s1fe7kINL.png)
+
+> 归并排序快是快，但是要耗费多一倍$O(n)$的存储空间，也就是使用空间换时间。
+
+#### 希尔排序
+
+代码实现:
+
+```c++
+//希尔排序
+template <typename T>
+void shellSort(T *arr, int size)
+{
+    int dk[] = {5, 3, 1};
+    for (int index = 0; index < 3; ++index)
+    {
+        for (int i = 0; i < size / dk[index]; ++i)
+        {
+            int j;
+            int e = arr[i];
+            for (j = i + dk[index]; j > dk[index] && arr[j] > e; j -= dk[index])
+            {
+                arr[j] = arr[j - dk[index]];
+            }
+            arr[j] = e;
+        }
+    }
+}
+```
+
+> 希尔排序相当于是插入排序的升级版，增加了一个步长参数，使用希尔排序可以让零散的数据实现跳跃行的交换，最后逐渐将数组转化为有序，这样最后使用步长为1的插入排序就非常快了。
+
+#### 快速排序
+
+
+
+
+
+未完待续......:kick_scooter:
