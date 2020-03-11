@@ -12,6 +12,7 @@ authorEmoji: 👻
 image: https://i.loli.net/2020/03/08/R37TfHmnANqJkB8.png
 libraries:
 - katex
+- mathjax
 tags:
 - 机器学习
 - SVM
