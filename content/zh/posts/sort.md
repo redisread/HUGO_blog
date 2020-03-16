@@ -297,7 +297,92 @@ void shellSort(T *arr, int size)
 
 代码实现：
 
+```C++
+template<typename T>
+int __partition(T *arr,int l,int r){
+    T v = arr[l];
+    int j = l;
+    for(int i = l+1;i <= r;++i){
+        if(arr[i] < v){
+            swap(arr[i],arr[++j]);
+        }
+    }
+    swap(arr[l],arr[j]);
+    return j;
+}
 
+template<typename T>
+void __quickSort(T *arr,int l,int r)
+{
+     if(l >= r) return;
+     int p = __partition(arr,l,r);
+     __quickSort(arr,l,p-1);
+     __quickSort(arr,p+1,r);
+}
+
+//快速排序
+template<typename T>
+void quickSort(T *arr,int size)
+{
+    __quickSort(arr,0,size-1);
+
+}
+```
+
+
+
+优化一：
+
+在数组的元素个数小于15个的时候使用插入排序进行优化:
+
+```diff
+template<typename T>
+void __quickSort(T *arr,int l,int r)
+{
++    if(r - l <= 15) insertionSort(arr,l,r);
+     int p = __partition(arr,l,r);
+     __quickSort(arr,l,p-1);
+     __quickSort(arr,p+1,r);
+}
+```
+
+优化二：
+
+使用随机值作为划分标准
+
+```diff
+template<typename T>
+int __partition(T *arr,int l,int r){
++   swap(arr[l],arr[rand() % (r-l+1) + l]);
+    T v = arr[l];
+    int j = l;
+    for(int i = l+1;i <= r;++i){
+        if(arr[i] < v){
+            swap(arr[i],arr[++j]);
+        }
+    }
+    swap(arr[l],arr[j]);
+    return j;
+}
+
+template<typename T>
+void quickSort(T *arr,int size)
+{
++   srand(time(NULL));
+    __quickSort(arr,0,size-1);
+}
+
+```
+
+缺点:
+
+1. 在近乎有序的数组排序中，快速排序的性能很差。时间复杂度也近乎$O(n^2 )$
+
+
+
+#### 堆排序
+
+![](https://gitee.com/wujiahong1998/MyBed/raw/master/img/heap.gif)
 
 
 
@@ -306,5 +391,13 @@ void shellSort(T *arr, int size)
 图片：
 
 ![](https://gitee.com/wujiahong1998/MyBed/raw/master/img/20200316204231.png)
+
+
+
+
+
+
+
+
 
 未完待续......:kick_scooter:
