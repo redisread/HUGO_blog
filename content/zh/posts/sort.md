@@ -432,13 +432,59 @@ void quickSort2(T *arr,int size)
 
 代码实现：
 
+```C++
+template<typename T>
+void __quickSort3(T *arr,int l,int r)
+{
+     if(r - l<= 15){
+         insertSort(arr,l,r);
+         return;
+     }
+    
+    swap(arr[l],arr[rand() % (r-l+1) + l]);
+    T v = arr[l];
+    int lt = l; //arr[l+1...lt] < v
+    int gt = r + 1;  //arr[gt...r] > v
+    int i = l+1;    //arr[lt+1...i] == v
 
+    while(i < gt){
+        if(arr[i] < v){
+            swap(arr[i++],arr[++lt]);
+        }else if(arr[i] > v){
+            swap(arr[i],arr[--gt]);
+        }else{
+            i++;
+        }
+    }
+    swap(arr[l],arr[lt]);
+    __quickSort3(arr,l,lt-1);
+    __quickSort3(arr,gt,r);
+}
+
+//快速排序版本三，三路快排
+template<typename T>
+void quickSort3(T *arr,int size)
+{
+    srand(time(NULL));
+    __quickSort3(arr,0,size-1);
+}
+```
 
 
 
 #### 堆排序
 
-![](https://gitee.com/wujiahong1998/MyBed/raw/master/img/heap.gif)
+
+
+#### 基数排序
+
+
+
+#### 桶排序
+
+
+
+
 
 
 
@@ -457,3 +503,13 @@ void quickSort2(T *arr,int size)
 
 
 未完待续......:kick_scooter:
+
+
+
+---
+
+参考：
+
+1. [https://www.cnblogs.com/onepixel/p/7674659.html](https://www.cnblogs.com/onepixel/p/7674659.html)
+2. [https://github.com/MisterBooo/Article](https://github.com/MisterBooo/Article)
+
