@@ -11,7 +11,8 @@ author: Victor
 authorEmoji: 👻
 image: https://i.loli.net/2020/03/11/OtNP7dmlk6y8cMY.png
 libraries:
-- 
+- katex
+- mathjax
 tags:
 - 算法
 - 排序
@@ -256,6 +257,10 @@ void mergeSort(T *arr, int size)
 
 #### 希尔排序
 
+动画演示(来自[@五分钟算法](https://github.com/MisterBooo/Article))：
+
+![](https://gitee.com/wujiahong1998/MyBed/raw/master/img/merge.gif)
+
 代码实现:
 
 ```c++
@@ -284,8 +289,22 @@ void shellSort(T *arr, int size)
 
 #### 快速排序
 
+*被称为二十世纪影响最大的算法之一！*
+
+动画演示(来自[@五分钟算法](https://github.com/MisterBooo/Article))：
+
+![](https://gitee.com/wujiahong1998/MyBed/raw/master/img/quick.gif)
+
+代码实现：
 
 
 
+
+
+### 排序算法总结
+
+图片：
+
+![](https://gitee.com/wujiahong1998/MyBed/raw/master/img/20200316204231.png)
 
 未完待续......:kick_scooter:
