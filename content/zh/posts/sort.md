@@ -377,6 +377,62 @@ void quickSort(T *arr,int size)
 缺点:
 
 1. 在近乎有序的数组排序中，快速排序的性能很差。时间复杂度也近乎$O(n^2 )$
+2. 对于有很多重复元素的数组，快速排序的性能也很差
+
+##### 快速排序版本二：两路快排
+
+使用两个下标分别处理大于v与小于v的部分。(v为基准元素)
+
+代码实现：
+
+```C++
+template<typename T>
+int __partition2(T *arr,int l,int r){
+    swap(arr[l],arr[rand() % (r-l+1) + l]);
+    T v = arr[l];
+    int i = l  + 1,j = r;
+    while(true)
+    {
+        while(arr[i] < v && i <= r) ++i;
+        while(arr[j] > v && j >= l+1) --j;
+        if(i > j) break;
+        swap(arr[i++],arr[j--]);
+    }
+    swap(arr[l],arr[j]);
+    return j;
+}
+
+template<typename T>
+void __quickSort2(T *arr,int l,int r)
+{
+     if(r - l<= 15){
+         insertSort(arr,l,r);
+         return;
+     }
+        
+     int p = __partition2(arr,l,r);
+     __quickSort2(arr,l,p-1);
+     __quickSort2(arr,p+1,r);
+}
+
+//快速排序版本二，双路快排
+template<typename T>
+void quickSort2(T *arr,int size)
+{
+    srand(time(NULL));
+    __quickSort2(arr,0,size-1);
+}
+```
+
+
+
+##### 快速排序版本三：三路快排
+
+使用三个下标分别处理大于v、等于v与小于v的部分。(v为基准元素)
+
+代码实现：
+
+
 
 
 
