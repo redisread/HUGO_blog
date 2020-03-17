@@ -11,7 +11,8 @@ author: Victor
 authorEmoji: 👻
 image:
 libraries:
-- 
+- katex
+- mathjax
 tags:
 -
 series:
