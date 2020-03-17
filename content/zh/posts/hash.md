@@ -80,7 +80,7 @@ categories:
 
    假设哈希函数为：
    $$
-   H(key) = key \mod 10
+   H(key) = key \mod10
    $$
    
 
