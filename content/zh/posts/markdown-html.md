@@ -14,14 +14,17 @@ libraries
 - katex
 - mathjax
 tags:
--
+- markdown
+- html
 series:
--
+- markdown
 categories:
 -
 ---
 
+在markdown文件中嵌入`html`代码.:canoe:
 
+<!--more-->
 
 ### 使用自定义文字样式
 
