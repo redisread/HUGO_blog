@@ -42,8 +42,21 @@ https://{username}:{password}@github.com
 git config --global credential.helper store
 ```
 
-执行此命令后，用户主目录下的.gitconfig文件会多了一项：`[credential]`
+执行此命令后，用户主目录下的`.gitconfig`文件会多了一项：`[credential]`
 
 ```
 helper = store
 ```
+
+这样以后push就不需要用户名和密码了
+
+
+
+### 2. 使用ssh协议
+
+首先生成密钥对
+
+ 
+
+
+
