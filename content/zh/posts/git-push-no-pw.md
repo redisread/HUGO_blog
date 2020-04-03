@@ -48,15 +48,32 @@ git config --global credential.helper store
 helper = store
 ```
 
+> 注意: Linux用户主目录一般在`~/`下,而Windows下一般为`C:\users\Administrator`
+
 这样以后push就不需要用户名和密码了
 
 
 
 ### 2. 使用ssh协议
 
-首先生成密钥对
+首先生成密钥对,执行
 
- 
+```bash
+ssh-keygen -t rsa -C "youremail"
+```
+
+接下来按照提示操作，默认可以一路往下。
+
+然后将生成的位于`~/.ssh/`的`id_rsa.pub`的内容复制到你github setting里的ssh key中。
+
+复制之后，如果你还没有克隆你的仓库，那你直接使用ssh协议用法：`git@github.com:yourusername/yourrepositoryname`克隆就行了。
+
+如果已经使用https协议克隆了，那么按照如下方法更改协议：
+`git remote set-url origin git@github.com:yourusername/yourrepositoryname.git`
+
+Done!
+
+### 3. 管理多git账号
 
 
 
