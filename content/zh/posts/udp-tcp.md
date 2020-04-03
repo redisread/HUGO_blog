@@ -10,6 +10,7 @@ tocPosition: inner
 author: Victor
 authorEmoji: 👻
 image: https://i.loli.net/2020/04/03/FfoM8l2KwXkdIxr.png
+typora-copy-images-to: upload
 libraries:
 - katex
 - mathjax
@@ -25,17 +26,13 @@ categories:
 
 
 
-
-
 TCP/IP编程
 
 <!--more-->
 
 
 
-{{< expand "Expand me" >}}
-
-### 目标:
+{{< expand "目标:" >}}
 
 能进行网络编程
 
@@ -78,8 +75,6 @@ TCP、UDP等主要协议的特点，主要格式，以及重要字段在协议�
 **6）源代码是最好的老师，永远都是。**
 
 **以上，差不多或者已经达到4）的时候，就是“熟悉”了。**
-
-contents
 
 {{< /expand >}}
 
@@ -137,5 +132,4 @@ contents
 
 
 
-
-
+<span style="font-size:2rem; background:yellow;">**Bigger**</span>
