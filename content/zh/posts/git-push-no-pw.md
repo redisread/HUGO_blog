@@ -75,5 +75,10 @@ Done!
 
 ### 3. 管理多git账号
 
+参考:
 
+1. [https://www.jianshu.com/p/f7f4142a1556](https://www.jianshu.com/p/f7f4142a1556) 简书
+2. [https://segmentfault.com/a/1190000012432367](https://segmentfault.com/a/1190000012432367)
+3. [https://juejin.im/post/5d6a23d45188252bd90f601a](https://juejin.im/post/5d6a23d45188252bd90f601a) 掘金
+4. [https://www.cnblogs.com/popfisher/p/5731232.html](https://www.cnblogs.com/popfisher/p/5731232.html)
 
