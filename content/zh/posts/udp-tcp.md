@@ -132,11 +132,12 @@ TCP、UDP等主要协议的特点，主要格式，以及重要字段在协议�
 
 
 
-<span style="font-size:2rem; background:yellow;">**Bigger**</span>
 
 
+---
 
-<kbd>Ctrl</kbd>+<kbd>F9</kbd>
+参考:
 
-
-
+1. [https://www.jianshu.com/p/c1015f5ffa74](https://www.jianshu.com/p/c1015f5ffa74) 进程间通信
+2. [https://segmentfault.com/a/1190000003063859](https://segmentfault.com/a/1190000003063859)  Linux IO模式及 select、poll、epoll详解
+3. [https://cloud.tencent.com/developer/article/1373483](https://cloud.tencent.com/developer/article/1373483) 各种IO复用模式之select，poll，epoll，kqueue，iocp分析
