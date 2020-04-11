@@ -9,7 +9,7 @@ enableTocContent: false
 tocPosition: inner
 author: Victor
 authorEmoji: 👻
-image: https://gitee.com/wujiahong1998/MyBed/raw/master/img/20200404233552.png
+image: https://gitee.com/wujiahong1998/MyBed/raw/master/img/文件.png
 libraries:
 - katex
 - mathjax
