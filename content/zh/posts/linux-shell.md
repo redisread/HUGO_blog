@@ -35,9 +35,9 @@ Linux基本操作。:cowboy_hat_face:
 
 ### 目录结构及解释
 
-![](https://gitee.com/wujiahong1998/MyBed/raw/master/img/Linux文件目录.png)
-
 ![](https://gitee.com/wujiahong1998/MyBed/raw/master/img/Linux.svg)
+
+
 
 查看命令行执行完位置：
 
