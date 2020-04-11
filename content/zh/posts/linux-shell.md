@@ -25,6 +25,12 @@ categories:
 
 
 
+
+
+Linux基本操作。:cowboy_hat_face:
+
+<!--more-->
+
 # Linux
 
 ### 目录结构及解释
