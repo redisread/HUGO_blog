@@ -103,3 +103,7 @@ categories:
 **Vim键盘图**
 
 ![Vim键盘图](https://gitee.com/wujiahong1998/MyBed/raw/master/img/20200413233349.png)
+
+**思维导图：**
+
+![](https://i.loli.net/2020/04/13/Iq1N3uvcxZP6ObV.png)
