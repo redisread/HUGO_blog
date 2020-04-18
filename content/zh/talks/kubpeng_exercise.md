@@ -3,7 +3,7 @@ title: "鲲鹏Learning🏸"
 date: 2020-04-18T17:13:00+08:00
 publishDate: 2020-04-18
 description:
-enableToc: false
+enableToc: true
 tags:
 - 云计算
 series:
@@ -30,7 +30,9 @@ categories:
 
 
 
-# 
+[toc]
+
+
 
 ## 1. 鲲鹏云服务
 
