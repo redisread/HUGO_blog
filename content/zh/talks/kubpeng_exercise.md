@@ -1,5 +1,5 @@
 ---
-title: "鲲鹏训练"
+title: "鲲鹏Learning🏸"
 date: 2020-04-18T17:13:00+08:00
 publishDate: 2020-04-18
 description:
@@ -31,10 +31,6 @@ categories:
 
 
 # 
-
-
-
-# 鲲鹏Learning:badminton:
 
 ## 1. 鲲鹏云服务
 
