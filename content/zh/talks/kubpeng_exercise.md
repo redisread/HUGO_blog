@@ -447,13 +447,13 @@ Web应用防火墙（Web Application Firewall）对网站业务流量进行多�
 
 ## 6. 问题汇总
 
-![image-20200418202229605](C:\Users\Victor\AppData\Roaming\Typora\typora-user-images\image-20200418202229605.png)
+![image-20200418202229605](https://i.loli.net/2020/04/18/5yD7vRPKjTIrWet.png)
 
 A
 
 
 
-![image-20200418202246551](C:\Users\Victor\AppData\Roaming\Typora\typora-user-images\image-20200418202246551.png)
+![image-20200418202246551](https://i.loli.net/2020/04/18/aemQ5f3LGwlo9KJ.png)
 
 B
 
@@ -461,18 +461,19 @@ B
 
 
 
-![image-20200418201821470](C:\Users\Victor\AppData\Roaming\Typora\typora-user-images\image-20200418201821470.png)
+![image-20200418201821470](https://i.loli.net/2020/04/18/HRoqi4UulLr7OY3.png)
 
 ABCD
 
 
 
-![image-20200418201845193](C:\Users\Victor\AppData\Roaming\Typora\typora-user-images\image-20200418201845193.png)
+![image-20200418201845193](https://i.loli.net/2020/04/18/HRoqi4UulLr7OY3.png)
 
 ABD ABCD
 
 
 
-![image-20200418201900622](C:\Users\Victor\AppData\Roaming\Typora\typora-user-images\image-20200418201900622.png)
+![image-20200418201900622](https://i.loli.net/2020/04/18/QP8tWh3Ig1yU6Rb.png)
 
 A
+
