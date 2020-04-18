@@ -22,6 +22,67 @@ categories:
 
 ## 1. 鲲鹏云服务
 
+### 鲲鹏处理器与服务器
+
+#### 鲲鹏处理器
+
+华为鲲鹏处理器是华为自主研发的基于ARM架构的企业级系列处理器产品，包含“算、存、传、管、智”五个产品系统体系。
+
+![鲲鹏服务器](https://i.loli.net/2020/04/18/VFhieyZYQuU6GBJ.png)
+
+##### 架构介绍：
+
+华为鲲鹏处理器基于ARM架构。ARM是一种CPU架构，有别于Intel、AMD CPU采用的CISC复杂指令集，ARM CPU采用RISC精简指令集（reduced instruction set computer，精简指令集计算机）。
+
+处理器对比：
+
+![](https://i.loli.net/2020/04/18/6W1juFiqv2hzr8d.png)
+
+##### 优点：
+
+* 采用ARM架构，同样功能性能占用的芯片面积小、功耗低、集成度更高，更多的硬件CPU核具备更好的并发性能。
+* 支持16位、32位、64位多种指令集，能很好的兼容从IOT、终端到云端的各类应用场景。
+* 大量使用寄存器，大多数数据操作都在寄存器中完成，指令执行速度更快。
+* 采用RISC指令集，指令长度固定，寻址方式灵活简单，执行效率高。
+
+##### 规格发展
+
+![](https://i.loli.net/2020/04/18/uwZ1cvNSGKR4H2f.png)
+
+
+
+##### 华为鲲鹏920处理器规格
+
+![](https://i.loli.net/2020/04/18/iMosNK617S54Dny.png)
+
+
+
+##### 技术创新
+
+![](https://i.loli.net/2020/04/18/9LC2kaKpDUNo5XT.png)
+
+![](https://i.loli.net/2020/04/18/yQuJH1DlMLehm7I.png)
+
+##### 内置多种加速引擎
+
+![](https://i.loli.net/2020/04/18/AZSiXNcfErgdxCw.png)
+
+### Taishan服务器
+
+##### 系列
+
+![](https://i.loli.net/2020/04/18/HCQnTb836pzG4d2.png)
+
+##### TaiShan 200机架服务器全景图
+
+![](https://i.loli.net/2020/04/18/eITiMzy1FdBkLW8.png)
+
+##### TaiShan 200高密服务器
+
+![](https://i.loli.net/2020/04/18/haEQrUi5bSxCMo4.png)
+
+![](https://i.loli.net/2020/04/18/TaH3KrYOsk9xFS5.png)
+
 ### 云服务
 
 #### 云计算
@@ -382,3 +443,36 @@ Web应用防火墙（Web Application Firewall）对网站业务流量进行多�
 
 项目:个人同步网盘
 
+
+
+## 6. 问题汇总
+
+![image-20200418202229605](C:\Users\Victor\AppData\Roaming\Typora\typora-user-images\image-20200418202229605.png)
+
+A
+
+
+
+![image-20200418202246551](C:\Users\Victor\AppData\Roaming\Typora\typora-user-images\image-20200418202246551.png)
+
+B
+
+
+
+
+
+![image-20200418201821470](C:\Users\Victor\AppData\Roaming\Typora\typora-user-images\image-20200418201821470.png)
+
+ABCD
+
+
+
+![image-20200418201845193](C:\Users\Victor\AppData\Roaming\Typora\typora-user-images\image-20200418201845193.png)
+
+ABD ABCD
+
+
+
+![image-20200418201900622](C:\Users\Victor\AppData\Roaming\Typora\typora-user-images\image-20200418201900622.png)
+
+A
