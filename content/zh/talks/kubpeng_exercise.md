@@ -3,30 +3,16 @@ title: "鲲鹏Learning🏸"
 date: 2020-04-18T17:13:00+08:00
 publishDate: 2020-04-18
 description:
-enableToc: true
+enableToc: false
+enableTocContent: true
 tags:
 - 云计算
 series:
 -
 categories:
 -
+
 ---
-
-
-
-
-
-# C++学习路线:seedling:
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -39,6 +25,10 @@ categories:
 ### 云服务
 
 #### 云计算
+
+美国国家标准与技术研究院（NIST）定义：
+
+云计算是一种模型，它可以实现随时随地，便捷地，随需应变地从可配置计算资源共享池中获取所需的资源（例如，网络、服务器、存储、应用、及服务），资源能够快速供应并释放，使管理资源的工作量和与服务提供商的交互减小到最低限度。
 
 云计算的特点:
 
