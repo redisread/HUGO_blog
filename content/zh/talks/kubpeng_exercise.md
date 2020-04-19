@@ -639,43 +639,17 @@ A
 
 
 
-![](https://i.loli.net/2020/04/19/klxU4tLDEujrKJ9.png)
-
-
-
-![](https://i.loli.net/2020/04/19/VtxWCqa8lhwNQG9.png)
-
-BC
-
-![](https://i.loli.net/2020/04/19/zpuiVy64rFmHXS2.png)
+![](https://i.loli.net/2020/04/19/hUxVeKOPQriTq2w.png)
 
 
 
 
 
-
-
-![image-20200419232715913](https://i.loli.net/2020/04/19/9tq3QjVwfoMp2Dz.png)
-
-18：BC
+![](https://i.loli.net/2020/04/19/bW1egw2oBuS7xXH.png)
 
 
 
-![image-20200419232747883](https://i.loli.net/2020/04/19/Qc5IxyCXYV23hzn.png)
-
-ABC
+![](https://i.loli.net/2020/04/19/3cvC4kXBumAzfo6.png)
 
 
-
-![image-20200419232916177](https://i.loli.net/2020/04/19/Qc5IxyCXYV23hzn.png)
-
-ABCD
-
-
-
-
-
-![image-20200419233150690](https://i.loli.net/2020/04/19/Q751wxkqh2jXaSf.png)
-
-X
 
