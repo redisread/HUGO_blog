@@ -374,11 +374,11 @@ void MixColumns(byte mtx[4*4])
 
 正向混淆处理：
 
-![正向列混淆](https://bbs.pediy.com/upload/attach/202002/813468_UES487VAAZPKDFS.png)
+![正向列混淆](https://i.loli.net/2020/05/01/vDcZ2fFskb4qzwK.png)
 
 逆向混淆处理：
 
-![逆向列混淆](https://bbs.pediy.com/upload/attach/202002/813468_ZCDXZKFMZA7K9SD.png)
+![逆向列混淆](https://i.loli.net/2020/05/01/idIrJna5DW2PoSh.png)
 
 反向列变换代码如下：
 
