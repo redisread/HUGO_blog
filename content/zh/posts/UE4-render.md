@@ -27,6 +27,58 @@ categories:
 
 # UE4渲染过程
 
+### 延迟渲染
+
+所谓延迟渲染，是指将一个场景的几何体（3D模型、多边形）的光照、阴影、质感搁置到一旁，先着手于绘画，然后在后半段再对光照、阴影、质感进行处理的处理方式。即给人一种把原本的多边形先绘制出来的印象，实际上不仅要绘制多边形，前者的参数还需要配合后面光照和阴影的处理。其输出目标，在成为复数缓冲时具有普遍性，但是这里的缓冲我们称之为"物理缓冲"。物体缓冲是指使用后照明和后处理特效的中间过渡环节
+
+
+
+## Z Pre Pass
+
+UE4的渲染管道，是在Bass Pass的物体缓冲写出来之前，在仅预处理深度值（Z值）之后，运行Z预阶段。
+
+事先预处理深度值的目的，是将最终影像和同一深度缓冲的内容结果，在透视前获得。Z预阶段之后的Base Pass则是，参考预先得出的深度值缓冲进行Z预测试，因此通过在最终的画面里不留下像素痕迹（即编写后又被消去的像素），以回避像素着色器的运行。
+
+## Base Pass
+
+使用Base Pass输出物体缓冲需要注意的两点：
+
+1. 不绘制没进入视线的对象
+
+   这种"投影剔除"（Frustum Culling），一般是通过CPU端来处理；为了整体覆盖被称为"包围球"（Bounding sphere）的各个3D对象，对象是否在视野内的判定标准，是通过预先设定的包围球来实行的。
+
+   > 什么程度的剔除会成功，可以通过Stat初始视图（Stat InitViews）指令的"视锥体裁剪基元（Frustum Culled Primitives）"进行确认。
+
+2. 不计算多余的像素
+
+   在图像处理的流程中，使用像素着色器实际处理前，会有运行深度测试（Z 测试）的"Pre Z 测试"这一步骤。从这里着手处理的像素，会因为被某个东西所遮挡而无法绘制出来，这时可以进行撤销处理。
+
+   > 但是，像半透明对象这种会伴随α测试的绘制、视差遮蔽映射这种像素着色器处理后会重新编写深度值的情况，就不进行Pre Z测试，而通过处理实行分路迂回。
+
+## UE4 绘制策略DrawingPolicy
+
+绘制策略在UE4渲染中使用很多， 中文也不好翻译。 其实就是根据策略 使用了哪些 着色器 。
+
+
+
+
+
+
+
+## Render模块
+
+调用Render()函数在Render模块`RendererModule.h`中，以下函数：
+
+```c++
+class FRendererModule : public IRendererModule
+{
+    // 开始渲染视图族
+    virtual void BeginRenderingViewFamily(FCanvas* Canvas,FSceneViewFamily* ViewFamily) override;
+}
+```
+
+
+
 https://answers.unrealengine.com/questions/17862/access-color-and-depth-buffer-of-each-frame.html
 
 https://segmentfault.com/a/1190000012737548
@@ -162,6 +214,130 @@ DrawCall是会被渲染的单一元素，每渲染一个DrawCall就是一次绘�
 **测试咬合**,处理框架中的所有遮挡测试.虚幻引擎默认使用硬件遮挡查询进行遮挡测试
 
 
+
+**RenderPrePass**
+
+```c++
+bool FDeferredShadingSceneRenderer::RenderPrePass(FRHICommandListImmediate& RHICmdList, TFunctionRef<void()> AfterTasksAreStarted)
+{
+	check(RHICmdList.IsOutsideRenderPass());	// 检查
+
+	SCOPED_NAMED_EVENT(FDeferredShadingSceneRenderer_RenderPrePass, FColor::Emerald);
+	bool bDepthWasCleared = false;
+
+	extern const TCHAR* GetDepthPassReason(bool bDitheredLODTransitionsUseStencil, EShaderPlatform ShaderPlatform);
+	SCOPED_DRAW_EVENTF(RHICmdList, PrePass, TEXT("PrePass %s %s"), GetDepthDrawingModeString(EarlyZPassMode), GetDepthPassReason(bDitheredLODTransitionsUseStencil, ShaderPlatform));
+
+	SCOPE_CYCLE_COUNTER(STAT_DepthDrawTime);
+	CSV_SCOPED_TIMING_STAT_EXCLUSIVE(RenderPrePass);
+	SCOPED_GPU_STAT(RHICmdList, Prepass);
+
+	bool bDidPrePre = false;
+	FSceneRenderTargets& SceneContext = FSceneRenderTargets::Get(RHICmdList);
+
+	bool bParallel = GRHICommandList.UseParallelAlgorithms() && CVarParallelPrePass.GetValueOnRenderThread();
+
+	if (!bParallel)
+	{
+		// nothing to be gained by delaying this.
+		AfterTasksAreStarted();
+		// Note: the depth buffer will be cleared under PreRenderPrePass.
+		bDepthWasCleared = PreRenderPrePass(RHICmdList);
+		bDidPrePre = true;
+
+		// PreRenderPrePass will end up clearing the depth buffer so do not clear it again.
+		SceneContext.BeginRenderingPrePass(RHICmdList, false);
+	}
+	else
+	{
+		SceneContext.GetSceneDepthSurface(); // this probably isn't needed, but if there was some lazy allocation of the depth surface going on, we want it allocated now before we go wide. We may not have called BeginRenderingPrePass yet if bDoFXPrerender is true
+	}
+
+	// Draw a depth pass to avoid overdraw in the other passes.
+	if(EarlyZPassMode != DDM_None)
+	{
+		const bool bWaitForTasks = bParallel && (CVarRHICmdFlushRenderThreadTasksPrePass.GetValueOnRenderThread() > 0 || CVarRHICmdFlushRenderThreadTasks.GetValueOnRenderThread() > 0);
+		FScopedCommandListWaitForTasks Flusher(bWaitForTasks, RHICmdList);
+
+		for(int32 ViewIndex = 0;ViewIndex < Views.Num();ViewIndex++)
+		{
+			const FViewInfo& View = Views[ViewIndex];
+
+			SCOPED_GPU_MASK(RHICmdList, !View.IsInstancedStereoPass() ? View.GPUMask : (Views[0].GPUMask | Views[1].GPUMask));
+			SCOPED_CONDITIONAL_DRAW_EVENTF(RHICmdList, EventView, Views.Num() > 1, TEXT("View%d"), ViewIndex);
+
+			TUniformBufferRef<FSceneTexturesUniformParameters> PassUniformBuffer;
+			
+			CreateDepthPassUniformBuffer(RHICmdList, View, PassUniformBuffer);
+			
+			FMeshPassProcessorRenderState DrawRenderState(View, PassUniformBuffer);
+
+			SetupDepthPassState(DrawRenderState);
+
+			if (View.ShouldRenderView())
+			{
+				Scene->UniformBuffers.UpdateViewUniformBuffer(View);
+
+				if (bParallel)
+				{
+					check(RHICmdList.IsOutsideRenderPass());
+					bDepthWasCleared = RenderPrePassViewParallel(View, RHICmdList, DrawRenderState, AfterTasksAreStarted, !bDidPrePre) || bDepthWasCleared;
+					bDidPrePre = true;
+				}
+				else
+				{
+					RenderPrePassView(RHICmdList, View, DrawRenderState);
+				}
+			}
+
+			// Parallel rendering has self contained renderpasses so we need a new one for editor primitives.
+			if (bParallel)
+			{
+				SceneContext.BeginRenderingPrePass(RHICmdList, false);
+			}
+			RenderPrePassEditorPrimitives(RHICmdList, View, DrawRenderState, EarlyZPassMode, true);
+			if (bParallel)
+			{
+				RHICmdList.EndRenderPass();
+			}
+		}
+	}
+	if (!bDidPrePre)
+	{
+		// Only parallel rendering with all views marked as not-to-be-rendered will get here.
+		// For some reason we haven't done this yet. Best do it now for consistency with the old code.
+		AfterTasksAreStarted();
+		bDepthWasCleared = PreRenderPrePass(RHICmdList);
+		bDidPrePre = true;
+	}
+
+	if (bParallel)
+	{
+		// In parallel mode there will be no renderpass here. Need to restart.
+		SceneContext.BeginRenderingPrePass(RHICmdList, false);
+	}
+
+	// Dithered transition stencil mask clear, accounting for all active viewports
+	if (bDitheredLODTransitionsUseStencil)
+	{
+		if (Views.Num() > 1)
+		{
+			FIntRect FullViewRect = Views[0].ViewRect;
+			for (int32 ViewIndex = 1; ViewIndex < Views.Num(); ++ViewIndex)
+			{
+				FullViewRect.Union(Views[ViewIndex].ViewRect);
+			}
+			RHICmdList.SetViewport(FullViewRect.Min.X, FullViewRect.Min.Y, 0, FullViewRect.Max.X, FullViewRect.Max.Y, 1);
+		}
+		DrawClearQuad(RHICmdList, false, FLinearColor::Transparent, false, 0, true, 0);
+	}
+
+	// Now we are finally finished.
+	SceneContext.FinishRenderingPrePass(RHICmdList);
+
+	return bDepthWasCleared;
+}
+```
 
 
 
