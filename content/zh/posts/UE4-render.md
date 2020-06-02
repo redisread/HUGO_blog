@@ -432,3 +432,6 @@ FSceneRenderTargets::Get(RHICmdList).AdjustGBufferRefCount(RHICmdList, -1);
 ```
 
 键入命令vis scenedepthz uv0以查看实际使用的深度缓冲区。UE4对场景使用“反向”深度缓冲区。
+
+![image-20200602195954138](https://i.loli.net/2020/06/02/P91kUEFIcplvNru.png)
+
