@@ -375,6 +375,12 @@ bool FDeferredShadingSceneRenderer::RenderPrePass(FRHICommandListImmediate& RHIC
 
 
 
+
+
+# 渲染系统概述
+
+![img](https://img-blog.csdnimg.cn/2018120510265318.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xlb253ZWk=,size_16,color_FFFFFF,t_70)
+
 # 读取纹理GBuffer
 
 
@@ -394,3 +400,35 @@ UDrawFrustumComponent
 `C:\Program Files (x86)\UE4+VS2017\UnrealEngine\Engine\Source\Runtime\Renderer\Private\SceneRendering.cpp`
 
 ![image-20200601161909214](https://i.loli.net/2020/06/01/V2QCnEDZplhgmko.png)
+
+
+
+
+
+```c++
+ENQUEUE_UNIQUE_RENDER_COMMAND_ONEPARAMETER(
+DZRenderSutioBP_InterceptSceneBaseColor,
+UTexture2D*, vTextureAsset, TextureAsset,
+{
+/*if (!IsInRenderingThread())
+return;*/
+FRHICommandListImmediate& RHICmdList = GRHICommandList.GetImmediateCommandList();
+//计数加一避免Render完成后直接清空了GBuffer,但会慢一帧，你猜
+FSceneRenderTargets::Get(RHICmdList).AdjustGBufferRefCount(RHICmdList, 1);
+static const FString ScrollingMessage(TEXT("Hello World: "));
+GEngine->AddOnScreenDebugMessage(-1, 0.2f, FColor::Red, ScrollingMessage);
+FSceneRenderTargets& SceneContext = FSceneRenderTargets::Get(RHICmdList);
+if (SceneContext.GBufferA)
+{
+FTexture2DRHIRef vTextTarget = SceneContext.GetGBufferATexture();
+FString vSiceStr = FString::Printf(TEXT("FSceneRenderTargets GBufferA Size = %d*%d"), vTextTarget->GetSizeX(), vTextTarget->GetSizeY());
+
+GEngine->AddOnScreenDebugMessage(-1, 0.2f, FColor::Red, vSiceStr);
+}
+//移除
+FSceneRenderTargets::Get(RHICmdList).AdjustGBufferRefCount(RHICmdList, -1);
+}
+);
+```
+
+键入命令vis scenedepthz uv0以查看实际使用的深度缓冲区。UE4对场景使用“反向”深度缓冲区。
