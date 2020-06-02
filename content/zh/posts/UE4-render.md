@@ -105,6 +105,12 @@ class FRendererModule : public IRendererModule
 
 
 
+==谁最终调用了Render？==
+
+![调用Render](https://i.loli.net/2020/06/02/FyKugnqzODMvslW.png)
+
+
+
 https://answers.unrealengine.com/questions/17862/access-color-and-depth-buffer-of-each-frame.html
 
 https://segmentfault.com/a/1190000012737548
