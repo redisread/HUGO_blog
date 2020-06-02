@@ -25,6 +25,36 @@ categories:
 
 
 
+
+
+
+
+
+
+
+
+# 渲染相关类
+
+[如何在C ++中从UTexture2D读取数据](https://stackoverflow.com/questions/37578939/how-to-read-data-from-a-utexture2d-in-c)
+
+https://forums.unrealengine.com/development-discussion/c-gameplay-programming/1422920-casting-converting-frhitexture-to-utexture
+
+[Unreal渲染相关的缓冲区](https://my.oschina.net/u/4362845/blog/3636853)
+
+## Texture2D
+
+
+
+## UTexture2D
+
+复合纹理,可以根据法线贴图变化(主要是来自 mip 贴图)来定义修改粗糙度。
+
+## FTexture2D
+
+Windows. MacOS. Linux. 继承层次结构
+
+## FRHITexture2D
+
 # UE4渲染过程
 
 ### 延迟渲染
@@ -58,10 +88,6 @@ UE4的渲染管道，是在Bass Pass的物体缓冲写出来之前，在仅预�
 ## UE4 绘制策略DrawingPolicy
 
 绘制策略在UE4渲染中使用很多， 中文也不好翻译。 其实就是根据策略 使用了哪些 着色器 。
-
-
-
-
 
 
 
@@ -343,11 +369,22 @@ bool FDeferredShadingSceneRenderer::RenderPrePass(FRHICommandListImmediate& RHIC
 
 
 
+# 读取纹理GBuffer
+
+
+
+
+
 UDrawFrustumComponent
 
+# Q:
+
+`C:\Program Files (x86)\UE4+VS2017\UnrealEngine\Engine\Source\Runtime\Renderer\Private\PostProcess\SceneRenderTargets.h`
+
+![image-20200601155736466](https://i.loli.net/2020/06/01/Sc6NuwBxzQ84prZ.png)
 
 
 
+`C:\Program Files (x86)\UE4+VS2017\UnrealEngine\Engine\Source\Runtime\Renderer\Private\SceneRendering.cpp`
 
-
-
+![image-20200601161909214](https://i.loli.net/2020/06/01/V2QCnEDZplhgmko.png)
