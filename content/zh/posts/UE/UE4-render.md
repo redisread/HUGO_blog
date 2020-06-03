@@ -435,3 +435,9 @@ FSceneRenderTargets::Get(RHICmdList).AdjustGBufferRefCount(RHICmdList, -1);
 
 ![image-20200602195954138](https://i.loli.net/2020/06/02/P91kUEFIcplvNru.png)
 
+
+
+
+
+## 渲染函数Render
+
