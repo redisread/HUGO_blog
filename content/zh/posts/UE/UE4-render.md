@@ -119,6 +119,8 @@ https://segmentfault.com/a/1190000012737548
 
 
 
+
+
 <img src="https://i.loli.net/2020/05/30/P6KEDtS1HkOg9fF.jpg" alt="preview" style="zoom: 200%;" />
 
 ## 相关术语
@@ -440,4 +442,142 @@ FSceneRenderTargets::Get(RHICmdList).AdjustGBufferRefCount(RHICmdList, -1);
 
 
 ## 渲染函数Render
+
+路径：`Engine \ Source \ Runtime \ Renderer \ Private \ DeferredShadingRenderer.cpp（660）`
+
+函数：`FDeferredShadingSceneRenderer :: Render（）`渲染路径
+
+| 全局系统纹理初始化                                           | DeferredShadingRenderer.cpp（677） GSystemTextures.InitializeTextures（） |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 保护 必要的渲染目标您是否已确保可以保护的最大目标数目？      | DeferredShadingRenderer.cpp（680） GSceneRenderTargets.Allocate（） |
+| 初始化每个视口 设置视口显示的对象，选择使用动态阴影时显示的对象，对半透明对象进行排序 | DeferredShadingRenderer.cpp（683） InitViews()（）           |
+| FXSystem预处理 GPU粒子正在被仿真                             | DeferredShadingRenderer.cpp（758） FXSystem-> PreRender（）  |
+| 启用Z Pre-Pass时执行的早期Z绘制 不绘制Tile渲染的硬件（移动设备，Android或iOS）对于 PC或PS4，将生成深度缓冲区和HiZ，因此后续绘制速度很快成为？ | DeferredShadingRenderer.cpp（768） RenderPrePass（）         |
+| 安全GBuffer                                                  | DeferredShadingRenderer.cpp（774） GSceneRenderTargets.AllocGBufferTargets（） |
+| 透明光传播量                                                 | DeferredShadingRenderer.cpp（779） ClearLPVs（）             |
+| 使用DBuffer时绘制延期贴图[单击此处](http://monsho.blog63.fc2.com/blog-entry-139.html)获取 DBuffer和延期贴图 | DeferredShadingRenderer.cpp（796） GCompositionLighting.ProcessBeforeBasePass（） |
+| 如有必要，请 在绘制线框图时清除GBuffer透明颜色缓冲区， 有些游戏在发行游戏时无法清除GBuffer或屏幕。 | DeferredShadingRenderer.cpp（805） SetAndClearViewGBuffer（）  DeferredShadingRenderer.cpp（816） RHICmdList.Clear（） |
+| 渲染不透明的对象渲染 项目，这些项目根据它们是Masked还是Default，是否有LightMap等按每种排序顺序进行了精细分类 | DeferredShadingRenderer.cpp（828） RenderBasePass（）        |
+| 清除 GBuffer 的未绘制部分如果事先清除GBuffer，则不必要。     | DeferredShadingRenderer.cpp（851） ClearGBufferAtMaxZ（）    |
+| 绘制 自定义深度请参见[此处](http://monsho.blog63.fc2.com/blog-entry-138.html)以获取自定义深度 | DeferredShadingRenderer.cpp（860） RenderCustomDepthPass（） |
+| 在这里再次模拟GPU粒子除了在这里 处理使用深度缓冲区执行碰撞检测的 粒子外，还对GPU粒子进行排序 | DeferredShadingRenderer.cpp（865） 场景-> FXSystem-> PostRenderOpaque（） |
+| 为SceneDepthTexture创建一个半分辨率（每个方面为1/4分辨率）的缓冲区 | DeferredShadingRenderer.cpp（875） UpdateDownsampledDepthSurface（） |
+| 执行阻塞测试 HZB的构建，执行提交 的HZB [Attotempkinder](https://twitter.com/tempkinder)的[这篇文章](http://darakemonodarake.hatenablog.jp/entry/2014/12/17/000422)指 | DeferredShadingRenderer.cpp（881） BeginOcclusionTests（）   |
+| 开始写 因为有点复杂，所以要写一些细节                        | DeferredShadingRenderer.cpp（890）                           |
+| 不使用DBuffer绘制延迟的贴图                                  | CompositionLighting.cpp（293） AddDeferredDecalsBeforeLighting（） |
+| 在屏幕空间中绘制环境光遮挡                                   | CompositionLighting.cpp（300） AddPostProcessingAmbientOcclusion（） |
+| 后期处理环境立方体贴图                                       | CompositionLighting.cpp（305） AddPostProcessingAmbientCubemap（） |
+| 到这里为止的一系列处理                                       | DeferredShadingRenderer.cpp（904） GCompositionLighting.ProcessAfterBasePass（） |
+| 透明的体积光缓冲液可提高透明度                               | DeferredShadingRenderer.cpp（908） ClearTranslucentVolumeLighting（） |
+| 从此处开始的主要照明设备 收集要绘制的灯光并将其排序 不要投影，不使用灯光功能的灯光将使用“ 基于图块” 绘制（如果可能）如果不能使用“ 基于图块”关于延迟渲染，[这](https://sites.google.com/site/monshonosuana/directxno-hanashi-1/directx-125)是味o，但请参见[此处](https://sites.google.com/site/monshonosuana/directxno-hanashi-1/directx-125) | LightRendering.cpp（312-348）  LightRendering.cpp（423） RenderTiledDeferredLighting（）  LightRendering.cpp（429） RenderSimpleLightsStandardDeferred（） |
+| 它不会阴影，也不会使用灯光功能，但是似乎无法使用TBDR绘制的灯光 被称为标准延迟灯光。 | LightRendering.cpp（445） RenderLight（）                    |
+| 如果用于半透明的体积光是有效的，则将每个光注入到体积光中 ，从而在3D纹理上绘制光效果。 | LightRendering.cpp（455） InjectTranslucentVolumeLightingArray（）  LightRendering.cpp（461） InjectSimpleTranslucentVolumeLightingArray（） |
+| 使用灯光功能投射阴影的灯光将单独处理                         | LightRendering.cpp（468-552）                                |
+| 首先，我在[投射](https://sites.google.com/site/monshonosuana/directxno-hanashi-1/directx-137)阴影时 绘制了一个阴影贴图；在这里我还绘制了一个 半透明的阴影贴图；我记得半透明的当然是[傅立叶不透明度贴图](https://sites.google.com/site/monshonosuana/directxno-hanashi-1/directx-137)。 | LightRendering.cpp（495） RenderTranslucentProjectedShadows（）  LightRendering.cpp（497） RenderProjectedShadows（） |
+| 使用LPV时绘制[反射阴影贴图](http://d.hatena.ne.jp/hanecci/20100731/1280596856) | LightRendering.cpp（508） RenderReflectiveShadowMaps（）     |
+| 灯光功能图 阴影指示器图                                      | LightRendering.cpp（515） RenderLightFunction（）  LightRendering.cpp（522） RenderPreviewShadowsIndicator（） |
+| 衰减缓冲器中的分辨 光的衰减信息是否曾经被吸入另一个缓冲器中？ | LightRendering.cpp（534） GSceneRenderTargets.FinishRenderingLightAttenuation（） |
+| 注入体积光以获得半透明                                       | LightRendering.cpp（541） InjectTranslucentVolumeLighting（） |
+| 这 是使用光功能投射阴影的光处理的结束。                      | LightRendering.cpp（550） RenderLight（）                    |
+| 这 是每个光的LPV 的主要注入照明过程的结尾                    | LightRendering.cpp（561-593） Lpv-> InjectLightDirect（）    |
+| 注入体积光以实现环境立方体贴图的半透明                       | DeferredShadingRenderer.cpp（916） InjectAmbientCubemapTranslucentVolumeLighting（） |
+| 过滤体积光以获得半透明                                       | DeferredShadingRenderer.cpp（919） FilterTranslucentVolumeLighting（） |
+| LPV传输过程 此外，第921行的注释上写有“ copypimis”，例如“ Clear LPV buffer”。 | DeferredShadingRenderer.cpp（924） PropagateLPVs（）         |
+| 动态天光绘图                                                 | DeferredShadingRenderer.cpp（928） RenderDynamicSkyLighting（） |
+| 延迟的反射图形 捕获的反射图形而不是屏幕空间                  | DeferredShadingRenderer.cpp（931） RenderDeferredReflections（） |
+| LPV的GI绘图                                                  | CompositionLighting.cpp（344） AddPostProcessingLpvIndirect（） |
+| 屏幕空间次表面散射（SSSSS）的后处理                          | CompositionLighting.cpp（347-376）                           |
+| 如果启用了“光轴”，则绘制“光轴遮挡”                           | DeferredShadingRenderer.cpp（953） RenderLightShaftOcclusion（） |
+| [大气雾](https://docs.unrealengine.com/latest/INT/Engine/Actors/FogEffects/AtmosphericFog/index.html)图 | DeferredShadingRenderer.cpp（977） RenderAtmosphere（）      |
+| 绘图雾 这是[高度](https://docs.unrealengine.com/latest/INT/Engine/Actors/FogEffects/HeightFog/index.html)雾吗？ | DeferredShadingRenderer.cpp（986） RenderFog（）             |
+| 画一个半透明的物体 在这里也画一个单独的半透明的东西          | DeferredShadingRenderer.cpp（1000） RenderTranslucency（）   |
+| 折射变形处理                                                 | DeferredShadingRenderer.cpp（1008） RenderDistortion（）     |
+| 光轴的起霜处理                                               | DeferredShadingRenderer.cpp（1013） RenderLightShaftBloom（） |
+| 距离场AO处理不能在 当前不支持多个视口 的分屏游戏中使用吗？   | DeferredShadingRenderer.cpp（1019） RenderDistanceFieldAOSurfaceCache（） |
+| 它只是在查看网格的“距离场”的可视化处理结果吗？               | DeferredShadingRenderer.cpp（1024） RenderMeshDistanceFieldVisualization（） |
+| 由于速度模糊而绘制运动对象的速度                             | DeferredShadingRenderer.cpp（1034） RenderVelocities（）     |
+| 从这里到最后的发布过程， 这也很复杂而且很长                  | DeferredShadingRenderer.cpp（1047） GPostProcessing.Process（） |
+| 使用BeforeTranslucency设置绘制后处理材料                     | PostProcessing.cpp（878） AddPostProcessMaterial（）         |
+| 景深处理 通过高斯模糊进行DOF 处理之后，正在执行散焦处理（使用指定的光圈形状的纹理进行绘制）， 在此阶段似乎合并了单独的半透明缓冲区 | PostProcessing.cpp（888） AddPostProcessDepthOfFieldGaussian（）  PostProcessing.cpp（898） AddPostProcessDepthOfFieldBokeh（）  PostProcessing.cpp（905） FRCPassPostProcessBokehDOFRecombine （如果未启用模糊） |
+| 使用BeforeTonemapping设置绘制后处理材料                      | PostProcessing.cpp（913） AddPostProcessMaterial（）         |
+| 如果要使用TemporalAA ，请在此处绘制，如果使用FXAA，请稍后再绘制 | PostProcessing.cpp（921） AddTemporalAA（）  PostProcessing.cpp（928） AddTemporalAA（） （如果不使用速度缓冲区，请单击此处） |
+| 运动模糊处理 设置，分辨率下采样，高斯模糊，运动模糊绘制，组合处理 | PostProcessing.cpp（932-994） FRCPassPostProcessMotionBlurSetup FRCPassPostProcessDownsample RenderGaussianBlur（） FRCPassPostProcessMotionBlur FRCPassPostProcessMotionBlurRecombine |
+| SceneColor下采样                                             | PostProcessing.cpp（1000） FRCPassPostProcessDownsample      |
+| 直方图                                                       | PostProcessing.cpp（1006-1040） FRCPassPostProcessHistogram FRCPassPostProcessHistogramReduce |
+| 此处需要[眼睛适应](https://docs.unrealengine.com/latest/INT/Engine/Rendering/PostProcessEffects/AutomaticExposure/index.html)图直方图 | PostProcessing.cpp（1046） AddPostProcessEyeAdaptation（）   |
+| 布卢姆绘图                                                   | PostProcessing.cpp（1057） AddBloom（）  PostProcessing.cpp（1060-1148） （对于移动设备，请单击此处） |
+| 色调映射 仅替换ReplacecingTonemapper设置工程图的一种后处理材料，但是 如果存在该材料，则执行默认色调映射 | PostProcessing.cpp（1155） AddSinglePostProcessMaterial（）  PostProcessing.cpp（1171） AddTonemapper（） （默认色调映射） |
+| 如果启用了FXAA，请在此处处理                                 | PostProcessing.cpp（1177） AddPostProcessAA（）              |
+| 绘制一些编辑器（如选定的轮廓）， 然后使用AfterTonemapping设置绘制后期处理材料 | PostProcessing.cpp（1244） AddPostProcessMaterial（）        |
+| 用于地下和GBuffer的可视化 调试                               | PostProcessing.cpp（1246-1254）                              |
+| 用于HMD的后处理 Oculus或Morpheus                             | PostProcessing.cpp（1256-1277） FRCPassPostProcessHMD FRCPassPostProcessMorpheus |
+| 之后，调试和高分辨率屏幕截图功能等。 之后，进行后处理并结束！ 谢谢！ | PostProcessing.cpp（1279-）                                  |
+
+
+哦，很长。
+可能很难阅读，但是如果您有兴趣，请过来。
+
+
+
+
+
+如何使用ENQUEUE_RENDER_COMMAND代替ENQUEUE_UNIQUE_RENDER_COMMAND_ONEPARAMETER-虚幻引擎论坛
+
+https://qiita.com/mechamogera/items/a0c369a3b853a3042cae
+
+```c++
+#include "ImageUtils.h"
+#include "GenericPlatform/GenericPlatformProcess.h"
+
+void HogeHoge::Convert(UTexture* Img, TArray<uint8>& ImgData)
+{
+    if (!Img || !Img->Resource || !Img->Resource->TextureRHI)
+    {
+        UE_LOG(LogTemp, Warning, TEXT("Upload Texture is invalid"));
+        return;
+    }
+
+    FTexture2DRHIRef Texture2D = Img->Resource->TextureRHI->GetTexture2D();
+    if (!Texture2D)
+    {
+        UE_LOG(LogTemp, Warning, TEXT("Upload Texture2D is invalid"));
+        return;
+    }
+
+    TArray<FColor> OutPixels;
+    struct FReadSurfaceContext
+    {
+        FTexture2DRHIRef Texture;
+        TArray<FColor>* OutData;
+        FIntRect Rect;
+        FReadSurfaceDataFlags Flags;
+    };
+
+    FReadSurfaceContext ReadSurfaceContext =
+    {
+        Texture2D,
+        &OutPixels,
+        FIntRect(0, 0, Texture2D->GetSizeXY().X, Texture2D->GetSizeXY().Y),
+        FReadSurfaceDataFlags(RCM_UNorm, CubeFace_MAX)
+    };
+
+    FReadSurfaceContext Context = ReadSurfaceContext;
+    ENQUEUE_RENDER_COMMAND(ReadSurfaceCommand)(
+        [Context](FRHICommandListImmediate& RHICmdList)
+    {
+        RHICmdList.ReadSurfaceData(
+            Context.Texture,
+            Context.Rect,
+            *Context.OutData,
+            Context.Flags
+        );
+    });
+
+    FlushRenderingCommands();
+
+    FImageUtils::CompressImageArray(Context.Rect.Width(), Context.Rect.Height(), OutPixels, ImgData);
+}
+```
+
+
 
