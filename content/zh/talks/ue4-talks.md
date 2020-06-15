@@ -951,3 +951,19 @@ FlushRenderingCommands();
 
 
 ![image-20200611160956920](https://i.loli.net/2020/06/11/1ChrRqPeWZyKpoz.png)
+
+
+
+### 添加自定义Pass的方法
+
+1. 添加Shader
+
+了解了一个Pass要完成的工作，我们就可以动手实现一个自己的 Pass 了。首先要确定的问题是 Shader。既然要把同一个模型画两次，那必然要用到不同的Shader。关于如何在UE4中添加 Shader，可以参考 DepthPass 的 VS/PS(在DepthRendering.h中) 和 UE4 的官方文档：[https://docs.unrealengine.com/en-US/Programming/Rendering/ShaderDevelopment/index.html](https://link.zhihu.com/?target=https%3A//docs.unrealengine.com/en-US/Programming/Rendering/ShaderDevelopment/index.html)。MobileBasePass的Shader因为涉及环境光，点光源数等可开关的Defination，所以对应的 C++ 类是以 template 的形式实现的。一般来说自定义 Pass 的 Shader 会继承 FMaterialShader 并用 IMPLEMENT_MATERIAL_SHADER_TYPE 宏来绑定对应的 usf 文件。 可以完全自己写新的 usf 文件，也可以在 FMaterialShader::ModifyCompilationEnvironment() 中应用不同的 SetDefine() 来实现不同的 Shader。需要注意的是 UE4 的 Shader 编译是一个比较漫长的过程，所以最好在 FMaterialShader::ShouldCompilePremutation() 中对材质进行筛选，只编译必要的Shader。否则所有的 Material 都会编译对应的 Shader，效率很低。还有注意 Shader 要在构造函数中绑定需要的 Uniform Buffer，在 GetShaderBinding 中绑定对应的UniformBuffer，否则会出现 ResourceMiss。
+
+**2. 添加 MeshProcessor**
+
+根据对UE4的渲染流程分析我们可以看出，Pass 生成 DrawCall 的主要逻辑是在 MeshProcessor 中完成的。MeshProcessor 是 4.22 中新加入的类名，之前对应的是 DrawingPolicy。添加 MeshProcessor 很简单，只需要继承 FMeshPassProcessor 并复写其 AddMeshBatch() 方法即可。一般我们会在 AddMeshBatch 方法中获取 Material Resource 的信息并对 MeshBatch 做进一步筛选，最后调用 Process 方法绑定 Shader，Mesh 和 Material，计算 Mesh 的 CullMode，ZTest，Zwrite，BlendOP 和 SortKey等等并用 BuildMeshCommands 生成 DrawCall。
+
+**3. 添加 Pass**
+
+所有的 Pass 都可以在 Enum EMeshPass中找到，所以第一步就是在 MeshProcessor.h 的 EMeshPass 中添加对应的 Enum。然后我们要为 Pass 创建对应的 MeshProcessor，我们可以在对应 .cpp 文件中实现对应 MeshProcessor 的 Creator 方法，并定义对应的 FRegisterPassProcessorCreatFunction 在其构造函数中传入对应的 Creator 方法指针和 Pass Enum。这一部分可以参考 MobileBasePass.cpp 最后的 CreateMobileBasePassProcessor 和 RegisterMobileBasePass 部分。之后我们就要在 MobileSceneRenderer 的 Render 方法中插入自定义 Pass 的渲染流程，这一部分主要是一些 Profile 标签和 RHICmdList 的Setup 和 Flush，还有生成 Pass 的多线程 DrawTask。这一部分逻辑可以参考 MobileBasePassRendering.cpp 中的 RenderMobileBasePass 方法。
