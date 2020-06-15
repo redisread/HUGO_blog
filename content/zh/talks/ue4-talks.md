@@ -883,3 +883,33 @@ static bool ProjectWorldToScreen
 
 ![图片描述](https://i.loli.net/2020/05/30/XsihEuColdnvbVm.png)
 
+
+
+### 获取GBuffer的一种方式
+
+```c++
+ENQUEUE_UNIQUE_RENDER_COMMAND_ONEPARAMETER(
+DZRenderSutioBP_InterceptSceneBaseColor,
+UTexture2D*, vTextureAsset, TextureAsset,
+{
+/*if (!IsInRenderingThread())
+return;*/
+FRHICommandListImmediate& RHICmdList = GRHICommandList.GetImmediateCommandList();
+//计数加一避免Render完成后直接清空了GBuffer,但会慢一帧，你猜
+FSceneRenderTargets::Get(RHICmdList).AdjustGBufferRefCount(RHICmdList, 1);
+static const FString ScrollingMessage(TEXT("Hello World: "));
+GEngine->AddOnScreenDebugMessage(-1, 0.2f, FColor::Red, ScrollingMessage);
+FSceneRenderTargets& SceneContext = FSceneRenderTargets::Get(RHICmdList);
+if (SceneContext.GBufferA)
+{
+FTexture2DRHIRef vTextTarget = SceneContext.GetGBufferATexture();
+FString vSiceStr = FString::Printf(TEXT("FSceneRenderTargets GBufferA Size = %d*%d"), vTextTarget->GetSizeX(), vTextTarget->GetSizeY());
+
+GEngine->AddOnScreenDebugMessage(-1, 0.2f, FColor::Red, vSiceStr);
+}
+//移除
+FSceneRenderTargets::Get(RHICmdList).AdjustGBufferRefCount(RHICmdList, -1);
+}
+);
+```
+
