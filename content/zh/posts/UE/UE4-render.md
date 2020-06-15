@@ -138,15 +138,9 @@ class FRendererModule : public IRendererModule
 
 ### 实时渲染流程图：
 
-<img src="https://i.loli.net/2020/05/30/qU8vN2WZVbt9hkF.jpg" id=test style='visibility:hidden'><input type=button value=test onclick="test.style.visibility=test.style.visibility==''?'hidden':''">
+part1:https://i.loli.net/2020/05/30/qU8vN2WZVbt9hkF.jpg
 
-https://i.loli.net/2020/05/30/qU8vN2WZVbt9hkF.jpg
-
-2
-
-
-
-https://i.loli.net/2020/05/30/3trKVpOMU5sTQfB.jpg
+part2:https://i.loli.net/2020/05/30/3trKVpOMU5sTQfB.jpg
 
 
 
