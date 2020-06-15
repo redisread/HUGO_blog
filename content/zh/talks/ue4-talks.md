@@ -913,3 +913,41 @@ FSceneRenderTargets::Get(RHICmdList).AdjustGBufferRefCount(RHICmdList, -1);
 );
 ```
 
+[How to export FTexture2DRHIRef to png?](https://stackoverflow.com/questions/45239108/how-to-export-ftexture2drhiref-to-png)
+
+```c++
+class SceneDepthCapture
+{
+public:
+TArray<FLinearColor> sceneDepthData;
+FIntPoint bufferSize;
+ 
+void SceneDepthCaptureSync()
+{
+ENQUEUE_RENDER_COMMAND(ReadSurfaceFloatCommand)(
+[this](FRHICommandListImmediate& RHICmdList)
+{
+FSceneRenderTargets& context = FSceneRenderTargets::Get(RHICmdList);
+bufferSize = context.GetBufferSizeXY();
+FIntRect Rect(0, 0, bufferSize.X, bufferSize.Y);
+RHICmdList.ReadSurfaceData(
+context.GetSceneDepthTexture(),
+Rect,
+sceneDepthData,
+FReadSurfaceDataFlags());
+ 
+});
+FlushRenderingCommands();
+}
+};
+```
+
+### 使用模块的方式
+
+使用模块
+
+![image-20200609203344611](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200609203344611.png)
+
+
+
+![image-20200611160956920](https://i.loli.net/2020/06/11/1ChrRqPeWZyKpoz.png)
