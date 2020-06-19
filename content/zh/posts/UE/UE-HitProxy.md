@@ -31,8 +31,6 @@ categories:
 
 
 
-
-
 在UE4游戏模式使用HitProxy。
 
 <!--more-->
@@ -160,11 +158,23 @@ HHitProxy* FViewport ::GetHitProxy (int32 X ,int32 Y )；
 
 上面的代码只要打开编辑器模式就会自动生成`HitProxy`
 
+### 3. HitProxy的采集更新
+
+```c++
+EMouseCursor::Type FEditorViewportClient::GetCursor(FViewport* InViewport,int32 X,int32 Y)
+```
+
+GetCursor -> GetHitProxy -> GetHitProxyMap -> GetRawHitProxyData -> **Draw**
+
 
 
 ### 如何实现hitproxy？
 
 您需要从 UGameViewportClient 类继承
+
+```c++
+virtual bool RequiresHitProxyStorage() override { return true; }
+```
 
 
 
@@ -187,6 +197,10 @@ HHitProxy* FViewport ::GetHitProxy (int32 X ,int32 Y )；
 1. [How to select an actor in-game using GetHitProxy?](https://forums.unrealengine.com/development-discussion/c-gameplay-programming/37946-how-to-select-an-actor-in-game-using-gethitproxy)
 2. [UE4 编辑器的光标拾取](http://www.acros.me/c/unreal-engine-4-%e7%bc%96%e8%be%91%e5%99%a8%e7%9a%84%e5%85%89%e6%a0%87%e6%8b%be%e5%8f%96%ef%bc%88cursor-query%ef%bc%89%e5%8a%9f%e8%83%bd%e5%b0%8f%e8%ae%b0/)
 3. [编辑器Viewport窗口中的鼠标拾取原理](https://arenas0.com/2019/04/20/UE4_Learn_HitProxy/)
+4. [场景基本对象](https://blog.csdn.net/jiangdengc/article/details/59486288)
+5. [渲染总流程](https://blue2rgb.sydneyzh.com/ue4-deferred-shading-pipeline.html)
+6. https://docs.unrealengine.com/zh-CN/Programming/Rendering/MeshDrawingPipeline/index.html
+7. [Unreal Mesh Drawing源码分析](https://papalqi.cn/index.php/2019/11/10/unreal-mesh-drawing%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/)
 
 ---
 
@@ -203,4 +217,40 @@ HHitProxy* FViewport ::GetHitProxy (int32 X ,int32 Y )；
 缓存的路径构建并重用“FMeshBatch”，对于不改变每一帧（比如静态网格体）的绘制，它是快速渲染的首选路径。这是由“DrawStaticElements”实现的，当一个代理被添加到场景中时会调用此函数。创建的“FMeshBatches”存储在“FPrimitiveSceneInfo::StaticMeshes”中，并且每一帧都被重用，直到从场景中删除代理为止。
 
 动态路径每一帧重新创建“FMeshBatch”。这是最灵活的路径，用于在帧与帧之间经常会发生变化的绘制，例如粒子。它由“GetDynamicMeshElements”实现。该函数从InitViews中调用每一帧，并为每个视图创建一个临时的“FMeshBatch”。
+
+## 通道类型
+
+有三种方法来使用“FMeshPassProcessor”绘制：
+
+| 通道类型                  | 说明                                                         |
+| :------------------------ | :----------------------------------------------------------- |
+| **“EMeshPass::Type”枚举** | 在此处添加一个条目会在“FScene”中分配一个“FParallelMeshDrawCommandPass”。这使得“FScene”能够在“AddToScene”时间缓存通道的网格体绘制命令。“FMeshPassProcessor”必须使用“FRegisterPassProcessorCreateFunction”注册到它们的枚举中。通道设置和调度发生在任务中。 |
+| **手动通道**              | 使用手动通道，其中“FParallelMeshDrawCommandPass”作为变量存储在任意类中。当每个帧的通道数可变时（例如，阴影深度通道），就会使用这种方法。这种类型的通道不能在“FScene::AddToScene”时间缓存命令，但仍然可以获得在任务中设置和调度通道的好处。 |
+| **“DrawDynamicMeshPass”** | 这用于即时模式绘制，是最慢但最方便的方法。通道设置和调度立即在调用者线程中发生。 |
+
+
+
+
+
+`FPrimitiveSceneProxy` 生成 `FMeshBatch` 有两个途径：
+
+* Cache
+
+  其会调用 FPrimitiveSceneInfo::AddStaticMeshes，这里仅是 Static Mesh 的添加。而动态物体创建并不在这里
+
+  CacheMeshDrawCommands(RHICmdList);
+
+  对于 StaticMesh 来说就是 Cache 的方式, 在 Proxy 添加到场景时调用 DrawStaticElements
+
+  生成的 FMeshBatch 被保存在 FPrimitiveSceneInfo 的 StaticMeshes 中
+
+  每帧进行重用直到 Proxy 从场景中移除。
+
+  ![generated-191](https://i.loli.net/2020/06/19/Equ2ZkXQLib4hcx.png)
+
+
+
+* Dynamic
+
+![generated-192](C:\Users\Administrator\Desktop\generated-192.png)
 
