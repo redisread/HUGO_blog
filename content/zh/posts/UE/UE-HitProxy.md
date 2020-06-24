@@ -191,7 +191,7 @@ virtual bool RequiresHitProxyStorage() override { return true; }
 
 在`GetRawHitProxyData`函数中进行以下的修改：`Engine\Source\Runtime\Engine\Private\UnrealClient.cpp`
 
-![修改GetRawHitProxyData函数](https://i.loli.net/2020/06/22/q3ZTv9BWQb5lHf4.png)
+![修改](https://i.loli.net/2020/06/24/d5QIToUrGFPYv6g.png)
 
 
 
