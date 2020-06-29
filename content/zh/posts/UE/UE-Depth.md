@@ -47,8 +47,6 @@ categories:
 
 键入命令vis scenedepthz uv0以查看实际使用的深度缓冲区。UE4对场景使用“反向”深度缓冲区。
 
-![depth](https://i.loli.net/2020/06/15/qUrHxbSfJGmue76.png)
-
 
 
 ## Way1：直接使用ENQUEUE_RENDER_COMMAND命令获取(效率较低)
