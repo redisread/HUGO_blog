@@ -93,6 +93,10 @@ struct DepthPixel	//定义深度像素结构体
 最终返回的`mydata`数据就是最终的深度值数组，其中每个深度值的结构是`DepthPixel`，其中一个成员为`depth`，另外四个不不使用。其中使用上面的几个命令需要添加"`RHI.h`"头文件
 
 ## Way2：写个请求类读取
+UML图：
+![depth_UML](https://i.loli.net/2020/06/29/BrpD1iKkXm3P2Qn.png)
+流程图：
+![depth-flowchat](https://i.loli.net/2020/06/29/JRovQn1dOH9hL7I.png)
 
 ### 1. 首先在项目的build.cs文件添加：
 
