@@ -9,7 +9,7 @@ enableTocContent: false
 tocPosition: inner
 author: Victor
 authorEmoji: 👻
-image: https://i.loli.net/2020/05/29/yO1bzGwBSflsVYj.png
+image: https://i.loli.net/2020/06/15/ivEDkwYhIQ5xVn7.png
 libraries:
 - katex
 - mathjax
@@ -31,7 +31,9 @@ categories:
 
 
 
+探索UE4游戏线程的进入
 
+<!--more-->
 
 # 游戏线程 & 渲染线程
 
@@ -264,3 +266,5 @@ void EngineExit( void )
 ![image-20200603213738709](https://i.loli.net/2020/06/03/oJxdiA2URfC8rqH.png)
 
 也就是本文开始的那个`Tick`函数。
+
+

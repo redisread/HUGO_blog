@@ -112,6 +112,16 @@ categories:
 21. UE4 渲染流程
 
     https://blog.csdn.net/or_7r_ccl/article/details/81102771
+    
+22. [UE4]尝试使用自定义深度 fq
+
+    http://monsho.blog63.fc2.com/blog-entry-138.html#comment469
+
+23. [UE4]扩展GBuffer
+
+    http://monsho.blog63.fc2.com/blog-entry-191.html
+
+24. https://ue4study-osaka.connpass.com/event/120568/
 
 
 
@@ -873,3 +883,87 @@ static bool ProjectWorldToScreen
 
 ![图片描述](https://i.loli.net/2020/05/30/XsihEuColdnvbVm.png)
 
+
+
+### 获取GBuffer的一种方式
+
+```c++
+ENQUEUE_UNIQUE_RENDER_COMMAND_ONEPARAMETER(
+DZRenderSutioBP_InterceptSceneBaseColor,
+UTexture2D*, vTextureAsset, TextureAsset,
+{
+/*if (!IsInRenderingThread())
+return;*/
+FRHICommandListImmediate& RHICmdList = GRHICommandList.GetImmediateCommandList();
+//计数加一避免Render完成后直接清空了GBuffer,但会慢一帧，你猜
+FSceneRenderTargets::Get(RHICmdList).AdjustGBufferRefCount(RHICmdList, 1);
+static const FString ScrollingMessage(TEXT("Hello World: "));
+GEngine->AddOnScreenDebugMessage(-1, 0.2f, FColor::Red, ScrollingMessage);
+FSceneRenderTargets& SceneContext = FSceneRenderTargets::Get(RHICmdList);
+if (SceneContext.GBufferA)
+{
+FTexture2DRHIRef vTextTarget = SceneContext.GetGBufferATexture();
+FString vSiceStr = FString::Printf(TEXT("FSceneRenderTargets GBufferA Size = %d*%d"), vTextTarget->GetSizeX(), vTextTarget->GetSizeY());
+
+GEngine->AddOnScreenDebugMessage(-1, 0.2f, FColor::Red, vSiceStr);
+}
+//移除
+FSceneRenderTargets::Get(RHICmdList).AdjustGBufferRefCount(RHICmdList, -1);
+}
+);
+```
+
+[How to export FTexture2DRHIRef to png?](https://stackoverflow.com/questions/45239108/how-to-export-ftexture2drhiref-to-png)
+
+```c++
+class SceneDepthCapture
+{
+public:
+TArray<FLinearColor> sceneDepthData;
+FIntPoint bufferSize;
+ 
+void SceneDepthCaptureSync()
+{
+ENQUEUE_RENDER_COMMAND(ReadSurfaceFloatCommand)(
+[this](FRHICommandListImmediate& RHICmdList)
+{
+FSceneRenderTargets& context = FSceneRenderTargets::Get(RHICmdList);
+bufferSize = context.GetBufferSizeXY();
+FIntRect Rect(0, 0, bufferSize.X, bufferSize.Y);
+RHICmdList.ReadSurfaceData(
+context.GetSceneDepthTexture(),
+Rect,
+sceneDepthData,
+FReadSurfaceDataFlags());
+ 
+});
+FlushRenderingCommands();
+}
+};
+```
+
+### 使用模块的方式
+
+使用模块
+
+![image-20200609203344611](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200609203344611.png)
+
+
+
+![image-20200611160956920](https://i.loli.net/2020/06/11/1ChrRqPeWZyKpoz.png)
+
+
+
+### 添加自定义Pass的方法
+
+1. 添加Shader
+
+了解了一个Pass要完成的工作，我们就可以动手实现一个自己的 Pass 了。首先要确定的问题是 Shader。既然要把同一个模型画两次，那必然要用到不同的Shader。关于如何在UE4中添加 Shader，可以参考 DepthPass 的 VS/PS(在DepthRendering.h中) 和 UE4 的官方文档：[https://docs.unrealengine.com/en-US/Programming/Rendering/ShaderDevelopment/index.html](https://link.zhihu.com/?target=https%3A//docs.unrealengine.com/en-US/Programming/Rendering/ShaderDevelopment/index.html)。MobileBasePass的Shader因为涉及环境光，点光源数等可开关的Defination，所以对应的 C++ 类是以 template 的形式实现的。一般来说自定义 Pass 的 Shader 会继承 FMaterialShader 并用 IMPLEMENT_MATERIAL_SHADER_TYPE 宏来绑定对应的 usf 文件。 可以完全自己写新的 usf 文件，也可以在 FMaterialShader::ModifyCompilationEnvironment() 中应用不同的 SetDefine() 来实现不同的 Shader。需要注意的是 UE4 的 Shader 编译是一个比较漫长的过程，所以最好在 FMaterialShader::ShouldCompilePremutation() 中对材质进行筛选，只编译必要的Shader。否则所有的 Material 都会编译对应的 Shader，效率很低。还有注意 Shader 要在构造函数中绑定需要的 Uniform Buffer，在 GetShaderBinding 中绑定对应的UniformBuffer，否则会出现 ResourceMiss。
+
+**2. 添加 MeshProcessor**
+
+根据对UE4的渲染流程分析我们可以看出，Pass 生成 DrawCall 的主要逻辑是在 MeshProcessor 中完成的。MeshProcessor 是 4.22 中新加入的类名，之前对应的是 DrawingPolicy。添加 MeshProcessor 很简单，只需要继承 FMeshPassProcessor 并复写其 AddMeshBatch() 方法即可。一般我们会在 AddMeshBatch 方法中获取 Material Resource 的信息并对 MeshBatch 做进一步筛选，最后调用 Process 方法绑定 Shader，Mesh 和 Material，计算 Mesh 的 CullMode，ZTest，Zwrite，BlendOP 和 SortKey等等并用 BuildMeshCommands 生成 DrawCall。
+
+**3. 添加 Pass**
+
+所有的 Pass 都可以在 Enum EMeshPass中找到，所以第一步就是在 MeshProcessor.h 的 EMeshPass 中添加对应的 Enum。然后我们要为 Pass 创建对应的 MeshProcessor，我们可以在对应 .cpp 文件中实现对应 MeshProcessor 的 Creator 方法，并定义对应的 FRegisterPassProcessorCreatFunction 在其构造函数中传入对应的 Creator 方法指针和 Pass Enum。这一部分可以参考 MobileBasePass.cpp 最后的 CreateMobileBasePassProcessor 和 RegisterMobileBasePass 部分。之后我们就要在 MobileSceneRenderer 的 Render 方法中插入自定义 Pass 的渲染流程，这一部分主要是一些 Profile 标签和 RHICmdList 的Setup 和 Flush，还有生成 Pass 的多线程 DrawTask。这一部分逻辑可以参考 MobileBasePassRendering.cpp 中的 RenderMobileBasePass 方法。
