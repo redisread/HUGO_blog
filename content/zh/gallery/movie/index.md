@@ -33,6 +33,6 @@ images:
 
 
 
-between 40 and 240 in movies
+between 70 and 240 in movies
 
 good movies！:movie_camera:

@@ -595,9 +595,53 @@ Web应用防火墙（Web Application Firewall）对网站业务流量进行多�
 
 
 
+## 6. 解决方案
 
+全览
+
+![image-20200709231314627](https://i.loli.net/2020/07/09/4qoyJ623VTgsCDb.png)
+
+### 华为鲲鹏通用解决方案
+
+
+
+### 华为鲲鹏行业解决方案
+
+
+
+
+
+---
+
+## 性能调优分析工具
+
+
+
+![image-20200709231512750](https://i.loli.net/2020/07/09/KhiRwSAbOv1s6gf.png)
+
+
+
+Kunpeng Tuning Kit鲲鹏性能优化工具
+
+华为鲲鹏性能优化工具主要面向华为FAE、开放实验室能力建设工程师或客户工程师，针对应用程序部署在TaiShan服务器的场景下，通过收集服务器的处理器硬件、操作系统、进程/线程、函数等各层次的性能数据，分析出系统性能指标，定位到瓶颈点及热点函数。
+
+![image-20200709231738931](https://i.loli.net/2020/07/09/RAWBUkbm3n9MNde.png)
+
+
+
+
+
+
+
+## 高性能计算
+
+![image-20200709232229609](https://i.loli.net/2020/07/09/NlW9zhKrYytoCJZ.png)
+
+
+
+![image-20200709232258758](https://i.loli.net/2020/07/09/tkEsdWK4uORaeiM.png)
+
+---
 
 项目:个人同步网盘
-
-
 
