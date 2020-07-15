@@ -9,11 +9,7 @@ enableTocContent: false
 tocPosition: inner
 author: Victor
 authorEmoji: 👻
-<<<<<<< HEAD
-image:
-=======
 image: https://i.loli.net/2020/06/06/hgIundQceAL853x.png
->>>>>>> origin/master
 libraries:
 - katex
 - mathjax
