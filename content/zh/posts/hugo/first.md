@@ -143,7 +143,7 @@ jobs:
 
 然后，你就可以提交代码了，push成功后，打开仓库**actions**，至此部署成功，大功告成！
 
-
+![finish](https://i.loli.net/2020/07/25/BrGxitRSbFDlLko.png)
 
 
 

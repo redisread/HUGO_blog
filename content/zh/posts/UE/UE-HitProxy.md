@@ -4,7 +4,7 @@
 
 修改返回值为`true`,路径：`\Source\Runtime\Engine\Private\GameViewportClient.h`
 
-```c++
+```cpp
 virtual bool RequiresHitProxyStorage() override { return true; }
 ```
 
