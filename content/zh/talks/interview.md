@@ -50,7 +50,7 @@ categories:
 
 * 进程/线程 区别 （线程共享进程的什么资源）？
 
-  ![img](https://images2015.cnblogs.com/blog/1030344/201702/1030344-20170226222710585-1109874075.png)
+  ![1030344-20170226222710585-1109874075](https://i.loli.net/2020/07/28/gJ1leGd9tb3rf4u.png)
 
   https://blog.csdn.net/WangQYoho/article/details/52598859
 
@@ -105,11 +105,11 @@ categories:
 
 * 排序算法
 
-  ![img](https://images2015.cnblogs.com/blog/364303/201608/364303-20160815165252312-182869324.png)
+  ![364303-20160815165252312-182869324](https://i.loli.net/2020/07/28/TUqAaEnGj8PV4vu.png)
 
 * STL容器的特点
 
-  ![img](https://images2015.cnblogs.com/blog/364303/201608/364303-20160815190552968-787753341.png)
+  ![364303-20160815190552968-787753341](https://i.loli.net/2020/07/28/wbsEWAT1dZNytOQ.png)
 
 [分段和分页](https://blog.csdn.net/wangrunmin/article/details/7967293)
 
@@ -124,7 +124,7 @@ categories:
 
   系统调用 （[常见Linux及其分类表](http://www.cnblogs.com/LUO77/p/5823241.html)）
 
-  ![img](https://images2015.cnblogs.com/blog/822287/201511/822287-20151126210248843-125792590.png)
+  ![image-20200728155419044](https://i.loli.net/2020/07/28/5KBXNwWCgRyOImE.png)
 
   
 
