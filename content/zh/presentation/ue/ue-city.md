@@ -32,7 +32,7 @@ reveal:
       - | 
         Depth
         
-        ![depth](https://i.loli.net/2020/07/30/dro2DhWwRfys7IH.png)
+        ![depth](https://i.loli.net/2020/07/30/SaXTt3D1sUirdGP.png)
 
     - sub: 
       - | 
@@ -50,4 +50,17 @@ reveal:
         Result
         
         ![Result](https://i.loli.net/2020/07/30/zVTYFrKMO1RwmCg.png)
+  - main:
+    - sub: 
+      - |
+        总结与感想
+        
+        - 对游戏框架及渲染框架有了一定的了解
+        - 阅读源码的能力得到了提高
+        - 对游戏开发有了了解
+        - 团队开发，认识了一些朋友......
+    - sub: 
+      - |
+        # 谢谢大家
 ---
+
