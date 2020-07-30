@@ -30,13 +30,26 @@ reveal:
   - main:    
     - sub: 
       - | 
+        # 工作总结
+
+        吴嘉鸿
+    - sub: 
+      - | 
+        # 任务
+
+        1. 小组任务： 深度图获取 (小组成员：吴嘉鸿、杨翔宏)
+        2. 个人任务： HitProxy游戏模式框架建立
+
+  - main:    
+    - sub: 
+      - | 
         Depth
         
         ![depth](https://i.loli.net/2020/07/30/SaXTt3D1sUirdGP.png)
 
     - sub: 
       - | 
-        Result
+        Depth Result
         
         ![result](https://i.loli.net/2020/07/30/QFPvGpdKUZOMVea.png)
   - main:
@@ -47,7 +60,7 @@ reveal:
         ![Hitproxy](https://i.loli.net/2020/07/30/nc9KLEPkBw6oIh2.png)
     - sub: 
       - |
-        Result
+        Hitproxy Result
         
         ![Result](https://i.loli.net/2020/07/30/zVTYFrKMO1RwmCg.png)
   - main:
@@ -57,7 +70,7 @@ reveal:
         
         - 对游戏框架及渲染框架有了一定的了解
         - 阅读源码的能力得到了提高
-        - 对游戏开发有了了解
+        - 解决问题的能力得到了提高
         - 团队开发，认识了一些朋友......
     - sub: 
       - |
