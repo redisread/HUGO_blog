@@ -30,20 +30,24 @@ reveal:
   - main:    
     - sub: 
       - | 
-        Depth - 物体距离屏幕的位置
+        Depth
+        
         ![depth](https://i.loli.net/2020/07/30/dro2DhWwRfys7IH.png)
 
     - sub: 
       - | 
         Result
+        
         ![result](https://i.loli.net/2020/07/30/QFPvGpdKUZOMVea.png)
   - main:
     - sub: 
       - |
-        Hitproxy - 记录屏幕物体的id
+        Hitproxy
+        
         ![Hitproxy](https://i.loli.net/2020/07/30/nc9KLEPkBw6oIh2.png)
     - sub: 
       - |
-        # Result
+        Result
+        
         ![Result](https://i.loli.net/2020/07/30/zVTYFrKMO1RwmCg.png)
 ---
