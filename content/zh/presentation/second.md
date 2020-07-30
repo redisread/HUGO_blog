@@ -29,7 +29,7 @@ reveal:
     - sub: 
       - |
         test 2
-    - sub
+    - sub: 
       - |
-		![depth](https://imgkr.cn-bj.ufileos.com/63de2f15-5bf1-42ed-a71d-f87d264553d8.png)
+        ![depth](https://imgkr.cn-bj.ufileos.com/63de2f15-5bf1-42ed-a71d-f87d264553d8.png)
 ---
