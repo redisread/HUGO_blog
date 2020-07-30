@@ -9,7 +9,7 @@ series:
 -
 categories:
 -
-image: images/feature1/number-four.png
+image: https://i.loli.net/2020/07/30/nep2BX8v6tLqVUo.png
 plugins:	# 拓展库
 - highlight	# 代码高亮
 - zoom		# 滑动风格
@@ -30,20 +30,18 @@ reveal:
   - main:    
     - sub: 
       - | 
-        # Depth
-        物体距离屏幕的位置
-        ![depth](https://imgkr.cn-bj.ufileos.com/63de2f15-5bf1-42ed-a71d-f87d264553d8.png)
+        Depth - 物体距离屏幕的位置
+        ![depth](https://i.loli.net/2020/07/30/dro2DhWwRfys7IH.png)
 
     - sub: 
       - | 
-        # Result
+        Result
         ![result](https://i.loli.net/2020/07/30/QFPvGpdKUZOMVea.png)
   - main:
     - sub: 
       - |
-        # Hitproxy
-        记录屏幕物体的id
-        ![Hitproxy](https://i.loli.net/2020/07/30/PI24lbvLwAaMsZ9.png)
+        Hitproxy - 记录屏幕物体的id
+        ![Hitproxy](https://i.loli.net/2020/07/30/nc9KLEPkBw6oIh2.png)
     - sub: 
       - |
         # Result
