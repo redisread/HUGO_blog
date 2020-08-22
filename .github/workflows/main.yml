@@ -26,10 +26,10 @@ jobs:
           PUBLISH_BRANCH: master
           PUBLISH_DIR: ./public
       - name: Deploy_Huawei
-        uses: garygrossgarten/github-action-scp@release
+        uses: wlixcc/SFTP-Deploy-Action@v1.0
         with:
-          local: ./public
-          remote: /usr/local/nginx/html/hugo_blog
-          host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
-          privateKey: ${{ secrets.HUGO_DEPLOY_KEY }}
+          server: ${{ secrets.SSH_HOST }}
+          ssh_private_key: ${{ secrets.HUGO_DEPLOY_KEY }}
+          local_path: ./public
+          remote_path: /usr/local/nginx/html/hugo_blog #服务器部署路径
