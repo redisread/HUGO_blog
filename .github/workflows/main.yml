@@ -29,7 +29,7 @@ jobs:
         uses: wlixcc/SFTP-Deploy-Action@v1.0
         with:
           username: 'root'
-          server: ' 114.116.242.58'
+          server: '114.116.242.58'
           ssh_private_key: ${{ secrets.HUGO_DEPLOY_KEY }} 
           local_path: ./public  # 对应我们项目build的文件夹路径
           remote_path: '/usr/local/nginx/html/hugo_blog'
