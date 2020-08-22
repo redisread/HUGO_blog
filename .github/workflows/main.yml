@@ -31,5 +31,5 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           server: ${{ secrets.SSH_HOST }}
           ssh_private_key: ${{ secrets.HUGO_DEPLOY_KEY }}
-          local_path: ./public  # 对应我们项目build的文件夹路径
+          local_path: ./public  # 对应我们项目build的文件夹路
           remote_path: '/usr/local/nginx/html/hugo_blog'
