@@ -32,4 +32,4 @@ jobs:
           server: ${{ secrets.SSH_HOST }}
           ssh_private_key: ${{ secrets.HUGO_DEPLOY_KEY }}
           local_path: ./public
-          remote_path: /usr/local/nginx/html/hugo_blog #服务器部署路径
+          remote_path: /usr/local/nginx/html/hugo_blog #服务器部署路
