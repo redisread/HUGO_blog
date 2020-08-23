@@ -25,11 +25,11 @@ jobs:
           EXTERNAL_REPOSITORY: redisread/redisread.github.io
           PUBLISH_BRANCH: master
           PUBLISH_DIR: ./public
-      - name: Deploy_Huawei
-        uses: wlixcc/SFTP-Deploy-Action@v1.0
-        with:
-          username: ${{ secrets.SSH_USERNAME }}
-          server: ${{ secrets.SSH_HOST }}
-          ssh_private_key: ${{ secrets.HUGO_DEPLOY_KEY }}
-          local_path: ./public
-          remote_path: /usr/local/nginx/html/hugo_blog #服务器部署路
+      # - name: Deploy_Huawei
+      #   uses: wlixcc/SFTP-Deploy-Action@v1.0
+      #   with:
+      #     username: ${{ secrets.SSH_USERNAME }}
+      #     server: ${{ secrets.SSH_HOST }}
+      #     ssh_private_key: ${{ secrets.HUGO_DEPLOY_KEY }}
+      #     local_path: ./public
+      #     remote_path: /usr/local/nginx/html/hugo_blog #服务器部署路
