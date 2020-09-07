@@ -26,6 +26,15 @@ jobs:
           PUBLISH_BRANCH: master
           PUBLISH_DIR: ./public
       # - name: Deploy_Huawei
+      #   env:
+      #     ACTIONS_DEPLOY_KEY: ${{ secrets.HUGO_DEPLOY_KEY }}
+      #     HOST: ${{ secrets.SSH_HOST }}
+      #     USER: ${{ secrets.SSH_USERNAME }}
+      #   run: |
+      #     cd /root/github/HUGO_blog
+      #     git pull
+      #     hugo -D
+      # - name: Deploy_Huawei
       #   uses: wlixcc/SFTP-Deploy-Action@v1.0
       #   with:
       #     username: ${{ secrets.SSH_USERNAME }}
