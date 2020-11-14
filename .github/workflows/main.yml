@@ -20,7 +20,7 @@ jobs:
         run: hugo -D
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v2.5.1
-        run:
+        with:
           echo "${{ secrets.ACTIONS_DEPLOY_KEY }}" >> $ACTIONS_DEPLOY_KEY
           echo "redisread/redisread.github.io" >> $EXTERNAL_REPOSITORY
           echo "master" >> $PUBLISH_BRANCH
