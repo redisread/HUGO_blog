@@ -22,7 +22,7 @@ header:
     imageSize: cover # auto|length|cover|contain|initial|inherit
     imageRepeat: no-repeat # repeat|repeat-x|repeat-y|no-repeat|initial|inherit
     imagePosition: center # x% y%| xpos ypos| left top| center bottom| ...
-    height: 235
+    height: 200
     paddingX: 50
     paddingY: 0
     align: center
