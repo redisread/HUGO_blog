@@ -1,4 +1,4 @@
-baseURL = "http://hugo.jiahongw.com"
+baseURL = ""
 theme = "zzo"
 
 # `hugo new` 新建文章自动打开的文本编辑器
