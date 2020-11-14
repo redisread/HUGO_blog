@@ -25,6 +25,7 @@ jobs:
           echo "redisread/redisread.github.io" >> $EXTERNAL_REPOSITORY
           echo "master" >> $PUBLISH_BRANCH
           echo "./public" >> $PUBLISH_DIR
+          
         # env:
         #   ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         #   EXTERNAL_REPOSITORY: redisread/redisread.github.io
