@@ -13,7 +13,7 @@ header:
     name: Jiahong Wu
     email: 1427298682@qq.com
     phone: +86 17318062050
-    website: https://victor.vhope.cf
+    website: hugo.jiahongw.com
     addr: ShenZhen China
     data: test
 items:

@@ -9,4 +9,4 @@ Disallow: /css/
 Disallow: /fonts/
 Disallow: /gallery/
 
-Sitemap: http://vhope.cf/sitemap.xml
+Sitemap: http://hugo.jiahongw.com/sitemap.xml
