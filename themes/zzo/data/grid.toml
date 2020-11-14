@@ -1,4 +1,4 @@
-grid_max_width = "1000"
+grid_max_width = "1024"
 grid_max_unit = "px" #  "px", "\"%\""  Using% is limited to using full width.
 grid_main_main_width = "5"
 grid_main_main_unit = "fr" # "fr", "px"
