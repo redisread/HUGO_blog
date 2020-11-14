@@ -6,7 +6,7 @@ header:
     paddingY: 0
     align: center
     title:
-      - Victor
+      - Victor Hong
     subtitle:
       - A man insist working!
     titleColor:
