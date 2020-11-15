@@ -66,9 +66,3 @@
   name = "📧contact"
   url = "contact"
   weight = 9
-
-[[main]]
-  identifier = "publication"
-  name = "🎡pub"
-  url = "publication"
-  weight = 10
