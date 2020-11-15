@@ -6,7 +6,7 @@ draft: false
 hideToc: false
 enableToc: true
 enableTocContent: true
-tocPosition: inner
+#tocPosition: outer
 author: Victor
 authorEmoji: 👻
 image: https://my.freenom.com/templates/freenom/img/logo.png

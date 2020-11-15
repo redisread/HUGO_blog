@@ -6,7 +6,7 @@ draft: false
 hideToc: false
 enableToc: true
 enableTocContent: true
-tocPosition: inner
+#tocPosition: outer
 tags:
 - PicGo
 - Github

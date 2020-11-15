@@ -6,7 +6,7 @@ draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
-tocPosition: inner
+#tocPosition: outer
 author: Victor
 authorEmoji: 👻
 image: https://gitee.com/wujiahong1998/MyBed/raw/master/img/Redis.png

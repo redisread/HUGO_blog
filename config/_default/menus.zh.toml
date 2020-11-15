@@ -57,7 +57,7 @@
 
 [[main]]
   identifier = "showcase"
-  name = "🔗Showcase"
+  name = "🔗Show"
   url = "showcase"
   weight = 8
 
@@ -66,3 +66,9 @@
   name = "📧contact"
   url = "contact"
   weight = 9
+
+[[main]]
+  identifier = "publication"
+  name = "🎡pub"
+  url = "publication"
+  weight = 10

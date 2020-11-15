@@ -1,12 +1,12 @@
 ---
-title: "数据结构(1)"
+title: "哈希表"
 date: 2020-08-16T13:17:07+08:00
-description:
+description: 哈希表（Hash table，也叫散列表），是根据关键码值(Key value)而直接进行访问的数据结构。也就是说，它通过把关键码值映射到表中一个位置来访问记录，以加快查找的速度。这个映射函数叫做散列函数，存放记录的数组叫做散列表。
 draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
-tocPosition: inner
+#tocPosition: outer
 author: Victor
 authorEmoji: 👻
 image: https://i.loli.net/2020/08/16/upZ29IGvKP3nqas.png
@@ -21,8 +21,6 @@ series:
 categories:
 -
 ---
-
-
 
 
 

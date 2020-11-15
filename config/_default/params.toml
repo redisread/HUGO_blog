@@ -1,6 +1,6 @@
-logoText = "WJH"
+logoText = "VictorHong"
 logoType = "short" # long, short
-description = "The Zzo theme for Hugo example site."
+description = "The VictorHong`s Blog for Hugo example site."
 custom_css = []
 custom_js = ["js/custom.js"]
 useFaviconGenerator = true # https://www.favicon-generator.org/
@@ -36,9 +36,9 @@ talksGroupByDate = "2006"
 pubPaginate = 20
 
 # whoami
-myname = "redisread"
+myname = "VictorHong"
 email = "1427298682@qq.com"
-whoami = "Full Stack"
+whoami = "📚Learner🤓Nerd🌐Developer"
 bioImageUrl = ""
 useGravatar = false
 location = "ShenZhen, China"
@@ -48,7 +48,7 @@ link = "https://github.com/redisread/HUGO_blog"
 # sidebar
 enableBio = true
 enableSidebar = true
-enableSidebarTags = true
+enableSidebarTags = false
 enableSidebarSeries = true
 enableSidebarCategories = true
 enableHomeSidebarTitles = true
@@ -56,13 +56,13 @@ enableListSidebarTitles = true
 enableToc = true
 hideToc = false
 tocFolding = true
-tocPosition = "inner" # inner, outer
+tocPosition = "outer" # inner, outer
 enableTocSwitch = true
 itemsPerCategory = 5
 sidebarPosition = "right"
 
 # footer
-showPoweredBy = true
+showPoweredBy = false
 showFeedLinks = true
 showSocialLinks = true
 enableLangChange = true
