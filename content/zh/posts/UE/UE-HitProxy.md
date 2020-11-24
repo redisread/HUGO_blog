@@ -1,4 +1,30 @@
-## UE编辑器下模拟使用HitProxy
+---
+title: "UE编辑器下模拟使用HitProxy"
+date: 2020-06-15T9:43:11+08:00
+description:
+draft: false
+hideToc: false
+enableToc: true
+enableTocContent: false
+#tocPosition: inner
+author: Victor
+authorEmoji: 👻
+image: https://i.loli.net/2020/06/15/ivEDkwYhIQ5xVn7.png
+libraries:
+- katex
+- mathjax
+tags:
+- C++
+- UE4
+- Game
+series:
+- Game
+categories:
+-
+
+---
+
+
 
 ### 需要从 UGameViewportClient 类继承
 

@@ -6,7 +6,7 @@ draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
-tocPosition: outer
+# tocPosition: inner
 author: Victor
 authorEmoji: 👻
 image: https://i.loli.net/2020/11/19/8cI4fYPsMKDmEnq.png

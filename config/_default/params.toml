@@ -56,7 +56,7 @@ enableListSidebarTitles = true
 enableToc = true
 hideToc = false
 tocFolding = true
-tocPosition = "outer" # inner, outer
+tocPosition = "inner" # inner, outer
 enableTocSwitch = true
 itemsPerCategory = 5
 sidebarPosition = "right"
@@ -106,7 +106,7 @@ commento = false
   notify = true  # mail notifier , https://github.com/xCss/Valine/wiki
   verify = false # Verification code
   avatar = 'robohash' 
-  placeholder = '说点什么吧...'
+  placeholder = 'Say something...'
   visitor = true
 
 [changyan]

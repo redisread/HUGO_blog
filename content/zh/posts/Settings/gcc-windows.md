@@ -6,7 +6,7 @@ draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
-#tocPosition: outer
+#tocPosition: inner
 author: Victor
 authorEmoji: 👻
 image: http://gcc.gnu.org/img/gccegg-65.png

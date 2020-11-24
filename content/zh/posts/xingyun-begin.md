@@ -6,10 +6,10 @@ draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
-#tocPosition: outer
+#tocPosition: inner
 author: Victor
 authorEmoji: 👻
-image: http://mart.cloudtogo.cn/assets/img/logo.svg
+image: https://i.loli.net/2020/11/22/HNSOjDBp4aETeIZ.png
 libraries:
 - katex
 - mathjax
@@ -17,12 +17,12 @@ tags:
 - 云计算
 - 行云趣码
 series:
--
+- 云计算
 categories:
 -
 ---
 
-outer
+
 
 简单地说，云计算就是计算服务的提供（包括服务器、存储、数据库、网络、软件、分析和智能）- 通过 Internet（云）提供快速创新、弹性资源和规模经济。对于云服务，通常你只需使用多少支付多少，从而帮助降低运营成本，使基础设施更有效地运行，并能根据业务需求的变化调整对服务的使用。
 

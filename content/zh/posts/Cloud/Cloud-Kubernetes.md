@@ -6,7 +6,7 @@ draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
-#tocPosition: outer
+#tocPosition: inner
 author: Victor
 authorEmoji: 👻
 image:  https://gitee.com/wujiahong1998/MyBed/raw/master/kunpeng/京东云.png
