@@ -27,3 +27,9 @@ time=$(date "+%Y-%m-%dT%H:%M:%S+08:00")
 cmd="sed -i 's/${time_key}/${time}/' "$dst
 echo $cmd
 eval $cmd
+
+cmd="cd ./content/zh/posts/"$mydir
+$cmd
+cmd="explorer.exe "$myname".md"
+echo $cmd
+eval $cmd
