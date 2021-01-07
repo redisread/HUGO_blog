@@ -6,10 +6,10 @@ draft: true
 hideToc: false
 enableToc: true
 enableTocContent: false
-tocPosition: outer
+tocPosition: inner
 author: Victor
 authorEmoji: 👻
-image:
+image: https://i.loli.net/2021/01/07/p8frJDq2YzFPIbu.png
 libraries:
 - katex
 - mathjax
@@ -20,8 +20,6 @@ series:
 categories:
 -
 ---
-
-
 
 
 
