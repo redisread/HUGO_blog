@@ -2,7 +2,7 @@
 title: AddressSanitizer Tool
 date: 2021-01-07T10:09:40+08:00
 description: A Fast Address Sanity Checker
-draft: true
+draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
