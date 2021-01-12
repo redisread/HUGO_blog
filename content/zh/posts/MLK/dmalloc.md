@@ -2,7 +2,7 @@
 title: dmalloc
 date: 2021-01-12T15:27:57+08:00
 description: Debug Malloc Library是一种用于检查C/C++内存泄露(leak)的工具，即检查是否存在直到程序运行结束还没有释放的内存，并且能够精确指出在哪个源文件的第几行。
-draft: false
+draft: true
 hideToc: false
 enableToc: true
 enableTocContent: false
