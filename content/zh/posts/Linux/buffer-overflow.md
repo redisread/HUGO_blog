@@ -9,7 +9,7 @@ enableTocContent: false
 tocPosition: outer
 author: Victor
 authorEmoji: 👻
-image:
+image: https://i.loli.net/2021/01/22/s1NDYkTmtRpvFjr.jpg
 libraries:
 - katex
 - mathjax
@@ -20,12 +20,6 @@ series:
 categories:
 - 
 ---
-
-
-
-
-
-
 
 
 
@@ -93,8 +87,18 @@ void fun(unsigned char *data)
 
 通过计算返回地址内存区域相对于buffer的偏移，并在对应位置构造新的地址指向buffer内部二进制代码的其实位置，便能执行用户的自定义代码！这段既是代码又是数据的二进制数据被称为shellcode，因为攻击者希望通过这段代码打开系统的shell，以执行任意的操作系统命令——比如下载病毒，安装木马，开放端口，格式化磁盘等恶意操作。
 
+
+
+
+
+more：
+
+![linux-memory.png](https://i.loli.net/2021/01/22/keu8qC5BwIbXNML.png)
+
 ---
 
 参考链接：
 
 1. [https://www.cnblogs.com/fanzhidongyzby/p/3250405.html](https://www.cnblogs.com/fanzhidongyzby/p/3250405.html)
+2. [函数栈的实现原理](https://segmentfault.com/a/1190000017151354)
+3. https://xz.aliyun.com/t/5964

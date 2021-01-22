@@ -9,12 +9,12 @@ enableTocContent: false
 tocPosition: outer
 author: Victor
 authorEmoji: 👻
-image:
+image: https://i.loli.net/2021/01/22/GUJ5qKE16unSr7h.png
 libraries:
 - katex
 - mathjax
 tags:
--
+- Linux
 series:
 -
 categories:
