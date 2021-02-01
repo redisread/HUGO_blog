@@ -139,7 +139,7 @@ LD_PRELOAD=/mnt/MLK/Tools/DieHard/src/libdiehard.so app app_args
 
 对堆的未初始化读取仍然未定义。与Java不同，新分配的C和C对象的内容不一定被定义。
 
-### 系统
+### 实际构建的系统
 
 #### 近似无限堆
 
@@ -161,7 +161,7 @@ $$
 
 DieHard的随机内存管理器**将对象随机放置在一个堆中，堆的大小是所需最大值的几倍**。例如下图：
 
-![image-20210121093950424](DieHard.assets/image-20210121093950424.png)
+![单独](https://i.loli.net/2021/02/01/W8Tyg1VlKwPt4aj.png)
 
 对象之间的间隔使得缓冲区溢出最终可能只覆盖空闲无用的空间
 
@@ -171,19 +171,7 @@ DieHard的随机内存管理器**将对象随机放置在一个堆中，堆的�
 
 对于复制版本：
 
-![image-20210121100401262](DieHard.assets/image-20210121100401262.png)
-
-##### 初始化 (Initialization)
-
-##### 对象分配(Object Allocation)
-
-##### 对象释放(Object Deallocation)
-
-#### DieHard
-
-提供概率内存安全的运行时系统。
-
-
+![复制](https://i.loli.net/2021/02/01/vDQHsOBGLJVrWfK.png)
 
 #### 模式
 
@@ -219,3 +207,10 @@ DieHard拦截来自所有不同副本的输出，并在发送任何输出之前�
 3. 内存消耗大。
 4. 复制模式需要多处理器并行。
 5. 这种随机分配使得计算机无法根据空间局部性推断，系统中的TLB往往失效。为了保持性能，Die Hard堆的使用中部分应该适合物理RAM。
+
+---
+
+参考：
+
+1. https://securitygossip.com/blog/2018/09/29/guarder-a-tunable-secure-allocator/
+2. https://firmianay.gitbooks.io/ctf-all-in-one/content/doc/8.46_freeguard.html

@@ -174,11 +174,160 @@ AMD64/MacOSX  +--------------+        |         -----------------|              
 
 Valgrind Core会反汇编应用程序代码，并将代码片段传递给工具插件以进行检测。工具插件会添加分析代码并将其重新组合。因此，Valgrind提供了在Valgrind框架之上编写我们自己的工具的灵活性。 Valgrind使用影子寄存器和影子存储器来检测读/写指令，读/写系统调用，堆栈和堆分配。
 
-algrind提供了围绕系统调用的包装，并为每个系统调用的前后回调注册，以跟踪作为系统调用一部分访问的内存。因此，Valgrind是Linux操作系统和客户端应用程序之间的OS抽象层。
+valgrind提供了围绕系统调用的包装，并为每个系统调用的前后回调注册，以跟踪作为系统调用一部分访问的内存。因此，Valgrind是Linux操作系统和客户端应用程序之间的OS抽象层。
 
 该图说明了Valgrind的8个阶段：
 
 ![8 phases of Valgrind](https://i.loli.net/2021/01/22/ga6d5xoJpjw2lyk.jpg)
+
+
+
+### 阴影值
+
+Valgrind 把重点放在 shadow values 这概念上， shadow values 是很强大但相关的研究较少、较难实作的 DBA 技术， 在这概念下需要对所有的 register 和 memory 做 shadow (自己维护一份)， 也因为这 feature 让 Valgrind 做出来的 lightweight 工具跑的相对慢，但是 Valgrind 可以做出更多更有趣、更重量级的工具， 这是其他 frameworks 很难做到的 (例如 Pin 或 DynamoRIO)。
+
+shadow value tools 会维护一份程式的状态， 把原本的程式状态称为 S， 那就会存一份 S’ 里面包含 S 的所有值 (例如 register 和 user-mode address)， 而 shadow values 有九种需求要满足， 九种需求可以依照特性分成四类 (Shadow State、读写操作、Allocation/Deallocation、增加辅助资讯)：
+
+> 阴影值简单来说说就是：在软件中或者寄存器中用另外一个映射值来说明一些内容
+
+阴影值的各个工具的应用
+
+1. memcheck使用阴影值跟踪哪个bit的值是未定义的。
+2. TaintCheck跟踪哪些字节被污染(不受信任的源，或来自受污染的值).
+3. McCamant and Ernst’s secret-tracking tool跟踪每一个秘密bit的值，并且确定公共的输出中暴露了多少秘密的信息。
+4. Hobbes跟踪每一个值得类型，因此可以检测后续操作不适合该类型的值。
+5. DynCompB类似地，为程序理解和不变检测目的确定字节值的抽象类型。
+6. Annelid跟踪是数组指针的word，可以检测越界错误。
+7. Redux创建了一个动态数据流图，是程序的整个计算的可视化，从图中可以看到所有有助于每个值创建的先前操作。
+
+可以是：
+
+- 每bit一个shadow bit
+- 每byte一个shadow byte
+- 每word一个shadow word
+
+
+
+1. 描述阴影值工具
+2. 如何在DBI框架中支持阴影值
+3. DBI框架并不完全相同
+
+
+
+为了实现shadow values需要框架实现以下4个部分：
+
+- Shadow State
+- 读写操作
+- 分配和释放操作
+- 透明执行+额外的输出
+
+9个功能
+
+- instrument read/write instructions
+- instrument read/write system calls
+- Allocation and deallocation operations
+- instrument start-up allocations
+- instrument system call (de)allocations
+- instrument stack (de)allocations
+- instrument heap (de)allocations
+- Transparent execution, but with extra output
+- extra output
+
+具体来说就是：
+
+- Shadow State
+
+  - R1：提供阴影寄存器(例如 integer、FP、SIMD)。
+  - R2：提供阴影内存(并且需要在 multithread 下可以安全地存取 shadow memory)。
+
+- 读写操作
+
+  - R3：插桩读写指令。
+
+    1. 需要知道每個 instruction 存取了哪些 memory 和 registers
+    2. 最好能做到跨平台 (跨 ISA)
+
+  - R4：插桩系统读写调用。
+
+    所有的 system call 都会去存取 register 或 memory，还可能从 register 或 stack 读参数，最后写回 register 或 memory，而且还要注意许多 system call 会存取 user-mode 的 memory (pointer)
+
+- 分配和释放操作
+
+  - R5：插桩启动时的分配操作。
+    1. 在程序开始执行时，所有 register 都會被 “allocated”，因為是 statically allocated memory locations，所以 shadow value tool 必須也這些做好 (create suitable 会hadow values)
+    2. 对于此时还没 allocated 的也要处理，可能在 allocated 之前发生不当的存取
+  - R6：插桩系统调用的分配和释放。
+    1. 一些 system call 会 allocate memory (e.g. brk, mmap)，一些会 deallocate memory (e.g. munmap)
+    2. mremap 會让memory 被 copy，shadow memory 也要 copy 好
+  - R7：插桩栈的分配和释放。
+    1. 更新 stack pointer
+    2. 这部份会比较耗时，因为 stack pointer 时常变动，而且有些程式会在多个 stack 之间切换，shadow value tool 会需要把这些 stack allocations 或 deallocations 区分出来，这对于 binary level 来说不容易
+  - R8：插桩堆的分配和释放.
+    1. 大部分的程式会利用来自 library 的 heap allocator，heap allocator 会把用 system call (brk、mmap) 取得的 large chuncks 中的一块 heap blocks 传回去给 client，每段 heap block 都有 book-keeping data (例如 block size)，这些是 client program 不应该存取的 (读可能还安全，写的话可能会 crash allocator)，所以有 kernel-level addressability 之上盖了一层 library-level addressability 的概念
+    2. 忽略 large chuncks 的 kernel-level allocations
+    3. 直到 allocator 把 allocated 的 bytes 转交给 client 之前都不把 memory 当作 active
+    4. realloc 也要像 mremap 一样被处理
+
+- 透明执行+额外的输出
+
+  - R9：额外的输出。
+    1. 不影响执行，产生有帮助的 output
+    2. 另外开个地方來 output，例如沒在用的 stderr 或 file
+
+核心思想就是要把寄存器和内存中的东西自己维护一份，并且在任何情况下都可以安全正确地使用，同时记录程序的所有操作，在不影响程序执行结果前提下，输出有用的信息。使用shadow values技术的DBI框架都使用不同方式实现了上述全部功能或部分功能。
+
+
+
+阴影值要求_9个要求
+
+程序执行有三个特性与影子值工具相关：
+
+1. 程序维持时期
+2. 程序执行读或写操作
+3. 程序执行分配或释放内存操作
+
+
+
+
+
+> 阴影状态：一个阴影状态S’包括每一个值对应的阴影值S。
+
+- 
+
+- 
+- 
+- 
+
+
+
+阴影值的支持
+
+阴影寄存器是一流的实体：
+
+- 在线程状态下为它们提供空间
+- 它们可以像来宿主寄存器一样容易地访问
+- 他们可以用同样的方式操纵和操作
+
+其次，IR提供了不受限制的临时资源，可以在其中操纵来宾寄存器，影子寄存器和中间值。这对于易用性非常重要，因为
+影子操作会引入许多额外的中间值。
+
+第三，IR的RISC-ness公开了所有隐式中间值，例如由复杂寻址模式计算的中间值，这可以使测试变得更容易，特别是在像x86这样的CISC体系结构上
+
+四，所有代码一视同仁。 阴影操作充分适合Valgrind的后仪器IR优化器和指令选择器。 
+
+
+
+提供阴影内存
+
+Valgrind不提供阴影内存的公开支持，例如内置的数据结构，阴影内存从工具到工具的变化足够大。
+
+
+
+事件系统
+
+![image-20210201143321958](Valgrind.assets/image-20210201143321958.png)
+
+Valgrind为每个系统调用提供一个包装器，它根据需要调用这些回调。 每个系统调用都有不同的参数，因此有不同的包装器。
 
 
 
@@ -212,26 +361,9 @@ algrind提供了围绕系统调用的包装，并为每个系统调用的前后�
 
 ### 组件
 
-Valgrind的重点是shadow values技术，该技术要求对所有的寄存器和使用到的内存做shadow（自己维护一份）。因此使用valgrind开发出来的工具一般跑的都比较慢。为了实现shadow values需要框架实现以下4个部分：
 
-- Shadow State
-- 提供 shadow registers (例如 integer、FP、SIMD)
-- 提供 shadow memory
-- 读写操作
 
-9个具体功能:
 
-- instrument read/write instructions
-- instrument read/write system calls
-- Allocation and deallocation operations
-- instrument start-up allocations
-- instrument system call (de)allocations
-- instrument stack (de)allocations
-- instrument heap (de)allocations
-- Transparent execution, but with extra output
-- extra output
-
-核心思想就是要把寄存器和内存中的东西自己维护一份，并且在任何情况下都可以安全正确地使用，同时记录程序的所有操作，在不影响程序执行结果前提下，输出有用的信息。使用shadow values技术的DBI框架都使用不同方式实现了上述全部功能或部分功能。
 
 valgrind结构上分为core和tool，不同的tool具有不同的功能。比较特别的是，valgrind tool都包含core的静态链接，虽然有点浪费空间，但可以简化某些事情。当我们在调用valgrind时，实际上启动的只是一个解析命令参数的启动器，由这个启动器启动具体的tool。
 
@@ -286,3 +418,6 @@ DBI framework 有两种基本的方式可以表示code和进行 instrumentation�
 5. [valgrind如何工作？](https://www.codenong.com/1656227/)
 6. http://awhite2008.blog.sohu.com/164824340.html
 7. https://wdv4758h-notes.readthedocs.io/zh_TW/latest/valgrind/dynamic-binary-instrumentation.html
+
+
+
