@@ -188,7 +188,7 @@ Valgrind 把重点放在 shadow values 这概念上， shadow values 是很强�
 
 shadow value tools 会维护一份程式的状态， 把原本的程式状态称为 S， 那就会存一份 S’ 里面包含 S 的所有值 (例如 register 和 user-mode address)， 而 shadow values 有九种需求要满足， 九种需求可以依照特性分成四类 (Shadow State、读写操作、Allocation/Deallocation、增加辅助资讯)：
 
-> 阴影值简单来说说就是：在软件中或者寄存器中用另外一个映射值来说明一些内容
+> 阴影值简单来说就是：在软件中或者寄存器中用另外一个映射值来说明一些内容
 
 阴影值的各个工具的应用
 
@@ -276,50 +276,21 @@ shadow value tools 会维护一份程式的状态， 把原本的程式状态称
 
 核心思想就是要把寄存器和内存中的东西自己维护一份，并且在任何情况下都可以安全正确地使用，同时记录程序的所有操作，在不影响程序执行结果前提下，输出有用的信息。使用shadow values技术的DBI框架都使用不同方式实现了上述全部功能或部分功能。
 
-
-
-阴影值要求_9个要求
-
-程序执行有三个特性与影子值工具相关：
-
-1. 程序维持时期
-2. 程序执行读或写操作
-3. 程序执行分配或释放内存操作
-
-
-
-
-
 > 阴影状态：一个阴影状态S’包括每一个值对应的阴影值S。
 
-- 
+**阴影值的支持**
 
-- 
-- 
-- 
+1. 阴影寄存器是一流的实体：
+   - 在线程状态下为它们提供空间
+   - 它们可以像来宿主寄存器一样容易地访问
+   - 他们可以用同样的方式操纵和操作
 
+2. 其次，IR提供了不受限制的临时资源，可以在其中操纵来宾寄存器，影子寄存器和中间值。这对于易用性非常重要，因为
+   影子操作会引入许多额外的中间值。
+3. 第三，IR的RISC-ness公开了所有隐式中间值，例如由复杂寻址模式计算的中间值，这可以使测试变得更容易，特别是在像x86这样的CISC体系结构上
+4. 第四，所有代码一视同仁。 阴影操作充分适合Valgrind的后仪器IR优化器和指令选择器。 
 
-
-阴影值的支持
-
-阴影寄存器是一流的实体：
-
-- 在线程状态下为它们提供空间
-- 它们可以像来宿主寄存器一样容易地访问
-- 他们可以用同样的方式操纵和操作
-
-其次，IR提供了不受限制的临时资源，可以在其中操纵来宾寄存器，影子寄存器和中间值。这对于易用性非常重要，因为
-影子操作会引入许多额外的中间值。
-
-第三，IR的RISC-ness公开了所有隐式中间值，例如由复杂寻址模式计算的中间值，这可以使测试变得更容易，特别是在像x86这样的CISC体系结构上
-
-四，所有代码一视同仁。 阴影操作充分适合Valgrind的后仪器IR优化器和指令选择器。 
-
-
-
-提供阴影内存
-
-Valgrind不提供阴影内存的公开支持，例如内置的数据结构，阴影内存从工具到工具的变化足够大。
+> Valgrind不提供阴影内存的公开支持，例如内置的数据结构，阴影内存从工具到工具的变化足够大。
 
 
 
@@ -335,7 +306,7 @@ Valgrind为每个系统调用提供一个包装器，它根据需要调用这些
 
 **如何知道那些地址是合法的（内存已分配）？**
 
-`维护一张合法地址表（`Valid-address (A) bits），当前所有可以合法读写（已分配）的地址在其中有对应的表项。该表通过以下措施维护
+维护一张合法地址表（Valid-address (A) bits），当前所有可以合法读写（已分配）的地址在其中有对应的表项。该表通过以下措施维护
 
 ```
 全局数据(data, bss section)--在程序启动的时候标记为合法地址
@@ -361,10 +332,6 @@ Valgrind为每个系统调用提供一个包装器，它根据需要调用这些
 
 ### 组件
 
-
-
-
-
 valgrind结构上分为core和tool，不同的tool具有不同的功能。比较特别的是，valgrind tool都包含core的静态链接，虽然有点浪费空间，但可以简化某些事情。当我们在调用valgrind时，实际上启动的只是一个解析命令参数的启动器，由这个启动器启动具体的tool。
 
 为了实现上述功能，valgrind会利用dynamic binary re-compilation把测试程序（client程序）的机器码解析到VEX中间语言。VEX IR是valgrind开发者专门设计给DBI使用的中间语言，是一种RISC like的语言。目前VEX IR从valgrind分离出去成libVEX了。libVEX采用execution-driven的方式用just-in-time技术动态地把机器码转换为IR，如果发生了某些tool感兴趣的事件，就会hook tool的函数，tool会插入一些分析代码，再把这些代码转换为机器码，存储到code cache中，以便再需要的时候执行。
@@ -386,12 +353,17 @@ valgrind启动后，core、tool和client都在一个进程中，共用一个地�
 DBI framework 有两种基本的方式可以表示code和进行 instrumentation：
 
 - disassemble-and-resynthesise (D&R)。
-  Valgrind 使用这种把machine code先转成IR，IR会通过加入更IR来instrument。IR最后转回machine code执行，原本的code对guest state的所有影响都必须明确地转成IR，因为最后执行的是纯粹由IR转成的machine code。
+  - Valgrind 使用这种把machine code先转成IR，IR会通过加入更IR来instrument。IR最后转回machine code执行，原本的code对
+  - guest state的所有影响都必须明确地转成IR，因为最后执行的是纯粹由IR转成的machine code。
 - copy-and-annotate (C&A)。instructions会被逐字地复制(除了一些 control flow 改变)
-  每个instruction都加上注解描述其影响(annotate)，利用这些描述来帮助做instrumentation
-  通过给每条指令添加一个额外的data structure (DynamoRIO)
-  通过提供相应的获取指令相关信息的API (Intel Pin)
-  这些添加的注解可以指导进行相应的instrument，并且不影响原来的native code的执行效果。
+  - 每个instruction都加上注解描述其影响(annotate)，利用这些描述来帮助做instrumentation
+  - 通过给每条指令添加一个额外的data structure (DynamoRIO)
+  - 通过提供相应的获取指令相关信息的API (Intel Pin)
+  - 这些添加的注解可以指导进行相应的instrument，并且不影响原来的native code的执行效果。
+
+基本上 DBI framework 可以分成这两种， 但是混用是可以做到的， 早期的 Valgrind 对 interger instructions 使用 D&R， 而对 floating point insturctions 和 SIMD 使用 C&A (paper 上写说并非设计想往这边走，而是意外)。另外，做一些变化也是可以的，例如 DynamoRIO 允许 instructions 在复制前 in-place 地修改。
+
+各个设计都有优缺点，而 D&R 的方式需要更多的实作和设计， 而且最后从 IR 生出有效率地 machine code 也需要一些努力， Valgrind JIT 就用了很多编译器的技术。相对地，C&A 的作法就可以比 D&R 少费些心力。
 
 ## 优点和缺点
 
@@ -418,6 +390,5 @@ DBI framework 有两种基本的方式可以表示code和进行 instrumentation�
 5. [valgrind如何工作？](https://www.codenong.com/1656227/)
 6. http://awhite2008.blog.sohu.com/164824340.html
 7. https://wdv4758h-notes.readthedocs.io/zh_TW/latest/valgrind/dynamic-binary-instrumentation.html
-
 
 
