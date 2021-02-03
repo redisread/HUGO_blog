@@ -23,10 +23,6 @@ categories:
 
 
 
-
-
-
-
 # 库打桩机制
 
 LInux链接器有强大的库打桩机制，它允许你对共享库的代码进行截取，从而执行自己的代码。而为了调试，你通常可以在自己的代码中加入一些调试信息，例如，调用次数，打印信息，调用时间等等。
@@ -47,36 +43,73 @@ LInux链接器有强大的库打桩机制，它允许你对共享库的代码进
 
 
 
+创建一个main.c文件，内容：
 
+```c
+#include <stdio.h>
+#include <malloc.h>
+int main()
+{
+    char *p = malloc(64);
+    printf("Hello\n");
+    free(p);
+    return 0;
+}
+```
 
 ### 编译时打桩
 
 > 使用 C 预处理器在编译时打桩。
 
+定义插桩函数头文件 `malloc.h`
 
+```c
+#define malloc(size) mymalloc(size)
+#define freeCptr) myfree(ptr) 23
 
+void *mymalloc(size_t size);
+void myfree(void *ptr);
+```
 
+定义插桩函数的文件 `mymalloc.c`
 
+```c
+// mymalloc.c
+#ifdef COMPILETIME
+#include <stdio.h>
+#include <malloc.h>
 
+// malloc wrapper function
+void * mymalloc(size_t size) {
+    void * ptr = malloc(size);
+    printf("malloc %p size %u\n", ptr, size);
+    return ptr;
+}
+
+// free wrapper function
+void myfree(void *ptr) {
+    free(ptr);
+    printf("free %p\n", ptr);
+}
+#endif
+```
 
 
 
 这样编译和链接程序
 
 ```bash
-gcc -DCOMPILE_TIME -c mymalloc.c
-gcc -I. -o intpos main.c mymalloc.o
+gcc -DCOMPILETIME -c mymalloc.c
+gcc -I. -o main main.c mymalloc.o
 ```
 
 执行：
 
 ```bash
-./intpos
+./main
 ```
 
-
-
-
+![编译插桩](https://i.loli.net/2021/02/03/tqPXczoxCrm6v2n.png)
 
 
 
@@ -84,11 +117,109 @@ gcc -I. -o intpos main.c mymalloc.o
 
 > 链接(linking)是将各种代码和数据片段收集并组合成为一个单一文件的过程，这个文件可被加载（复制）到内存并执行。
 
+这个不需要头文件，直接创建一个插桩函数文件 `mymalloc.c`:
 
+```c
+#ifdef LINKTIME
+#include <stdio.h>
+void *__real_malloc(size_t size);
+void __real_free(void *ptr);
+
+/* malloc wrapper function */
+void *__wrap_malloc(size_t size)
+{
+    void *p = __real_malloc(size);  // 调用libc的malloc
+    printf("malloc(%d) = %p \n",size,p);
+    return p;
+}
+
+/* free wrapper function */
+void *__wrap_free(void *ptr)
+{
+    __real_free(ptr);
+    printf("free(%p)\n",ptr);
+}
+
+#endif
+```
+
+这样编译和链接程序
+
+```bash
+gcc -DLINKTIME -c mymalloc.c
+gcc -c main.c
+gcc -Wl,--wrap,malloc -Wl,--wrap,free -o main main.o mymalloc.o
+```
+
+执行
+
+```bash
+./main
+```
+
+![链接插桩](https://i.loli.net/2021/02/03/tpgkNJbFv3s8Pl6.png)
 
 ### 运行时打桩
 
+创建一个插桩函数文件 `mymalloc.c`:
 
+```c
+#ifdef RUNTIME
+
+#define _GNU_SOURCE
+#include <stdio.h>
+#include <stdlib.h>
+#include <dlfcn.h>
+
+
+/* malloc wrapper function */
+void *malloc(size_t size)
+{
+    void  *(*mallocp)(size_t size);
+    char *error;
+    mallocp = dlsym(RTLD_NEXT,"malloc");    // get the address of libc malloc
+    if((error = dlerror()) != NULL)
+    {
+        fputs(error,stderr);
+        exit(1);
+    }
+    char *ptr = mallocp(size);
+    printf("malloc(%d) = %p \n",(int)size,ptr);
+    return ptr;
+}
+
+
+/* free wrapper function */
+void free(void* ptr)
+{
+    void (*freep)(void*) = NULL;
+    char *error;
+    if(!ptr) return;
+    freep = dlsym(RTLD_NEXT,"free");
+    if((error = dlerror()) != NULL)
+    {
+        fputs(error,stderr);
+        exit(1);
+    }
+    freep(ptr);
+    printf("free(%p)\n",ptr);
+
+}
+
+#endif
+```
+
+
+
+这样编译链接执行程序
+
+```bash
+gcc -DRUNTIME -shared -fpic -o mymalloc.so mymalloc.c -ldl
+gcc -o main main.c
+LD_PRELOAD="./mymalloc.so" ./main
+```
+
+![运行时插桩](https://i.loli.net/2021/02/03/5TuJ76IrwNiyCpH.png)
 
 ## GCC相关参数
 
@@ -104,13 +235,9 @@ gcc -I. -o intpos main.c mymalloc.o
 
 
 
-
-
-
-
 我们通过ldd命令查看程序链接的系统库：
 
-![image-20210114141828848](interposition.assets/image-20210114141828848.png)
+![ldd指令](https://i.loli.net/2021/02/03/YOmVR8Qi3zIhkDL.png)
 
 
 
