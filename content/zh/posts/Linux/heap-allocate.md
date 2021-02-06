@@ -468,6 +468,10 @@ struct malloc_state
 
 ```
 
+malloc_state 和 heap_info结构在空间中的布局：
+
+![malloc_state and heap_info structs in memory](heap-allocate.assets/image-20210206160141623.png)
+
 
 
 #### malloc_chunk
@@ -501,16 +505,6 @@ NOTE：
 
 1. Main thread不含有多个heaps所以也就不含有heap_info结构体。当需要更多堆空间的时候，就通过扩展sbrk的heap segment来获取更多的空间，直到它碰到内存mapping区域为止。
 2. 不同于thread arena，main arena的arena header并不是sbrk heap segment的一部分，而是一个全局变量！因此它属于libc.so的data segment
-
-
-
-
-
-
-
-
-
-![malloc_state and heap_info structs in memory](heap-allocate.assets/image-20210206160141623.png)
 
 
 
