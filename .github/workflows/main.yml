@@ -27,8 +27,6 @@ jobs:
       #     PUBLISH_DIR: ./public
 
       # - name: Deploy to Huawei # 
-      - name: Checkout repository
-        uses: actions/checkout@main
       - name: Modify files permissions
         run: |
           chmod 777 -R ./public
