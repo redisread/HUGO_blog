@@ -29,7 +29,7 @@ jobs:
       - name: Deploy to Huawei # 
         # uses: AEnterprise/rsync-deploy@v1.0 # 使用别人包装好的步骤镜像
         run: |
-          scp -r "$FOLDER" "$USERNAME"@"$SERVER_IP":"$SERVER_DESTINATION"
+          scp -r $FOLDER $USERNAME@$SERVER_IP:$SERVER_DESTINATION
         env:
           # DEPLOY_KEY: ${{ secrets.HUGO_DEPLOY_KEY }} # 引用配置，SSH私钥
           # ARGS: -avz --delete --exclude='CNAME' # rsync参数，排除.pyc文件
