@@ -27,14 +27,28 @@ jobs:
       #     PUBLISH_DIR: ./public
 
       - name: Deploy to Huawei # 
-        # uses: AEnterprise/rsync-deploy@v1.0 # 使用别人包装好的步骤镜像
-        run: |
-          scp -r $FOLDER $USERNAME@$SERVER_IP:$SERVER_DESTINATION
+        uses: up9cloud/action-rsync@v1.1
         env:
-          # DEPLOY_KEY: ${{ secrets.HUGO_DEPLOY_KEY }} # 引用配置，SSH私钥
-          # ARGS: -avz --delete --exclude='CNAME' # rsync参数，排除.pyc文件
-          SERVER_PORT: "22" # SSH端口
-          FOLDER: ./public # 要推送的文件夹，路径相对于代码仓库的根目录
-          SERVER_IP: ${{ secrets.SSH_HOST }} # 引用配置，服务器的host名（IP或者域名domain.com）
-          USERNAME: ${{ secrets.SSH_USERNAME }} # 引用配置，服务器登录名
-          SERVER_DESTINATION: /usr/local/nginx/html/hugo # 部署到目标文件夹
+          HOST: jiahongw.com
+          KEY: ${{ secrets.HUGO_DEPLOY_KEY }}
+          TARGET: /usr/local/nginx/html/hugo
+
+          VERBOSE: true
+          USER: ${{ secrets.SSH_USERNAME }}
+          # PORT: 2222 # no need to set this, because of $SSH_ARGS
+          ARGS: -az --exclude=/.git/
+          SSH_ARGS: '-p 22 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
+          SOURCE: ./public/
+
+          PRE_SCRIPT: |
+            echo start at:
+            date -u
+        POST_SCRIPT: "echo done at: && date -u"
+        # env:
+        #   # DEPLOY_KEY: ${{ secrets.HUGO_DEPLOY_KEY }} # 引用配置，SSH私钥
+        #   # ARGS: -avz --delete --exclude='CNAME' # rsync参数，排除.pyc文件
+        #   SERVER_PORT: "22" # SSH端口
+        #   FOLDER: ./public # 要推送的文件夹，路径相对于代码仓库的根目录
+        #   SERVER_IP: ${{ secrets.SSH_HOST }} # 引用配置，服务器的host名（IP或者域名domain.com）
+        #   USERNAME: ${{ secrets.SSH_USERNAME }} # 引用配置，服务器登录名
+        #   SERVER_DESTINATION: /usr/local/nginx/html/hugo # 部署到目标文件夹
