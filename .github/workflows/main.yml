@@ -20,30 +20,19 @@ jobs:
         run: hugo
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v2.5.1
-        # with:
-          # echo "${{ secrets.ACTIONS_DEPLOY_KEY }}" >> $ACTIONS_DEPLOY_KEY
-          # echo "redisread/redisread.github.io" >> $EXTERNAL_REPOSITORY
-          # echo "master" >> $PUBLISH_BRANCH
-          # echo "./public" >> $PUBLISH_DIR
         env:
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           EXTERNAL_REPOSITORY: redisread/redisread.github.io
           PUBLISH_BRANCH: master
           PUBLISH_DIR: ./public
-      # - name: Deploy_Huawei
-      #   env:
-      #     ACTIONS_DEPLOY_KEY: ${{ secrets.HUGO_DEPLOY_KEY }}
-      #     HOST: ${{ secrets.SSH_HOST }}
-      #     USER: ${{ secrets.SSH_USERNAME }}
-      #   run: |
-      #     cd /root/github/HUGO_blog
-      #     git pull
-      #     hugo -D
-      # - name: Deploy_Huawei
-      #   uses: wlixcc/SFTP-Deploy-Action@v1.0
-      #   with:
-      #     username: ${{ secrets.SSH_USERNAME }}
-      #     server: ${{ secrets.SSH_HOST }}
-      #     ssh_private_key: ${{ secrets.HUGO_DEPLOY_KEY }}
-      #     local_path: ./public
-      #     remote_path: /usr/local/nginx/html/hugo_blog #服务器部署路
+
+      - name: Deploy to Huawei # 
+        uses: AEnterprise/rsync-deploy@v1.0 # 使用别人包装好的步骤镜像
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }} # 引用配置，SSH私钥
+          ARGS: -avz --delete --exclude='CNAME' # rsync参数，排除.pyc文件
+          SERVER_PORT: "22" # SSH端口
+          FOLDER: ./public # 要推送的文件夹，路径相对于代码仓库的根目录
+          SERVER_IP: ${{ secrets.SSH_HOST }} # 引用配置，服务器的host名（IP或者域名domain.com）
+          USERNAME: ${{ secrets.SSH_USERNAME }} # 引用配置，服务器登录名
+          SERVER_DESTINATION: /usr/local/nginx/html/hugo # 部署到目标文件夹
