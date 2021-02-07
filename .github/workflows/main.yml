@@ -26,25 +26,22 @@ jobs:
       #     PUBLISH_BRANCH: master
       #     PUBLISH_DIR: ./public
 
-      - name: Deploy to Huawei # 
-        uses: up9cloud/action-rsync@v1.1
-        env:
-          HOST: ${{ secrets.SSH_HOST }}
-          KEY: ${{ secrets.HUGO_DEPLOY_KEY }}
-          TARGET: /usr/local/nginx/html/hugo
-
-          VERBOSE: true
-          USER: ${{ secrets.SSH_USERNAME }}
-          # PORT: 2222 # no need to set this, because of $SSH_ARGS
-          ARGS: -az --exclude=/.git/
-          SSH_ARGS: '-p 22 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
-          SOURCE: ./public/
-
-          PRE_SCRIPT: |
-            echo start at:
-            date -u
-          POST_SCRIPT: "echo done at: && date -u"
-        # env:
+      # - name: Deploy to Huawei # 
+      - name: Checkout repository
+        uses: actions/checkout@main
+      - name: Modify files permissions
+        run: |
+          chmod 777 -R ./public
+      - name: Tester
+        uses: yeshan333/rsync-deploy-action@main
+        id: rsync-deploy-action
+        with:
+          ssh_login_username: ${{ secrets.SSH_USERNAME }}
+          remote_server_ip: ${{ secrets.SSH_HOST }}
+          ssh_port: 22
+          ssh_private_key: ${{ secrets.HUGO_DEPLOY_KEY }}
+          source_path: ./public/*
+          destination_path: /usr/local/nginx/html/hugo
         #   # DEPLOY_KEY: ${{ secrets.HUGO_DEPLOY_KEY }} # 引用配置，SSH私钥
         #   # ARGS: -avz --delete --exclude='CNAME' # rsync参数，排除.pyc文件
         #   SERVER_PORT: "22" # SSH端口
