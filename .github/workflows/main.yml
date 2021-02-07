@@ -29,7 +29,7 @@ jobs:
       - name: Deploy to Huawei # 
         uses: up9cloud/action-rsync@v1.1
         env:
-          HOST: jiahongw.com
+          HOST: ${{ secrets.SSH_HOST }}
           KEY: ${{ secrets.HUGO_DEPLOY_KEY }}
           TARGET: /usr/local/nginx/html/hugo
 
