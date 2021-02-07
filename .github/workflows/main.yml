@@ -43,7 +43,7 @@ jobs:
           PRE_SCRIPT: |
             echo start at:
             date -u
-        POST_SCRIPT: "echo done at: && date -u"
+          POST_SCRIPT: "echo done at: && date -u"
         # env:
         #   # DEPLOY_KEY: ${{ secrets.HUGO_DEPLOY_KEY }} # 引用配置，SSH私钥
         #   # ARGS: -avz --delete --exclude='CNAME' # rsync参数，排除.pyc文件
