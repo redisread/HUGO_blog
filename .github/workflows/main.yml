@@ -18,19 +18,21 @@ jobs:
           extended: true
       - name: Build
         run: hugo
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v2.5.1
-        env:
-          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          EXTERNAL_REPOSITORY: redisread/redisread.github.io
-          PUBLISH_BRANCH: master
-          PUBLISH_DIR: ./public
+      # - name: Deploy
+      #   uses: peaceiris/actions-gh-pages@v2.5.1
+      #   env:
+      #     ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+      #     EXTERNAL_REPOSITORY: redisread/redisread.github.io
+      #     PUBLISH_BRANCH: master
+      #     PUBLISH_DIR: ./public
 
       - name: Deploy to Huawei # 
-        uses: AEnterprise/rsync-deploy@v1.0 # 使用别人包装好的步骤镜像
+        # uses: AEnterprise/rsync-deploy@v1.0 # 使用别人包装好的步骤镜像
+        run: |
+          scp -r "$FOLDER" "$USERNAME"@"$SERVER_IP":"$SERVER_DESTINATION"
         env:
-          DEPLOY_KEY: ${{ secrets.HUGO_DEPLOY_KEY }} # 引用配置，SSH私钥
-          ARGS: -avz --delete --exclude='CNAME' # rsync参数，排除.pyc文件
+          # DEPLOY_KEY: ${{ secrets.HUGO_DEPLOY_KEY }} # 引用配置，SSH私钥
+          # ARGS: -avz --delete --exclude='CNAME' # rsync参数，排除.pyc文件
           SERVER_PORT: "22" # SSH端口
           FOLDER: ./public # 要推送的文件夹，路径相对于代码仓库的根目录
           SERVER_IP: ${{ secrets.SSH_HOST }} # 引用配置，服务器的host名（IP或者域名domain.com）
