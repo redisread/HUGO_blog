@@ -91,16 +91,16 @@ commento = false
   repo = ""               # The repo to store comments
 
 [gitalk]           # Gitalk is a comment system based on GitHub issues. see https://github.com/gitalk/gitalk
-  owner = ""              # Your GitHub ID
-  repo = ""               # The repo to store comments
-  clientId = ""           # Your client ID
-  clientSecret = ""       # Your client secret
+  owner = "" # redisread"              # Your GitHub ID
+  repo = "" #https://hugo.jiahongw.com/"               # The repo to store comments
+  clientId = "" # "5880093503923d139adb"           # Your client ID
+  clientSecret = "" #"aa0741ecdc011069553c3c898e8e0f54915af0bb"       # Your client secret
 
 # Valine.
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://valine.js.org
 [valine]
-  enable = true
+  enable = false
   appId = 'H6qFmM5oh7cl8CiHHUdexKnz-gzGzoHsz'
   appKey = 'LNg1dVRYx2AuR4bd0ay4S8x5'
   notify = true  # mail notifier , https://github.com/xCss/Valine/wiki
@@ -110,8 +110,8 @@ commento = false
   visitor = true
 
 [changyan]
-  changyanAppid = ""        # Changyan app id             # 畅言
-  changyanAppkey = ""       # Changyan app key
+  changyanAppid = "cyvpHrehG"        # Changyan app id             # 畅言
+  changyanAppkey = "ab0a70f46cab34e1bd995f077e7357aa"       # Changyan app key
 
 [livere]
   livereUID = ""            # LiveRe UID                  # 来必力
