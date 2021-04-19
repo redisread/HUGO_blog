@@ -91,7 +91,7 @@ commento = false
   repo = ""               # The repo to store comments
 
 [gitalk]           # Gitalk is a comment system based on GitHub issues. see https://github.com/gitalk/gitalk
-  owner = "redisread"              # Your GitHub ID
+  owner = "redisread"              #Your GitHub ID
   repo = "http://redisread.github.io/"               # The repo to store comments
   clientId = "5880093503923d139adb"           # Your client ID
   clientSecret = "aa0741ecdc011069553c3c898e8e0f54915af0bb"       # Your client secret
