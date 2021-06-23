@@ -38,6 +38,11 @@
   url = "gallery/hero"
 
 [[main]]
+  parent = "gallery"
+  name = "✈川西"
+  url = "gallery/chuanxi"
+
+[[main]]
   identifier = "posts"
   name = "🧱Posts"
   url = "posts"
