@@ -40,7 +40,7 @@ categories:
 
 ## 基本路线
 
-小环线+稻城亚丁
+**小环线+稻城亚丁**
 
 ![路线](https://i.loli.net/2021/06/23/PQfbodXhja2miCs.png)
 
@@ -48,7 +48,7 @@ categories:
 
 ## 川西美景
 
-![IMG_20210610_152922](https://i.loli.net/2021/06/23/wqCExP4BKOd7RNH.jpg)
+![1](https://i.loli.net/2021/06/23/wqCExP4BKOd7RNH.jpg)
 
 
 
