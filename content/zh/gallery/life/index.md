@@ -20,3 +20,4 @@ images:
 ---
 
 Sample images about life.
+
