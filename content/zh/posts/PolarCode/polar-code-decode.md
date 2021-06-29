@@ -1,6 +1,6 @@
 ---
 title: 极化码-译码
-date: 2021-06-24T21:19:45+08:00
+date: 2021-06-24T14:04:45+08:00
 description: 译码和编码类似，基于递归的结构。
 draft: false
 hideToc: false
