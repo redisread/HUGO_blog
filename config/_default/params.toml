@@ -41,8 +41,8 @@ email = "1427298682@qq.com"
 whoami = "📚Learner🤓Nerd🌐Developer"
 bioImageUrl = ""
 useGravatar = false
-location = "ShenZhen, China"
-organization = "Sangfor"
+location = "Beijing, China"
+organization = "Meituan"
 link = "https://github.com/redisread/HUGO_blog"
 
 # sidebar
