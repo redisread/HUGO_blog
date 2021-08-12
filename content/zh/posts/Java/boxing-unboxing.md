@@ -72,14 +72,21 @@ java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
 java/lang/Integer.intValue:()I
 ```
 
-
 即装箱转换为Integer.valueOf()，把拆箱替换为Integer.intValue()，在Java源码可见这个值默认缓存是-128到127之间。
 
-![](https://raw.githubusercontent.com/redisread/Image/master/Java/image.png)
+**源码**
 
-![](https://raw.githubusercontent.com/redisread/Image/master/Java/image_1.png)
+缓存范围：
 
-![](https://raw.githubusercontent.com/redisread/Image/master/Java/image_2.png)
+<img src="https://raw.githubusercontent.com/redisread/Image/master/Java/image.png" style="zoom:50%;" />
+
+**装箱操作**
+
+<img src="https://raw.githubusercontent.com/redisread/Image/master/Java/image_1.png" style="zoom:50%;" />
+
+**拆箱操作**
+
+<img src="https://raw.githubusercontent.com/redisread/Image/master/Java/image_2.png" style="zoom: 50%;" />
 
 
 
