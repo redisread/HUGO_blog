@@ -31,17 +31,24 @@ replaceTemplate(){
 	time_content="{{ .Date }}"
 	title="$myname"
 	now_time=$(date "+%Y-%m-%dT%H:%M:%S+08:00")
+	if [[ `uname` == 'Darwin' ]];then
+	sed -i "" "s/${title_content}/${title}/" "$dst"
+	sed -i "" "s/${time_content}/${now_time}/" "$dst"
+	elif [[ `uname` == 'Linux' ]];then
+	echo "Linux"
+	elif [[ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" || "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]];then
 	sed -i "s/${title_content}/${title}/" "$dst"
 	sed -i "s/${time_content}/${now_time}/" "$dst"
+	fi
+
 }
 
 openMarkdownEditor(){
 	if [[ `uname` == 'Darwin' ]];then
-	# Mac OS X 操作系统
-	echo "Mac"
+	open -a typora "${dst}"
 	elif [[ `uname` == 'Linux' ]];then
-	# GNU/Linux操作系统
-	echo "Linux"
+	cmd="typora ${dst}" 
+	eval $cmd
 	elif [[ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" || "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]];then
 	# Windows NT操作系统
 	cmd="cd $PWD/content/zh/posts/${mydir}"
