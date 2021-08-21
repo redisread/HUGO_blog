@@ -362,7 +362,7 @@ fffffd930000-fffffd960000 rw-p 00000000 00:00 0                          [stack]
 
 glibc堆总览
 
-![glibc堆总览](heap-allocate.assets/image-20210206151048130.png)
+![glibc堆总览](https://raw.githubusercontent.com/redisread/Image/master/Linux/image-20210206151048130.png)
 
 
 
@@ -470,7 +470,7 @@ struct malloc_state
 
 malloc_state 和 heap_info结构在空间中的布局：
 
-![malloc_state and heap_info structs in memory](heap-allocate.assets/image-20210206160141623.png)
+![malloc_state and heap_info structs in memory](https://raw.githubusercontent.com/redisread/Image/master/Linux/image-20210206160141623.png)
 
 
 
@@ -497,7 +497,7 @@ struct malloc_chunk {
 
 
 
-![在内存中分配额chunk](heap-allocate.assets/image-20210206160108339.png)
+![在内存中分配额chunk](https://raw.githubusercontent.com/redisread/Image/master/Linux/image-20210206160108339.png)
 
 
 
@@ -512,7 +512,7 @@ NOTE：
 
 
 
-![img](heap-allocate.assets/chunk-allocated-simple-CS.png.pagespeed.ce.4F7IE_9i1S.png)
+![img](https://raw.githubusercontent.com/redisread/Image/master/Linux/chunk-allocated-simple-CS.png.pagespeed.ce.4F7IE_9i1S.png)
 
 
 
@@ -537,25 +537,25 @@ NOTE：
 
 简单的allocated chunk和free chunk
 
-![图片描述](heap-allocate.assets/bVvDyh)
+![图片描述](https://raw.githubusercontent.com/redisread/Image/master/Linux/bVvDyh.jpg)
 
-![图片描述](heap-allocate.assets/bVvDyj)
+![图片描述](https://raw.githubusercontent.com/redisread/Image/master/Linux/bVvDyj.jpg)
 
 
 
 带边界标志的allocate chunk和free chunk
 
-![图片描述](heap-allocate.assets/bVvDyC)
+![图片描述](https://raw.githubusercontent.com/redisread/Image/master/Linux/bVvDyC.jpg)
 
-![图片描述](heap-allocate.assets/bVvDyE)
+![图片描述](https://raw.githubusercontent.com/redisread/Image/master/Linux/bVvDyE.jpg)
 
 支持多线程
 
 首先思考：是否有必要同时保存当前chunk和前一个chunk的已分配/空闲标记位？答案是否定的，因为我们只需要保存前一个chunk的分配标志位就可以了，至于当前chunk的分配标志位，可以通过查询下一个chunk的size字段得到。那么size字段中剩下的两个比特位就可以用于满足多线程的标志需求了：
 
-![图片描述](heap-allocate.assets/bVvDyF)
+![图片描述](https://raw.githubusercontent.com/redisread/Image/master/Linux/bVvDyF.jpg)
 
-![图片描述](heap-allocate.assets/bVvDyJ)
+![图片描述](https://raw.githubusercontent.com/redisread/Image/master/Linux/bVvDyJ.jpg)
 
 
 
@@ -567,9 +567,9 @@ NOTE：
 
 再进一步，发现没必要保存chunk size的副本，也就是说Footer的作用并不大，但是如果前一个chunk是free的话，在合并的时候我们又需要知道前一个chunk的大小，怎么办呢？将Footer从尾部移到首部，同时其不再保存当前chunk的size，而是前一个free chunk的size不就行了。同样的，为了提高内存利用率，如果前一个chunk是allocated chunk的话，这个Footer就作为allocated chunk的payload或padding的一部分，结构图如下：
 
-![图片描述](heap-allocate.assets/bVvDyP)
+![图片描述](https://raw.githubusercontent.com/redisread/Image/master/Linux/bVvDyP.jpg)
 
-![图片描述](heap-allocate.assets/bVvDyQ)
+![图片描述](https://raw.githubusercontent.com/redisread/Image/master/Linux/bVvDyQ.jpg)
 
 
 
@@ -579,11 +579,11 @@ glibc
 
 *Allocated chunk*:：
 
-![img](https://docs.google.com/drawings/d/1eLkG-WF9U3O_ytNs6iFKHacqkjWZeY4KtLqxmd01EVs/pub?w=962&h=682)
+![img](https://raw.githubusercontent.com/redisread/Image/master/Linux/pub.png)
 
 *Free Chunk*:
 
-![img](heap-allocate.assets/pub)
+![img](https://raw.githubusercontent.com/redisread/Image/master/Linux/pub.jpg)
 
 
 
@@ -598,7 +598,7 @@ glibc
 Bins是用来维护free chunk的链表数据结构，分配chunk从bins选，释放的chunk添加到bins；
  Bins分为了四类：Fast bin、Unsorted bin、Small bin、Large bin；
 
-![img](heap-allocate.assets/650075-45e188ded0403d1a.png)
+![img](https://raw.githubusercontent.com/redisread/Image/master/Linux/650075-45e188ded0403d1a.png)
 
 
 
@@ -631,7 +631,7 @@ Large bin
 - malloc(large chunk)操作：初始化完成之前的操作类似于small bin，这里主要讨论large bins初始化完成之后的操作。首先确定用户请求的大小属于哪一个large bin，然后判断该large bin中最大的chunk的size是否大于用户请求的size(只需要对比链表中front end的size即可)。如果大于，就从rear end开始遍历该large bin，找到第一个size相等或接近的chunk，分配给用户。如果该chunk大于用户请求的size的话，**就将该chunk拆分为两个chunk：前者返回给用户，且size等同于用户请求的size；剩余的部分做为一个新的chunk添加到unsorted bin中**。
 - Free(large chunk)：类似于small chunk。
 
-![img](heap-allocate.assets/650075-74cc313a3cc7530f.png)
+![img](https://raw.githubusercontent.com/redisread/Image/master/Linux/650075-74cc313a3cc7530f.png)
 
 
 
