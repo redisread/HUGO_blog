@@ -29,10 +29,10 @@ categories:
 
 
 
-<div class="card" style="width: 18rem;">
+<div class="card" style="width: 18rem;" aligin=“center”>
   <img class="card-img-top" src="https://raw.githubusercontent.com/redisread/Image/master/Javaimage-20210821220237489.png" alt="Card image cap">
   <div class="card-body">
-    <a href="https://jesor.me/2021/my-father/" class="btn btn-primary"><h5 class="card-title">我的父亲</h5></a>
+    <a href="https://jesor.me/2021/my-father/" class="btn btn-primary">文章链接</a>
   </div>
 </div>
 
