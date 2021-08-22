@@ -31,11 +31,9 @@ categories:
 
 <div class="card" style="width: 18rem;" aligin=“center”>
   <img class="card-img-top" src="https://raw.githubusercontent.com/redisread/Image/master/Javaimage-20210821220237489.png" alt="Card image cap">
-  <div class="card-body">
-    <a href="https://jesor.me/2021/my-father/" class="btn btn-primary">文章链接(可能需要翻墙)</a>
-  </div>
 </div>
 
+{{< button href="https://jesor.me/2021/my-father/" width="100px" height="36px" color="primary" >}}文章链接(可能需要翻墙){{< /button >}}
 
 
 我自己对待父亲其实一直以来都很冷漠，之前有段时间还经常的吵架，因为一些事。仔细想一下，很多东西是失去了之后才懂得珍惜，也有很多东西，是自己亲身体验了之后才知道里面的苦楚。我对父亲的不理解，或许只是我没有经历过他经历的，也或许是我自己的傲慢。
