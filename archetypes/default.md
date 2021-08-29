@@ -10,6 +10,7 @@ tocPosition: outer
 author: Victor
 authorEmoji: 👻
 image:
+plantuml: true
 libraries:
 - katex
 - mathjax
