@@ -2,7 +2,7 @@
 title: 面向对象中的面向过程代码
 date: 2021-09-01T20:26:23+08:00
 description: 
-draft: false
+draft: true
 hideToc: false
 enableToc: true
 enableTocContent: false
