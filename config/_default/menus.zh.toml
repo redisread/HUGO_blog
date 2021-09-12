@@ -21,7 +21,7 @@
   name = "🎨相册"
   url = "gallery"
   weight = 4
-    
+
 [[main]]
   parent = "gallery"
   name = "🌱Life"
@@ -41,6 +41,11 @@
   parent = "gallery"
   name = "✈川西"
   url = "gallery/chuanxi"
+
+[[main]]
+  parent = "gallery"
+  name = "🌆北京的日子"
+  url = "gallery/beijing"
 
 [[main]]
   identifier = "posts"
