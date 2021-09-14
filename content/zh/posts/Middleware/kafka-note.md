@@ -48,15 +48,14 @@ Kafka被别人成为消息队列，我第一次听说Kafka也只是知道它是�
 
 ### 相同的产品对比
 
-| 产品     | 官网                                                       | 特点                                                         | 优点                                                         |
-| -------- | ---------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Kafka    | [http://kafka.apache.org/](http://kafka.apache.org/)       | 是 Apache 的顶级项目，是一个高性能跨语言分布式 Publish/Subscribe 消息队列系统，以 Pull 的形式消费消息 | 1. 快速持久化，可以在 O(1) 的系统开销下进行消息持久化<br />2. 高吞吐，在一台普通的服务器上既可以达到 10W/s 的吞吐速率<br />3. 完全的分布式系统，Broker、Producer、Consumer 都原生自动支持分布式，自动实现复杂均衡 |
-| RabbitMQ | [https://www.rabbitmq.com/](https://www.rabbitmq.com/)     | RabbitMQ 是基于 Erlang 语言编写的开源消息队列，通过 Erlang 的 Actor 模型实现了数据的稳定可靠传输。 |                                                              |
-| ZeroMQ   | [http://zeromq.org/](http://zeromq.org/)                   | 一个开源的通用消息传递库，号称是“史上最快的消息队列”，基于 c 语言开发的，可以在任何平台通过任何代码连接。 |                                                              |
-| RocketMQ | [http://rocketmq.apache.org/](http://rocketmq.apache.org/) | RocketMQ 是阿里开源的消息中间件，目前在 Apache 孵化，使用纯 Java 开发，具有高吞吐量、高可用性、适合大规模分布式系统应用的特点。 |                                                              |
-| ActiveMQ | [http://activemq.apache.org/](http://activemq.apache.org/) | 类似于 ZeroMQ，它可以部署于代理模式和 P2P 模式。类似于 RabbitMQ，它易于实现高级场景，而且只需付出低消耗。被誉为消息中间件的“瑞士军刀”。 |                                                              |
-|          |                                                            |                                                              |                                                              |
-|          |                                                            |                                                              |                                                              |
+| 产品     | 官网                                                       | 特点                                                         | 优点                                                         | 缺点                                                         |
+| -------- | ---------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Kafka    | [http://kafka.apache.org/](http://kafka.apache.org/)       | 是 Apache 的顶级项目，是一个高性能跨语言分布式 Publish/Subscribe 消息队列系统，以 Pull 的形式消费消息 | 1. 快速持久化，可以在 O(1) 的系统开销下进行消息持久化<br />2. 高吞吐，在一台普通的服务器上既可以达到 10W/s 的吞吐速率<br />3. 完全的分布式系统，Broker、Producer、Consumer 都原生自动支持分布式，自动实现复杂均衡 |                                                              |
+| RabbitMQ | [https://www.rabbitmq.com/](https://www.rabbitmq.com/)     | RabbitMQ 是基于 Erlang 语言编写的开源消息队列，通过 Erlang 的 Actor 模型实现了数据的稳定可靠传输。 |                                                              |                                                              |
+| ZeroMQ   | [http://zeromq.org/](http://zeromq.org/)                   | 一个开源的通用消息传递库，号称是“史上最快的消息队列”，基于 c 语言开发的，可以在任何平台通过任何代码连接。 |                                                              |                                                              |
+| RocketMQ | [http://rocketmq.apache.org/](http://rocketmq.apache.org/) | RocketMQ 是阿里开源的消息中间件，目前在 Apache 孵化，使用纯 Java 开发，具有高吞吐量、高可用性、适合大规模分布式系统应用的特点。 |                                                              |                                                              |
+| ActiveMQ | [http://activemq.apache.org/](http://activemq.apache.org/) | 类似于 ZeroMQ，它可以部署于代理模式和 P2P 模式。类似于 RabbitMQ，它易于实现高级场景，而且只需付出低消耗。被誉为消息中间件的“瑞士军刀”。 | 1. 支持 OpenWire、Stomp、AMQP v1.0、MQTT v3.1、REST、Ajax、Webservice 等多种协议<br />2. 完全支持 JMS1.1 和 J2EE 1.4 规范（事务、持久化、XA 消息）<br />3. 支持持久化到数据库 | 1. 不够轻巧<br />2. 对于队列较多的情况支持不好<br />3. 有丢消息的情况 |
+|          |                                                            |                                                              |                                                              |                                                              |
 
 - [https://xie.infoq.cn/article/e9a513931ecb1905ccde9fa8d](https://xie.infoq.cn/article/e9a513931ecb1905ccde9fa8d)
 - [https://segmentfault.com/a/1190000019547121](https://segmentfault.com/a/1190000019547121)
