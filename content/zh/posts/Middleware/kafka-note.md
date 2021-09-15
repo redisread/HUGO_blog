@@ -61,6 +61,24 @@ Kafka被别人成为消息队列，我第一次听说Kafka也只是知道它是�
 - [https://segmentfault.com/a/1190000019547121](https://segmentfault.com/a/1190000019547121)
 - [https://juejin.cn/post/6844904088438571021](https://juejin.cn/post/6844904088438571021)
 
+
+
+### kafka的生态
+
+[https://cwiki.apache.org/confluence/display/KAFKA/Ecosystem](https://cwiki.apache.org/confluence/display/KAFKA/Ecosystem)
+
+
+
+### 版本演进
+
+早些版本的Kafka是用Scala语言写的，新版的Kafka是使用Java编写的。
+
+Kafka目前总共演进了7个大版本，分别是0.7、0.8、0.9、0.10、0.11、1.0和2.0，其中的小版本和Patch版本很多。
+
+0.7只提供了最基础的消息队列功能 -> 0.8之后正式引入了**副本机制** -> 0.8.2.0版本社区引入了**新版本Producer API** -> 0.9大版本增加了基础的安全认证/权限功能，同时使用Java重写了新版本消费者API，另外还引入了Kafka Connect组件用于实现高性能的数据抽取 -> 0.10.0.0是里程碑式的大版本，因为该版本**引入了Kafka Streams** -> 0.11.0.0 引入了两个重量级的功能变更：一个是提供幂等性Producer API以及事务（Transaction） API；另一个是对Kafka消息格式做了重构
+
+
+
 ## 架构
 
 Kafka的服务端由称为Broker的服务进程构成，一个Kafka集群由多个Broker组成。
@@ -80,6 +98,12 @@ Kafka的服务端由称为Broker的服务进程构成，一个Kafka集群由多�
 组件架构：
 
 <img src="https://i.loli.net/2021/09/14/XVNBmwnyqtb14Pr.png" alt="Kafka架构和原理1" style="zoom:67%;" />
+
+
+
+网络模型：
+
+Kafka客户端底层使用了Java的selector，selector在Linux上的实现机制是epoll，而在Windows平台上的实现机制是select。**因此在这一点上将Kafka部署在Linux上是有优势的，因为能够获得更高效的I/O性能。**
 
 
 
@@ -116,6 +140,36 @@ Kafka中的分区机制指的是将每个主题划分成多个分区（Partition
 - 因为kafka引入的分区已经考虑了负载均衡。
 - 追随者副本跟领导者副本是有延迟的，如果要这样做的话，需要等追随者副本同步，延迟更大；
 - 即使满足了2的同步，让追随者副本提供读服务，有可能引入了不均衡，因为领导者副本本身就是尽量均摊到不同的broker上的
+
+
+
+
+
+
+
+
+
+
+
+## 方案设计
+
+
+
+磁盘容量计算
+
+我们来计算一下：每天1亿条1KB大小的消息，保存两份且留存两周的时间，那么总的空间大小就等于1亿 * 1KB * 2 / 1000 / 1000 = 200GB。一般情况下Kafka集群除了消息数据还有其他类型的数据，比如索引数据等，故我们再为这些数据预留出10%的磁盘空间，因此总的存储容量就是220GB。既然要保存两周，那么整体容量即为220GB * 14，大约3TB左右。Kafka支持数据的压缩，假设压缩比是0.75，那么最后你需要规划的存储空间就是0.75 * 3 = 2.25TB。
+
+总之在规划磁盘容量时你需要考虑下面这几个元素：
+
+- 新增消息数
+- 消息留存时间
+- 平均消息大小
+- 备份数
+- 是否启用压缩
+
+
+
+带宽计算
 
 ---
 
