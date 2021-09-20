@@ -46,7 +46,7 @@ Term Dictionary保存了所有的单词和倒排列表的映射，当在term ind
 
 关于 Lucene，额外值得一提的两点是：
 
-- **Term index**：在内存中是以 FST（finite state transducers）的形式保存的，其特点是非常节省内存。
+- **Term index**：在内存中是以 FST（finite state transducers）的形式保存的，其特点是非常节省内存。具体参考：[地址](https://www.lizhaozhong.info/archives/2111)
 - **Term dictionary**：在磁盘上是以分 block 的方式保存的，一个 block 内部利用公共前缀压缩，比如都是 Ab 开头的单词就可以把 Ab 省去。这样 term dictionary 可以比 b-tree 更节约磁盘空间。
 
 
