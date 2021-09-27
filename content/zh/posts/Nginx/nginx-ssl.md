@@ -25,10 +25,6 @@ categories:
 
 
 
-
-
-
-
 ## 申请证书
 
 ### letsencrypt的证书
@@ -169,5 +165,101 @@ https://segmentfault.com/a/1190000017847301
 
 
 
+[通过 Certbot 安装 Let's Encrypt 证书，实现免费的全站 HTTPS 访问 | Laravel 学院](https://laravelacademy.org/post/22297)
 
+
+
+
+
+
+
+
+
+## 配置Nginx
+
+
+
+
+
+主要功能：
+
+1. 静态资源
+2. 反向代理
+3. API服务
+
+
+
+Nginx配置反向代理：
+
+
+
+
+
+
+
+
+
+### alias与root的区别
+
+> root 实际访问文件路径会拼接URL中的路径
+> alias 实际访问文件路径不会拼接URL中的路径
+
+示例如下：
+
+
+
+```
+location ^~ /sta/ {  
+   alias /usr/local/nginx/html/static/;  
+}
+```
+
+请求：`http://test.com/sta/sta1.html`
+实际访问：`/usr/local/nginx/html/static/sta1.html` 文件
+
+
+
+```
+location ^~ /tea/ {  
+   root /usr/local/nginx/html/;  
+}
+```
+
+请求：`http://test.com/tea/tea1.html`
+实际访问：`/usr/local/nginx/html/tea/tea1.html` 文件
+
+
+
+
+
+
+
+
+
+----
+
+Ref：
+
+- [Nginx location匹配规则 - Ryan.Miao - 博客园](https://www.cnblogs.com/woshimrf/p/nginx-config-location.html)
+- [Nginx配置文件详解 - 程序员自由之路 - 博客园](https://www.cnblogs.com/54chensongxia/p/12938929.html)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+检测HTTP3（quic）：[HTTP/3 Check](https://http3check.net/)
 
