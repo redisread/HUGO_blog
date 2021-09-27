@@ -22,14 +22,6 @@ categories:
 -
 ---
 
-
-
-
-
-
-
-
-
 # Kafka笔记
 
 ## 简介
@@ -246,6 +238,235 @@ Kafka 在生产者上有一个可选的参数 ack，该参数指定了必须要�
 
 [Kafka 的高性能的源头 - Spongecaptain 的个人技术博客](https://spongecaptain.cool/post/kafka/why-kafka-is-high-performance/)
 
+
+
+
+
+
+
+### 消费者组机制
+
+**Consumer Group是Kafka提供的可扩展且具有容错性的消费者机制**
+
+消费者组内可以有多个消费者或者消费者实例，它们共享一个公共的Group ID。组内的所有消费者协调在一起来消费订阅主题（Subscribed Topics）的所有分区（Partition）。当然，每个分区只能由同一个消费者组内的一个Consumer实例来消费。
+
+两种消息引擎模型：
+
+- 点对点模型（消息队列模型）
+- 发布/订阅模型
+
+消费者机制既可以避开上面两个模型的缺点，又兼具它们的优点。
+
+> 当Consumer Group订阅了多个主题后，组内的每个实例不要求一定要订阅主题的所有分区，它只会消费部分分区中的消息。
+
+**Kafka仅仅使用Consumer Group这一种机制，却同时实现了传统消息引擎系统的两大模型**：
+
+- 如果所有实例都属于同一个Group，那么它实现的就是消息队列模型；
+- 如果所有实例分别属于不同的Group，那么它实现的就是发布/订阅模型。
+
+
+
+#### 配置消费者的数量
+
+> **理想情况下，Consumer实例的数量应该等于该Group订阅主题的分区总数。**
+
+举个简单的例子，假设一个Consumer Group订阅了3个主题，分别是A、B、C，它们的分区数依次是1、2、3，那么通常情况下，为该Group设置6个Consumer实例是比较理想的情形，因为它能最大限度地实现高伸缩性。
+
+我能设置小于或大于6的实例吗？当然可以！如果你有3个实例，那么平均下来每个实例大约消费2个分区（6 / 3 = 2）；如果你设置了8个实例，那么很遗憾，有2个实例（8 – 6 = 2）将不会被分配任何分区，它们永远处于空闲状态。因此，在实际使用过程中一般不推荐设置大于总分区数的Consumer实例。设置多余的实例只会浪费资源，而没有任何好处。
+
+
+
+#### 消费位移记录
+
+消费者在消费的过程中需要记录自己消费了多少数据，即消费位置信息。看上去该Offset就是一个数值而已，其实对于Consumer Group而言，它是一组KV对，Key是分区，V对应Consumer消费该分区的最新位移。
+
+老版本的Consumer Group把位移保存在ZooKeeper中。在新版本的Consumer Group中，Kafka社区重新设计了Consumer Group的位移管理方式，采用了将位移保存在Kafka内部主题的方法。
+
+
+
+
+
+
+
+---
+
+总结：
+
+消息位移保存了消费者当前消费的进度。
+
+
+
+
+
+
+
+
+
+#### 重平衡机制（Rebalance）
+
+**Rebalance本质上是一种协议，规定了一个Consumer Group下的所有Consumer如何达成一致，来分配订阅Topic的每个分区**。比如某个Group下有20个Consumer实例，它订阅了一个具有100个分区的Topic。正常情况下，Kafka平均会为每个Consumer分配5个分区。这个分配的过程就叫Rebalance。
+
+Rebalance的触发条件有3个：
+
+1. 组成员数发生变更。
+2. 订阅主题数发生变更。
+3. 订阅主题分区数发生变更。
+
+<img src="https://static001.geekbang.org/resource/image/29/1b/2976713957cd4cc8cc796aa64222611b.png" alt="img" style="zoom: 25%;" />
+
+> Rebalance发生时，Group下所有的Consumer实例都会协调在一起共同参与。这个时候需要分配策略的协助。
+
+Rebalance的缺点：
+
+- 在Rebalance过程中，**所有Consumer实例都会停止消费**，等待Rebalance完成。
+- 目前Rebalance的设计是所有Consumer实例共同参与，其实可以进行优化。
+- 速度太慢。
+
+
+
+总结：
+
+- 最好避免Rebalance的发生。
+
+
+
+#### coordinator
+
+Kafka提供了一个角色：coordinator来执行对于consumer group的管理。
+
+每个consumer group都会被分配一个这样的coordinator用于组管理和位移管理。这个group coordinator比原来承担了更多的责任，比如组成员管理、位移提交保护机制等。当新版本consumer group的第一个consumer启动的时候，它会去和kafka server确定谁是它们组的coordinator。之后该group内的所有成员都会和该coordinator进行协调通信。显而易见，这种coordinator设计不再需要zookeeper了，性能上可以得到很大的提升。
+
+[Kafka消费组(consumer group) - 不断努力的青春 - 博客园](https://www.cnblogs.com/songanwei/p/9202803.html)
+
+
+
+### 位移主题
+
+**老版本Consumer的位移管理是依托于Apache ZooKeeper的，它会自动或手动地将位移数据提交到ZooKeeper中保存。当Consumer重启后，它能自动从ZooKeeper中读取位移数据，从而在上次消费截止的地方继续消费。**这种设计使得Kafka Broker不需要保存位移数据，减少了Broker端需要持有的状态空间，因而有利于实现高伸缩性。
+
+但是，**ZooKeeper其实并不适用于这种高频的写操作**，因此，Kafka社区自0.8.2.x版本开始，就在酝酿修改这种设计，并最终在新版本Consumer中正式推出了全新的位移管理机制，自然也包括这个新的位移主题。
+
+新版本Consumer的位移管理机制其实也很简单，就是**将Consumer的位移数据作为一条条普通的Kafka消息，提交到__consumer_offsets中。可以这么说，__consumer_offsets的主要作用是保存Kafka消费者的位移信息。**
+
+> 位移主题是Kafka内部的一个主题，消息格式是Kafka自己定义的。
+
+
+
+位移主题什么时候创建？
+
+**当Kafka集群中的第一个Consumer程序启动时，Kafka会自动创建位移主题**。默认分区数是50，副本位为3。
+
+
+
+如何提交消费者位移？
+
+1. 自动提交
+
+   Consumer端有个参数叫enable.auto.commit，如果值是true，则Consumer在后台默默地为你定期提交位移，提交间隔由一个专属的参数auto.commit.interval.ms来控制。
+
+   极端情况：当前没有消费，位移不动，但是还是一直产生位移主题的消息。它就会无限期地向位移主题写入消息。
+
+2. 手动提交
+
+   设置enable.auto.commit = false。一旦设置了false，作为Consumer应用开发的你就要承担起位移提交的责任。
+
+
+
+自动提交极端情况如何解决？——使用Kafka的**Compact策略**来删除位移主题中的过期消息。
+
+具体可以看下图：
+
+<img src="https://cos.jiahongw.com/uPic/86a44073aa60ac33e0833e6a9bfd9ae7.jpeg" alt="img" style="zoom: 67%;" />
+
+---
+
+总结：
+
+老版本的Kafka保存消费位移的使用zookeeper，但是zookeeper不适合高频的写操作；之后的版本中，使用单独一个位移主题来保存消费者位移，就像消费普通的数据一样。数据被提交到__consumer_offsets中，保存的数据结构简化来说可以是一个Map，Key保存Group ID和分区信息，Value保存实际的位移数据。当不断生产位移数据，会产生大量的Kafka数据，此时需要定时删除过期数据防止主题膨胀，此时需要使用Compact策略。Kafka提供了专门的后台线程Log Cleaner定期地巡检待Compact的主题，看看是否存在满足条件的可删除数据。
+
+
+
+
+
+### 消息交付可靠性保障
+
+所谓的消息交付可靠性保障，是指Kafka对Producer和Consumer要处理的消息提供什么样的承诺。常见的承诺有以下三种：
+
+- 最多一次（at most once）：消息可能会丢失，但绝不会被重复发送。
+- 至少一次（at least once）：消息不会丢失，但有可能被重复发送。
+- 精确一次（exactly once）：消息不会丢失，也不会被重复发送。
+
+> 目前，Kafka默认提供的交付可靠性保障是第二种，即至少一次。
+
+Kafka是怎么做到精确一次的呢？简单来说，这是通过两种机制：**幂等性（Idempotence）**和**事务（Transaction）**。
+
+#### 幂等性
+
+> “幂等”这个词原是数学领域中的概念，指的是某些操作或函数能够被执行多次，但每次得到的结果都是不变的。
+
+在计算机领域中，幂等性的含义稍微有一些不同：
+
+- 在命令式编程语言（比如C）中，若一个子程序是幂等的，那它必然不能修改系统状态。这样不管运行这个子程序多少次，与该子程序关联的那部分系统状态保持不变。
+- 在函数式编程语言（比如Scala或Haskell）中，很多纯函数（pure function）天然就是幂等的，它们不执行任何的side effect。
+
+幂等性有很多好处，**其最大的优势在于我们可以安全地重试任何幂等性操作，反正它们也不会破坏我们的系统状态**。如果是非幂等性操作，我们还需要担心某些操作执行多次对状态的影响，但对于幂等性操作而言，我们根本无需担心此事。
+
+**幂等性Producer**
+
+在0.11之后，指定Producer幂等性的方法很简单，仅需要设置一个参数即可，即：
+
+```java
+props.put(“enable.idempotence”, ture)
+```
+
+或:
+
+```java
+props.put(ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG， true)
+```
+
+enable.idempotence被设置成true后，Producer自动升级成幂等性Producer，其他所有的代码逻辑都不需要改变。Kafka自动帮你做消息的重复去重。底层具体的原理很简单，就是经典的用空间去换时间的优化思路，即在Broker端多保存一些字段。当Producer发送了具有相同字段值的消息后，Broker能够自动知晓这些消息已经重复了，于是可以在后台默默地把它们“丢弃”掉。
+
+缺陷：
+
+- 只能保证单分区上的幂等性
+- 只能实现单会话上的幂等性
+
+
+
+#### 事务
+
+Kafka的事务概念类似于我们熟知的数据库提供的事务。在数据库领域，事务提供的安全性保障是经典的ACID，即原子性（Atomicity）、一致性(Consistency)、隔离性(Isolation)和持久性(Durability)。
+
+Kafka自0.11版本开始也提供了对事务的支持，目前主要是在read committed隔离级别上做事情。它能保证多条消息原子性地写入到目标分区，同时也能保证Consumer只能看到事务成功提交的消息。
+
+**事务型Producer**
+
+事务型Producer能够保证将消息原子性地写入到多个分区中。这批消息要么全部写入成功，要么全部失败。另外，事务型Producer也不惧进程的重启。Producer重启回来后，Kafka依然保证它们发送消息的精确一次处理。
+
+设置事务型Producer的方法也很简单，满足两个要求即可：
+
+- 和幂等性Producer一样，开启enable.idempotence = true。
+- 设置Producer端参数transactional. id。最好为其设置一个有意义的名字。
+
+此外，你还需要在Producer代码中做一些调整，如这段代码所示：
+
+```java
+producer.initTransactions();
+try {
+            producer.beginTransaction();
+            producer.send(record1);
+            producer.send(record2);
+            producer.commitTransaction();
+} catch (KafkaException e) {
+            producer.abortTransaction();
+}
+```
+
+
+
+
+
 ## 高性能
 
 
@@ -270,6 +491,16 @@ Kafka 在生产者上有一个可选的参数 ack，该参数指定了必须要�
 #### 网络模型
 
 Kafka客户端底层使用了Java的selector，selector在Linux上的实现机制是epoll，而在Windows平台上的实现机制是select。**因此在这一点上将Kafka部署在Linux上是有优势的，因为能够获得更高效的I/O性能。**
+
+
+
+### TCP连接
+
+**在创建KafkaProducer实例时，生产者应用会在后台创建并启动一个名为Sender的线程，该Sender线程开始运行时首先会创建与Broker的连接**。
+
+**TCP连接还可能在两个地方被创建：一个是在更新元数据后，另一个是在消息发送时**。（也就是更新元数据时候更改了之后发现与某些Broker没有连接，这个时候会继续连接；或者是发送的时候主题不存在，此时Producer会发送METADATA请求给Kafka集群，去尝试获取最新的元数据信息）
+
+Producer端关闭TCP连接的方式有两种：**一种是用户主动关闭；一种是Kafka自动关闭**。
 
 
 
@@ -324,9 +555,37 @@ Kafka中的分区机制指的是将每个主题划分成多个分区（Partition
 7. 确保replication.factor > min.insync.replicas。如果两者相等，那么只要有一个副本挂机，整个分区就无法正常工作了。我们不仅要改善消息的持久性，防止数据丢失，还要在不降低可用性的基础上完成。推荐设置成replication.factor = min.insync.replicas + 1。
 8. 确保消息消费完成再提交。Consumer端有个参数enable.auto.commit，最好把它设置成false，并采用手动提交位移的方式。就像前面说的，这对于单Consumer多线程处理的场景而言是至关重要的。
 
-
+[Apache Kafka（十）Partitions与Replication Factor 调整准则 - ZacksTang - 博客园](https://www.cnblogs.com/zackstang/p/11525919.html)
 
 https://km.sankuai.com/page/468142786
+
+
+
+### 客户端拦截器使用
+
+Kafka拦截器可以在消息处理的前后多个时点动态植入不同的处理逻辑，比如在消息发送前或者在消息被消费后。
+
+**Kafka拦截器分为生产者拦截器和消费者拦截器**。生产者拦截器允许你在发送消息前以及消息提交成功后植入你的拦截器逻辑；而消费者拦截器支持在消费消息前以及提交位移后编写特定逻辑。值得一提的是，这两种拦截器都支持链的方式，即你可以将一组拦截器串连成一个大的拦截器，Kafka会按照添加顺序依次执行拦截器逻辑。
+
+利用拦截器满足实际的需求，比如端到端系统性能检测、消息审计等。
+
+思考：
+
+思考这样一个问题：Producer拦截器onSend方法的签名如下：
+
+```
+public ProducerRecord onSend(ProducerRecord record)
+```
+
+如果我实现的逻辑仅仅是return null，你觉得Kafka会丢弃该消息，还是原封不动地发送消息？请动手试验一下，看看结果是否符合你的预期。
+
+
+
+
+
+
+
+
 
 
 
@@ -369,5 +628,9 @@ https://km.sankuai.com/page/468142786
 Ref：
 
 1. [Kafka官网](https://raw.githubusercontent.com/redisread/Image/master/Blog/kafka_logo--simple.png)
-2. [medium-kafka](https://betterprogramming.pub/thorough-introduction-to-apache-kafka-6fbf2989bbc1)
+2. [Kafka Improvement Proposals - Apache Kafka - Apache Software Foundation](https://cwiki.apache.org/confluence/display/KAFKA/Kafka+Improvement+Proposals)
+3. [medium-kafka](https://betterprogramming.pub/thorough-introduction-to-apache-kafka-6fbf2989bbc1)
+4. [apache kafka技术分享系列(目录索引)_李志涛的专栏-CSDN博客_kafka技术分享](https://blog.csdn.net/lizhitao/article/details/39499283)
+5. [huxihx - 博客园](https://www.cnblogs.com/huxi2b/)
+6. [kafka中文教程 - OrcHome](https://www.orchome.com/kafka/index)
 
