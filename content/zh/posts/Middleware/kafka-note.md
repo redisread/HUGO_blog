@@ -330,6 +330,22 @@ Rebalance的缺点：
 
 
 
+#### 如何避免重平衡
+
+> 什么是重平衡？Rebalance就是让一个Consumer Group下所有的Consumer实例就如何消费订阅主题的所有分区达成共识的过程。
+
+在进行重平衡的时候，对服务的的TPS影响很大，因为在重平衡期间，所有实例都不能消费任何信息。
+
+> TPS：Transactions Per Second（每秒传输的事物处理个数），即服务器每秒处理的事务数。TPS包括一条消息入和一条消息出，加上一次用户数据库访问。（业务TPS = CAPS × 每个呼叫平均TPS）
+
+
+
+
+
+
+
+
+
 #### coordinator
 
 Kafka提供了一个角色：coordinator来执行对于consumer group的管理。
