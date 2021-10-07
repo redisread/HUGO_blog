@@ -137,7 +137,7 @@ categories:
 
 彩蛋～
 
-![IMG_20211004_123709_1](../../../../../../../../../Volumes/My Passport/旅行/青岛/渲染/IMG_20211004_123709_1.jpg)
+![IMG_20211004_123709_1](https://cos.jiahongw.com/uPic/IMG_20211004_123709_1.jpg)
 
 
 
