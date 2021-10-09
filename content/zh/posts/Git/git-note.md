@@ -454,6 +454,16 @@ git clone -b master http://gitslab.yiqing.com/declare/about.git
 git remote update origin --prune
 ```
 
+
+
+rebase的坑
+
+
+
+
+
+
+
 这里要注意下，如果你的remote branch不是在origin下，按你得把origin换成你的名字。
 
 合并分支到此分支:
