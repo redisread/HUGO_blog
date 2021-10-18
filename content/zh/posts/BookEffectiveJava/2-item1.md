@@ -1,5 +1,5 @@
 ---
-title: (2)Item1-考虑以静态工厂方法代替构造函数
+title: (2)1-考虑以静态工厂方法代替构造函数
 date: 2021-10-16T16:42:14+08:00
 description:
 draft: false
@@ -130,65 +130,8 @@ public static Boolean valueOf(boolean b) {
 
 ---
 
-Reference：
+***Reference***：
 
 1. [Effective-Java-3rd-edition-Chinese-English-bilingual/Chapter-2-Item-1-Consider-static-factory-methods-instead-of-constructors.md at dev · clxering/Effective-Java-3rd-edition-Chinese-English-bilingual](https://github.com/clxering/Effective-Java-3rd-edition-Chinese-English-bilingual/blob/dev/Chapter-2/Chapter-2-Item-1-Consider-static-factory-methods-instead-of-constructors.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

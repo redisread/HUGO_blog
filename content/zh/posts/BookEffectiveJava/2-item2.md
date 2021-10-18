@@ -1,0 +1,252 @@
+---
+title: (2)2-当构造函数有多个参数时，考虑改用构建器
+date: 2021-10-16T18:35:36+08:00
+description: 使用建造者模式创建允许部分参数没有的类。
+draft: false
+hideToc: false
+enableToc: true
+enableTocContent: false
+tocPosition: outer
+author: Victor
+authorEmoji: 👻
+image: https://cos.jiahongw.com/uPic/image-20211016174809419.png
+plantuml: true
+libraries:
+- katex
+- mathjax
+tags:
+- EffectiveJava
+series:
+- EffectiveJava
+categories:
+-
+---
+
+
+
+<!--第二章：创建和销毁对象-->
+
+## item2
+
+***当构造函数有多个参数时，考虑改用构建器。***
+
+
+
+### 多参数构造函数的问题
+
+静态工厂和构造函数都有一个局限：它们不能对大量可选参数做很好的扩展。以一个类为例，它表示包装食品上的营养标签。这些标签上有一些字段是必需的，如：净含量、毛重和每单位份量的卡路里，另有超过 20 个可选的字段，如：总脂肪、饱和脂肪、反式脂肪、胆固醇、钠等等。大多数产品只有这些可选字段中的少数，且具有非零值。
+
+应该为这样的类编写什么种类的构造函数或静态工厂呢？传统的方式是使用可伸缩构造函数，在这种模式中，只向构造函数提供必需的参数。即，向第一个构造函数提供单个可选参数，向第二个构造函数提供两个可选参数，以此类推，最后一个构造函数是具有所有可选参数的。这是它在实际应用中的样子。
+
+```java
+// Telescoping constructor pattern - does not scale well!
+public class NutritionFacts {
+    private final int servingSize; // (mL) required
+    private final int servings; // (per container) required
+    private final int calories; // (per serving) optional
+    private final int fat; // (g/serving) optional
+    private final int sodium; // (mg/serving) optional
+    private final int carbohydrate; // (g/serving) optional
+
+    public NutritionFacts(int servingSize, int servings) {
+        this(servingSize, servings, 0);
+    }
+
+    public NutritionFacts(int servingSize, int servings, int calories) {
+        this(servingSize, servings, calories, 0);
+    }
+
+    public NutritionFacts(int servingSize, int servings, int calories, int fat) {
+        this(servingSize, servings, calories, fat, 0);
+    }
+
+    public NutritionFacts(int servingSize, int servings, int calories, int fat, int sodium) {
+        this(servingSize, servings, calories, fat, sodium, 0);
+    }
+
+    public NutritionFacts(int servingSize, int servings, int calories, int fat, int sodium, int carbohydrate) {
+        this.servingSize = servingSize;
+        this.servings = servings;
+        this.calories = calories;
+        this.fat = fat;
+        this.sodium = sodium;
+        this.carbohydrate = carbohydrate;
+    }
+}
+```
+
+> 拓展，在Java8之后，对于那些可有可无的成员变量最好使用Optional进行限制。
+
+当你想要创建一个实例的时候，这样进行调用：
+
+```java
+NutritionFacts cocaCola =new NutritionFacts(240, 8, 100, 0, 35, 27);
+```
+
+通常，**这个构造函数包含许多额外的参数，但是你必须为它们传递一个值**。在本例中，我们为 fat 传递了一个值 0（因为我们必须填入一个数，这样才能匹配函数）。只有六个参数时，这可能看起来不那么糟，但随着参数的增加，它很快就会失控。
+
+> 简单地说，**可伸缩构造函数模式可以工作，但是当有很多参数时，编写客户端代码是很困难的，而且读起来更困难。** 读者想知道所有这些值是什么意思，必须仔细清点参数。相同类型参数的长序列会导致细微的错误。如果客户端不小心倒转了两个这样的参数，编译器不会报错，但是程序会在运行时出错
+
+
+
+### 解决办法1-使用JavaBean模式
+
+这种模式是这样运作的：**先通过一个无参构造函数创建对象，然后调用对象的setter方法设置需要设置的值**。
+
+> JavaBean是一种符合命名规范的`class`，它通过`getter`和`setter`来定义属性
+
+例如定义一个JavaBean模式的类：
+
+```java
+// JavaBeans Pattern - allows inconsistency, mandates mutability
+public class NutritionFacts {
+    // Parameters initialized to default values (if any)
+    private int servingSize = -1; // Required; no default value
+    private int servings = -1; // Required; no default value
+    private int calories = 0;
+    private int fat = 0;
+    private int sodium = 0;
+    private int carbohydrate = 0;
+    public NutritionFacts() { }
+    // Setters
+    public void setServingSize(int val) { servingSize = val; }
+    public void setServings(int val) { servings = val; }
+    public void setCalories(int val) { calories = val; }
+    public void setFat(int val) { fat = val; }
+    public void setSodium(int val) { sodium = val; }
+    public void setCarbohydrate(int val) { carbohydrate = val; }
+}
+```
+
+在实际的使用是这样的：
+
+```java
+NutritionFacts cocaCola = new NutritionFacts();
+cocaCola.setServingSize(240);
+cocaCola.setServings(8);
+cocaCola.setCalories(100);
+cocaCola.setSodium(35);
+cocaCola.setCarbohydrate(27);
+```
+
+虽然JavaBean模式可以很方便的让我们自由的设置我们需要设置的值，但是**因为构建是在多个调用之间进行的，所以 JavaBean 可能在构建的过程中处于不一致的状态。**（并发情况）
+
+该类不能仅通过检查构造函数参数的有效性来强制一致性。在不一致的状态下尝试使用对象可能会导致错误的发生，而包含这些错误的代码很难调试。
+
+另外一个相关的缺点是，JavaBean 模式**排除了使类不可变的可能性**，因为Setter方法已经暴露内部数据修改的方法。除非程序员自己来确保线程安全。
+
+
+
+### 解决办法2-使用建造者模式
+
+> 建造者模式结合了可伸缩构造函数模式的安全性和 JavaBean 模式的可读性。
+
+客户端不直接生成所需的对象，而是**使用所有必需的参数调用构造函数（或静态工厂）**，并获得一个 builder 对象。然后，客户端在构建器对象上调用像 setter 这样的方法来设置每个感兴趣的可选参数。最后，客户端调用一个无参数的构建方法来生成对象，这通常是不可变的。构建器通常是它构建的类的**静态成员类**。下面是它在实际应用中的样子：
+
+```java
+// Builder Pattern
+public class NutritionFacts {
+    private final int servingSize;
+    private final int servings;
+    private final int calories;
+    private final int fat;
+    private final int sodium;
+    private final int carbohydrate;
+
+    public static class Builder {
+        // Required parameters
+        private final int servingSize;
+        private final int servings;
+        // Optional parameters - initialized to default values
+        private int calories = 0;
+        private int fat = 0;
+        private int sodium = 0;
+        private int carbohydrate = 0;
+
+        public Builder(int servingSize, int servings) {
+            this.servingSize = servingSize;
+            this.servings = servings;
+        }
+
+        public Builder calories(int val) {
+            calories = val;
+            return this;
+        }
+
+        public Builder fat(int val) {
+            fat = val;
+            return this;
+        }
+
+        public Builder sodium(int val) {
+            sodium = val;
+            return this;
+        }
+
+        public Builder carbohydrate(int val) {
+            carbohydrate = val;
+            return this;
+        }
+
+        public NutritionFacts build() {
+            return new NutritionFacts(this);
+        }
+    }
+
+    private NutritionFacts(Builder builder) {
+        servingSize = builder.servingSize;
+        servings = builder.servings;
+        calories = builder.calories;
+        fat = builder.fat;
+        sodium = builder.sodium;
+        carbohydrate = builder.carbohydrate;
+    }
+}
+```
+
+> 这里为了简洁，省略了有效性检查。
+
+使用：
+
+```java
+NutritionFacts cocaCola = new NutritionFacts.Builder(240, 8)
+.calories(100).sodium(35).carbohydrate(27).build();
+```
+
+> NutritionFacts 类是不可变的，因为构造对象并没有调用setter方法，所有参数默认值都在一个位置。构建器的 setter 方法返回构建器本身，这样就可以链式调用，从而得到一个流畅的 API。
+
+
+
+建造者模式非常适合于类层次结构。使用构建器的并行层次结构，每个构建器都嵌套在相应的类中。抽象类有抽象类构建器；具体类有具体类构建器。
+
+![建造者模式-继承](https://cos.jiahongw.com/uPic/image-20211018201949975.png)
+
+继承的话需要双继承，子类和子类构造器对应继承父类的。
+
+
+
+### 建造者模式的缺点
+
+1. 为了创建一个对象，你必须首先创建它的构建器。
+2. 虽然在实际应用中创建这个构建器的成本可能并不显著，但在以性能为关键的场景下，这可能会是一个问题。
+3. 建造者模式比可伸缩构造函数模式更冗长。因此只有在有足够多的参数时才值得使用，比如有 4 个或更多参数时，才应该使用它。
+
+> 如果你以构造函数或静态工厂开始，直至类扩展到参数数量无法控制的程度时，也会切换到构建器，但是过时的构造函数或静态工厂将很难处理。因此，最好一开始就从构建器开始。
+
+
+
+
+
+### 总结
+
+总之，在设计构造函数或静态工厂的类时，建造者模式是一个很好的选择，特别是当许多参数是可选的或具有相同类型时。与可伸缩构造函数相比，使用构建器客户端代码更容易读写，而且构建器比 JavaBean 更安全。
+
+
+
+---
+
+***Reference***：
+
+1. [秒懂设计模式之建造者模式（Builder pattern） - 知乎](https://zhuanlan.zhihu.com/p/58093669)
+2. [Effective-Java-3rd-edition-Chinese-English-bilingual/Chapter-2-Item-2-Consider-a-builder-when-faced-with-many-constructor-parameters.md at dev · clxering/Effective-Java-3rd-edition-Chinese-English-bilingual](https://github.com/clxering/Effective-Java-3rd-edition-Chinese-English-bilingual/blob/dev/Chapter-2/Chapter-2-Item-2-Consider-a-builder-when-faced-with-many-constructor-parameters.md)
+
