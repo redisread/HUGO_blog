@@ -1,5 +1,5 @@
 ---
-title: spring-note
+title: SpringBoot笔记
 date: 2021-09-06T10:53:10+08:00
 description:
 draft: true
@@ -21,6 +21,31 @@ series:
 categories:
 -
 ---
+
+
+
+
+
+### SpringBoot项目配置字段
+
+标准工程的创建方法。
+
+- AppKey：服务的全局唯一标识和通行证
+- 项目名称：整个项目的目录。（或者是git仓库目录）
+- Group ID：项目组织唯一的标识符，对应为根pom中`<groupId>`标签中的值（所在部门的唯一标志）
+- Artifact ID：项目的唯一的标识符，对应为根pom中`<artifactId>`标签中的值
+- Version：项目当前版本号，对应为根pom中`<version>`标签中的值
+- Package Name：项目中的包名
+
+
+
+
+
+
+
+
+
+
 
 
 
