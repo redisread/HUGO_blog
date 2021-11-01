@@ -8,7 +8,7 @@ enableToc: true
 enableTocContent: false
 tocPosition: outer
 author: Victor
-authorEmoji: 👻
+authorEmoji: 🪶
 image:
 plantuml: true
 libraries:
