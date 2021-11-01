@@ -417,6 +417,68 @@ Ref:
 
 
 
+
+
+### Java并发
+
+[CompletableFuture的原理与实践-记外卖商家端API的异步化](https://km.sankuai.com/page/947271480)
+
+[CompletableFuture功能介绍与原理分析_尘间絮的专栏-CSDN博客](https://blog.csdn.net/dlxi12345/article/details/107767001)
+
+同步模型的问题：
+
+会有阻塞的时间。
+
+
+
+异步主要是：**减少线程池的调度开销和阻塞时间**
+
+
+
+CompletableFuture的优势：
+
+- 可异步
+- 可组合（编排）
+
+
+
+应用场景：
+
+[使用CompletableFuture异步执行循环中的任务 | localhost](http://zengyangcloud.com/archives/155/)
+
+现在有一个需求：给你一批商品编号查询出商品的所有相关信息，这些商品信息并不能通过一条sql就直接获取到，需要对**每一件商品调用很多接口**来获取相关，因此查一件商品的耗时较长，如果查询的商品较多使用循环来执行的话，所耗费的时间肯定是特别长的。
+
+
+
+
+
+
+
+CompletableFuture处理工具类：
+
+- FutureUtils
+- 
+
+
+
+两个或者多个任务的异步执行。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### Useful方法
 
 
@@ -482,6 +544,53 @@ groupingBy()是Stream API中最强大的收集器Collector之一，提供与SQL�
 
 https://blog.csdn.net/daobuxinzi/article/details/100190366
 
+分组：
+
+```java
+// 重新分组
+Map<String, List<CompareStockVO>> detailMap = afterFilter.stream()
+  .collect(Collectors.groupingBy(compareStockVO -> StringUtils
+                                 .joinWith("-", compareStockVO.getPoiId(), compareStockVO.getSkuId(),
+                                           compareStockVO.getSupplierId())));
+```
+
+
+
+
+
+另外一种聚合的方法：
+
+```java
+// 聚合
+Map<String, WmsStockSkuLotExpiryPO> poiLot2Expire = lotExpiryPOS.stream().collect(
+  Collectors.toMap(
+    lotExpiryPO -> expirySyncService
+    .getExpiryEsKey(lotExpiryPO.getLotId(), lotExpiryPO.getPoiId()),
+    a -> a, (k1, k2) -> k1));
+```
+
+
+
+聚合：
+
+```
+// 重新聚合
+        List<CompareStockVO> result = Lists.newArrayList();
+        for (List<CompareStockVO> compareStockVOList : detailMap.values()) {
+            Optional<CompareStockVO> compareStockVO = compareStockVOList.stream()
+                    .reduce((left, right) -> {
+                        left.setQuantity(left.getQuantity().add(right.getQuantity()));
+                        left.setLockQuantity(left.getLockQuantity().add(right.getLockQuantity()));
+                        return left;
+                    });
+            if (compareStockVO.isPresent()) {
+                result.add(compareStockVO.get());
+            }
+        }
+```
+
+
+
 
 
 #### partition
@@ -492,6 +601,22 @@ https://blog.csdn.net/daobuxinzi/article/details/100190366
 List<List<Long>> subLists = Lists.partition(result,20);
 List<List<Integer>> subSets = ListUtils.partition(intList, 3);
 ```
+
+
+
+#### flatMap
+
+[Java8 Stream使用flatMap合并List](https://blog.csdn.net/weixin_41835612/article/details/83713891)
+
+
+
+#### CompletableFuture
+
+[CompletableFuture的使用](https://km.sankuai.com/page/212004627)
+
+
+
+
 
 
 
