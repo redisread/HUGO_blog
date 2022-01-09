@@ -434,6 +434,56 @@ git rebase -i 版本
 
 **之后选择需要合并的commit的前面的pick改为s，然后保存推出，有冲突按照提示修改即可。** 
 
+
+
+# Git将单个commit拆分成多个commit
+
+
+
+
+
+参考：[Git : 如何将一个commit拆分成多个 | 一个程序员的自我修养](https://codemelody.wordpress.com/2012/12/04/git-%E5%A6%82%E4%BD%95%E5%B0%86%E4%B8%80%E4%B8%AAcommit%E6%8B%86%E5%88%86%E6%88%90%E5%A4%9A%E4%B8%AA/)
+
+
+
+
+
+
+
+
+
+
+
+## Git查看某次提交的内容
+
+```bash
+git show commitId
+```
+
+查看某个文件某次提交的内容:
+
+```bash
+git show commitId fileName
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## git 分支操作
 
 游戏学习分支操作：https://learngitbranching.js.org/?locale=zh_CN
