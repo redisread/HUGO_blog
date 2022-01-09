@@ -25,6 +25,8 @@ categories:
 
 
 
+> 在home目录下安装的nginx程序d
+
 ## 申请证书
 
 ### letsencrypt的证书
