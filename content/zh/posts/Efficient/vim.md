@@ -1,30 +1,26 @@
 ---
-title: vim
+title: vim使用笔记
 date: 2021-09-04T23:12:34+08:00
 description:
-draft: true
+draft: false
 hideToc: false
 enableToc: true
-enableTocContent: false
+enableTocContent: true
 tocPosition: outer
 author: Victor
 authorEmoji: 👻
-image:
+image: https://cos.jiahongw.com/uPic/4691236_vim_icon.png
 plantuml: true
 libraries:
 - katex
 - mathjax
 tags:
--
+- vim
 series:
 -
 categories:
 -
 ---
-
-|  | <++> |
-|  |      |
-|  |      |
 
 
 
@@ -166,10 +162,6 @@ vim-table-mode插件参考使用:
 
 
 
-
-
-
-
 ### 可视模式
 
 Vim 有 3 种不同的可可视模式，分别用于操作字符文本、行文本和块文本。
@@ -204,14 +196,6 @@ Vim 有 3 种不同的可可视模式，分别用于操作字符文本、行文�
 
 
 
-
-
-
-
-
-
-
-
 ![image-20210921220449236](https://cos.jiahongw.com/uPic/image-20210921220449236.png)
 
 
@@ -243,15 +227,7 @@ Vim 有 3 种不同的可可视模式，分别用于操作字符文本、行文�
 
 ### 命令行模式
 
-
-
-
-
-
-
-
-
-
+待补充。。。
 
 
 
@@ -262,10 +238,8 @@ vim实用技巧：
   1. 从进入插入模式开始，直到返回普 通模式为止，在此期间输入或删除的任何内容都被当成一次修改。因此，只要我们控制 好对 <Esc> 键的使用，就可使撤销命令作用于单词、句子或段落
   2. 当处于插入模式时，如果光标位于行尾的话，另起一行最快的方式是按<CR>。不 过有时我更喜欢按 <Esc>o，这是因为我有预感，也许在撤销时我想拥有更细的粒度
 2. 124
-3. 
 
 ---
 ### 坑
 
 - 打开vim回到上次的位置：https://www.dyxmq.cn/linux/vim-setting-mouse-place.html
-
