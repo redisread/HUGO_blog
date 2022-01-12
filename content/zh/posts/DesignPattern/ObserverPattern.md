@@ -2,7 +2,7 @@
 title: 观察者模式
 date: 2022-01-03T22:41:31+08:00
 description: 一个比喻：报纸订阅（出版者和订阅者）。
-draft: true
+draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
