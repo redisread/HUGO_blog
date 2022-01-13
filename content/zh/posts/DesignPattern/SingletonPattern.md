@@ -15,10 +15,10 @@ libraries:
 - katex
 - mathjax
 tags:
-- DesignPattern
-- Singleton
+- 设计模式
+- 单例模式
 series:
-- DesignPattern
+- 设计模式
 categories:
 -
 ---
@@ -90,7 +90,7 @@ public class SingletonPattern {
     }
 
     /**
-     * 饿汉单例模式 这样的实现方式不支持延迟加载（在真正用到IdGenerator的时候，再创建实例）
+     * 1.饿汉单例模式 这样的实现方式不支持延迟加载（在真正用到IdGenerator的时候，再创建实例）
      */
     static class SingletonV1 {
 
@@ -105,7 +105,7 @@ public class SingletonPattern {
     }
 
     /**
-     * 懒汉单例模式
+     * 2.懒汉单例模式
      */
     static class SingletonV2 {
 
@@ -123,7 +123,7 @@ public class SingletonPattern {
     }
 
     /**
-     * 静态阻塞初始化
+     * 3.静态阻塞初始化
      */
     static class SingletonV3 {
 
@@ -176,6 +176,7 @@ public class SingletonPattern {
 
         public static SingletonV5 getInstance() {
             if (instance == null) {
+              // 只有在第一次创建对象的时候才会进行同步锁定，其他情况不需要，提高了性能
                 synchronized (SingletonV5.class) {
                     if (instance == null) {
                         instance = new SingletonV5();
@@ -254,6 +255,20 @@ public class SingletonPattern {
 
 
 
+> question :question:
+>
+> 1. 为什么使用双检锁？
+>
+>    避免额外的开销。在两次判断instance是否为null的中间加入synchronized关键字，将synchronize的返回从整个方法降到判断里面。
+>
+> 2. 
+
+
+
+
+
+
+
 ### 单例的问题
 
 1. 对OOP对象不友好
@@ -300,6 +315,14 @@ public class SingletonPattern {
   具体来说，我们需要把这个单例对象序列化并存储到外部共享存储区（比如文件）。进程在使用这个单例对象的时候，需要先从外部共享存储区中将它读取到内存，并反序列化成对象，然后再使用，使用完成之后还需要再存储回外部共享存储区。
 
   为了保证任何时刻，在进程间都只有一份对象存在，一个进程在获取到对象之后，需要对对象加锁，避免其他进程再将其获取。在进程使用完这个对象之后，还需要显式地将对象从内存中删除，并且释放对对象的加锁。
+
+### 使用场景
+
+- 线程池
+- 缓存
+- 对话框
+- 注册表对象
+- 日志对象
 
 
 
