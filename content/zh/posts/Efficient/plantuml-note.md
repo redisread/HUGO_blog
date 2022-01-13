@@ -1264,6 +1264,14 @@ usecase usecase [
 
 `-[hidden]-`可以画一条隐藏的线条，常常用于布局。
 
+#### 排列
+
+可以添加下面的一行进行竖排列：
+
+```
+left to right direction
+```
+
 
 
 ### 相关配置
