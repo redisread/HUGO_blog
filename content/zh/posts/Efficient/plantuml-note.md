@@ -1298,6 +1298,4 @@ brew install graphviz
 - [程序员必备画图技能之——时序图 - 程序员自由之路 - 博客园](https://www.cnblogs.com/54chensongxia/p/13236965.html)
 - [【程序员小知识】使用 PlantUML 画 UML（上）类图 - 掘金](https://juejin.cn/post/7012797326083227661)
 - [在 Hugo 博客上使用 PlantUML – Mogeko's Blog](https://mogeko.me/posts/zh-cn/083/)
-
-
-
+- https://crashedmind.github.io/PlantUMLHitchhikersGuide/layout/layout.html
