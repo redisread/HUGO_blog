@@ -347,7 +347,256 @@ package three.four {
 
 
 
+包可以使用颜色和替换样式：
 
+```
+@startuml
+'https://plantuml.com/class-diagram
+
+class Client
+
+class Facade
+
+Client -> Facade
+
+package "子系统" <<cloud>> #DDDDDD{
+  class A
+  class B
+  class C
+  class D
+  class E
+
+}
+
+Facade -- A
+Facade -- C
+
+A - C
+A -- B
+A -- E
+C - E
+B - D
+
+@enduml
+```
+
+```plantuml
+@startuml
+'https://plantuml.com/class-diagram
+
+class Client
+
+class Facade
+
+Client -> Facade
+
+package "子系统" <<cloud>> #DDDDDD{
+  class A
+  class B
+  class C
+  class D
+  class E
+
+}
+
+Facade -- A
+Facade -- C
+
+A - C
+A -- B
+A -- E
+C - E
+B - D
+
+@enduml
+```
+
+
+
+样式列表：
+
+```
+@startuml
+scale 750 width
+package foo1 <<Node>> {
+  class Class1
+}
+
+package foo2 <<Rectangle>> {
+  class Class2
+}
+
+package foo3 <<Folder>> {
+  class Class3
+}
+
+package foo4 <<Frame>> {
+  class Class4
+}
+
+package foo5 <<Cloud>> {
+  class Class5
+}
+
+package foo6 <<Database>> {
+  class Class6
+}
+
+@enduml
+
+```
+
+```plantuml
+@startuml
+scale 750 width
+package foo1 <<Node>> {
+  class Class1
+}
+
+package foo2 <<Rectangle>> {
+  class Class2
+}
+
+package foo3 <<Folder>> {
+  class Class3
+}
+
+package foo4 <<Frame>> {
+  class Class4
+}
+
+package foo5 <<Cloud>> {
+  class Class5
+}
+
+package foo6 <<Database>> {
+  class Class6
+}
+
+@enduml
+```
+
+
+
+#### note笔记
+
+一般可以使用下面的语句进行在组件的上下左右添加笔记：
+
+```
+@startuml
+class A
+class B
+class C
+class D
+
+‘ 在组件A左边添加笔记
+note left of A : 笔记A
+
+‘ 在组件B右边添加笔记
+note right of B : 笔记B
+
+‘ 在组件C上边添加笔记
+note top of C : 笔记C
+
+‘ 在组件D下边添加笔记
+note bottom of D : 笔记D
+@enduml
+```
+
+```plantuml
+@startuml
+class A
+class B
+class C
+class D
+
+‘ 在组件A左边添加笔记
+note left of A : 笔记A
+
+‘ 在组件B右边添加笔记
+note right of B : 笔记B
+
+‘ 在组件C上边添加笔记
+note top of C : 笔记C
+
+‘ 在组件D下边添加笔记
+note bottom of D : 笔记D
+@enduml
+```
+
+可以在字段（field、attribute、member）或方法上添加注释。 这不能与命名空间分隔符(namespaceSeparator) `::` 一起使用
+
+注释属性和方法：
+
+```
+@startuml
+class A {
+{static} int counter
++void {abstract} start(int timeout)
+}
+note left of A::counter
+  该成员已注释
+end note
+note right of A::start
+  在 UML 注释了此方法
+end note
+@enduml
+```
+
+```plantuml
+@startuml
+class A {
+{static} int counter
++void {abstract} start(int timeout)
+}
+note left of A::counter
+  该成员已注释
+end note
+note right of A::start
+  在 UML 注释了此方法
+end note
+@enduml
+```
+
+注释同名方法：
+
+```
+@startuml
+class A {
+{static} int counter
++void {abstract} start(int timeoutms)
++void {abstract} start(Duration timeout)
+}
+note left of A::counter
+  该成员已注释
+end note
+note right of A::"start(int timeoutms)"
+  这个start方法的参数是int类型
+end note
+note right of A::"start(Duration timeout)"
+  这个start方法的参数是Duration类型
+end note
+@enduml
+```
+
+```plantuml
+@startuml
+class A {
+{static} int counter
++void {abstract} start(int timeoutms)
++void {abstract} start(Duration timeout)
+}
+note left of A::counter
+  该成员已注释
+end note
+note right of A::"start(int timeoutms)"
+  这个start方法的参数是int类型
+end note
+note right of A::"start(Duration timeout)"
+  这个start方法的参数是Duration类型
+end note
+@enduml
+```
 
 
 
