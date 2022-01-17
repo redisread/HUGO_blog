@@ -90,7 +90,19 @@ end note
 @enduml
 ```
 
+模板方法可以配合范型进行使用：
 
+```java
+public class AbstractService<T, L> {
+  
+  protected abstract T getData(int x);
+  public void calAndSaveTransaction(T t,L l);
+}
+
+public ConcreteService implements AbstractService<String, Integer> {
+  ...
+}
+```
 
 ### 区别
 
