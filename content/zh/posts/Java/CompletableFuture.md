@@ -1,32 +1,54 @@
 ---
-title: CompletableFuture的使用
-date: 2021-10-19T17:38:53+08:00
+title: CompletableFuture笔记
+date: 2022-03-28T17:38:53+08:00
 description:
-draft: true
+draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
 tocPosition: outer
 author: Victor
 authorEmoji: 👻
-image:
+image: https://raw.githubusercontent.com/redisread/Image/master/Java/java.png
 plantuml: true
 libraries:
 - katex
 - mathjax
 tags:
--
+- Java
+- CompletableFuture
 series:
--
+- Java
 categories:
 -
 ---
 
 
 
+>创建线程池的方法：
+>
+>```java
+>ExecutorService executorService = Executors.newCachedThreadPool();
+>ExecutorService executorService = Executors.newFixedThreadPool(3);
+>ScheduledExecutorService executorService = Executors.newScheduledThreadPool(3);
+>ExecutorService executorService = Executors.newSingleThreadExecutor();
+>```
+>
+>https://www.cnblogs.com/pcheng/p/13540619.html
+
+
+
 ### 多线程的问题
 
 线程任务是实现了`Runnable`接口，或者直接写个类继承`Thread`,但是这两种方法只能通过共享对象或者文件来得到返回的结果，无法直接返回。并且`Runnable`接口中的`run`方法无法抛出异常。
+
+> 回调地狱（Callback hell）问题
+
+Java 5 提供了执行器框架，其思想类似于一个高层的线程池，可以充分发􏴁线程的能力。执行器使得程序员有机会解􏳽任务的提交与任务的执行。
+
+无论什么时候，任何任务(或者线程)在方法 调用中启动时，都会在其返回之前调用同一个方法。换句话说，线程创建以及与其匹配的 join() 在调用返回的嵌套方法调用中都以嵌套的方式成对出现。这种思想被称为􏶖􏶗 fork/join。
+
+![image-20211104163018776](https://cos.jiahongw.com/uPic/image-20211104163018776.png)
 
 
 
@@ -390,6 +412,16 @@ Result of Task2
 
 ### CompletableFuture简介
 
+并发与并行的区别：
+
+![并发与并行](https://cos.jiahongw.com/uPic/image-20211104155518371.png)
+
+
+
+避免阻塞，应用通过 与各种网络服务通信，替用户实时整合需要的信息，或者将整合的信息作为进一步的网络服务 提供出去。这种工作方式被称为反应式编程。
+
+
+
 #### CompletableFuture能够解决什么问题？
 
 CompletableFuture是**Java8引入的**，在Java8之前一般通过Future实现异步。(但是是阻塞的)
@@ -523,7 +555,7 @@ completableFuture.complete("Future's Result");
 
 ####  **`runAsync()`** 
 
-这个适用于无返回值的异步执行。
+这个适用于**无返回值**的异步执行。
 
 `CompletableFuture.runAsync()`方法，它持有一个[Runnable ](https://link.segmentfault.com/?enc=diQ%2BJHoBiSIWYNaXHiKF4A%3D%3D.S5Fvkk4QZR6KY5wH9EcIbnPDmc8i2VCBkVs5Cqx3vukZyVn28mZPwbng2KuzQ0lkL4Ec9wYiJDsOA7BYCe3dPUAIwp3R7vFXJEPLCk4xWyo%3D)对象，并返回 `CompletableFuture<Void>`。
 
@@ -565,7 +597,7 @@ CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
 
 ####  **`supplyAsync()`** 
 
-适用于有返回值的异步计算。
+适用于**有返回值**的异步计算。
 
 `CompletableFuture.supplyAsync()` 持有`supplier<T>` 并且返回`CompletableFuture<T>`，`T` 是通过调用 传入的supplier取得的值的类型。
 
@@ -901,6 +933,7 @@ CompletableFuture<String> maturityFuture = CompletableFuture.supplyAsync(() -> {
         return "Child";
     }
 }).exceptionally(ex -> {
+  	// 在此处打印相关的日志，返回值需要特别注意，可以返回一个指定的值，然后在后面进行过滤
     System.out.println("Oops! We have an exception - " + ex.getMessage());
     return "Unknown!";
 });
@@ -937,7 +970,239 @@ System.out.println("Maturity : " + maturityFuture.get());
 
 如果异常发生，`res`参数将是 null，否则，`ex`将是 null。
 
+### 区别
+
+supplyAsync：
+
+- 当只是指定第一个参数，默认使用的线程池是 `ForkJoinPool.commonPool()`
+- 当指定第二个线程池的参数，使用的是自定义的线程
+
+
+
+supplyAsync表示开启一个有返回值的异步任务。
+
+可以使用 `thenAccept` 和 `thenApply` 给它增加回调函数。同样，`thenAccept` 和 `thenApply` 也有同样的异步函数`thenAcceptAsync` 和 `thenApplyAsync` ，可以让逻辑执行在设定的线程池上。
+
+
+
+同步和异步的区别：
+
+假设我们想一次向同一个接收者发送两条消息。
+
+```java
+CompletableFuture<String> receiver  
+            = CompletableFuture.supplyAsync(this::findReceiver);
+receiver.thenApply(this::sendMsg);  
+receiver.thenApply(this::sendOtherMsg);  
+```
+
+在上面的例子中，一切都将在同一个线程上执行。这导致最后一条消息等待第一条消息完成。
+
+考虑这个代码:
+
+```java
+CompletableFuture<String> receiver  
+            = CompletableFuture.supplyAsync(this::findReceiver);
+
+receiver.thenApplyAsync(this::sendMsg);  
+receiver.thenApplyAsync(this::sendMsg);  
+```
+
+通过使用async后缀，每个消息被作为单独的任务提交给ForkJoinPool.commonPool()。这导致在完成前面的计算时，sendMsg的回调都被执行。
+
+一个测试：
+
+```java
+//thenApply和thenApplyAsync的区别
+System.out.println("-------------");
+CompletableFuture<String> supplyAsyncWithSleep = CompletableFuture.supplyAsync(()->{
+    try {
+        Thread.sleep(10000);
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
+    return "supplyAsyncWithSleep Thread Id : " + Thread.currentThread();
+});
+CompletableFuture<String> thenApply = supplyAsyncWithSleep
+        .thenApply(name -> name + "------thenApply Thread Id : " + Thread.currentThread());
+CompletableFuture<String> thenApplyAsync = supplyAsyncWithSleep
+        .thenApplyAsync(name -> name + "------thenApplyAsync Thread Id : " + Thread.currentThread());
+System.out.println("Main Thread Id: "+ Thread.currentThread());
+System.out.println(thenApply.get());
+System.out.println(thenApplyAsync.get());
+System.out.println("-------------No Sleep");
+CompletableFuture<String> supplyAsyncNoSleep = CompletableFuture.supplyAsync(()->{
+    return "supplyAsyncNoSleep Thread Id : " + Thread.currentThread();
+});
+CompletableFuture<String> thenApplyNoSleep = supplyAsyncNoSleep
+        .thenApply(name -> name + "------thenApply Thread Id : " + Thread.currentThread());
+CompletableFuture<String> thenApplyAsyncNoSleep = supplyAsyncNoSleep
+        .thenApplyAsync(name -> name + "------thenApplyAsync Thread Id : " + Thread.currentThread());
+System.out.println("Main Thread Id: "+ Thread.currentThread());
+System.out.println(thenApplyNoSleep.get());
+System.out.println(thenApplyAsyncNoSleep.get());
+```
+
+分别测试执行不同处理速度的代码，thenApply 和 thenApplyAsync 使用的是哪个线程：
+
+```
+-------------
+Main Thread Id: Thread[main,5,main]
+supplyAsyncWithSleep Thread Id : Thread[ForkJoinPool.commonPool-worker-9,5,main]------thenApply Thread Id : Thread[ForkJoinPool.commonPool-worker-9,5,main]
+supplyAsyncWithSleep Thread Id : Thread[ForkJoinPool.commonPool-worker-9,5,main]------thenApplyAsync Thread Id : Thread[ForkJoinPool.commonPool-worker-9,5,main]
+-------------No Sleep
+Main Thread Id: Thread[main,5,main]
+supplyAsyncNoSleep Thread Id : Thread[ForkJoinPool.commonPool-worker-2,5,main]------thenApply Thread Id : Thread[main,5,main]
+supplyAsyncNoSleep Thread Id : Thread[ForkJoinPool.commonPool-worker-2,5,main]------thenApplyAsync Thread Id : Thread[ForkJoinPool.commonPool-worker-2,5,main]
+```
+
+可以看到
+
+- `supplyAsync`方法执行速度慢的话`thenApply`方法执行线程和`supplyAsync `执行线程相同
+- `supplyAsync `方法执行速度快的话，那么`thenApply`方法执行线程和`Main`方法执行线程相同
+
+
+
+#### 返回值
+
+
+
+| 方法名       | 是否可获得前一个任务的返回值 | 是否有返回值 |
+| :----------- | :--------------------------- | :----------- |
+| `thenApply`  | 能获得                       | 有           |
+| `thenAccept` | 能获得                       | 无           |
+| `thenRun`    | 不可获得                     | 无           |
+
+所以一般来说`thenAccept `、`thenRun `这两个方法在调用链的最末端使用。
+
+
+
+
+
+#### 二元依赖
+
+- thenCombine:两个异步方法得出来值的情况下才能进行计算
+- thenCompose:二个定时任务需要用到第一个定时任务的返回值
+- runAfterBoth
+
+
+
+
+
+
+
+二选一：acceptEither
+
+firstSource.acceptEither(secondSource, this::sendMsg); 
+
+
+
+
+
+## 总结
+
+1. CompletableFuture使用get方法和join方法会阻塞后续的操作。
+2. 不阻塞的话并且不需要返回值可以直接不显示的使用get方法和join方法。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### 使用场景
+
+> 你以前可能接触过 CompletableFuture 对象背后的概念，在其他语言中这被 叫作延迟对象或约定。在Google Guava类库和Spring框架中，这被叫作 ListenableFutures。
+
+#### 多服务调用
+
+
+
+![image-20211204213546992](https://cos.jiahongw.com/uPic/image-20211204213546992.png)
+
+
+
+实际的情况可能是这样子
+
+![image-20211204214205801](https://cos.jiahongw.com/uPic/image-20211204214205801.png)
+
+
+
+
+
+#### 多线程组装数据。
+
+![image-20211204213806661](https://cos.jiahongw.com/uPic/image-20211204213806661.png)
+
+
+
+每一个分片数据都用一个CompletableFuture执行。
+
+
+
+
+
+
+
+Join，它的作用和 get 方法 是一样的，而且它没有使用 get 方法时令人倒胃口的检查异常。
+
+join抛出unchecker异常，而get抛出checked异常
+
+
+
+混合使Stream和CompletableFuture的时候需要注意⚠️：
+
+考虑操作之间的延迟特性，如何你在单一流水线中处理流，每个创建CompletableFuture 对象只能在前一个操作结束之后才能创建。
+
+
+
+最好是将CompletableFuture先聚集到一个列表中。然后再屌用join。
+
+
+
 ### 原理
+
+通常，设计和理解并发系统最好的方式是使用图形:
+
+![image-20211104170155870](https://cos.jiahongw.com/uPic/image-20211104170155870.png)
+
+
+
+上面的图形可以使用下面的代码来实现：
+
+```java
+int t = p(x);
+System.out.println( r(q1(t), q2(t)) );
+```
+
+使用Future方法：
+
+```java
+int t = p(x);
+Future<Integer> a1 = executorService.submit(() -> q1(t));
+Future<Integer> a2 = executorService.submit(() -> q2(t));
+System.out.println( r(a1.get(),a2.get()));
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 CompletableFuture使用的是一种观察者模式进行实现的。
 
@@ -947,9 +1212,195 @@ CompletableFuture使用的是一种观察者模式进行实现的。
 
 
 
+### Java实战
+
+我们实际的开发过程中，总是需要调用多个服务，假如没有使用并发进行编程，那么，在一个服务返回结果之前，这都是阻塞的，不能执行其他的任务。然而，你并不希望由于要等待远程服务的响应，阻塞现有的计算任务并白白浪费 CPU 中数十亿个宝贵的时􏲁􏵑期。譬 如，你不应该由于要等待 Facebook 数据的返回而􏵒止对 Twitter 数据的处理。
 
 
 
+#### Java的并发之路
+
+1. 一开始就提供了锁(通过 synchronized 类和方法)、Runnable 以及线程。
+2. 2004 年， Java 5 又引入了 java.util.concurrent 包。（引入ExecutorService、Callable<T>以及 Future<T>）
+3. Java 7 为了使用 fork/join 实现分而􏵬之算法，新 增了java.util.concurrent.RecursiveTask
+4. Java 8则增加了对流和流的并行处理(依赖于新增的 Lambda 表达式)的支持
+5. Java 8还支持组合式的Future(基于Java 8CompleteFuture实现的Future）
+6. Java 9 提供了对分布式异步编程的显式支持。（通过 java.util.concurrent.Flow 接口）
+
+> CompletableFuture 及 java.util.concurrent.Flow 的关键理念是提供一种程序结构，**让相互独立的任务尽可能地并发执行**，通过这种方式最大化地利用多核或者多台机器提供的并发能力。
+
+
+
+#### 多线程并发内幕
+
+在一个多核的环境中，单用户登录的笔记本电脑上可能只启动了一个用户进程，这种程序永远不能充分发挥计算机的处理能力，除非使用多线程。虽然每个核可以服务一个或多个进程或线程，但是**如果你的程序并未使用多线程，那它同一时刻能有效使用的只有处理器众多核中的一个**。
+
+这需要我们在编写代码的时候注意使用多线程并发编程，以充分发挥计算机的处理能力。
+
+1. 线程的问题
+
+   Java 线程直接访问操作系统的线程。这里主要的问题在于创建和􏳒除操作系统线程的代价很 大(涉及页表操作)，并且一个系统中能创建的线程数目是有限的。如果创建的线程数超过操作系统的限制，很可能导致 Java 应用莫名其妙地崩溃，因此你需要特别留意，不要在线程运行时 持续不断地创建新线程。并且操作系统(以及 Java)的线程数都远远大于硬件线程数，因此即便一些操作系统线程被阻塞了，或者处于睡眠状态。
+
+2. 线程池的优势
+
+   Java 的 ExecutorService 提供了一个接口，用户可以提交任务并获取它们的执行结果。新创建 的线程会被放入一个线程池，每次有新任务请求时，以先来先到的􏵼略从线程池中选取未被使用 的线程执行提交的任务请求。任务执行完毕之后，这些线程又会被归还给线程池。这种方式的最大优势在于能以很低的成本向线程池提交上千个任务，同时保证硬件匹配的任务执行。
+
+3. 线程池的不足
+
+   - 使用 *k* 个线程的线程池只能并发地执行 *k* 个任务
+
+     提交的任务如果超过这个限制，线程池不会创建新线程去执行该任务，这些超限的任务会被加入等待队列，直到现有任务执行 完毕才会重新调度空闲线程去执行新任务。
+
+     > 采用这种方式时你 需要特别留意任务是否存在会进入睡眠、等待 I/O 结􏰅或者等待网络连接的情况。一旦发 生阻塞式 I/O，这些任务占用了线程，却会由于等待无法执行有价值的工作。
+     >
+     > 例如，假如CPU有4个硬件线程，你创建了一个大小为5的线程池，你一次性提交了 20 个执行任务，希望这20个任务并发的执行，直到所有 20 个任务执行完毕。假设首批提交的 线程中有 3 个线程进入了阻塞状态或者在等待 I/O，那就只剩2 个线程可以服务剩下的 15 个任务了。如此一来，你只能取得你之前预期吞吐量的一半(如果你创建的线程池中工 作线程数为 8，那么还是能取得同样预期吞吐量的)。
+     >
+     > ![image-20211205162829647](https://cos.jiahongw.com/uPic/image-20211205162829647.png)
+
+   - 通常情况下，Java 从 main 返回之前，都会等待所有的线程执行完毕，从而避免误杀正在执行关键代码的线程。
+
+     实际操作时的一个好习惯是在退出程序执行之前，确保关闭每一个线程池。
+
+你希望采用线程技术理程序的结构，以便在需要的时候享受程序并行带来的好处，生成足够多的任务以充分利用所有硬件线程。这意味着你需要对程序进行**切分**。
+
+
+
+#### 使多线程的演进过程
+
+多于函数 `f(x)` 和 `g(x)`，分别使用一个线程去并发执行。
+
+使用Runnable：
+
+```java
+class ThreadExample {
+public static void main(String[] args) throws InterruptedException { int x = 1337;
+            Result result = new Result();
+            Thread t1 = new Thread(() -> { result.left = f(x); } );
+            Thread t2 = new Thread(() -> { result.right = g(x); });
+            t1.start();
+            t2.start();
+            t1.join();
+            t2.join();
+            System.out.println(result.left + result.right);
+}
+        private static class Result {
+            private int left;
+            private int right;
+} }
+```
+
+使用线程池和Future：
+
+```java
+public class ExecutorServiceExample {
+	public static void main(String[] args) throws ExecutionException, InterruptedException {
+    int x = 1337;
+    ExecutorService executorService = Executors.newFixedThreadPool(2);
+    Future<Integer> y = executorService.submit(() -> f(x));
+    Future<Integer> z = executorService.submit(() -> g(x));
+    System.out.println(y.get() + z.get());
+    executorService.shutdown();
+  }
+}
+```
+
+然而，这段代码依然受到了显式调用 submit 时使用的模板代码的污染。也就是说，其实这个枯燥的操作其实也是可以省略的。
+
+解决这个问题的答案是将 API 由同步 API 变为步 API，也就是增加异步的API函数。
+
+使用线程池和CompletableFuture：
+
+```java
+public class ExecutorServiceExample {
+	public static void main(String[] args) throws ExecutionException, InterruptedException {
+    int x = 1337;
+    ExecutorService executorService = Executors.newFixedThreadPool(2);
+    CompletableFuture<Integer> y = CompletableFuture.supplyAsync(() -> f(x),executorService); 
+    CompletableFuture<Integer> z = CompletableFuture.supplyAsync(() -> g(x),executorService);
+    CompletableFuture<Integer> result = y.thenCombine(z,(y_val,z_val) -> {return y_val + z_val;} )
+    System.out.println(result.get());
+    executorService.shutdown();
+  }
+}
+```
+
+
+
+使用反应式的API：(基于回调函数)
+
+````java
+public class CallbackStyleExample {
+	public static void main(String[] args) {
+ 		System.out.println((result.left + result.right));
+		int x = 1337;
+		Result result = new Result();
+    f(x, (int y) -> {
+        result.left = y;
+     });
+    g(x, (int z) -> {
+    	result.right = z;
+    	System.out.println((result.left + result.right)); 7
+    });
+  }
+}
+````
+
+> 注意，反应式编程允许方法 f 和 g 多次调用它们的回调函数 dealWithResult。而原始版
+> 本的 f 和 g 使用 return 返回结果，return 只能被调用一次。Future 与此类似，它也只能完 成一次，执行 Future 的计算结果可以通过 get()方法获取。
+
+
+
+#### 可能阻塞线程的因素
+
+
+
+阻塞式操作可以分为两类:
+
+1. 一类是等待另一个任务执行，譬如调用 Future 的 get()方法;
+2.  另一类是等待与外部交互的返回，譬如**从网络、数据库服务器或者键盘这样的人机接口读取数据**。
+
+> 睡眠也会阻塞。
+
+
+
+#### 学习并发的模式
+
+通常，设计和理解并发系统最好的方式是使用图形。我们将这种技术称**线程-管道** (box-and-channel)模型。
+
+<img src="https://cos.jiahongw.com/uPic/image-20211205170713764.png" alt="image-20211205170713764" style="zoom:50%;" />
+
+
+
+这其实是观察者模式的一种实现。
+
+
+
+#### 使用CompletableFuture
+
+CompletableFuture和并行流的实现方式类似的，它们内部都是调用多线程进行执行，然而CompletableFuture可以允许设置线程池，指定线程的数量（线程池的大小），并且支持组合模式。
+
+> 并行流是把内容拆分成多个数据块，用不同线程处理每个数据块的数据。这样以来，就可以自动的把工作的负荷分配到多核处理器的所有核，让他们都忙起来。
+
+使用Async还是同步API的判断标准：
+
+- 一般情况下操作不涉及远程服务和I/O操作，可以采用同步API
+- 其他耗时的操作可以使用异步API。
+
+> 通常而言，名称中不带Async的方法和它的前一个任务一样，在同一个线程中运行，而名称以Async结尾的方法会将后续的任务提交到一个线程池，所以每个任务是由不同的线程处理的。对于不复杂的延迟低的操作，尽量复用同一个进程，减少进程间切换的开销。
+
+
+
+
+
+### Java中的线程池
+
+参考：《Java并发编程的艺术》
+
+#### 线程池的好处
+
+1. 降低资源损耗。
+2. 提高响应速度。
+3. 提高线程的可管理性。
 
 
 
@@ -962,4 +1413,7 @@ CompletableFuture使用的是一种观察者模式进行实现的。
 3. [Java 8 CompletableFuture 教程 - SegmentFault 思否](https://segmentfault.com/a/1190000014479792)
 4. [关于实现Runnable接口不能抛异常只能捕获异常原因_小林子的博客-CSDN博客](https://blog.csdn.net/qq_26106607/article/details/79145882#:~:text=%E5%8E%9F%E5%9B%A0%EF%BC%9A%20%E5%9C%A8java%E4%B8%AD%E6%9C%89,%E7%9A%84%E5%BC%82%E5%B8%B8%EF%BC%89%EF%BC%8C%E5%9B%A0%E4%B8%BA%E5%9C%A8Runnable&text=%E7%94%B1%E4%BA%8EJava%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%9C%AC%E8%B4%A8,%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8try%2Dcatch%E5%9D%97%E3%80%82)
 5. [Java Callable and Future Tutorial | CalliCoder ~ Java可调用和未来教程 | CalliCoder](https://www.callicoder.com/java-callable-and-future-tutorial/)
+6. [使用CompletableFuture异步组装数据](https://blog.csdn.net/ling_76539446/article/details/104146259)
+7. [Java: Writing asynchronous code with CompletableFuture](https://www.deadcoderising.com/java8-writing-asynchronous-code-with-completablefuture/)
+8. [Java8——异步编程 - Mr.墨斗的博客 | MoDou Blog](https://modouxiansheng.top/2019/08/13/%E4%B8%8D%E5%AD%A6%E6%97%A0%E6%95%B0-Java8-%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B-2019/)
 

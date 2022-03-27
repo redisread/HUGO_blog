@@ -1,7 +1,7 @@
 ---
 title: Java虚拟机原理
 date: 2021-10-26T16:26:58+08:00
-description:
+description: Java虚拟机，Java利器之一。待补充
 draft: true
 hideToc: false
 enableToc: true
