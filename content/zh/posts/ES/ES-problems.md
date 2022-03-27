@@ -1,23 +1,23 @@
 ---
-title: ES-problems
-date: 2021-09-14T10:36:37+08:00
-description:
-draft: true
+title: ES相关问题
+date: 2022-03-27T10:36:37+08:00
+description: ES相关问题故障和解决
+draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
 tocPosition: outer
 author: Victor
 authorEmoji: 👻
-image:
+image: https://cos.jiahongw.com/uPic/pluginIcon.png
 plantuml: true
 libraries:
 - katex
 - mathjax
 tags:
--
+- ES
 series:
--
+- ES
 categories:
 -
 ---
@@ -27,6 +27,8 @@ categories:
 
 
 ES集群故障：警惕通配符查询
+
+![Cap-Elasticsearch-Client - IntelliJ IDEs Plugin | Marketplace]()
 
 https://elasticsearch.cn/article/171
 
@@ -104,34 +106,6 @@ GET test_log/course/_search
 4. [Mysql，elasticsearch 等 按时间排序中的坑 - 星逝流的个人页面 - OSCHINA - 中文开源技术交流社区](https://my.oschina.net/jiangzhixiong/blog/597018)
 5. [ES系列-Mapping-Meta_Fields-_id与_uid字段（索引、映射、字段）_Vancl_Wang Blog-程序员宅基地 - 程序员宅基地](https://www.cxyzjd.com/article/Vancl_Wang/84193405)
 6. [(5条消息) Elasticsearch聚合学习之五：排序结果不准的问题分析_程序员欣宸的博客-CSDN博客](https://blog.csdn.net/boling_cavalry/article/details/90319399)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

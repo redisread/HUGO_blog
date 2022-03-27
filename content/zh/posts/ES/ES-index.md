@@ -1,15 +1,15 @@
 ---
-title: ES笔记
-date: 2021-09-09T16:37:50+08:00
-description:
-draft: true
+title: ES索引原理
+date: 2022-03-27T16:37:50+08:00
+description: ES基于Lucene 倒排索引进行构建的结构。
+draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
 tocPosition: outer
 author: Victor
 authorEmoji: 👻
-image:
+image: https://cos.jiahongw.com/uPic/pluginIcon.png
 plantuml: true
 libraries:
 - katex
@@ -17,7 +17,7 @@ libraries:
 tags:
 - ES
 series:
--
+- ES
 categories:
 -
 ---

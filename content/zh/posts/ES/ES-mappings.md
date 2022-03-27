@@ -1,23 +1,23 @@
 ---
 title: ES-mappings
-date: 2021-09-10T14:52:00+08:00
+date: 2022-03-27T14:52:00+08:00
 description:
-draft: true
+draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
 tocPosition: outer
 author: Victor
 authorEmoji: 👻
-image:
+image: https://cos.jiahongw.com/uPic/pluginIcon.png
 plantuml: true
 libraries:
 - katex
 - mathjax
 tags:
--
+- ES
 series:
--
+- ES
 categories:
 -
 ---
@@ -179,13 +179,5 @@ properties是由众多的字段组成，字段由字段名、字段类型、字�
 
 
 
-
-
-https://km.sankuai.com/page/619492590
-
 ---
-
-Ref：
-
-1. [km](https://km.sankuai.com/page/1202860904)
 
