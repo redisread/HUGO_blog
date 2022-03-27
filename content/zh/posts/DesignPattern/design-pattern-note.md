@@ -1,6 +1,6 @@
 ---
 title: 设计模式小记
-date: 2021-03-27T19:20:05+08:00
+date: 2022-03-27T19:20:05+08:00
 description: 设计模式基于设计原则。
 draft: false
 hideToc: false
