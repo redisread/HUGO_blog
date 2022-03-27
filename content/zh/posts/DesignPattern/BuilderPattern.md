@@ -1,28 +1,27 @@
 ---
 title: 建造者模式
 date: 2021-10-21T10:47:09+08:00
-description:
-draft: true
+description: 建造者模式主要是为了解决调用构造函数的时候，参数太多，并且有一些是可选参数不填的情况。这种情况下，使用建造者模式会更加灵活.
+draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
 tocPosition: outer
 author: Victor
 authorEmoji: 👻
-image:
+image: https://cos.jiahongw.com/uPic/image-20220327140530127.png
 plantuml: true
 libraries:
 - katex
 - mathjax
 tags:
--
+- 设计模式
+- 建造者模式
 series:
--
+- 设计模式
 categories:
 -
 ---
-
-
 
 > 建造者模式也称为生成器模式或者Builder模式。
 
@@ -37,8 +36,6 @@ categories:
 ![拆解参数构造](https://cos.jiahongw.com/uPic/image-20211021110735422.png)
 
 **不同生成器以不同方式执行相同的任务。**
-
-
 
 
 
@@ -141,19 +138,11 @@ public class BuilderPattern {
 
 
 
-
-
-
-
-
-
-
-
 优点：
 
--  你可以分步创建对象， 暂缓创建步骤或递归运行创建步骤。
+-  **你可以分步创建对象， 暂缓创建步骤或递归运行创建步骤。**
 -  生成不同形式的产品时， 你可以复用相同的制造代码。
--  *单一职责原则*。 你可以将复杂构造代码从产品的业务逻辑中分离出来。（避免 “重叠构造函数 （telescopic constructor）” 的出现）
+-  ***单一职责原则*。 你可以将复杂构造代码从产品的业务逻辑中分离出来。（避免 “重叠构造函数 （telescopic constructor）” 的出现）**
 
 缺点：
 
@@ -165,7 +154,7 @@ public class BuilderPattern {
 
 *顾客走进一家餐馆点餐，我们利用工厂模式，根据用户不同的选择，来制作不同的食物，比如披萨、汉堡、沙拉。对于披萨来说，用户又有各种配料可以定制，比如奶酪、西红柿、起司，我们通过建造者模式根据用户选择的不同配料来制作披萨。*
 
-
+> 建造者模式可以进行一些特殊的组合操作，其中一些内部对象可有也可无。
 
 ---
 
