@@ -2,7 +2,7 @@
 title: Test
 date: '2022-09-28T16:22:00.000Z'
 description: 描述一下
-draft: true
+draft: false
 hideToc: false
 enableToc: true
 tocPosition: outer
