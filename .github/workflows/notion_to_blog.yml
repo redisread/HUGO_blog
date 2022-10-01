@@ -7,7 +7,7 @@ on:
 
 jobs:
   notion-to-blog:
-    if: ${{ github.event.issue.user.login == github.actor && contains(github.event.issue.title, 'notion-ci') }}
+    if: ${{ github.event.issue.user.login == github.actor && contains(github.event.issue.title, 'notion-ci') }} || ${{ github.event.workflow_dispatch.user.login == github.actor }}
     runs-on: ubuntu-latest
 
     steps:
