@@ -3,6 +3,7 @@ name: Notion To Blog
 on:
   issues:
     types: [opened]
+  workflow_dispatch:
 
 jobs:
   notion-to-blog:
