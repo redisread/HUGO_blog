@@ -4,12 +4,12 @@ on:
   issues:
     types: [opened]
   schedule:
-    - cron: "43 17 * * *" # 毎日 0 時 8 分执行
+    - cron: "45 17 * * *" # 毎日 0 時 8 分执行
   workflow_dispatch:
 
 jobs:
   notion-to-blog:
-    if: ${{ github.event.issue.user.login == github.actor && contains(github.event.issue.title, 'notion-ci') }} || ${{ github.event.workflow_dispatch.user.login == github.actor }} || ${{ github.event.schedule.user.login == github.actor }}
+    if: ${{ github.event_name == 'issues' && github.event.issue.user.login == github.actor && contains(github.event.issue.title, 'notion-ci') }} || ${{ github.event_name == 'workflow_dispatch' }} || ${{ github.event_name == 'schedule' }}
     runs-on: ubuntu-latest
 
     steps:
