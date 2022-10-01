@@ -3,11 +3,13 @@ name: Notion To Blog
 on:
   issues:
     types: [opened]
+  schedule:
+    - cron: "40 17 * * *" # 毎日 0 時 8 分执行
   workflow_dispatch:
 
 jobs:
   notion-to-blog:
-    if: ${{ github.event.issue.user.login == github.actor && contains(github.event.issue.title, 'notion-ci') }} || ${{ github.event.workflow_dispatch.user.login == github.actor }}
+    if: ${{ github.event.issue.user.login == github.actor && contains(github.event.issue.title, 'notion-ci') }} || ${{ github.event.workflow_dispatch.user.login == github.actor }} || ${{ github.event.schedule.user.login == github.actor }}
     runs-on: ubuntu-latest
 
     steps:
