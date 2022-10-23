@@ -1,5 +1,5 @@
 ---
-title: ES索引原理
+title: ES原理分析
 date: '2022-10-01T14:30:00.000Z'
 description: ES是基于Lucene的存储应用，核心是倒排索引。
 draft: false
@@ -45,7 +45,7 @@ ES的全称是ElasticSearch（下面简称ES），是一个分布式、高扩展
 ES作为一种非关系型数据库，他和传统的关系型数据库有什么区别呢？(参考：[elasticsearch-vs-mysql](https://www.trustradius.com/compare-products/elasticsearch-vs-mysql))
 
 - 底层的数据结构不同，ES使用**倒排索引**，而MySQL使用**B+树**。
-- MySQL支持事务，ES不支持事务，可以这么认为，MySQL更加适合OLTP，ES更适合OLAP。
+- MySQL**支持事务**，ES**不支持事务**，可以这么认为，**MySQL更加适合OLTP，ES更适合OLAP**。
 - MYSQL是单机的，ES是分布式的，支持水平拓展以及高可用的特性。
 - ES拥有灵活的数据类型，创建更多的索引（默认都是索引）。
 
@@ -66,15 +66,15 @@ ES的使用场景都有哪些呢？（参考：[use-cases-of-elasticsearch](http
 	常见：百科搜索（百度百科、维基百科）、论坛博客（CSDN、简书、掘金、Stack Overflow）、电商网站（京东、淘宝、拼多多）
 
 
-	![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1fa18cca-c0e7-4d00-bd0b-5a6079a00233/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221023%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221023T124523Z&X-Amz-Expires=3600&X-Amz-Signature=a6671dad07bbfe7cb6e382a8f6bb5f6af222ff5ed46ba372cfc6082590e7b828&X-Amz-SignedHeaders=host&x-id=GetObject)
+	![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1fa18cca-c0e7-4d00-bd0b-5a6079a00233/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221023%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221023T164842Z&X-Amz-Expires=3600&X-Amz-Signature=a978e05077ef804401f713261f069d78649a6b7a59c764b9c2d459fd2d8cebd0&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 2. 日志收集和监控
 
-	![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f8bf9578-c4f5-427e-9a25-f9b05d23ba4a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221023%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221023T124523Z&X-Amz-Expires=3600&X-Amz-Signature=25f9580df310ce8174e498a43e20d6105475facaacff4e1989caeb1f673f264d&X-Amz-SignedHeaders=host&x-id=GetObject)
+	![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f8bf9578-c4f5-427e-9a25-f9b05d23ba4a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221023%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221023T164842Z&X-Amz-Expires=3600&X-Amz-Signature=137940762a30df940cc0218e6924d45cf2e3110be22b072a1231046a56859bf3&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 3. BI系统
 
-	![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/03c3b7e5-76f1-4066-8483-b6965bfd383f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221023%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221023T124528Z&X-Amz-Expires=3600&X-Amz-Signature=4689eece36945c58d431907aa2c39f4403f8b04b4178827c46c93006ecc7091a&X-Amz-SignedHeaders=host&x-id=GetObject)
+	![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/03c3b7e5-76f1-4066-8483-b6965bfd383f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221023%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221023T164842Z&X-Amz-Expires=3600&X-Amz-Signature=e6288e94e77a05bc562579354ef479215a64a2a2035de98ec1815b3c5c20538f&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 4. 结构化查询和数据异构
 
@@ -110,10 +110,13 @@ ES的使用场景都有哪些呢？（参考：[use-cases-of-elasticsearch](http
 ---
 
 
-📗**词典-FS**
+📗**词典-FST**
 
 
-各种词典结构的优点和缺点（参考：[Lucene底层原理](https://www.jianshu.com/p/b00079460b29)）：
+> 参考：[Lucene底层原理](https://www.jianshu.com/p/b00079460b29) 和 [关于Lucene的词典FST深入剖析 | 申艳超-博客](https://www.shenyanchao.cn/blog/2018/12/04/lucene-fst/)
+
+
+各种词典结构的优点和缺点：
 
 
 ![](https://raw.githubusercontent.com/redisread/Image/master/notionimg/14/db/14dbdcb181a44b4e0baa56fe25a2fa1c.png)
@@ -133,7 +136,7 @@ ES的使用场景都有哪些呢？（参考：[use-cases-of-elasticsearch](http
 | FST | 节省内存，查询快，支持前缀和后缀查询                                                               | 更新难，构建复杂  |
 
 
-lucene从4.x开始大量使用的数据结构是FST（Finite State Transducer,有限状态转换器）。FST有两个优点：
+lucene从4.x开始大量使用的数据结构是**FST**（_Finite State Transducer,有限状态转换器_）。FST有两个优点：
 
 1. **空间占用小**。通过对词典中单词前缀和后缀的重复利用，压缩了存储空间。
 2. **查询速度快**。O(len(str))的查询时间复杂度。（str是输入的查询字符串长度）
@@ -144,13 +147,13 @@ lucene从4.x开始大量使用的数据结构是FST（Finite State Transducer,�
 	假设我们有一个这样的Set: mon,tues,thurs。FST是这样的：
 
 
-	![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7a521058-a827-44d4-b6b2-60de6c13d7bc/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221023%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221023T124529Z&X-Amz-Expires=3600&X-Amz-Signature=e8a1679a7aea1f591fccb8516d28e17c699ab7174e409608a3b39baaa359df34&X-Amz-SignedHeaders=host&x-id=GetObject)
+	![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7a521058-a827-44d4-b6b2-60de6c13d7bc/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221023%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221023T164843Z&X-Amz-Expires=3600&X-Amz-Signature=74596cfa38102bd80a510b20486234e76b4bea4e8da9379787769a7f9cdcc57a&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 	相应的TRIE则是这样的，只共享了前缀。
 
 
-	![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/84212a63-12c8-424c-89dd-2e386a0d4a81/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221023%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221023T124529Z&X-Amz-Expires=3600&X-Amz-Signature=9ed0cff71994e8ea0206c26f602b7b820774eb64d8859d28ee33104d97ed1c3b&X-Amz-SignedHeaders=host&x-id=GetObject)
+	![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/84212a63-12c8-424c-89dd-2e386a0d4a81/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221023%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221023T164843Z&X-Amz-Expires=3600&X-Amz-Signature=22411d4c1e81b9ccee867150092a3c1287bea1c8524d15966dc1fc8f5c8d7039&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 ---
@@ -401,7 +404,7 @@ ES 每隔一秒（可以配置）执行一次 **refresh** 操作，会创建一�
 - Query阶段：得到目标结果对应的doc Id和排序信息，并且做聚合
 - Fetch阶段：根据doc Id列表查找对应的数据内容
 
-![](https://raw.githubusercontent.com/redisread/Image/master/notionimg/a3/02/a30230aa3d75f567b6aca192e2096022.png)
+![](https://raw.githubusercontent.com/redisread/Image/master/notionimg/f6/72/f672ef3b12c55a8038869fdb93bf1a62.png)
 
 
 ### **定时合并段文件Flush**
@@ -450,7 +453,7 @@ merge 合并时才真正删除，合并后的 segment 中就没有已经删除�
 - **支持横向扩展**：比如你数据量是 3T，3 个 shard，每个 shard 就 1T 的数据，若现在数据量增加到 4T，重新建一个有 4 个 shard 的索引，将数据导进去即可。
 - **动态扩容**：之前的两个节点继续水平扩容，再增加一个节点，此时集群状态会如下图所示：
 
-	![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6287459d-93c7-4448-a50c-3d01ccede2b3/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221023%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221023T124530Z&X-Amz-Expires=3600&X-Amz-Signature=6477babfd5bbaf474c4e04a6342d0748fd14e8d0f7d81ad716d924ddce81e437&X-Amz-SignedHeaders=host&x-id=GetObject)
+	![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6287459d-93c7-4448-a50c-3d01ccede2b3/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221023%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221023T164845Z&X-Amz-Expires=3600&X-Amz-Signature=1e90280ae0f61e97b23cf87501b25ad21f16a8848fbb01e86afe37a01285e91e&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 	为了分散负载，ES 会对分片进行重新分配。Node 1 和 Node 2 上各有一个分片被迁移到了新的 Node 3 节点，现在每个节点上都拥有2个分片，而不是之前的3个。
@@ -701,7 +704,7 @@ Profile API 用于定位查询过程中的异常耗时问题的。可以通过�
 
 - **ES模糊查询导致CPU飙升**
 
-	[bookmark](https://elasticsearch.cn/article/171)
+	[[原创] ElasticSearch集群故障案例分析: 警惕通配符查询 - Elastic 中文社区](https://elasticsearch.cn/article/171)
 
 - **分片设置不合理导致ES写入挤压**
 
@@ -710,19 +713,8 @@ Profile API 用于定位查询过程中的异常耗时问题的。可以通过�
 
  参考：
 
-
-[bookmark](https://www.6aiq.com/article/1627091326793)
-
-
-[bookmark](https://blog.csdn.net/truelove12358/article/details/105577414)
-
-
-[bookmark](https://blog.csdn.net/waltonhuang/article/details/106694326)
-
-
-[bookmark](https://elasticsearch.cn/article/446)
-
-
-[bookmark](https://www.6aiq.com/article/1627091326793)
-
+- [去哪儿网 | Lucene 倒排索引原理 - AIQ](https://www.6aiq.com/article/1627091326793)
+- [Elasticsearch倒排索引与B+Tree对比_MayMatrix的博客-CSDN博客_倒排索引和b+索引的区别](https://blog.csdn.net/truelove12358/article/details/105577414)
+- [b-k-d树 原理 图文解析_stevewongbuaa的博客-CSDN博客_bkd树](https://blog.csdn.net/waltonhuang/article/details/106694326)
+- [number?keyword?傻傻分不清楚 - Elastic 中文社区](https://elasticsearch.cn/article/446)
 
