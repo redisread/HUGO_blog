@@ -35,9 +35,9 @@ enableRobotsTXT = true
     lineNumbersInTable = true
     noClasses = false
   [markup.tableOfContents]
-    endLevel = 4
+    endLevel = 6
     ordered = false
-    startLevel = 2
+    startLevel = 1
 
 [outputs]
   page = ["HTML", "SearchIndex"]
