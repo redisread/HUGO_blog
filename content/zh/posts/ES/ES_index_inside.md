@@ -66,15 +66,15 @@ ES的使用场景都有哪些呢？（参考：[use-cases-of-elasticsearch](http
 	常见：百科搜索（百度百科、维基百科）、论坛博客（CSDN、简书、掘金、Stack Overflow）、电商网站（京东、淘宝、拼多多）
 
 
-	![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1fa18cca-c0e7-4d00-bd0b-5a6079a00233/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221023%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221023T122927Z&X-Amz-Expires=3600&X-Amz-Signature=a224989720c545e4e9c22119dc58fe3fde72fae3e55365f8e19dfd78f34a4f9f&X-Amz-SignedHeaders=host&x-id=GetObject)
+	![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1fa18cca-c0e7-4d00-bd0b-5a6079a00233/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221023%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221023T124523Z&X-Amz-Expires=3600&X-Amz-Signature=a6671dad07bbfe7cb6e382a8f6bb5f6af222ff5ed46ba372cfc6082590e7b828&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 2. 日志收集和监控
 
-	![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f8bf9578-c4f5-427e-9a25-f9b05d23ba4a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221023%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221023T122928Z&X-Amz-Expires=3600&X-Amz-Signature=a1b4a20c35c2c5c9a7efa176073998078ee4034fb2ca2280adf8c778fd556e12&X-Amz-SignedHeaders=host&x-id=GetObject)
+	![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f8bf9578-c4f5-427e-9a25-f9b05d23ba4a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221023%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221023T124523Z&X-Amz-Expires=3600&X-Amz-Signature=25f9580df310ce8174e498a43e20d6105475facaacff4e1989caeb1f673f264d&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 3. BI系统
 
-	![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/03c3b7e5-76f1-4066-8483-b6965bfd383f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221023%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221023T122929Z&X-Amz-Expires=3600&X-Amz-Signature=0f872134e0eab32824a8057f96fb7df73db818cc7a2db86dabf138ab725304dd&X-Amz-SignedHeaders=host&x-id=GetObject)
+	![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/03c3b7e5-76f1-4066-8483-b6965bfd383f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221023%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221023T124528Z&X-Amz-Expires=3600&X-Amz-Signature=4689eece36945c58d431907aa2c39f4403f8b04b4178827c46c93006ecc7091a&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 4. 结构化查询和数据异构
 
@@ -144,13 +144,13 @@ lucene从4.x开始大量使用的数据结构是FST（Finite State Transducer,�
 	假设我们有一个这样的Set: mon,tues,thurs。FST是这样的：
 
 
-	![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7a521058-a827-44d4-b6b2-60de6c13d7bc/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221023%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221023T122929Z&X-Amz-Expires=3600&X-Amz-Signature=f399043980e99b88f8e3067c72968025bd2f2c8b54bfcb71052b5ea7455e38d2&X-Amz-SignedHeaders=host&x-id=GetObject)
+	![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7a521058-a827-44d4-b6b2-60de6c13d7bc/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221023%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221023T124529Z&X-Amz-Expires=3600&X-Amz-Signature=e8a1679a7aea1f591fccb8516d28e17c699ab7174e409608a3b39baaa359df34&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 	相应的TRIE则是这样的，只共享了前缀。
 
 
-	![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/84212a63-12c8-424c-89dd-2e386a0d4a81/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221023%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221023T122929Z&X-Amz-Expires=3600&X-Amz-Signature=57a9c514f3ba10b09f4d2006933e2d9095368472e5ce3e4b460d5d501c156ba9&X-Amz-SignedHeaders=host&x-id=GetObject)
+	![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/84212a63-12c8-424c-89dd-2e386a0d4a81/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221023%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221023T124529Z&X-Amz-Expires=3600&X-Amz-Signature=9ed0cff71994e8ea0206c26f602b7b820774eb64d8859d28ee33104d97ed1c3b&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 ---
@@ -450,7 +450,7 @@ merge 合并时才真正删除，合并后的 segment 中就没有已经删除�
 - **支持横向扩展**：比如你数据量是 3T，3 个 shard，每个 shard 就 1T 的数据，若现在数据量增加到 4T，重新建一个有 4 个 shard 的索引，将数据导进去即可。
 - **动态扩容**：之前的两个节点继续水平扩容，再增加一个节点，此时集群状态会如下图所示：
 
-	![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6287459d-93c7-4448-a50c-3d01ccede2b3/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221023%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221023T122933Z&X-Amz-Expires=3600&X-Amz-Signature=f2bf1a2c5eae58b135c3d95f55b20598368a68595b6088f148d706693f3f35b3&X-Amz-SignedHeaders=host&x-id=GetObject)
+	![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6287459d-93c7-4448-a50c-3d01ccede2b3/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221023%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221023T124530Z&X-Amz-Expires=3600&X-Amz-Signature=6477babfd5bbaf474c4e04a6342d0748fd14e8d0f7d81ad716d924ddce81e437&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 	为了分散负载，ES 会对分片进行重新分配。Node 1 和 Node 2 上各有一个分片被迁移到了新的 Node 3 节点，现在每个节点上都拥有2个分片，而不是之前的3个。
@@ -721,5 +721,8 @@ Profile API 用于定位查询过程中的异常耗时问题的。可以通过�
 
 
 [bookmark](https://elasticsearch.cn/article/446)
+
+
+[bookmark](https://www.6aiq.com/article/1627091326793)
 
 
