@@ -130,6 +130,33 @@ categories:
 
 
 
+# 编译JDK
+
+访问网址：
+
+
+
+
+
+
+
+
+
+参考：
+
+- [《深入理解Java虚拟机》学习之openjdk12环境搭建_Tom-Zheng的博客-CSDN博客](https://blog.csdn.net/z1616595/article/details/105427135)
+- [《深入理解Java虚拟机》学习之openjdk12环境搭建_Tom-Zheng的博客-CSDN博客](https://blog.csdn.net/z1616595/article/details/105427135?utm_medium=distribute.pc_feed_404.none-task-blog-2~default~BlogCommendFromBaidu~Rate-2-105427135-blog-null.pc_404_mixedpudn&depth_1-utm_source=distribute.pc_feed_404.none-task-blog-2~default~BlogCommendFromBaidu~Rate-2-105427135-blog-null.pc_404_mixedpud)
+
+
+
+
+
+
+
+
+
+
+
 
 
 

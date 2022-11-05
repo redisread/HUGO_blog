@@ -434,3 +434,49 @@ List<List<Integer>> subSets = ListUtils.partition(intList, 3);
 
 
 
+
+
+## Java语法糖
+
+
+
+#### 函数式接口
+
+- Supplier接口(供应接口)
+
+  java.util.function.Supplier<T> 接口仅包含一个无参的方法： T get() 。用来获取一个泛型参数指定类型的对象数据。由于这是一个函数式接口，
+
+  这也就意味着对应的Lambda表达式需要“**对外提供**”一个符合泛型类型的对象数据。
+
+- Consumer接口
+
+  java.util.function.Consumer<T> 接口则正好与Supplier接口相反，它不是生产一个数据，而是**消费**一个数据，其数据类型由泛型决定
+
+  **抽象方法：accept**
+
+  Consumer 接口中包含抽象方法 void accept(T t) ，意为消费一个指定泛型的数据。
+
+- Predicate接口
+
+- Function接口
+
+   java.util.function.Function<T,R> 接口用来根据一个类型的数据得到另一个类型的数据，前者称为前置条件，后者称为后置条件
+
+  
+
+
+
+
+
+`Supplier` 的一个主要用例是**延迟执行**（deferred execution）
+
+[Java 利用Supplier创建日志消息|极客教程](https://geek-docs.com/java/java-examples/java-using-supplier-create-log-messages.html)
+
+
+
+
+
+
+
+
+
