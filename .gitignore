@@ -3,3 +3,4 @@ upload/
 .git-credentials
 ./themes/zzo/static/*
 .DS_Store
+.idea/

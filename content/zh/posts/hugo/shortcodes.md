@@ -22,7 +22,7 @@ image: images/feature3/code-file.png
 
 ## 盒子
 
-### 支持Markdown语法的盒子
+### 支持 Markdown 语法的盒子
 
 语法：
 
@@ -51,8 +51,6 @@ This is **boxmd** shortcode
 {{< box >}}
 This is **box** shortcode
 {{< /box >}}
-
-
 
 ## 代码选项卡
 
@@ -91,7 +89,7 @@ This is **box** shortcode
 {{< tabs Windows MacOS Ubuntu >}}
   {{< tab >}}
 
-  ### Windows section
+### Windows section
 
   ```javascript
   console.log('Hello World!');
@@ -102,13 +100,13 @@ This is **box** shortcode
   {{< /tab >}}
   {{< tab >}}
 
-  ### MacOS section
+### MacOS section
 
   Hello world!
   {{< /tab >}}
   {{< tab >}}
 
-  ### Ubuntu section
+### Ubuntu section
 
   Great!
   {{< /tab >}}
@@ -186,8 +184,6 @@ warning text
 error text
 {{< /notice >}}
 
-
-
 ## 图片描述
 
 使用语法：
@@ -197,8 +193,6 @@ error text
 渲染显示：
 
 {{< img src="https://i.loli.net/2021/06/23/bfAkG5v4X8qQpRD.jpg" title="Sample Image" caption="Image with title, caption, alt, ..." alt="image alt" width="700px" position="center" >}}
-
-
 
 ## 按钮
 
@@ -217,4 +211,3 @@ error text
 设置颜色：
 
 {{< button href="https://hugo.jiahongw.com/zh/posts/hugo/shortcodes/" width="100px" height="36px" color="primary" >}}button{{< /button >}}
-
