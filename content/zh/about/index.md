@@ -40,6 +40,29 @@ type: about
 ## 使用工具
 ![IDEA][IDEA] ![DataGrip][data_grip]
 
+MacBook 软件清单：
+- Raycast（终端效率工具）
+- ClashX（VPN工具）
+- Edge（浏览器）
+- Arc（浏览器）
+- Notion（笔记软件）
+- Obsidian（笔记软件，写博客）
+- item2（命令行工具）
+- Snipaste（复制粘贴工具）
+- Reeder（RSS阅读器）
+- SublimeText（文本编辑器）
+- PicGo（图片上传）
+- uPic（图片上传工具）
+
+
+命令行终端工具：
+- zsh + oh-my-zsh
+- HomeBrew
+- git
+- vim
+- [neovim](https://github.com/neovim/neovim) + [NvChad](https://github.com/NvChad/NvChad)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)（文本搜索工具）
+- [joshuto](https://github.com/kamiyaa/joshuto)(终端文件管理器)
 
 
 <!-- Links -->
