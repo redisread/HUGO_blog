@@ -1,0 +1,12 @@
+resources/
+public/
+upload/
+.git-credentials
+./themes/zzo/static/*
+.DS_Store
+.idea/
+
+*.log
+*.lock
+
+.obsidian

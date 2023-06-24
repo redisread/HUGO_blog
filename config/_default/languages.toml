@@ -1,0 +1,6 @@
+[zh]
+  title = "✏VictorHong's Blog"
+  languageName = "中文"
+  weight = 1
+  languagedir = "ltr"
+  contentdir = "content/zh"

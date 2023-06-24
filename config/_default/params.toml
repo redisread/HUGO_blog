@@ -1,0 +1,245 @@
+logoText = "VictorHong"
+logoType = "short" # long, short
+logo = true
+description = "VictorHong的博客"
+
+# 设置首页栏展示的样式 header
+homeHeaderType = "img" # text, img, slide
+# 移动端是否隐藏header
+hideHomeHeaderWhenMobile = false
+
+# 设置自定义的样式：custom_css = ["scss/custom.scss"] and then make file at root/assets/scss/custom.scss
+custom_css = ["scss/custom.scss", "css/bb-lmm-mk.css"]
+
+# 设置自定义的脚本：custom_js = ["js/custom.js"] and then make file at root/assets/js/custom.js
+custom_js = ["js/custom.js", "js/bb-lmm-mk.js"]
+
+# 使用图标初始化
+useFaviconGenerator = true # https://www.favicon-generator.org/
+
+# 主题选项
+themeOptions = ["dark", "light", "hacker", "solarized", "kimbie"]
+# 允许切换主题
+enableThemeChange = true
+# 不允许出现在首页的页面类型
+notAllowedTypesInHome = ["contact", "talks", "about", "showcase", "resume", "publication", "now", "message"]
+# 不允许出现在首页侧边栏的页面类型，最近提交展示
+notAllowedTypesInHomeSidebar = ["about", "archive", "showcase", "gallery", "publication", "presentation", "resume", "talks"]
+# 不允许在归档页面展示的页面类型
+notAllowedTypesInArchive = ["about", "talks", "showcase"] # not allowed page types in archive page
+# 不允许RSS的页面类型
+notAllowedTypesInHomeFeed = ["about", "archive", "contact", "showcase", "presentation", "resume", "gallery"]
+# 是否展示置顶帖子,pinned: true可以设置文章置顶
+enablePinnedPosts = true
+
+# 视图宽度展示设置
+viewportSize = "normal" # widest, wider, wide, normal, narrow
+
+# 设置文章分享的图片展示，在每篇文章也可以设置
+meta_image = "/images/header/hh.jpg"
+
+# 是否使用加载动画
+enableUiAnimation = true
+
+# 如果为 true，当在浏览器中禁用 javascript 时，博客内容将被隐藏。
+hideSingleContentsWhenJSDisabled = false
+
+# tag标记数量在5以上才展示
+minItemsToShowInTagCloud = 1 # Minimum items to show in tag cloud
+
+# appbar
+# 首页栏展示搜索按钮
+enableAppbarSearchIcon = true
+# 首页栏展示语言选择
+enableAppbarLangIcon = false
+
+# menu 移动端展示
+# showMobileMenuTerms = ["tags", "categories", "series"]
+
+# body
+# 博客文章路径展示
+enableBreadcrumb = true
+enablePhotoSwipe = true
+enableSearch = true
+enableSearchHighlight = true
+enableGoToTop = true
+enableWhoami = true
+# 摘要类型
+summaryShape = "classic" # card, classic, compact
+# 搜索结果位置
+searchResultPosition = "main" # side, main
+archiveGroupByDate = "2006" # "2006-01": group by month, "2006": group by year
+archivePaginate = 13
+paginateWindow = 1
+talksPaginate = 5
+talksGroupByDate = "2006"
+pubPaginate = 20
+
+# whoami 个人信息
+myname = "VictorHong"
+email = "1427298682@qq.com"
+whoami = "📚Learner🤓Nerd🌐Developer 努力做有价值的事情"
+bioImageUrl = ""
+useGravatar = false
+location = "Beijing, China"
+organization = "Meituan"
+link = "https://www.jiahongw.com"
+
+# sidebar 侧边栏
+enableBio = true
+enableSidebar = true
+enableSidebarTags = true
+enableSidebarSeries = true
+enableSidebarCategories = true
+enableHomeSidebarTitles = true
+enableListSidebarTitles = true
+enableToc = true
+hideToc = false
+tocFolding = true
+tocPosition = "inner" # inner, outer
+enableTocSwitch = true
+itemsPerCategory = 5 # 侧边栏最多显示的文章数量
+sidebarPosition = "right"
+tocLevels = ["h2", "h3", "h4"] # minimum h2, maximum h4 in your article
+enableSidebarPostsByOrder = false # another lists in the sidebar
+
+# footer
+showPoweredBy = true
+showFeedLinks = true
+showSocialLinks = true
+enableLangChange = false
+
+
+# service 外部服务配置 网页访问展示设置
+baiduAnalytics = "8ac34c9d30985a71517efff22def1592"
+enableBusuanzi = true
+busuanziSiteUV = true
+busuanziSitePV = true
+busuanziPagePV = true
+
+# comment 评论配置
+enableComment = true
+disqus_shortname = ""
+commento = false
+
+# [gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
+#   enable = false
+#   owner = "redisread"              # Your GitHub ID
+#   repo = "redisread.github.io"               # The repo to store comments
+#   clientId = "5880093503923d139adb"           # Your client ID
+#   clientSecret = "aa0741ecdc011069553c3c898e8e0f54915af0bb"       # Your client secret
+
+[utterances]       # https://utteranc.es/
+  owner = "redisread"              # Your GitHub ID
+  repo = "redisread.github.io"               # The repo to store comments
+  issueTerm = "title"          # pathname (default), title, url, og:title
+  message = ""      # Optional
+  link = ""         # Optional
+
+# [gitalk]           # Gitalk is a comment system based on GitHub issues. see https://github.com/gitalk/gitalk
+#   enable = true
+#   owner = "redisread"              #Your GitHub ID
+#   repo = "redisread.github.io"               # The repo to store comments
+#   clientId = "5880093503923d139adb"           # Your client ID
+#   clientSecret = "aa0741ecdc011069553c3c898e8e0f54915af0bb"       # Your client secret
+
+# Valine.
+# You can get your appid and appkey from https://leancloud.cn
+# more info please open https://valine.js.org
+[valine]
+  enable = false
+  appId = 'H6qFmM5oh7cl8CiHHUdexKnz-gzGzoHsz'
+  appKey = 'LNg1dVRYx2AuR4bd0ay4S8x5'
+  notify = true  # mail notifier , https://github.com/xCss/Valine/wiki
+  verify = false # Verification code
+  avatar = 'robohash' 
+  placeholder = 'Say something...'
+  visitor = true
+
+[changyan]
+  changyanAppid = ""        # Changyan app id             # 畅言
+  changyanAppkey = ""       # Changyan app key
+
+[livere]
+  livereUID = ""            # LiveRe UID                  # 来必力
+
+# Isso: https://posativ.org/isso/
+[isso]
+  enable = false
+  scriptSrc = "" # "https://isso.example.com/js/embed.min.js"
+  dataAttrs = "" # "data-isso='https://isso.example.com' data-isso-require-author='true'"
+
+[socialOptions]
+  email = "mailto:1427298682@qq.com"
+  # phone = "+8617318062050"
+  facebook = ""
+  twitter = ""
+  github = "https://github.com/redisread/"
+  stack-overflow = ""
+  instagram = "https://www.instagram.com/jiahong.wu.581/"
+  google-plus = ""
+  youtube = ""
+  medium = ""
+  tumblr = ""
+  linkedin = ""
+  pinterest = ""
+  stack-exchange = ""
+  telegram = ""
+  steam = ""
+  # weibo = "https://www.weibo.com/2587041797/"
+  douban = ""
+  csdn = "https://blog.csdn.net/weixin_41263449"
+  gitlab = ""
+  mastodon = ""
+  jianshu = ""
+  zhihu = ""
+  signal = ""
+  whatsapp = ""
+  matrix = ""
+  xmpp = ""
+  dev-to = ""
+  gitea = ""
+  # jike = "https://okjk.co/6kiDCE"
+
+[donationOptions]
+  enable = false # if set, the donation button will show up on the single page.
+  alipay = "" # Alipay QR Code image (example path: images/donation/alipay-qrcode.png) and put your file at root/static/images/donation/
+  wechat = "" # Wechat pay QR Code image (example path: same as above)
+  paypal = "" # Paypal URL
+  patreon = "" # Patreon URL
+  bitcoin = "" # example path: images/donation/bitcoin-code-image.png
+
+
+[copyrightOptions]
+  enableCopyrightLink = false # if set, you can add copyright link
+  copyrightLink = ""
+  copyrightLinkImage = ""
+  copyrightLinkText = ""
+
+# possible share name: ["facebook","twitter", "reddit", "linkedin", "tumblr", "weibo", "douban", "line"]
+# [[share]]
+#   name = "facebook"
+#   username = ""
+# [[share]]
+#   name = "twitter"
+# [[share]]
+#   name = "reddit"
+# [[share]]
+#   name = "csdn"
+
+[[footerLinks]]
+  name = ""
+  link = ""
+[[footerLinks]]
+  name = ""
+  link = ""
+
+# 自定义emoji
+writtenTimeIcon = "📅"
+modifiedTimeIcon = "📝"
+readingTimeIcon = "☕"
+authorIcon = "✍️"
+pagePvIcon = "👀"
+tagIcon = "🏷️"
+publicationIcon = "📚"
+typeIcon = "🎯"

@@ -1,0 +1,49 @@
+name: HUGO_CI #自动化的名称
+on:
+  push: # push的时候触发
+    branches: # 那些分支需要触发
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest # 镜像市场
+    steps:
+      - name: checkout # 步骤的名称.
+        uses: actions/checkout@v2 #软件市场的名称
+        with: # 参数
+          submodules: true # 子模块
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.110.0'
+          extended: true
+      - name: Build
+        run: hugo
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v2.5.1
+        env:
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          EXTERNAL_REPOSITORY: redisread/redisread.github.io
+          PUBLISH_BRANCH: master
+          PUBLISH_DIR: ./public
+
+      # - name: Deploy to Huawei # 
+      # - name: Modify files permissions
+      #   run: |
+      #     chmod 777 -R ./public
+      # - name: Tester
+      #   uses: yeshan333/rsync-deploy-action@main
+      #   id: rsync-deploy-action
+      #   with:
+      #     ssh_login_username: ${{ secrets.SSH_USERNAME }}
+      #     remote_server_ip: ${{ secrets.SSH_HOST }}
+      #     ssh_port: 22
+      #     ssh_private_key: ${{ secrets.HUGO_DEPLOY_KEY }}
+      #     source_path: ./public/*
+      #     destination_path: /usr/local/nginx/html/hugo
+        #   # DEPLOY_KEY: ${{ secrets.HUGO_DEPLOY_KEY }} # 引用配置，SSH私钥
+        #   # ARGS: -avz --delete --exclude='CNAME' # rsync参数，排除.pyc文件
+        #   SERVER_PORT: "22" # SSH端口
+        #   FOLDER: ./public # 要推送的文件夹，路径相对于代码仓库的根目录
+        #   SERVER_IP: ${{ secrets.SSH_HOST }} # 引用配置，服务器的host名（IP或者域名domain.com）
+        #   USERNAME: ${{ secrets.SSH_USERNAME }} # 引用配置，服务器登录名
+        #   SERVER_DESTINATION: /usr/local/nginx/html/hugo # 部署到目标文件夹

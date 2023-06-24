@@ -1,0 +1,86 @@
+// 这是一个自定义的样式
+// 导入字体
+@import url('https://cdn.staticfile.org/lxgw-wenkai-webfont/1.6.0/style.css');
+@import url('https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/style.css');
+@import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.0.0/style.css');
+
+// 设置自定义样式
+
+
+
+
+
+
+// @font-face {
+//     font-family: 'Montserrat';
+//     src: url('../fonts/montserrat-black.woff2') format('woff2'),
+//          url('../fonts/montserrat-black.woff') format('woff');
+//     font-weight: 900;
+//     font-style: normal;
+// }
+
+
+// 添加自定义字体
+// body,html{
+//     font-family: lxgw wenkai screen,-apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Helvetica,Arial,serif;
+//     font-weight: 500;
+//     font-size: 1.1rem;
+//     line-height: 2.2;
+//     -webkit-text-size-adjust: 100%;
+//     // /* Lite version */
+//     // font-family: "LXGW WenKai Lite", sans-serif;
+//     // /* TC version */q
+//     // font-family: "LXGW WenKai TC", sans-serif;
+//     /* Screen version */
+//     // font-family: "LXGW WenKai Screen", sans-serif;
+// }
+
+// .single__contents h1, .single__contents h2, .single__contents h3, .single__contents h4, .single__contents h5, .single__contents h6 {
+//     position: relative;
+//     line-height: 1.25;
+//     font-family: lxgw wenkai screen,-apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Helvetica,Arial,serif;
+// }
+
+// single__contents {
+//     font-family: lxgw wenkai screen, -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, Helvetica, Arial, serif;
+// }
+
+// p {
+//     display: block;
+//     margin-block-start: 1em;
+//     margin-block-end: 1em;
+//     margin-inline-start: 0px;
+//     margin-inline-end: 0px;
+// }
+
+
+//   body {
+//     font: 125%/1.4 muli,sans-serif,muli,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+//     font-style: normal;
+//     font-variant-caps: normal;
+//     font-variant-ligatures: normal;
+//     font-variant-numeric: normal;
+//     font-variant-east-asian: normal;
+//     font-weight: normal;
+//     font-stretch: normal;
+//     font-size: 125%;
+//     line-height: 1.4;
+//     font-family: "LXGW WenKai", sans-serif;
+// }
+
+
+//   .summary-classic .title a {
+//     font-family: "LXGW WenKai Screen", sans-serif;
+//     font-weight: 700;
+//     word-break: break-word;
+// }
+
+// .spoiler {
+//     color: black;
+//     background-color: black;
+//   }
+  
+//   .spoiler:hover {
+//     color: white;
+//   }
+  

@@ -1,0 +1,105 @@
+[[main]]
+  identifier = "about"
+  name = "🤓关于"
+  url = "about"
+  weight = 1
+
+[[main]]
+  identifier = "archive"
+  name = "📦归档"
+  url = "archive"
+  weight = 2
+
+
+# [[main]]
+#   identifier = "categories"
+#   name = "⏳分类"
+#   url = "categories"
+#   weight = 3
+
+[[main]]
+  identifier = "tags"
+  name = "🏷️标签"
+  url = "tags"
+  weight = 4
+
+
+[[main]]
+  identifier = "presentation"
+  name = "🔮幻灯"
+  url = "presentation"
+  weight = 5
+
+[[main]]
+  identifier = "gallery"
+  name = "🎨相册"
+  url = "gallery"
+  weight = 6
+
+[[main]]
+  parent = "gallery"
+  name = "🌱生活"
+  url = "gallery/life"
+
+[[main]]
+  parent = "gallery"
+  name = "🎬影视"
+  url = "gallery/movie"
+
+[[main]]
+  parent = "gallery"
+  name = "🧳川西"
+  url = "gallery/chuanxi"
+
+[[main]]
+  parent = "gallery"
+  name = "🌆北京"
+  url = "gallery/beijing"
+
+# [[main]]
+#   identifier = "posts"
+#   name = "🧱Posts"
+#   url = "posts"
+#   weight = 5
+
+[[main]]
+  identifier = "talks"
+  name = "🌎连接"
+  url = "talks"
+  weight = 7
+
+# [[main]]
+#   identifier = "resume"
+#   name = "📝简历"
+#   url = "resume"
+#   weight = 8
+
+# [[main]]
+#   identifier = "showcase"
+#   name = "🪄展示"
+#   url = "showcase"
+#   weight = 9
+
+# [[main]]
+#   identifier = "contact"
+#   name = "📧联系"
+#   url = "contact"
+#   weight = 9
+
+[[main]]
+  identifier = "now"
+  name = "🤡现在"
+  url = "now"
+  weight = 10
+
+[[main]]
+  identifier = "message"
+  name = "📨留言"
+  url = "message"
+  weight = 11
+
+[[main]]
+  identifier = "memos"
+  name = "✍️memos"
+  url = "memos"
+  weight = 12

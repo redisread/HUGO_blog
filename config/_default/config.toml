@@ -1,0 +1,85 @@
+baseURL = "https://hugo.jiahongw.com"
+theme = "zzo-dev"
+title = "VictorHong's Blog"
+
+# `hugo new` 新建文章自动打开的文本编辑器
+# newContentEditor = "C:\\Program Files\\Typora\\Typora.exe"
+
+# 设置默认语言为中文
+defaultContentLanguage = "zh"
+
+# 设置是否 baseURL/en/, baseURL/kr/ ...
+defaultContentLanguageInSubdir = true
+
+# Set `true` for Chinese/Japanese/Korean languages.
+hasCJKLanguage = true
+
+# 设置摘要的字数
+summaryLength = 70
+
+# 是否可以在talk页面使用未来日期
+buildFuture = true
+
+# 设置版权和域名备案
+copyright = "&copy;2021-{year}| VictorHong | [粤ICP备20043735号](https://beian.miit.gov.cn)"
+
+# 超时时间
+timeout = 10000
+
+# 允许emoji
+enableEmoji = true
+
+# 每个页面展示的文章数量
+paginate = 10
+
+# RSS数量限制
+rssLimit = 100
+
+# 允许获取git仓库相关信息，将更新时间显示在摘要和单个页面上
+enableGitInfo = false
+
+# 谷歌分析，暂不配置
+googleAnalytics = ""
+
+# 是否生成 robots.txt 文件
+enableRobotsTXT = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      hardWraps = true
+      unsafe = true
+      xHTML = true
+  [markup.highlight]
+    codeFences = true
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = false
+    startLevel = 2
+
+[outputs]
+  page = ["HTML", "SearchIndex"]
+  home = ["HTML", "RSS", "SearchIndex"]
+  section = ["HTML", "RSS", "SearchIndex"]
+  taxonomyTerm = ["HTML", "RSS", "SearchIndex"]
+  taxonomy = ["HTML", "RSS", "SearchIndex"]
+
+[outputFormats]
+  [outputFormats.SearchIndex]
+    mediaType = "application/json"
+    baseName = "index"
+    isPlainText = true
+    notAlternative = true
+
+# 分类法
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"
+
+# 设置文章的链接地址格式，参考：https://www.gohugo.org/doc/extras/permalinks/
+[Permalinks]
+  posts = "/:year:month:day/:filename/"
