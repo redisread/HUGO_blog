@@ -75,7 +75,7 @@ categories: []
 
 其他插件例如图片上传的插件[Obsidian Image Auto Upload Plugin](https://github.com/renmu123/obsidian-image-auto-upload-plugin/blob/master/readme-zh.md)以及自动 git 提交的插件[Obsidian Git](https://github.com/denolehov/obsidian-git)，目前来看都不是必须的，暂且不安装使用。
 
-[Obsidian Pangu]([Natumsol/obsidian-pangu: 为 Obsidian 笔记加上「盘古之白」，排版强迫症者的福音。 | A small plugin aims to add space between Chinese Characters and English Alphabet, and it is a boon for typographically compulsive people. (github.com)](https://github.com/Natumsol/obsidian-pangu)) 这个插件还可以，可以在英文与中文之间自动添加空格，使用方法为`Commond + Shift + S`
+[Obsidian Pangu](https://github.com/Natumsol/obsidian-pangu) 这个插件还可以，可以在英文与中文之间自动添加空格，使用方法为`Commond + Shift + S`
 
 ---
 
