@@ -4,7 +4,7 @@ subtitle: 一个还行的笔记工具🔧
 date: 2023-06-24 15:07:41
 publishDate: 2023-06-24 15:07:41
 aliases: []
-description: 之前使用的是Typora，感觉没有特别好，虽然简介，但是简洁了，模版或者提交等操作繁杂，最终还是选择功能强大的Obsidian，虽然功能多，但我只需要我要的就够了。
+description: 之前使用的是Typora，感觉没有特别好，虽然简洁，但是模版或者提交等操作繁杂，最终还是选择功能强大的Obsidian，虽然功能多，但我只需要我要的就够了。
 image: https://cos.jiahongw.com/uPic/PqMz2x.jpg
 draft: false
 hideToc: false
