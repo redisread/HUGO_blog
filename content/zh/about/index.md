@@ -14,17 +14,20 @@ type: about
 
 
 ## 关于我
-我是一个不够严谨的程序员:hear_no_evil:.
+👋 **Hi, I’m VictorHong.**
 
 平时喜欢看电影，看美剧，上班路上听听博客和音乐...
 
 喜欢自己折腾一些的东西，比较喜欢的产品是flomo.
 
+您可通过以下渠道订阅更新：
+- RSS: 
 
-## 关于博客
-- 2021年开始使用hugo框架博客，基于zzo，部署在Github Page上
-- 2022年使用当前域名，并且用CloudFlare进行域名解析和流量转发
-- 至今
+Find Me：
+- [Github](https://github.com/redisread)
+- [X](https://twitter.com/Victor_jiahong)
+- [jike](https://web.okjike.com/u/e991c442-72ff-4522-8559-d5dff7c541cf)
+
 
 
 ## 技能
@@ -60,10 +63,6 @@ MacBook 软件清单：
 - HomeBrew
 - git
 - vim
-- [neovim](https://github.com/neovim/neovim) + [NvChad](https://github.com/NvChad/NvChad)
-- [ripgrep](https://github.com/BurntSushi/ripgrep)（文本搜索工具）
-- [joshuto](https://github.com/kamiyaa/joshuto)(终端文件管理器)
-
 
 <!-- Links -->
 [blog]: https://redisread.github.io

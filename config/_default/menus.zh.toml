@@ -69,12 +69,6 @@
   weight = 7
 
 # [[main]]
-#   identifier = "resume"
-#   name = "📝简历"
-#   url = "resume"
-#   weight = 8
-
-# [[main]]
 #   identifier = "showcase"
 #   name = "🪄展示"
 #   url = "showcase"
@@ -99,7 +93,13 @@
   weight = 11
 
 [[main]]
-  identifier = "memos"
-  name = "✍️memos"
-  url = "memos"
+  identifier = "resume"
+  name = "📝resume"
+  url = "resume"
   weight = 12
+
+# [[main]]
+#   identifier = "memos"
+#   name = "✍️memos"
+#   url = "memos"
+#   weight = 12
