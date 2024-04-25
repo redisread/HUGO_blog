@@ -21,11 +21,11 @@ type: about
 喜欢自己折腾一些的东西，比较喜欢的产品是flomo.
 
 您可通过以下渠道订阅更新：
-- RSS: 
+- RSS: https://hugo.jiahongw.com/zh/index.xml
 
 Find Me：
 - [Github](https://github.com/redisread)
-- [X](https://twitter.com/Victor_jiahong)
+- [Twitter](https://twitter.com/Victor_jiahong)
 - [jike](https://web.okjike.com/u/e991c442-72ff-4522-8559-d5dff7c541cf)
 
 
