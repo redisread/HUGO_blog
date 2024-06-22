@@ -1,5 +1,5 @@
 ---
-title: "分布式搜索和分析的利器：ElasticSearch简介"
+title: "ES原理和实践：ElasticSearch简介"
 date: 2023-02-24T23:26:32+08:00
 description: ES是一个功能强大、高效稳定的搜索和分析引擎，具有广泛的应用场景和业界的认可度。无论是企业内部的数据分析，还是面向公众的搜索服务，ES都能够提供高性能和可靠性的支持.
 draft: false
