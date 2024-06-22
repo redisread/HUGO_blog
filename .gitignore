@@ -10,3 +10,4 @@ upload/
 *.lock
 
 .obsidian
+textgenerator/*
