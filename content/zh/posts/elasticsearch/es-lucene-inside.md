@@ -30,5 +30,16 @@ categories:
 
 ## Lucene 的底层数据结构设计
 
+Lucene 是一个高效的，基于 Java 的全文检索库。主要包括下面的一些核心操作：
+![lucene核心操作](https://cos.jiahongw.com/uPic/aefxFy.png)
+
+
+### 倒排索引
+
+什么是倒排索引？
+
+
+
+
 
 

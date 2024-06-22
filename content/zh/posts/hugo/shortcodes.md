@@ -25,6 +25,11 @@ image: images/feature3/code-file.png
 ### 支持 Markdown 语法的盒子
 
 语法：
+```
+{{< boxmd >}}
+This is **boxmd** shortcode
+{{< /boxmd >}}
+```
 
 <img src="https://raw.githubusercontent.com/redisread/Image/master/Blog/image-20210822151028711.png" alt="boxmd" style="zoom: 67%;" />
 
