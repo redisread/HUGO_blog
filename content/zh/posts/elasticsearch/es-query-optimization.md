@@ -145,14 +145,7 @@ ES5 之后目前 fileldCache 默认不开启，需要设置 fielddata=true 才�
 ## 范围查询的优化
 
 没有 BKD 树的时候，Lucene 是如何对数值类型进行范围查询是下面这样的：
-| Term | Postings List |
-|------|------------------------|
-| 2 | [doc3, doc5, doc10 ...]|
-| 5 | [doc1, doc3, doc9 ...] |
-| ... | ... |
-| 90 | [doc2, doc3, doc8 ...] |
-| 99 | [doc3, doc5, doc20 ...]|
-| ... | ... |
+![vW7SvM](https://cos.jiahongw.com/uPic/vW7SvM.png)
 
 假设有上面的一个数值类型的倒排表，这种结构对于**精确的数值查询**速度还是比较快的，直接从倒排索引根据查找的 term 拿到 postings list 就好了。 但类似 range: [50, 100]这样的范围查找就比较麻烦了，Lucene 在找到对应的 term 后，只能将其转换成类似 50 OR 51 OR 52 ... OR 100 这样的 Bool 查询。
 
