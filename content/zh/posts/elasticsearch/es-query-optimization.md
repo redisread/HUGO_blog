@@ -153,7 +153,7 @@ ES5 之后目前 fileldCache 默认不开启，需要设置 fielddata=true 才�
 
 ES5 之后使用 Lucene6.0，Lucene6.0 对数字类型的范围查询优化，使用 BKD 树优化数值类型的范围查询。
 
-> 具体参考：[[b-k-d 树 原理 图文解析\_stevewongbuaa 的博客-CSDN 博客\_bkd 树](https://blog.csdn.net/waltonhuang/article/details/106694326) 和 [number?keyword?傻傻分不清楚](https://elasticsearch.cn/article/446)
+> 具体参考：[b-k-d 树 原理 图文解析\_stevewongbuaa 的博客-CSDN 博客\_bkd 树](https://blog.csdn.net/waltonhuang/article/details/106694326) 和 [number?keyword?傻傻分不清楚](https://elasticsearch.cn/article/446)
 
 下面看下 BKD 树是如何提高数字类型的范围查询的：
 
