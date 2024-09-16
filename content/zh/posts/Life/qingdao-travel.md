@@ -23,7 +23,7 @@ categories:
 
 我这里列了一个大致的攻略（虽然最后崂山没去成）：
 
-[青岛攻略](https://www.wolai.com/qFSzWQXMejF9fgyMF8694t?theme=light)
+[青岛攻略](https://drive.google.com/file/d/16Amqyezfl9aa6bMndx46-3tcaR91gyY3/view?usp=sharing)
 
 还准备了一个行程路线：
 
