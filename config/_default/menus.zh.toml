@@ -56,6 +56,11 @@
   name = "🌆北京"
   url = "gallery/beijing"
 
+[[main]]
+  parent = "gallery"
+  name = "🇹🇭泰国旅行"
+  url = "gallery/tailand"
+
 # [[main]]
 #   identifier = "posts"
 #   name = "🧱Posts"
