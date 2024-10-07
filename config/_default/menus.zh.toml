@@ -55,6 +55,10 @@
   parent = "gallery"
   name = "🌆北京"
   url = "gallery/beijing"
+[[main]]
+  parent = "gallery"
+  name = "🌆北京202409"
+  url = "gallery/beijing-202409"
 
 [[main]]
   parent = "gallery"
