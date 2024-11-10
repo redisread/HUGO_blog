@@ -77,6 +77,13 @@
   url = "talks"
   weight = 7
 
+[[main]]
+  identifier = "weekly"
+  name = "⏳weekly"
+  url = "weekly"
+  weight = 8
+
+
 # [[main]]
 #   identifier = "showcase"
 #   name = "🪄展示"
