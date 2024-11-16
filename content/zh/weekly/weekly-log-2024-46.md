@@ -46,20 +46,19 @@ image: https://cos.jiahongw.com/uPic/aWUTAI.png
 
 ## Buy thing 
 国补大剁手！
-投影仪：
-- 极米RS plus 10: 原价 6699 ，凑单两个支架，最终费用4904 +246 = 5150。投影约优惠了1784
-- 极米Z7X 高亮版：原价3099。使用政府补贴之后，最终的费用是2233。优惠了865。
+- 投影仪：
+	- 极米RS plus 10: 原价 6699 ，凑单两个支架，最终费用4904 +246 = 5150。投影约优惠了1784
+	- 极米Z7X 高亮版：原价3099。使用政府补贴之后，最终的费用是2233。优惠了865。
 
-家庭 KTV：
-- JBL家庭KTV旗舰版：原价10690。配合政府补贴和Plus优惠，最终的费用是7741，优惠了3348。
-
+- 家庭 KTV：
+	- JBL家庭KTV旗舰版：原价10690。配合政府补贴和Plus优惠，最终的费用是7741，优惠了3348。
 
 ## Music
 - 春亭雪
-  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="[//music.163.com/outchain/player?type=2&id=2155773719&auto=1&height=66](https://music.163.com/outchain/player?type=2&id=2155773719&auto=1&height=66)"></iframe>
+<iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/%E6%98%A5%E5%BA%AD%E9%9B%AA/1667022452?i=1667022456"></iframe>
 - 鼓楼
-  <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="[](https://embed.music.apple.com/cn/album/%E9%BC%93%E6%A5%BC/1722409813?i=1722409911)[https://embed.music.apple.com/cn/album/鼓楼/1722409813?i=1722409911](https://embed.music.apple.com/cn/album/%E9%BC%93%E6%A5%BC/1722409813?i=1722409911)"></iframe>
 
+<iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/%E9%BC%93%E6%A5%BC/1722409813?i=1722409911"></iframe>
 ## Images
 
 ![GK59Lh](https://cos.jiahongw.com/uPic/GK59Lh.png)
