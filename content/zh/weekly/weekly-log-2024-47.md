@@ -2,7 +2,7 @@
 title: 2024-47 Weekly Log
 date: 2024-11-24T00:16:10+08:00
 publishDate: 2024-11-24
-description: 2024-11-18 ～ 2024-11-24 Weekly Log！
+description: 从333计划重新定义衣橱边界，到知识管理的分类艺术，再到习惯养成的微妙技巧。生活中的边界不是限制，而是让我们在克制中找到更多创造力与自由。
 tags:
   - weekly
 series: 
