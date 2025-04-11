@@ -182,13 +182,13 @@ commento = false
   medium = ""
   tumblr = ""
   linkedin = ""
-  pinterest = ""
+  pinterest = "https://www.pinterest.com/VictorHongGG"
   stack-exchange = ""
   telegram = ""
   steam = ""
   # weibo = "https://www.weibo.com/2587041797/"
   douban = ""
-  csdn = "https://blog.csdn.net/weixin_41263449"
+  csdn = ""
   gitlab = ""
   mastodon = ""
   jianshu = ""
@@ -228,11 +228,15 @@ commento = false
 #   name = "csdn"
 
 [[footerLinks]]
-  name = ""
-  link = ""
+  name = "🤖 AI武器库"
+  link = "https://slash.jiahongw.com/s/at"
+  description = "AI工具集合"
+  weight = 1
 [[footerLinks]]
-  name = ""
-  link = ""
+  name = "🧠 知识管理工具"
+  link = "https://slash.jiahongw.com/s/kt"
+  description = "知识管理工具"
+  weight = 2
 
 # 自定义emoji
 writtenTimeIcon = "📅"
