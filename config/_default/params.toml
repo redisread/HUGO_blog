@@ -77,11 +77,11 @@ pubPaginate = 20
 
 # whoami 个人信息
 myname = "VictorHong"
-email = "1427298682@qq.com"
-whoami = "📚Learner🤓Nerd🌐Developer 努力做有价值的事情"
-bioImageUrl = ""
+email = "wujiahong2013@gmail.com"
+whoami = "🔩工具控,⌨️ 后端程序员,🧪AI 探索者"
+bioImageUrl = "/images/whoami/VictorHongAvatar.png"  # 相对于 static 目录的路径
 useGravatar = false
-location = "Beijing, China"
+location = "Shenzhen, China"
 organization = "Meituan"
 link = "https://www.jiahongw.com"
 
@@ -170,10 +170,10 @@ commento = false
   dataAttrs = "" # "data-isso='https://isso.example.com' data-isso-require-author='true'"
 
 [socialOptions]
-  email = "mailto:1427298682@qq.com"
+  email = "mailto:wujiahong2013@gmail.com"
   # phone = "+8617318062050"
   facebook = ""
-  twitter = ""
+  twitter = "https://x.com/VictorHong1022"
   github = "https://github.com/redisread/"
   stack-overflow = ""
   instagram = "https://www.instagram.com/jiahong.wu.581/"
