@@ -45,7 +45,7 @@ enableUiAnimation = true
 hideSingleContentsWhenJSDisabled = false
 
 # tag标记数量在5以上才展示
-minItemsToShowInTagCloud = 1 # Minimum items to show in tag cloud
+minItemsToShowInTagCloud = 2 # Minimum items to show in tag cloud
 
 # appbar
 # 首页栏展示搜索按钮
@@ -211,10 +211,10 @@ commento = false
 
 
 [copyrightOptions]
-  enableCopyrightLink = false # if set, you can add copyright link
-  copyrightLink = ""
-  copyrightLinkImage = ""
-  copyrightLinkText = ""
+  enableCopyrightLink = false
+  copyrightLink = "https://creativecommons.org/licenses/by-nc/4.0/"
+  copyrightLinkImage = "/images/CC BY-NC.svg"
+  copyrightLinkText = "CC BY-NC 4.0"
 
 # possible share name: ["facebook","twitter", "reddit", "linkedin", "tumblr", "weibo", "douban", "line"]
 # [[share]]

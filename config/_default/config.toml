@@ -20,8 +20,8 @@ summaryLength = 70
 # 是否可以在talk页面使用未来日期
 buildFuture = true
 
-# 设置版权和域名备案
-copyright = "&copy;2021-{year}| VictorHong | [粤ICP备20043735号](https://beian.miit.gov.cn)"
+# 设置版权和域名备案 [粤ICP备20043735号](https://beian.miit.gov.cn)
+copyright = "&copy;2021-{year} | VictorHong"
 
 # 超时时间
 timeout = 10000
