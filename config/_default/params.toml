@@ -237,6 +237,11 @@ commento = false
   link = "https://slash.jiahongw.com/s/kt"
   description = "知识管理工具"
   weight = 2
+[[footerLinks]]
+  name = "📝 卡片盒笔记"
+  link = "https://slash.jiahongw.com/s/bn"
+  description = "卡片盒笔记"
+  weight = 3
 
 # 自定义emoji
 writtenTimeIcon = "📅"
