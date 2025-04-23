@@ -1,5 +1,5 @@
 ---
-title: "链接库"
+title: "🪵资源"
 date: 2019-12-30T11:14:14+09:00
 publishDate:
 tags:

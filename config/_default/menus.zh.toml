@@ -73,7 +73,7 @@
 
 [[main]]
   identifier = "talks"
-  name = "🌎讨论"
+  name = "🪵资源"
   url = "talks"
   weight = 7
 
@@ -96,17 +96,17 @@
 #   url = "contact"
 #   weight = 9
 
-[[main]]
-  identifier = "now"
-  name = "🤡现在"
-  url = "now"
-  weight = 10
+# [[main]]
+#   identifier = "now"
+#   name = "🤡现在"
+#   url = "now"
+#   weight = 10
 
-[[main]]
-  identifier = "message"
-  name = "📨留言"
-  url = "message"
-  weight = 11
+# [[main]]
+#   identifier = "message"
+#   name = "📨留言"
+#   url = "message"
+#   weight = 11
 
 # [[main]]
 #   identifier = "resume"
