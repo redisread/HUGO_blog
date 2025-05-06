@@ -5,7 +5,7 @@ date: 2025-05-06T13:31:35+08:00
 publishDate: 2025-05-06T13:31:35+08:00
 aliases:
 description: "本指南详细介绍了如何使用Java语言，基于Spring AI和Quarkus两大主流框架，开发符合MCP（模型上下文协议）标准的Server端服务。以Apple Notes为例，涵盖项目初始化、依赖引入、核心服务编写、打包配置及调试全流程，适合希望将本地数据接入大模型上下文的开发者参考"
-image: https://cos.jiahongw.com/uPic/JpmSSA.png
+image: https://cos.jiahongw.com/uPic/M5ZFaW.png
 draft: false
 hideToc: false
 enableToc: true
@@ -21,10 +21,8 @@ series: []
 categories: ["AI"]
 ---
 ![JpmSSA](https://cos.jiahongw.com/uPic/JpmSSA.png)
-
 ## 前言：MCP 核心概念
 什么是MCP协议，参考：[MCP 协议](https://modelcontextprotocol.io/introduction)  
-
 ### Resources
 
 资源：客户端可读取的类文件数据（如 API 响应或文件内容）
