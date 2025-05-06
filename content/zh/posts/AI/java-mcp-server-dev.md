@@ -22,27 +22,27 @@ categories: ["AI"]
 ---
 
 
-# 前言：MCP 核心概念
+## 前言：MCP 核心概念
 什么是MCP协议，参考：[MCP 协议](https://km.sankuai.com/collabpage/2687142585)  
 
-## Resources
+### Resources
 
 资源：客户端可读取的类文件数据（如 API 响应或文件内容）
 
 资源是模型上下文协议（MCP）中的核心基本元素，允许服务器暴露数据和内容，这些数据和内容可以被客户端读取并用于LLM交互作为上下文。
 
-## Tools
+### Tools
 
 工具：可由LLM调用的函数（需用户批准）
 
-## Prompts
+### Prompts
 
 提示词: 预先编写的模板，帮助用户完成特定任务
 
 
-# 使用Spring AI 框架开发 Java MCP Server
+## 使用Spring AI 框架开发 Java MCP Server
 
-## 1 初始化 Java Spring Boot 项目
+### 1 初始化 Java Spring Boot 项目
 
 **使用IDEA创建**：
 
@@ -57,7 +57,7 @@ categories: ["AI"]
 5.  运行 `DemoApplication.java`（带 `@SpringBootApplication` 的主类）。
 
 
-## 2 引入依赖
+### 2 引入依赖
 添加 Spring AI 依赖:
 ```xml
 <dependencies>
@@ -74,7 +74,7 @@ categories: ["AI"]
 ```
 
 
-## 3 编写MCP服务
+### 3 编写MCP服务
 AppleNotesService.java 文件
 ```java
 package com.jiahongw.applenotesmcp.service;
@@ -177,7 +177,7 @@ public class AppleNotesService {
 }
 ```
 
-## 4 打包配置 
+### 4 打包配置 
 
 打包可执行文件：
 ```bash
@@ -198,7 +198,7 @@ public class AppleNotesService {
 }
 ```
 
-## 5 调试
+### 5 调试
 执行下面指令打开 MCP Server 调试页面进行调试
 ```bash
 npx @modelcontextprotocol/inspector
@@ -208,11 +208,11 @@ npx @modelcontextprotocol/inspector
 
 
 
-# 使用 Quarkus  框架开发 Java MCP Server
+## 使用 Quarkus  框架开发 Java MCP Server
 >新建一个 Java 实现的访问 Apple Notes 的 MCP Server 。使用 quarkus 框架实现 。
 
 
-## 1 新建 quarkus 项目
+### 1 新建 quarkus 项目
 新建一个 `apple-notes-mcp `项目：
 
 ```bash
@@ -230,7 +230,7 @@ cd apple-notes-mcp
 
 
 
-## 2 编写 MCP Server 代码逻辑
+### 2 编写 MCP Server 代码逻辑
 打开项目目录 ，在 `pom.xml` 文件添加 **quarkus-mcp-server** 依赖：
 ```xml
 <dependency>
@@ -301,7 +301,7 @@ public class AppleNotesService {
 ```
 
 
-## 3 编译调试
+### 3 编译调试
 执行：
 ```bash
 ./mvnw compile quarkus:dev
@@ -317,7 +317,7 @@ public class AppleNotesService {
 ![XQ8z8g](https://cos.jiahongw.com/uPic/XQ8z8g.png)
 
 
-## 4 打包运行配置
+### 4 打包运行配置
 打包：
 ```bash
 ./mvnw package
