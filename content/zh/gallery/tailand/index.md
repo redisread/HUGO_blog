@@ -4,7 +4,7 @@ date: 2024-02-10T22:20:16+09:00
 type: gallery
 mode: remote
 description: "2024.02 泰国旅行"
-image: https://victor-1258931518.cos.ap-beijing.myqcloud.com/album/%E6%B3%B0%E5%9B%BD%E6%97%85%E6%B8%B8-2024.02/Tailand/%E8%A1%97%E5%A4%B4%E6%8A%93%E6%8B%8D.jpg
+image: https://cos.jiahongw.com/album/%E6%B3%B0%E5%9B%BD%E6%97%85%E6%B8%B8-2024.02/Tailand/%E8%A1%97%E5%A4%B4%E6%8A%93%E6%8B%8D.jpg
 images:
   - image: https://cos.jiahongw.com/album/%E6%B3%B0%E5%9B%BD%E6%97%85%E6%B8%B8-2024.02/Tailand/yj.jpg
   - image: https://cos.jiahongw.com/album/%E6%B3%B0%E5%9B%BD%E6%97%85%E6%B8%B8-2024.02/Tailand/%E4%BA%AD%E5%AD%90-%E6%97%A5%E8%90%BD-ins.jpg
