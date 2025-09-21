@@ -6,14 +6,7 @@ type: about
 ---
 
 
-<style>
-    .single__contents img {
-        display: inline;
-    }
-</style>
 
-
-## 关于我
 👋 **Hi, I’m VictorHong.**
 
 一名 Java 后端开发工程师，目前在互联网行业从事后端开发工作。
@@ -22,7 +15,6 @@ type: about
 
 
 我相信：<u>**写作是最好的思考方式**</u>，所以在这里写下我的思考，也欢迎你留言交流、指正、探讨。
-
 
 ## 联系我
 - 📮 邮箱：[wujiahong2013@gmail.com](wujiahong2013@gmail.com)

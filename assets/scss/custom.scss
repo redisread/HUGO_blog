@@ -83,4 +83,31 @@
 //   .spoiler:hover {
 //     color: white;
 //   }
-  
+
+// 调整文章容器的宽度和边距
+.single {
+  padding: 1rem 2rem; // 减小左右内边距（从2rem改为0.5rem）
+//   max-width: 1400px; // 增加最大宽度（从1200px改为1400px）
+//   margin: 0 auto; // 水平居中
+}
+
+// 专门针对about页面的边距设置
+.main.about {
+  padding: 1rem 1rem; // 调整主容器的内边距
+}
+
+.single__contents--about {
+  max-width: 1000px; // 设置内容的最大宽度
+  margin: 0 auto; // 水平居中
+  padding-left: 1.5rem; // 调整左侧内边距
+  padding-right: 1.5rem; // 调整右侧内边距
+}
+
+// 响应式设计，适应移动设备
+@media (max-width: 768px) {
+  .single__contents--about {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 100%;
+  }
+}
