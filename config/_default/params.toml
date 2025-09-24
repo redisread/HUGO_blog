@@ -83,7 +83,7 @@ bioImageUrl = "/images/whoami/VictorHongAvatar.png"  # 相对于 static 目录�
 useGravatar = false
 location = "Shenzhen, China"
 organization = "Meituan"
-link = "https://www.jiahongw.com"
+link = "https://hugo.jiahongw.com"
 
 # sidebar 侧边栏
 enableBio = true

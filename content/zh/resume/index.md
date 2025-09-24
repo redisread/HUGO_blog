@@ -13,8 +13,8 @@ header:
     name: Jiahong Wu (VictorHong)
     email: 1427298682@qq.com
     # phone: +86 17318062050
-    website: https://www.jiahongw.com
-    addr: Beijing China
+    website: https://hugo.jiahongw.com
+    addr: Shenzhen China
     data: test
     github: github.com/redisread
 items:
