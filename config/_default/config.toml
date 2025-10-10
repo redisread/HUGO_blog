@@ -39,7 +39,7 @@ rssLimit = 100
 enableGitInfo = false
 
 # 谷歌分析，暂不配置
-googleAnalytics = ""
+googleAnalytics = "G-E1HT976P00"
 
 # 是否生成 robots.txt 文件
 enableRobotsTXT = true
