@@ -5,7 +5,7 @@ date: 2026-02-16 14:35:00
 publishDate: 2026-02-16 14:35:00
 aliases: []
 description: 2015 年，Notion 创始人 Ivan 差点以 50 美元价格卖掉公司。如今估值超 200 亿美元。来看看这个关于梦想与坚持的故事。
-image: https://cos.jiahongw.com/uPic/2026/02/16/notion-story.jpg
+image: /images/notion-cover.jpg
 draft: false
 hideToc: false
 enableToc: true
