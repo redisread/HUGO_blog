@@ -31,6 +31,7 @@ content/
 config/_default/     # 配置、菜单（仅使用 zh 相关配置）
 themes/zzo-dev/      # 主题（git 子模块）
 archetypes/          # 内容模板
+workspace/           # 文章创作工作区
 ```
 
 ## Front Matter（文章头部）
@@ -87,11 +88,13 @@ GitHub Actions 在推送到 `master` 分支时自动构建和部署：
 
 ## 快速开始
 
-1. **创建文章**：运行 `hugo new posts/我的第一篇文章.md`
-2. **本地预览**：运行 `hugo server -D`，访问 http://localhost:1313
-3. **发布网站**：运行 `hugo` 构建，部署 `public/` 目录内容
+1. **创作文章**：在 `workspace/` 目录下创建和编辑文章草稿
+2. **创建文章**：编辑完成后，运行 `hugo new posts/我的文章名.md` 创建新文章
+3. **本地预览**：运行 `hugo server -D`，访问 http://localhost:1313
+4. **发布网站**：运行 `hugo` 构建，部署 `public/` 目录内容
 
 ## 注意事项
 
+- `workspace/` 目录用于文章创作，属于草稿阶段，不参与 Hugo 构建
 - 修改主题后需运行 `git submodule update --recursive --remote` 更新
 - 所有已发布的文章 `draft` 应设为 `false`
