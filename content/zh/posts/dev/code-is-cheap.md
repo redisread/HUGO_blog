@@ -7,7 +7,7 @@ hideToc: false
 enableToc: true
 enableTocContent: false
 authorEmoji: 🪶
-image: https://cos.jiahongw.com/uPic/code-cheap-expensive.jpg
+image: https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200
 libraries: []
 tags: [AI, 编程, 开发方法论, Agentic Engineering]
 series:
