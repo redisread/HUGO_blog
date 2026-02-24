@@ -5,7 +5,7 @@ draft: false
 tags: ["Claude", "AI", "开发工具", "编程效率"]
 categories: ["AI"]
 author: "Victor"
-image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1600&h=900&q=80"
+image: "https://openclaw.cos.jiahongw.com/blog/uploaded-image.jpg"
 ---
 
 # Claude Code 模式切换实战指南：从新手到高手的四个境界
