@@ -6,7 +6,7 @@ draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
-image: https://cos.jiahongw.com/uPic/tmux-cover.png
+image: https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&q=80
 libraries:
 tags:
 - tmux
