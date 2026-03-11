@@ -3,7 +3,7 @@ title: Lovable + Supabase + Stripe + Vercel 技术栈最佳实践
 date: 2026-03-11 01:45:00
 publishDate: 2026-03-11 01:45:00
 description: 详解 Lovable + Supabase + Stripe + Vercel 全栈技术栈的优势、风险与长期维护策略，附各阶段决策建议
-image: https://cos.jiahongw.com/uPic/lovable-stack.png
+image: https://openclaw.cos.jiahongw.com/blog/lovable-stack-cover.png
 draft: false
 hideToc: false
 enableToc: true
