@@ -24,6 +24,8 @@ categories: [dev]
 
 ## 技术栈架构
 
+![四层架构](https://openclaw.cos.jiahongw.com/blog/illustrations/lovable/01-architecture.png)
+
 | 层级 | 工具 | 核心职责 |
 |------|------|----------|
 | **前端** | Lovable | UI 生成 + AI 辅助编辑 |
@@ -36,6 +38,9 @@ categories: [dev]
 ## 核心优势
 
 ### 1. 开发速度极快
+
+![开发流程](https://openclaw.cos.jiahongw.com/blog/illustrations/lovable/02-workflow.png)
+
 - **Lovable**: 自然语言描述即可生成 UI，分钟级迭代
 - **Supabase**: 内置 Auth + Row Level Security，省掉 80% 的 boilerplate
 - **Vercel**: Git push 即部署，零配置 CI/CD
@@ -156,6 +161,8 @@ categories: [dev]
 | 复杂业务逻辑 | Claude Code | 精细控制架构，代码可维护 |
 | 无专职前端 | Lovable | 降低 UI 开发门槛 |
 | 需要自定义架构 | Claude Code | 完全控制技术决策 |
+
+![技术决策](https://openclaw.cos.jiahongw.com/blog/illustrations/lovable/03-decision.png)
 
 **混合策略（推荐）**
 - 用 Lovable 做原型和快速实验

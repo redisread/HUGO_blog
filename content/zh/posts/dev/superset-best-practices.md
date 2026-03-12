@@ -44,6 +44,8 @@ git worktree add ../feature-b-worktree feature-b
 
 ### 1.2 Superset 如何利用 Worktree？
 
+![Git Worktree 原理](https://openclaw.cos.jiahongw.com/blog/illustrations/superset/01-worktree.png)
+
 Superset 为每个 Workspace 创建一个独立的 worktree：
 
 ```
@@ -65,6 +67,8 @@ Superset 为每个 Workspace 创建一个独立的 worktree：
 ## 二、Workspace 设计策略
 
 ### 2.1 任务粒度划分
+
+![Workspace 任务划分](https://openclaw.cos.jiahongw.com/blog/illustrations/superset/02-workspace.png)
 
 不要一个 Workspace 干太多事。建议的划分维度：
 
@@ -252,6 +256,8 @@ Teardown 是清理资源的关键，务必配置好：
 | 测试生成 | Codex/Cursor | 模式匹配准确 |
 
 ### 4.2 并行任务组合示例
+
+![Agent 并行工作](https://openclaw.cos.jiahongw.com/blog/illustrations/superset/03-agents.png)
 
 **场景：大型功能开发**
 
