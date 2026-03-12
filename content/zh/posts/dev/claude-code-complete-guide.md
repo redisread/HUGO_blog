@@ -7,7 +7,7 @@ hideToc: false
 enableToc: true
 enableTocContent: false
 authorEmoji: 🤖
-image: https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200
+image: imgs/claude-code-cover.png
 libraries: []
 tags: [Claude, AI, 开发工具, 编程效率, Agent]
 series:
