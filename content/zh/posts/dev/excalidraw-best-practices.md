@@ -3,6 +3,7 @@ title: Excalidraw 最佳实践：手绘风格图表的完整工作流
 date: 2026-03-12 13:50:00
 publishDate: 2026-03-12 13:50:00
 description: 详解如何使用 Excalidraw 创建手绘风格图表，涵盖核心功能、使用场景、进阶技巧与团队协作策略
+image: https://openclaw.cos.jiahongw.com/blog/excalidraw-cover.png
 draft: false
 hideToc: false
 enableToc: true
