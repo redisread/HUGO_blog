@@ -3,6 +3,7 @@ title: AI 自动研究：Shopify CEO 如何用编码智能体优化 20 年老代
 date: 2026-03-13 12:30:00
 publishDate: 2026-03-13 12:30:00
 description: Shopify CEO Tobias Lütke 使用 AI 自动研究模式优化 Liquid 模板引擎，实现 53% 性能提升，探索编码智能体在遗留代码优化中的新范式
+image: https://openclaw.cos.jiahongw.com/blog/autoresearch-cover.png
 draft: false
 hideToc: false
 enableToc: true
