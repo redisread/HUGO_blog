@@ -3,6 +3,7 @@ title: MCP 深度解析：模型上下文协议原理与最佳实践
 date: 2026-03-13 03:30:00
 publishDate: 2026-03-13 03:30:00
 description: 深入解析 MCP（Model Context Protocol）协议原理、架构设计与最佳实践，从协议层到应用层的完整技术指南
+image: https://openclaw.cos.jiahongw.com/blog/mcp-deep-dive-cover.png
 draft: false
 hideToc: false
 enableToc: true
