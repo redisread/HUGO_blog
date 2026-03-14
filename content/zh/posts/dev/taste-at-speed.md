@@ -3,6 +3,7 @@ title: AI 时代的产品经理新技能：快速品味（Taste at Speed）
 date: 2026-03-14 01:30:00
 publishDate: 2026-03-14 01:30:00
 description: 参考 Aakash Gupta 的 Taste at Speed，探讨 AI 时代产品经理的核心技能转变——从写文档到快速评估软件，从"能不能做"到"应不应该做"
+image: https://openclaw.cos.jiahongw.com/blog/taste-at-speed-cover.png
 draft: false
 hideToc: false
 enableToc: true
