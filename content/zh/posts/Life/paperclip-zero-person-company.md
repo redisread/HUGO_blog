@@ -2,7 +2,7 @@
 title: Paperclip 与"零人公司"：AI 代理编排的下一个战场
 date: 2026-03-16T09:20:00+08:00
 description: Paperclip 一周斩获 19k Star，它解决的不是"AI 能做什么"，而是"如何管理 20 个 AI 员工"。当单个代理能力不再是瓶颈，规模化协调成为新痛点。
-draft: true
+draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
