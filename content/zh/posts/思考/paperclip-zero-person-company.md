@@ -6,7 +6,7 @@ draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
-image: 
+image: https://cos.jiahongw.com/agent/20260325/paperclip-zero-person-cover.png
 libraries:
 tags:
 - AI

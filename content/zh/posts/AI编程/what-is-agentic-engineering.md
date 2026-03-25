@@ -4,7 +4,7 @@ subtitle: "当 AI 能写代码也能跑代码，开发者还剩什么？"
 date: 2026-03-17T02:10:00+08:00
 publishDate: 2026-03-17T02:10:00+08:00
 description: "Simon Willison 提出的 Agentic Engineering 概念，定义了使用 Coding Agents 开发软件的新范式。本文深入解读其核心特征与 Vibe Coding 的本质区别。"
-image: "https://openclaw.cos.jiahongw.com/blog/uploaded-image.jpg"
+image: https://cos.jiahongw.com/agent/20260325/agentic-engineering-cover.png
 draft: false
 hideToc: false
 enableToc: true

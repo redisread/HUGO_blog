@@ -6,6 +6,7 @@ draft: false
 description: "当 AI 能 100% 自主编写代码，软件工程师这个职业还有未来吗？Boris Cherny 的四条黄金法则与印刷术的历史启示"
 tags: ["AI", "Claude Code", "编程", "职业发展", "Agentic AI"]
 categories: ["思考"]
+image: https://cos.jiahongw.com/agent/20260325/ai-coding-revolution-cover.png
 author: "Victor"
 authorEmoji: 🪶
 enableToc: true

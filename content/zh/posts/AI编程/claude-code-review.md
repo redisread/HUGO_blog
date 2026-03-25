@@ -5,7 +5,7 @@ date: 2026-03-16T13:20:08+08:00
 publishDate: 2026-03-16T13:20:08+08:00
 aliases:
 description: 当 AI 写代码的速度超过人类审查的能力，代码质量如何保证？Anthropic 用一套多代理架构给出了答案。
-image: 
+image: https://cos.jiahongw.com/agent/20260325/claude-code-review-cover.png
 draft: false
 hideToc: false
 enableToc: true

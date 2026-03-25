@@ -4,7 +4,7 @@ subtitle: "LLM 生成的上下文文件可能弊大于利"
 date: 2026-03-16T13:20:00+08:00
 publishDate: 2026-03-16T13:20:00+08:00
 description: "ETH Zurich 最新研究发现，LLM 生成的 AGENTS.md 文件反而降低 AI 编程成功率 3%，人工编写的仅提升 4%。本文深入分析研究结论与实践建议。"
-image: "https://openclaw.cos.jiahongw.com/blog/uploaded-image.jpg"
+image: https://cos.jiahongw.com/agent/20260325/agents-md-research-cover.png
 draft: false
 hideToc: false
 enableToc: true
