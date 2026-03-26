@@ -8,6 +8,7 @@ author: VictorHong
 authorEmoji: 🪶
 tags: ["AI编程", "认知债务", "独立开发", "软件工程"]
 categories: ["思考"]
+image: "https://cos.jiahongw.com/covers/slowing-down-ai-copilot.jpg"
 ---
 
 > "你把自己从循环中移走了，所以你甚至不知道那些无害的小错误已经形成了怪物一样的代码库。你只有在痛感太晚时才感受到疼痛。" —— Mario Zechner
