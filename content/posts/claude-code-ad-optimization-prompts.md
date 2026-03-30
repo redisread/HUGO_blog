@@ -5,7 +5,10 @@ draft: false
 tags: ["claude-code", "ai", "marketing", "prompts"]
 categories: ["tech"]
 description: "来自 tenten.co 的 30 个 Claude Code 广告优化神级指令，涵盖 Google Ads、Meta Ads、GA4、GSC 等多平台数据分析和优化策略"
+image: "https://cos.jiahongw.com/images/2026/03/claude-code-ad-optimization-prompts-cover.png"
 ---
+
+{{< img src="https://cos.jiahongw.com/images/2026/03/claude-code-ad-optimization-prompts-cover.png" title="Claude Code 广告优化" >}}
 
 最近看到 tenten.co 分享了一篇超实用的 Claude Code 广告优化 Prompts 合集，30 个神级指令覆盖了从跨平台分析到自动化报表的完整 workflow。整理了一下分享给大家。
 
