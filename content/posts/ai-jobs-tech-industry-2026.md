@@ -38,6 +38,8 @@ Karri Saarinen用《魔兽世界》的团队角色来类比未来的职场分工
 
 ### 1. 坦克（Tank）—— 决策者与方向制定者
 
+{{< img src="https://cos.jiahongw.com/ai-jobs-tank-role.png" title="坦克角色：决策者与方向制定者" >}}
+
 **核心职责**：承受压力、制定战略、为团队指明方向
 
 在AI时代，"坦克"型角色的价值将愈发凸显。当AI可以生成无数种方案时，**选择哪条路走**比"能不能走"重要得多。
@@ -55,6 +57,8 @@ Karri Saarinen用《魔兽世界》的团队角色来类比未来的职场分工
 **现实对应**：产品经理、技术负责人、创业者
 
 ### 2. 治疗（Healer）—— 系统维护者与质量保障
+
+{{< img src="https://cos.jiahongw.com/ai-jobs-healer-role.png" title="治疗角色：系统维护者与质量保障" >}}
 
 **核心职责**：确保系统稳定运行、修复问题、预防风险
 
@@ -74,6 +78,8 @@ Karri Saarinen用《魔兽世界》的团队角色来类比未来的职场分工
 
 ### 3. 输出DPS（Damage Dealer）—— 创意生产者与执行者
 
+{{< img src="https://cos.jiahongw.com/ai-jobs-dps-role.png" title="DPS角色：创意生产者与执行者" >}}
+
 **核心职责**：高效产出、快速迭代、将想法转化为现实
 
 这是AI时代变化最大的角色。传统的"码农"工作正在被AI接管，但**高价值的创意生产**——那些需要独特视角、创意组合、快速实验的工作——将变得更加重要。
@@ -92,6 +98,8 @@ Karri Saarinen用《魔兽世界》的团队角色来类比未来的职场分工
 
 ### 4. 辅助Support（Buff/Debuff）—— 连接者与赋能者
 
+{{< img src="https://cos.jiahongw.com/ai-jobs-support-role.png" title="辅助角色：连接者与赋能者" >}}
+
 **核心职责**：提升团队整体效能、建立连接、优化流程
 
 这个角色最容易被忽视，但在AI时代将变得至关重要。当每个人都能借助AI完成更多工作时，**如何让1+1>2**成为关键问题。
@@ -109,6 +117,8 @@ Karri Saarinen用《魔兽世界》的团队角色来类比未来的职场分工
 **现实对应**：技术写作、开发者关系、内部工具团队
 
 ## AI Agent生态的最新发展
+
+{{< img src="https://cos.jiahongw.com/ai-jobs-ecosystem.png" title="AI Agent生态系统" >}}
 
 理解这4个岗位的重要性，需要结合当前AI Agent生态的最新进展：
 
