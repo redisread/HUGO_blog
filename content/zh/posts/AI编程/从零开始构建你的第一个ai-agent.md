@@ -5,7 +5,7 @@ date: 2026-04-01T22:38:04+08:00
 publishDate: 2026-04-01T22:38:04+08:00
 aliases:
 description:
-image: https://r2.victorhong.cn/agent/20260401/cover.png
+image: https://cos.jiahongw.com/agent/20260401/cover.png
 draft: false
 hideToc: false
 enableToc: true
@@ -35,7 +35,7 @@ categories: []
 
 # 从零开始构建你的第一个AI Agent：一个周末的完整实战指南
 
-![封面图](https://r2.victorhong.cn/agent/20260401/cover.png)
+![封面图](https://cos.jiahongw.com/agent/20260401/cover.png)
 
 ## 引言：为什么AI Agent正在改变一切
 
@@ -68,7 +68,7 @@ categories: []
 5. Claude决定是否需要另一个工具，或者目标是否已完成
 6. 重复直到完成
 
-![Agent Loop](https://r2.victorhong.cn/agent/20260401/illustration-02-loop.png)
+![Agent Loop](https://cos.jiahongw.com/agent/20260401/illustration-02-loop.png)
 
 这就是全部概念。其他都是细节。
 
