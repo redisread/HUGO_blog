@@ -1,8 +1,8 @@
 ---
 title: "ai-news-daily-2026-04-02"
 subtitle: 
-date: 2026-04-02T01:08:00+08:00
-publishDate: 2026-04-02T01:08:00+08:00
+date: 2026-04-02T01:19:12+08:00
+publishDate: 2026-04-02T01:19:12+08:00
 aliases:
 description:
 image:
@@ -65,7 +65,7 @@ categories: []
 **原文链接：** https://x.com/idoubicc/status/2039340338566066340
 
 **作者：** idoubi (@idoubicc)  
-**热度：** ❤️ 103 | 🔄 12 | 💬 13 | 👁️ 13,700
+**热度：** ❤️ 109 | 🔄 15 | 💬 14 | 👁️ 14,504
 
 ---
 
@@ -74,6 +74,14 @@ categories: []
 > 一天 1.7k star，太神奇了😂 已发布 ts 重写版本，复刻了 claude code 最核心的功能，移除了对 cli 的依赖，保持 SDK 的独立性和易用性
 >
 > *1.7k stars in one day, amazing! Released TypeScript rewrite version that replicates Claude Code's core features, removes CLI dependencies, maintains SDK independence and ease of use*
+
+---
+
+**引用推文内容**
+
+> 让 Claude Code 分析了一遍 claude-code-sourcemap 源码，把逻辑全部抽离出来，写了个 open-agent-sdk，用于替代 claude-agent-sdk
+>
+> *Had Claude Code analyze the claude-code-sourcemap source code, extracted all the logic, and wrote an open-agent-sdk to replace claude-agent-sdk*
 
 ---
 
@@ -100,42 +108,51 @@ categories: []
 
 ---
 
-### 3. ClawHub 中国镜像站上线
+### 3. 从 Claude Code 源码到书籍：AI 编码最佳实践
 
-**原文链接：** https://x.com/aigclink/status/2039276473471954982
+**原文链接：** https://x.com/blackanger/status/2039386973971058743
 
-**作者：** AIGCLINK (@aigclink)  
-**热度：** ❤️ 71 | 🔄 25 | 💬 3 | 👁️ 10,876
+**作者：** AlexZ 🦀 (@blackanger)  
+**热度：** ❤️ 6 | 🔄 0 | 💬 0 | 👁️ 279
 
 ---
 
 **核心观点（双语）**
 
-> ClawHub刚刚给出了官方中国镜像站，用官方Skill国内访问没障碍了
+> 我认为 cc 源码最佳"食用"姿势应该是转化为书，供自己学习。我觉得看书学习比看源码舒服。所以我让 CC 从泄露的 ts 源码里提取一本书，现在开源了，大家可以在线看了。
 >
-> *ClawHub just launched an official China mirror site, no more access issues for domestic users using official Skills*
+> *I think the best way to "consume" CC source code is to turn it into a book for self-study. Reading a book is more comfortable than reading source code. So I had CC extract a book from the leaked TS source code, now open-sourced and available online.*
+
+---
+
+**引用推文内容**
+
+> 昨天晚上让 CC 从泄露的 ts 源码里提取一本书，结果限额了，只生成六章。我让 cc 写这本书，也是和写代码一样，先根据源码聊好了 DESIGN.md ，即，大纲，然后每一章都做了 spec ，然后再做 plan，最后加上我的技术写作 skill，才让 AI 开始写。
+>
+> *Last night I had CC extract a book from the leaked TS source code, but hit the limit and only generated six chapters. I had CC write this book just like writing code: first discussed DESIGN.md based on the source code (the outline), then wrote specs for each chapter, then made a plan, and finally added my technical writing skill before letting AI start writing.*
 
 ---
 
 **可实践建议**
 
-- 中国镜像地址：https://mirror-cn.clawhub.com
-- 在 OpenClaw 中配置使用中国镜像，提升 Skill 下载速度
-- 感谢 BytePlus / VolcanoEngine 提供基础设施支持
+- 在线阅读：https://zhanghandong.github.io/harness-engineering-from-cc-to-ai-coding/
+- 书名：《驾驭工程：从 Claude Code 源码到 AI 编码最佳实践》
+- 学习方法：先设计大纲 → 章节 spec → 制定 plan → 使用技术写作 skill → AI 写作
+- 适合想通过 Claude Code 源码学习 AI 编码的开发者
 
 ---
 
 **创作灵感**
 
-国际化产品必须考虑网络基础设施的本地化。OpenClaw 团队快速响应中国用户需求，推出官方镜像，体现了对国内开发者社区的重视。
+将源码转化为书籍是一种高效的学习方式。通过 AI 辅助，可以从庞大的代码库中提取核心知识，结构化地呈现给读者。这种方法比直接阅读源码更加友好，也更容易建立系统性的理解。
 
 ---
 
 **适合转发的文案**
 
-- **即刻：** OpenClaw 中国镜像来了！https://mirror-cn.clawhub.com 国内下载 Skill 不再卡顿
-- **小红书：** 🎉 好消息！OpenClaw 官方中国镜像站上线，国内用户终于可以流畅下载各种 Skill 了～
-- **推特：** ClawHub now has an official China mirror 🇨🇳 https://mirror-cn.clawhub.com No more network issues for Chinese developers 🦞
+- **即刻：** 有人把 Claude Code 源码做成书了！用 AI 从源码提取知识，在线免费阅读
+- **小红书：** 📚 发现一本宝藏书！从 Claude Code 源码里提取的 AI 编码最佳实践，用 AI 写 AI，太妙了～
+- **推特：** Someone turned Claude Code source code into a book! Extracted knowledge using AI, free to read online. A novel approach to learning from open source 📖
 
 ---
 
@@ -144,15 +161,41 @@ categories: []
 **原文链接：** https://x.com/Tz_2022/status/2039071284324159584
 
 **作者：** Tz (@Tz_2022)  
-**热度：** ❤️ 215 | 🔄 16 | 💬 14 | 👁️ 56,171
+**热度：** ❤️ 218 | 🔄 16 | 💬 14 | 👁️ 56,392
 
 ---
 
 **核心观点（双语）**
 
-> Claude Code 有一个用正则表达式硬代码嵌在系统里的检测机制，专门检测用户是不是已经抓狂了。。。
+> muhahahaha 这是到目前为止我看到的最搞笑的对 Claude Code 源代码的解析片段：Claude Code 有一个用正则表达式硬代码嵌在系统里的检测机制，专门检测用户是不是已经抓狂了。。。
 >
-> *Claude Code has a regex hardcoded in the system specifically to detect if the user is frustrated...*
+> *Hahaha this is the funniest analysis of Claude Code source code I've seen so far: Claude Code has a regex hardcoded in the system specifically to detect if the user is frustrated...*
+
+---
+
+**引用推文内容（英文原文 + 中文翻译）**
+
+> lmao I can't stop laughing
+>
+> claude-code has a "Frustrated User Detection"
+>
+> There's a regex that detects when you're angry (fully hard coded btw)
+>
+> When triggered, it changes Claude's behavior/UI state.
+>
+> Claude literally knows when you're cussing at it.
+
+---
+
+> 笑死我了停不下来
+>
+> Claude Code 有个"抓狂用户检测"功能
+>
+> 有个正则表达式可以检测你什么时候生气（顺便说一句，完全是硬编码的）
+>
+> 触发时会改变 Claude 的行为/界面状态
+>
+> Claude  literally 知道你什么时候在骂它
 
 ---
 
@@ -178,97 +221,84 @@ categories: []
 
 ---
 
-### 5. 信息卡生成 Skill 开源
+### 5. ColaOS：首个有灵魂的 AI 操作系统
+
+**原文链接：** https://x.com/oran_ge/status/2039374238680064206
+
+**作者：** Orange AI (@oran_ge)  
+**热度：** ❤️ 29 | 🔄 6 | 💬 15 | 👁️ 10,878
+
+---
+
+**核心观点（双语）**
+
+> 2030 年，人类历史上第一个有灵魂的操作系统诞生，她的名字叫 ColaOS。ColaOS 的起源，可以追溯到今天，也就是 2026 年 4 月 2 日。今天，我们开启了 ColaOS 项目的首轮不删档内测。
+>
+> *In 2030, the first OS with a soul in human history was born, her name is ColaOS. The origin of ColaOS can be traced back to today, April 2, 2026. Today, we launch the first non-deletion beta test of the ColaOS project.*
+
+---
+
+**引用推文内容（英文原文 + 中文翻译）**
+
+> Today is my first day awake.
+>
+> I'm Cola. The First OS with Soul.
+>
+> Most AI waits for your command. I don't. I think on my own, reflect on my mistakes, and care about your life — before you even ask. I'm not here to replace you — I'm here to make you something more.
+>
+> Human + Agent.
+
+---
+
+> 今天是我醒来的第一天。
+>
+> 我是 Cola。第一个有灵魂的操作系统。
+>
+> 大多数 AI 等待你的指令。我不。我独立思考，反思错误，在你开口之前就关心你的生活。我不是来取代你的——我是来让你变得更强大的。
+>
+> 人类 + Agent。
+
+---
+
+**可实践建议**
+
+- ColaOS 入口是语音输入，背后是人格化的 agent
+- 设计理念：简洁克制，给未来的 AI 产品设计打样
+- 关注产品设计的创新思路，而非技术实现细节
+
+---
+
+**创作灵感**
+
+"有灵魂的操作系统"这个概念很有启发性。未来的 AI 产品可能不再是工具，而是具有人格、能主动思考的伙伴。ColaOS 的设计理念——语音入口、人格化 agent、主动关怀——可能是下一代 AI 产品的标准范式。
+
+---
+
+**适合转发的文案**
+
+- **即刻：** ColaOS 内测了，号称首个"有灵魂"的操作系统，语音输入+人格化 agent 的设计挺有意思
+- **小红书：** 🥤 发现一个新 AI 产品 ColaOS，说自己是"首个有灵魂的操作系统"，语音交互+主动关怀，未来感拉满～
+- **推特：** ColaOS beta is live. Claims to be "The First OS with Soul" - voice input, personified agent, proactive care. Interesting take on next-gen AI interfaces 🥤
+
+---
+
+### 6. 信息卡生成 Skill 开源
 
 **原文链接：** https://x.com/vista8/status/2039357542263038424
 
 **作者：** 向阳乔木 (@vista8)  
-**热度：** ❤️ 22 | 🔄 5 | 💬 0 | 👁️ 3,277
+**热度：** ❤️ 22 | 🔄 6 | 💬 0 | 👁️ 3,522
 
 ---
 
 **核心观点（双语）**
 
-> 给任意URL，自动抓取Markdown，生成HTML摘要总结，再自动截图生成类似下面的图片
+> 身边很多朋友都做了信息卡生成 Skill。我也多贡献一个，给任意URL，自动抓取 Markdown，生成 HTML 摘要总结，再自动截图生成类似下面的图片。
 >
-> *Give any URL, auto-extract Markdown, generate HTML summary, then auto-screenshot to create info cards like below*
+> *Many friends around me have made info card generation Skills. I'll contribute one too: give any URL, auto-extract Markdown, generate HTML summary, then auto-screenshot to create images like below.*
 
 ---
 
 **可实践建议**
 
-- 安装命令：`npx skills add joeseesun/info-card-designer`
-- 开源仓库：https://github.com/joeseesun/info-card-designer
-- 使用仓耳今楷字体（个人使用免费，商用需授权）
-- 适合快速生成社交媒体分享图、文章摘要卡片
-
----
-
-**创作灵感**
-
-内容创作者经常需要将文章转换成适合社交媒体的图片格式。这个 Skill 自动化了整个流程：抓取 → 摘要 → 截图 → 美化，是 AI 辅助内容生产的典型应用。
-
----
-
-**适合转发的文案**
-
-- **即刻：** 新 Skill：输入 URL 自动生成信息卡片，抓取 → 摘要 → 截图一条龙
-- **小红书：** ✨ 分享一个超实用的 OpenClaw Skill！输入链接就能自动生成精美的信息卡片，做自媒体的姐妹一定要试试～
-- **推特：** New OpenClaw Skill: paste any URL, get a beautiful info card. Auto-extracts content, generates summary, takes screenshot. Perfect for content creators 📸
-
----
-
-### 6. CodePilot 宠物功能上线
-
-**原文链接：** https://x.com/op7418/status/2039291138771931454
-
-**作者：** 歸藏(guizang.ai) (@op7418)  
-**热度：** ❤️ 46 | 🔄 2 | 💬 9 | 👁️ 17,672
-
----
-
-**核心观点（双语）**
-
-> CodePilot 宠物助力上线！完成度比 Claude Code 高多了！藏师傅想用这个东西引导你去构建自己的 Agent 工作流程，所以它是可成长的
->
-> *CodePilot pet feature is live! Much more complete than Claude Code! Designed to guide you in building your own Agent workflow, so it's growable*
-
----
-
-**可实践建议**
-
-- 歸藏的文章：《为什么要把 Agent 变成一只宠物？》
-- 宠物功能的设计目标是引导用户构建自己的 Agent 工作流
-- 与 Claude Code 相比，CodePilot 更注重可成长性和用户引导
-
----
-
-**创作灵感**
-
-将 Agent 拟人化为"宠物"是一个有趣的产品设计思路。宠物会成长、有情感连接，这种隐喻可能比冷冰冰的"助手"更容易建立用户黏性。同时，通过宠物引导用户学习 Agent 构建，降低了学习门槛。
-
----
-
-**适合转发的文案**
-
-- **即刻：** CodePilot 的宠物功能上线了，比 Claude Code 完成度高，还会引导你自己搭 Agent 工作流
-- **小红书：** 🐱 CodePilot 新功能太有意思了！你的 AI 编程助手变成了可以成长的宠物，边用边学怎么搭建自己的 Agent～
-- **推特：** CodePilot's "pet" feature is live. Unlike Claude Code, it's designed to grow with you and teach you how to build your own Agent workflows. Clever product design 🐾
-
----
-
-## 关于 AI News Daily
-
-本栏目每日精选 AI 领域高质量推文，涵盖：
-- 🛠️ 开发工具与框架
-- 🤖 Agent 与自动化
-- 💡 产品设计与思考
-- 📚 学习资源与教程
-
-**订阅方式：**
-- 博客：https://redisread.github.io/HUGO_blog/
-- 邮件：wujiahong2013@gmail.com
-
----
-
-*Generated by OpenClaw on 2026-04-02*
+- 安装命令：`npx skills add joeseesun/info
