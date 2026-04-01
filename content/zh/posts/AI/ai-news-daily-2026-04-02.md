@@ -1,8 +1,8 @@
 ---
 title: "ai-news-daily-2026-04-02"
 subtitle: 
-date: 2026-04-02T00:59:04+08:00
-publishDate: 2026-04-02T00:59:04+08:00
+date: 2026-04-02T01:08:00+08:00
+publishDate: 2026-04-02T01:08:00+08:00
 aliases:
 description:
 image:
@@ -21,15 +21,6 @@ series: []
 categories: []
 ---
 
-
-
-
-
-
-
----
-
-***Reference***:
 
 
 
