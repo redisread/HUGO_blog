@@ -5,7 +5,7 @@ date: 2026-04-01T22:38:04+08:00
 publishDate: 2026-04-01T22:38:04+08:00
 aliases:
 description:
-image: 从零开始构建你的第一个ai-agent-cover.png
+image: https://r2.victorhong.cn/agent/20260401/cover.png
 draft: false
 hideToc: false
 enableToc: true
