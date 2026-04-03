@@ -5,7 +5,7 @@ aliases: []
 description: 全面解析 2026 年 Google AI 生态，涵盖 Gemini、NotebookLM、Veo、Firebase Studio 等核心工具，按个人生产力、创意表达、技术开发三大维度分类呈现。
 date: 2026-04-03 12:00:00
 publishDate: 2026-04-03 12:00:00
-image: https://cos.jiahongw.com/uPic/google-ai-tools-2026-cover.jpg
+image: https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200
 draft: false
 hideToc: false
 enableToc: true
