@@ -88,6 +88,12 @@
   url = "weekly"
   weight = 8
 
+[[main]]
+  identifier = "daily"
+  name = "📅daily"
+  url = "daily"
+  weight = 9
+
 
 # [[main]]
 #   identifier = "showcase"

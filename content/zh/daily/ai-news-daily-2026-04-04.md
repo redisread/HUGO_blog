@@ -16,9 +16,11 @@ authorEmoji: 🪶
 authorImageUrl:
 tocLevels: ["h1","h2", "h3", "h4"]
 libraries: [katex, mathjax, mermaid, chart, flowchartjs, msc, viz, wavedrom]
-tags: []
+tags:
+  - daily
 series: []
-categories: []
+categories:
+  - daily
 ---
 
 

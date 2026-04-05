@@ -22,7 +22,7 @@ themeOptions = ["dark", "light", "hacker", "solarized", "kimbie"]
 # 允许切换主题
 enableThemeChange = true
 # 不允许出现在首页的页面类型
-notAllowedTypesInHome = ["contact", "talks", "about", "showcase", "resume", "publication", "now", "message"]
+notAllowedTypesInHome = ["contact", "talks", "about", "showcase", "resume", "publication", "now", "message", "daily"]
 # 不允许出现在首页侧边栏的页面类型，最近提交展示
 notAllowedTypesInHomeSidebar = ["about", "archive", "showcase", "gallery", "publication", "presentation", "resume", "talks"]
 # 不允许在归档页面展示的页面类型
