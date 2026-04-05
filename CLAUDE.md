@@ -4,97 +4,356 @@
 
 ## 项目概览
 
-这是一个基于 Hugo 的单语言博客项目（VictorHong's Blog），托管于 https://hugo.jiahongw.com。
-主题使用 `zzo-dev`（`hugo-theme-zzo` 的分支），仅使用中文内容。
+**VictorHong's Blog** — 基于 Hugo 的中文博客，托管于 https://hugo.jiahongw.com
+- **主题**: zzo-dev（hugo-theme-zzo 分支）
+- **语言**: 中文（zh）
+- **工作流**: Obsidian + QuickAdd 插件 + Claude Code
 
 ## 常用命令
 
-| 命令 | 说明 |
-|------|------|
-| `hugo new posts/文章名.md` | 创建新博客文章 |
-| `hugo server -D` | 本地开发服务器（预览地址：http://localhost:1313） |
-| `hugo` | 构建生产版本（输出到 `public/` 目录） |
-| `git submodule update --recursive --remote` | 更新主题子模块 |
+```bash
+# 本地开发
+hugo server -D                    # 启动预览服务器 http://localhost:1313
+hugo server -D --bind 0.0.0.0     # 局域网可访问
+
+# 创建内容
+hugo new posts/tech/文章名.md      # 创建技术文章
+hugo new weekly/weekly-log-YYYY-WW.md  # 创建周报
+hugo new daily/tech-ai-insights-daily-YYYY-MM-DD.md  # 创建日报
+
+# 构建与部署
+hugo                              # 构建（输出到 public/）
+hugo --gc --minify               # 生产构建（清理缓存+压缩）
+
+# 主题维护
+git submodule update --recursive --remote  # 更新主题子模块
+```
 
 ## 项目结构
 
 ```
 content/
-  zh/                # 中文内容
-    posts/          # 博客文章
-    talks/          # 演讲/资源
-    gallery/        # 相册
-    archive/        # 归档页
-    weekly/         # 周报
-    publication/    # 出版物
-    presentation/   # 演示
-config/_default/     # 配置、菜单（仅使用 zh 相关配置）
-themes/zzo-dev/      # 主题（git 子模块）
-archetypes/          # 内容模板
-workspace/           # 文章创作工作区
+├── zh/                          # 中文内容（主内容目录）
+│   ├── posts/                   # 博客文章
+│   │   ├── tech/               # 技术文章（AI、编程、工具等）
+│   │   ├── 技术实践/            # 技术实践笔记
+│   │   ├── 专业领域/            # 专业领域知识
+│   │   ├── AI编程/             # AI 编程相关
+│   │   ├── 思考/               # 思考与随笔
+│   │   ├── 生活/               # 生活记录
+│   │   ├── 书籍/               # 读书笔记
+│   │   └── 工具折腾/            # 工具配置与折腾
+│   ├── daily/                  # AI 日报/每日摘要
+│   ├── weekly/                 # 周报
+│   ├── talks/                  # 演讲/资源收集
+│   ├── gallery/                # 相册
+│   │   ├── life/              # 生活照片
+│   │   ├── movie/             # 影视
+│   │   ├── beijing/           # 北京
+│   │   ├── chuanxi/           # 川西
+│   │   └── tailand/           # 泰国
+│   ├── presentation/           # 幻灯片
+│   ├── showcase/               # 展示/作品集
+│   ├── about/                  # 关于页面
+│   ├── archive/                # 归档页
+│   ├── now/                    # 现在/动态
+│   ├── contact/                # 联系页面
+│   └── resume/                 # 简历
+├── posts/                      # 英文/默认语言文章（较少使用）
+├── tags/                       # 标签分类页面
+└── categories/                 # 分类页面
+
+config/_default/                # 配置文件
+├── config.toml                # 主配置
+├── params.toml                # 主题参数
+├── menus.zh.toml              # 中文菜单
+└── languages.toml             # 语言配置
+
+archetypes/                     # 文章模板
+├── default.md                 # 默认模板
+├── weekly.md                  # 周报模板
+├── presentation.md            # 幻灯片模板
+├── resume.md                  # 简历模板
+├── showcase.md                # 展示模板
+└── Obsidian_Hugo_Blog_Template.md  # Obsidian 快速模板
+
+themes/zzo-dev/                 # 主题（git 子模块）
+workspace/                      # 草稿工作区（不参与构建）
+static/                         # 静态资源
+├── images/                    # 图片资源
+└── css/, js/                  # 自定义样式脚本
+assets/                         # 构建时处理的资源
+public/                         # 构建输出（GitHub Pages 部署）
 ```
 
-## Front Matter（文章头部）
+## Front Matter 规范
 
-所有页面使用 YAML 格式的 front matter，常用字段如下：
+### 标准文章模板
 
 ```yaml
-title:               # 页面标题
-subtitle:           # 可选的副标题
-date:               # 创建日期
-publishDate:        # 发布日期
-aliases:           # URL 别名
-description:        # 页面描述
-image:             # 封面图 URL
-draft: false        # 是否为草稿（发布的文章应为 false）
-hideToc: false      # 是否隐藏目录
-enableToc: true     # 是否启用目录
-enableTocContent: false
-tocPosition: inner
+---
+title: "文章标题"
+subtitle: "副标题（可选）"
+date: 2026-04-05T10:00:00+08:00      # 创建时间
+publishDate: 2026-04-05T10:00:00+08:00  # 发布时间
+description: "文章描述，用于 SEO 和摘要"
+image: "https://cos.jiahongw.com/path/to/image.png"  # 封面图 URL
+aliases: []                         # URL 别名
+draft: false                        # false=发布，true=草稿
+hideToc: false                      # 是否隐藏目录
+enableToc: true                     # 是否启用目录
+tocPosition: inner                  # inner/outer
+tocLevels: ["h2", "h3", "h4"]       # 目录包含的标题层级
 author: VictorHong
 authorEmoji: 🪶
-tocLevels: ["h1","h2", "h3", "h4"]
-libraries: [katex, mathjax, mermaid, chart, flowchartjs, msc, viz, wavedrom]
-tags: []            # 标签列表
-series: []          # 系列列表
-categories: []      # 分类列表
+libraries: []                       # 加载的库：[katex, mermaid, chart, ...]
+tags: ["AI", "Claude", "效率"]       # 标签
+categories: ["技术"]                 # 分类
+series: []                          # 系列文章
+---
 ```
 
-## Shortcodes（短代码）
+### 关键字段说明
 
-主题提供的短代码：
+| 字段 | 说明 | 建议 |
+|------|------|------|
+| `title` | 文章标题 | 简洁明确，包含关键词 |
+| `subtitle` | 副标题 | 补充说明，可选 |
+| `description` | 描述 | 120字以内，用于 SEO |
+| `image` | 封面图 | 使用 R2/CDN 外链，推荐 1200x630 |
+| `tags` | 标签 | 3-5 个相关标签 |
+| `categories` | 分类 | 选择最相关的一个分类 |
+| `date` | 创建时间 | ISO 8601 格式 |
+| `draft` | 草稿状态 | 发布前设为 false |
 
-| 短代码 | 说明 |
-|--------|------|
-| `{{< img >}}` | 插入图片，支持标题、懒加载、位置控制 |
-| `{{< featuredImage >}}` | 显示 front matter 中设置的封面图 |
-| `{{< notice 类型 标签 >}}` | 提示块（warning/info/success） |
-| `{{< iframe >}}` | 嵌入 iframe 内容 |
+## 写作工作流
 
-## CI/CD
+### 方式一：Obsidian + QuickAdd（推荐）
 
-GitHub Actions 在推送到 `master` 分支时自动构建和部署：
-- 使用 Hugo 0.110.0 extended 版本
-- 部署到 `redisread/redisread.github.io`
-- 自动初始化子模块
+1. **新建文章**：使用 QuickAdd 模板创建草稿
+2. **本地编辑**：在 Obsidian 中编写内容
+3. **移动发布**：完成后复制到 `content/zh/posts/分类/`
+4. **提交部署**：Git push 触发自动部署
 
-## 技术栈
+### 方式二：Claude Code 辅助写作
 
-- **Hugo**: 0.110.0 extended
-- **主题**: zzo-dev（基于 hugo-theme-zzo）
-- **语言**: 中文
-- **编辑器工作流**: Obsidian + QuickAdd 模板插件
-- **CJK 支持**: 已启用，70 字摘要长度
+```bash
+# 1. 创建新文章
+hugo new posts/tech/文章名.md
 
-## 快速开始
+# 2. 编辑内容（Claude 辅助）
+# 使用 /edit 修改文件
+# 使用 /read 查看结构
 
-1. **创作文章**：在 `workspace/` 目录下创建和编辑文章草稿
-2. **创建文章**：编辑完成后，运行 `hugo new posts/我的文章名.md` 创建新文章
-3. **本地预览**：运行 `hugo server -D`，访问 http://localhost:1313
-4. **发布网站**：运行 `hugo` 构建，部署 `public/` 目录内容
+# 3. 本地预览
+hugo server -D
 
-## 注意事项
+# 4. 提交发布
+git add .
+git commit -m "add: 文章标题"
+git push origin master
+```
 
-- `workspace/` 目录用于文章创作，属于草稿阶段，不参与 Hugo 构建
-- 修改主题后需运行 `git submodule update --recursive --remote` 更新
-- 所有已发布的文章 `draft` 应设为 `false`
+### 方式三：Workspace 草稿模式
+
+1. 在 `workspace/` 目录下创建草稿
+2. 使用 Claude 协助完善内容
+3. 完成后移动到 `content/zh/posts/` 对应分类
+4. 设置 `draft: false` 发布
+
+## Shortcodes 使用
+
+### 内置 Shortcodes
+
+```markdown
+{{< img src="/images/example.png" caption="图片描述" >}}
+{{< featuredImage >}}                    # 显示 front matter 封面图
+{{< notice warning "注意" >}}内容{{< /notice >}}
+{{< notice info "提示" >}}内容{{< /notice >}}
+{{< notice success "成功" >}}内容{{< /notice >}}
+{{< iframe src="..." >}}                # 嵌入 iframe
+```
+
+### 图片插入规范
+
+```markdown
+<!-- 方式 1：Markdown 标准语法 -->
+![图片描述](https://cos.jiahongw.com/path/image.png)
+
+<!-- 方式 2：主题 img shortcode -->
+{{< img src="https://cos.jiahongw.com/path/image.png" caption="标题" >}}
+
+<!-- 方式 3：带样式的图片 -->
+<img src="..." width="80%" style="display: block; margin: 0 auto;">
+```
+
+**图片存储建议**：
+- 使用 Cloudflare R2 或 CDN 外链
+- 命名规范：`YYYYMMDDHHMMSS-description.png`
+- 推荐尺寸：封面图 1200x630，正文图最大 1200px 宽
+
+## 内容分类规范
+
+### 分类（Categories）
+
+| 分类 | 说明 | 示例 |
+|------|------|------|
+| 技术 | 技术文章、编程、工具 | AI 编程、系统架构 |
+| 生活 | 日常记录、随笔 | 旅行、读书 |
+| 思考 | 深度思考、观点 | 职业规划、方法论 |
+
+### 常用标签（Tags）
+
+- **AI/LLM**: AI, Claude, GPT, LLM, Prompt
+- **编程**: Python, Java, Go, JavaScript, 架构
+- **工具**: Obsidian, Docker, Git
+- **效率**: 工作流, 自动化, 时间管理
+- **生活**: 读书, 电影, 旅行
+
+### 特殊内容类型
+
+| 类型 | 路径 | 说明 |
+|------|------|------|
+| 日报 | `zh/daily/` | AI 每日资讯摘要 |
+| 周报 | `zh/weekly/` | 周总结与计划 |
+| Talks | `zh/talks/` | 演讲、资源收集 |
+| Gallery | `zh/gallery/` | 相册分组 |
+
+## 技术配置
+
+### 启用数学公式
+
+在 front matter 添加：
+```yaml
+libraries: [katex]
+```
+
+### 启用 Mermaid 图表
+
+```yaml
+libraries: [mermaid]
+```
+
+### 代码高亮
+
+使用标准 Markdown 代码块，支持语言：
+```markdown
+```python
+print("Hello")
+```
+```
+
+## CI/CD 部署
+
+GitHub Actions 配置在 `.github/workflows/hugo-blog-ci.yml`
+
+**部署流程**：
+1. Push 到 `master` 分支触发
+2. Hugo 0.110.0 extended 构建
+3. 部署到 `redisread/redisread.github.io`
+4. 通过 GitHub Pages 访问
+
+**手动部署**（备用）：
+```bash
+hugo --gc --minify
+cd public
+# 手动推送到部署仓库
+```
+
+## SEO 与优化
+
+### 文章优化清单
+
+- [ ] 标题包含关键词，长度 20-30 字
+- [ ] description 清晰描述内容（120 字内）
+- [ ] 添加 3-5 个相关标签
+- [ ] 选择合适的分类
+- [ ] 添加封面图（1200x630）
+- [ ] 文章首段包含关键词
+- [ ] 使用 H2/H3 结构化内容
+- [ ] 添加内部链接（相关文章）
+
+### URL 规范
+
+- 使用 `-` 连接单词：`claude-code-best-practices`
+- 避免中文 URL，使用拼音或英文
+- 保持简洁：`/posts/tech/article-name/`
+
+## 主题自定义
+
+### 自定义 CSS
+
+编辑 `assets/scss/custom.scss`：
+```scss
+// 自定义样式
+.custom-class {
+  color: #333;
+}
+```
+
+### 自定义 JS
+
+编辑 `assets/js/custom.js`：
+```javascript
+// 自定义脚本
+console.log('Custom script loaded');
+```
+
+## 常见问题
+
+### 本地预览失败
+
+```bash
+# 清除缓存重试
+hugo server -D --gc
+
+# 检查配置
+hugo config
+```
+
+### 主题更新
+
+```bash
+git submodule update --recursive --remote
+# 如有冲突，手动合并主题更新
+```
+
+### 图片不显示
+
+- 检查图片 URL 是否可访问
+- 确认图片域名在 config.toml 的 `[imaging]` 允许列表
+- 本地图片放入 `static/images/`
+
+### 文章不显示
+
+- 检查 `draft: false`
+- 确认在正确语言目录 `content/zh/`
+- 检查 front matter 格式是否正确（YAML）
+
+## 资源与参考
+
+- **主题文档**: `themes/zzo-dev/README.md`
+- **Hugo 文档**: https://gohugo.io/documentation/
+- **项目仓库**: https://github.com/redisread/HUGO_blog
+- **在线地址**: https://hugo.jiahongw.com
+
+## 快速命令速查
+
+```bash
+# 创建与编辑
+hugo new posts/tech/$(date +%Y%m%d)-title.md
+hugo new daily/tech-ai-insights-daily-$(date +%Y-%m-%d).md
+
+# 预览与构建
+hugo server -D
+hugo server -D --bind 0.0.0.0
+hugo --gc --minify
+
+# Git 操作
+git add content/zh/posts/tech/new-post.md
+git commit -m "add: 文章标题"
+git push origin master
+
+# 主题维护
+git submodule update --recursive --remote
+```
