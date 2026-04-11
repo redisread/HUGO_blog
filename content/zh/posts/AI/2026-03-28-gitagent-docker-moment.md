@@ -5,6 +5,7 @@ draft: false
 tags: ["ai", "agent", "llm", "open-source"]
 categories: ["ai"]
 description: "GitAgent 试图成为 AI Agent 的通用标准，让智能体像 Docker 容器一样一次构建、到处运行。"
+image: "https://cos.jiahongw.com/agent/20260411/01-hand-drawn-gitagent-docker-cover.png"
 ---
 
 GitAgent 提出了一个尖锐的问题：为什么每个 AI Agent 框架都要重新定义一切？

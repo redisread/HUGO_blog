@@ -5,6 +5,7 @@ draft: false
 tags: ["cli", "rust", "ai-agent", "web-scraping", "automation"]
 categories: ["tech"]
 description: "AutoCLI 是一个用 Rust 重写的极速 CLI 工具，能把任何网站变成命令行接口。支持 55+ 网站，复用 Chrome 登录态，对 AI Agent 极其友好。"
+image: "https://cos.jiahongw.com/agent/20260411/autocli-cover.png"
 ---
 
 AutoCLI 是一个用 Rust 重写的极速 CLI 工具，能把任何网站变成命令行接口。它复用 Chrome 登录态（无需 API Key），支持 55+ 网站（Twitter、Reddit、Bilibili、知乎、小红书等），单文件 4.7MB、零依赖。相比原 TypeScript 版本 OpenCLI，速度快 12 倍、内存省 10 倍。对 AI Agent 极其友好——在 AGENT.md 里配置 `autocli list`，AI 就能自动发现并调用所有工具。

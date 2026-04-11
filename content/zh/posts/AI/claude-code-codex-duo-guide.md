@@ -5,6 +5,7 @@ draft: false
 tags: ["ai", "claude", "codex", "programming", "agent"]
 categories: ["tech"]
 description: "当模式匹配遇上问题解决，1+1 > 2 的编程工作流。本文介绍如何将 Claude Code 和 Codex 结合使用，形成规划-执行-审查的完整闭环。"
+image: "https://cos.jiahongw.com/agent/20260411/claude-code-codex-cover.png"
 ---
 
 > 当模式匹配遇上问题解决，1+1 > 2 的编程工作流

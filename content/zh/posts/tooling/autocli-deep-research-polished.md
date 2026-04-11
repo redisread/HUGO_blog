@@ -1,16 +1,16 @@
 ---
-title: "autocli-deep-research-polished"
+title: "AutoCLI 深度解析：Rust 极速 CLI 与 AI Agent 的完美结合"
 subtitle: 
 date: 2026-04-08T02:05:41+08:00
 publishDate: 2026-04-08T02:05:41+08:00
 aliases:
-description:
-image:
+description: "深度剖析 AutoCLI 的架构设计、性能优势与实战应用，让 AI Agent 拥有真正的'手'与'眼'"
+image: "https://cos.jiahongw.com/agent/20260411/autocli-cover.png"
 draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
-tocPosition: inner # outer
+tocPosition: inner
 author: VictorHong
 authorEmoji: 🪶
 authorImageUrl:

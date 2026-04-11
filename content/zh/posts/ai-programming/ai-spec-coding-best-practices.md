@@ -1,16 +1,16 @@
 ---
-title: "ai-spec-coding-best-practices"
+title: "AI Spec 先行编程最佳实践：从 Vibe Coding 到工程化"
 subtitle: 
 date: 2026-04-07T09:50:20+08:00
 publishDate: 2026-04-07T09:50:20+08:00
 aliases:
-description:
-image:
+description: "从氛围编程到规范驱动开发的进化之路，掌握 AI 时代的高效编程方法论"
+image: "https://cos.jiahongw.com/agent/20260411/ai-spec-coding-cover.png"
 draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
-tocPosition: inner # outer
+tocPosition: inner
 author: VictorHong
 authorEmoji: 🪶
 authorImageUrl:

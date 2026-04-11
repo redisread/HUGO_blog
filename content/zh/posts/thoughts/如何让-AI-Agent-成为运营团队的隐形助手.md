@@ -1,16 +1,16 @@
 ---
-title: "如何让-AI-Agent-成为运营团队的隐形助手"
+title: "如何让 AI Agent 成为运营团队的隐形助手"
 subtitle: 
 date: 2026-04-09T10:14:29+08:00
 publishDate: 2026-04-09T10:14:29+08:00
 aliases:
-description:
-image:
+description: "在内容爆炸的时代，运营团队需要的不是更多工具，而是一个真正懂业务、能执行、会学习的智能伙伴"
+image: "https://cos.jiahongw.com/agent/20260411/ai-agent-operations-cover.png"
 draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
-tocPosition: inner # outer
+tocPosition: inner
 author: VictorHong
 authorEmoji: 🪶
 authorImageUrl:
