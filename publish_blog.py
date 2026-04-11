@@ -42,7 +42,7 @@ DEFAULT_WEEKLY_TEMPLATE = "archetypes/weekly.md"
 
 # 分类建议映射
 CATEGORY_SUGGESTIONS = {
-    "技术": {
+    "technology": {
         "keywords": [
             "代码",
             "编程",
@@ -58,7 +58,7 @@ CATEGORY_SUGGESTIONS = {
             "算法",
             "数据结构",
         ],
-        "tags": ["技术", "编程", "开发", "架构"],
+        "tags": ["technology", "programming", "development", "architecture"],
     },
     "AI": {
         "keywords": [
@@ -78,7 +78,7 @@ CATEGORY_SUGGESTIONS = {
         ],
         "tags": ["AI", "LLM", "机器学习", "人工智能"],
     },
-    "生活": {
+    "life": {
         "keywords": [
             "读书",
             "电影",
@@ -91,9 +91,9 @@ CATEGORY_SUGGESTIONS = {
             "随笔",
             "感悟",
         ],
-        "tags": ["生活", "随笔", "感悟"],
+        "tags": ["life", "essay", "reflection"],
     },
-    "思考": {
+    "thoughts": {
         "keywords": [
             "思考",
             "观点",
@@ -106,7 +106,7 @@ CATEGORY_SUGGESTIONS = {
             "目标",
             "复盘",
         ],
-        "tags": ["思考", "方法论", "成长"],
+        "tags": ["thoughts", "methodology", "growth"],
     },
 }
 
@@ -340,18 +340,18 @@ def get_target_files(target_dir: str) -> list:
 
 def display_categories(categories: list, content_type: str = "posts"):
     """显示所有分类"""
-    print(f"\n可用的 {content_type} 分类目录:")
+    print(f"\nAvailable {content_type} categories:")
     print("=" * 50)
     for i, category in enumerate(categories, 1):
         print(f"{i}. {category}")
     print("=" * 50)
 
     # 显示分类建议
-    print("\n💡 分类建议:")
-    print("- 技术: 技术文章、编程、工具、系统架构")
-    print("- AI: 人工智能、机器学习、LLM、Prompt")
-    print("- 生活: 日常记录、读书、电影、旅行")
-    print("- 思考: 深度思考、观点、方法论、成长")
+    print("\n💡 Category Suggestions:")
+    print("- technology: Technical articles, programming, tools, system architecture")
+    print("- AI: Artificial intelligence, machine learning, LLM, Prompt")
+    print("- life: Daily records, reading, movies, travel")
+    print("- thoughts: Deep thinking, opinions, methodology, growth")
 
 
 def display_files(files: list, content_type: str = "daily"):
@@ -756,28 +756,28 @@ def main():
   # 查看配置信息
   %(prog)s --check-config
 
-  # 查看可用分类（posts 类型）
+  # List available categories (posts type)
   %(prog)s --type posts --list-categories
 
-  # 查看已有文章（daily/weekly 类型）
+  # List existing articles (daily/weekly type)
   %(prog)s --type daily --list
 
-  # 发布到 posts（需指定分类）
-  %(prog)s --md ./article.md --type posts --category 技术
+  # Publish to posts (category required)
+  %(prog)s --md ./article.md --type posts --category technology
 
-  # 发布到 daily（直接放入目录）
+  # Publish to daily (direct to directory)
   %(prog)s --md ./ai-news.md --type daily
 
-  # 发布到 weekly（直接放入目录）
+  # Publish to weekly (direct to directory)
   %(prog)s --md ./weekly-log.md --type weekly
 
-  # 发布文章并设置封面
+  # Publish article with cover
   %(prog)s --md ./my-article.md --cover ./cover.png --type daily
 
-  # 发布为草稿
+  # Publish as draft
   %(prog)s --md ./draft.md --type daily --draft
   
-  # 查看 Shortcodes 使用指南
+  # View Shortcodes guide
   %(prog)s --shortcodes
         """,
     )
@@ -810,8 +810,8 @@ def main():
     parser.add_argument("--cover", "-c", help="封面图片路径")
 
     parser.add_argument(
-        "--category", "-cat", help="博客分类目录名称（仅 posts 类型需要）"
-    )
+            "--category", "-cat", type=str, default="technology", help="Article category (e.g.: technology,life,thoughts,AI)"
+        )
 
     parser.add_argument("--name", "-n", help="文章名称（默认使用 Markdown 文件名）")
 
