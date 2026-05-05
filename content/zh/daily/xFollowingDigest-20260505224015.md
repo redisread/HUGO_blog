@@ -1,5 +1,5 @@
 ---
-title: "xFollowingDigest-20260505224015"
+title: "X Following Digest - May 6, 2026"
 date: 2026-05-06T06:43:55+08:00
 publishDate: 2026-05-06T06:43:55+08:00
 description:
@@ -14,7 +14,7 @@ tags:
 categories:
   - AI
   - AI
-image:
+image: https://cos.jiahongw.com/agent/20260505/x-digest-cover-20260505.png
 libraries: ['katex']
 ---
 
