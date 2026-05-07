@@ -1,20 +1,18 @@
 ---
-title: "x-list-v2-hourly-2026-05-08-00"
+title: "X List V2 精选 | 2026-05-08 00:00"
 date: 2026-05-08T00:40:34+08:00
 publishDate: 2026-05-08T00:40:34+08:00
-description:
+description: "每3小时精选高质量推文 | 共筛选100条，精选26篇 | 涵盖AI技术突破、产品发布、行业洞察"
 tags:
   - AI
   - Claude
   - GPT
   - LLM
-  - Prompt
-  - AI
-  - Daily Digest
+  - Daily
 categories:
   - 技术
   - AI
-image:
+image: https://cos.jiahongw.com/agent/20260508/x-list-v2-hourly-2026-05-08-00-cover.png
 ---
 
 
