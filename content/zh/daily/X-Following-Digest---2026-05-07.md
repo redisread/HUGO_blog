@@ -14,7 +14,7 @@ tags:
 categories:
   - 技术
   - AI
-image:
+image: "https://cos.jiahongw.com/agent/20260507/x-digest-cover-20260507104000.png"
 libraries: ['katex']
 ---
 
