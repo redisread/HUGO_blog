@@ -1,20 +1,21 @@
 ---
-title: "X-Following-Digest---2026-05-09"
+title: "X Following Digest - 2026-05-09"
 date: 2026-05-09T06:49:15+08:00
 publishDate: 2026-05-09T06:49:15+08:00
-description:
+description: "X Following 精选内容日报 - AI技术趋势、产品洞察与创业思考"
 tags:
   - AI
   - GPT
   - Prompt
   - Python
   - Go
-  - AI
   - Daily Digest
+  - Twitter
+  - X
 categories:
   - 技术
   - AI
-image:
+image: https://cos.jiahongw.com/agent/20260509/x-digest-cover-202605090640.png
 libraries: ['katex']
 ---
 
