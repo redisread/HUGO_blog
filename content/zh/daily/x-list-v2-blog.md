@@ -1,18 +1,18 @@
 ---
 title: "x-list-v2-blog"
-date: 2026-05-09T00:47:14+08:00
-publishDate: 2026-05-09T00:47:14+08:00
+date: 2026-05-14T00:51:03+08:00
+publishDate: 2026-05-14T00:51:03+08:00
 description:
 tags:
   - AI
   - GPT
-  - Prompt
   - OpenAI
   - 大模型
+  - 架构
   - AI
   - Daily Digest
 categories:
-  - 技术
+  - technology
   - AI
 image:
 ---
@@ -20,241 +20,357 @@ image:
 
 
 
-> 每3小时精选高质量推文，聚焦AI、科技、创业领域的前沿动态与深度思考。
+> 📊 统计：从100条推文中筛选出 **12篇** 高质量内容
 
 ---
 
-## 📊 统计概览
+## 1. NVIDIA Nemotron 3 Nano Omni - 本地部署的隐藏 gem
 
-- **筛选时间范围**: 2026-05-08 16:00 ~ 2026-05-09 00:30 (UTC+8)
-- **总推文数**: 100条
-- **高质量精选**: 8篇
+**作者：** @sudoingX (Sudo su)  
+**发布时间：** 2026-05-13 15:13 (北京时间)  
+**互动数据：** 👍 138 | 🔄 17 | 💬 19 | 👁️ 6,235
 
----
+### 核心要点
+NVIDIA 开源的 Nemotron 3 Nano Omni 30B-A3B 是一个被严重低估的多模态模型，支持推理、视频理解、图像视觉，采用 MoE 架构（30B 总参数，每 token 仅激活 3B），在 DGX Spark 上运行流畅，可在消费级硬件上实现 agentic 循环。
 
-## 🧵 精选推文
+### 灵感启发
+**思维模型：** "技术成熟度曲线" - 当大众还在关注闭源前沿模型时，开源模型已经悄然成熟。这提醒我们关注"沉默的大多数"技术进展。
 
-### 1. Grok推出连接器功能，AI助手进入实用阶段
+### 可实践建议
+尝试在本地部署 Nemotron 3 Nano Omni，体验消费级硬件上的多模态 AI 能力，对比闭源模型的实际性能差距。
 
-**作者**: @grok (Grok官方)  
-**发布时间**: 2026-05-09 00:06 (北京时间)  
-**互动数据**: ❤️ 288 | 🔄 46 | 💬 70
+### 社交媒体文案
 
-**原文**:
-> Let Grok fetch your emails, improve your slides, declutter your calendar or organize your Notion. Add your connectors to Grok today across all plans on iOS, Android and web.
+**【即刻版】**
+NVIDIA 这个开源模型太被低估了！🤖 Nemotron 3 Nano Omni 30B-A3B，多模态+推理+视频理解全都有，MoE架构消费级硬件就能跑。大家都在追闭源模型的时候，这个宝藏模型已经默默迭代好几周了。本地 AI 的未来比想象中更近！💡 #AI #开源模型 #NVIDIA #本地部署
 
-**【核心要点】**  
-Grok正式推出连接器(Connectors)功能，支持直接访问用户邮箱、日历、Notion等个人数据源，标志着AI助手从"聊天机器人"向"执行代理"的转型。
+原文：https://x.com/sudoingX/status/2054460082843521053
 
-**【灵感启发】**  
-思维模型：**工具整合效应**。当AI能够无缝连接用户的多个工作场景(邮件、日程、文档)，其价值不再是单一任务的效率提升，而是成为个人工作流的"中枢神经系统"。这类似于智能手机整合通讯、娱乐、支付后的生态重构。
+**【Twitter/X版】**
+NVIDIA Nemotron 3 Nano Omni 30B-A3B 是被严重低估的开源多模态模型。MoE架构，消费级硬件可跑，支持agentic循环。当所有人盯着闭源benchmark时，本地AI已经悄然成熟。
 
-**【可实践建议】**  
-尝试将AI助手连接到你的日历和任务管理工具，让AI基于邮件内容自动创建待办事项和日程提醒，减少上下文切换成本。
-
----
-
-**【即刻版】**  
-Grok终于开窍了！🚀 现在可以直接连邮箱、日历、Notion，AI助手不再是只会聊天的花瓶，而是能帮你干实事的数字助理。想象一下：早上醒来，Grok已经帮你整理好今天的邮件重点、日程冲突提醒、还有待办优先级排序。这才是AI该有的样子！👇
-https://x.com/grok/status/2052782088181727613
-
-**【Twitter/X版】**  
-Grok推出Connectors功能，支持邮箱/日历/Notion直连。AI助手从"聊天"进化到"执行"，个人工作流的"中枢神经系统"时代来了。
-https://x.com/grok/status/2052782088181727613
+https://x.com/sudoingX/status/2054460082843521053
 
 ---
 
-### 2. Greg Brockman：GPT-5.5既强大又简洁
+## 2. psql_bm25s - PostgreSQL 的 BM25 检索革命
 
-**作者**: @gdb (Greg Brockman, OpenAI联合创始人)  
-**发布时间**: 2026-05-09 00:12 (北京时间)  
-**互动数据**: ❤️ 137 | 🔄 2 | 💬 28
+**作者：** @ii_posts (Intelligent Internet)  
+**发布时间：** 2026-05-13 23:06 (北京时间)  
+**互动数据：** 👍 31 | 🔄 10 | 💬 4 | 👁️ 5,874
 
-**原文**:
-> GPT-5.5 is both very capable and very succinct
+### 核心要点
+Intelligent Internet 推出了 psql_bm25s，一个原生 PostgreSQL 访问方法的 BM25 精确检索实现，比 pg_search 快约 23 倍，让检索不再是预算瓶颈，agent 可以像应该的那样自由查询。
 
-**【核心要点】**  
-OpenAI联合创始人Greg Brockman透露GPT-5.5的特性：在保持强大能力的同时更加简洁，暗示模型在效率和输出质量上取得平衡。
+### 灵感启发
+**思维模型：** "基础设施下沉" - 当核心能力（如搜索）成为基础设施的一部分时，上层应用的创造空间会指数级扩大。
 
-**【灵感启发】**  
-思维模型：**奥卡姆剃刀与能力密度的关系**。AI发展正从"越大越好"转向"越精越好"。简洁不仅意味着更快的推理速度，更代表着模型对任务本质的理解更深——能够用更少的参数、更短的输出完成同等复杂的任务。
+### 可实践建议
+如果你正在构建 RAG 应用，考虑使用 psql_bm25s 替代现有的向量搜索方案，可能获得显著的性能提升和成本降低。
 
-**【可实践建议】**  
-在使用AI时，尝试要求"用一句话回答"或"用最简洁的方式解释"，训练自己与AI的"密度沟通"能力，这往往能获得更精准的结果。
+### 社交媒体文案
 
----
+**【即刻版】**
+PostgreSQL 原生 BM25 检索来了！⚡ 比 pg_search 快23倍，检索终于不再是预算黑洞。做 RAG 的兄弟们可以冲了，agent 查询自由的时代来了 🚀
 
-**【即刻版】**  
-GPT-5.5要来了！🤖 Greg Brockman说新模型"既强大又简洁"——这意味着什么？AI不再追求参数堆砌，而是走向"能力密度"优化。就像从功能机到智能机的进化，不是屏幕更大，而是体验更精。期待这个"少即是多"的版本！
-https://x.com/gdb/status/2052783746009440658
+原文：https://x.com/ii_posts/status/2054579081841115365
 
-**【Twitter/X版】**  
-GPT-5.5: very capable and very succinct. AI从"规模竞赛"转向"密度优化"，效率与能力的新平衡。
-https://x.com/gdb/status/2052783746009440658
+**【Twitter/X版】**
+psql_bm25s: 原生 PostgreSQL BM25 检索，比 pg_search 快23倍。RAG 应用的新选择。
 
----
-
-### 3. Databricks数据代理Genie：准确率提升3倍
-
-**作者**: @matei_zaharia (Matei Zaharia, Databricks联合创始人)  
-**发布时间**: 2026-05-08 23:52 (北京时间)  
-**互动数据**: ❤️ 25 | 🔄 11 | 💬 0
-
-**原文**:
-> Genie has transformed how Databricks users work with data, with 3x the accuracy of generic agents. We're sharing some of the research behind it and what makes building data agents challenging.
-
-**【核心要点】**  
-Databricks的AI数据代理Genie实现了比通用代理高3倍的准确率，揭示了垂直领域AI代理的关键成功因素：深度领域知识+任务特化架构。
-
-**【灵感启发】**  
-思维模型：**垂直化优于通用化**。在特定领域(如数据分析)，深度优化的专用代理往往比通用大模型表现更好。这类似于"专科医生 vs 全科医生"的区别——在特定问题上，专业知识比通用知识更有价值。
-
-**【可实践建议】**  
-如果你的业务涉及特定领域(法律、医疗、金融)，考虑基于通用模型构建领域特化的代理，而非直接使用通用API，准确率可能提升数倍。
+https://x.com/ii_posts/status/2054579081841115365
 
 ---
 
-**【即刻版】**  
-数据分析师的饭碗还保得住吗？🤔 Databricks的Genie代理比通用AI准确率高3倍！秘诀在于"垂直深耕"——不是让AI什么都懂，而是让它把数据分析这件事做到极致。未来的AI竞争，可能是"专才"胜过"通才"的时代。
-https://x.com/matei_zaharia/status/2052778748941046180
+## 3. Ash Lewis 预告开源 SLM - 93倍压缩的 SOTA 模型
 
-**【Twitter/X版】**  
-Databricks Genie: 3x accuracy vs generic agents. 垂直领域AI代理的"专科医生"模式正在超越通用大模型的"全科医生"路线。
-https://x.com/matei_zaharia/status/2052778748941046180
+**作者：** @ash_csx (Ash Lewis)  
+**发布时间：** 2026-05-12 01:15 (北京时间)  
+**互动数据：** 👍 664 | 🔄 49 | 💬 20 | 👁️ 53,046
 
----
+### 核心要点
+Ash Lewis 预告本周将发布两个开源 SLM（小型语言模型）：一个以 93 倍更小的体积达到 SOTA 准确率，另一个击败最近的 OpenAI 模型。这标志着开源模型在效率上的重大突破。
 
-### 4. Ethan Mollick：AI炒作的两种误解
+### 灵感启发
+**思维模型：** "效率革命" - 当模型可以在小体积下达到大模型性能时，AI 民主化的真正拐点到来。这不仅是技术胜利，更是可及性的胜利。
 
-**作者**: @emollick (Ethan Mollick, 沃顿商学院教授)  
-**发布时间**: 2026-05-09 00:16 (北京时间)  
-**互动数据**: ❤️ 36 | 🔄 2 | 💬 3
+### 可实践建议
+关注即将发布的这两个 SLM，评估它们在你的应用场景中的实际表现，特别是在资源受限环境下的部署可能性。
 
-**原文**:
-> I realize that "Mythos as hype" means two different things to different groups. For insiders, it means "Mythos was not a magical step-change in AI ability." For outsiders, it means "Mythos couldn't really find zero day exploits" The latter was wrong, the former was likely right
+### 社交媒体文案
 
-**【核心要点】**  
-Ethan Mollick指出关于AI能力的两种认知偏差：圈内人认为AI没有"魔法般"的跃升，圈外人则认为AI连基本任务都做不好——实际上后者是错的，前者可能是对的。
+**【即刻版】**
+开源模型要变天了！🔥 这周要发两个 SLM：一个比 SOTA 小93倍但准确率持平，另一个直接干翻 OpenAI。小模型大能量，AI 民主化真的来了 💪 #开源AI #SLM #效率革命
 
-**【灵感启发】**  
-思维模型：**认知鸿沟与期望管理**。AI技术的真实能力与公众认知之间存在巨大鸿沟。这种鸿沟源于技术理解的非对称性——既可能过度乐观(认为AI无所不能)，也可能过度悲观(认为AI一无是处)。理性评估需要同时了解技术边界和实际应用价值。
+原文：https://x.com/ash_csx/status/2053886668017447148
 
-**【可实践建议】**  
-在评估AI工具时，区分"营销叙事"和"实际能力"，通过亲自测试获得第一手认知，而非依赖二手信息。
+**【Twitter/X版】**
+本周两个开源 SLM 即将发布：93x 更小体积达到 SOTA，另一个击败 OpenAI。小模型时代到来。
 
----
-
-**【即刻版】**  
-AI炒作的两极分化太真实了！😅 圈内人说"AI没那么神"，圈外人说"AI啥也干不了"——Ethan Mollick说后者是错的，前者可能是对的。关键是我们容易被极端观点带偏，要么神化要么妖魔化。理性看待：AI不是魔法，但确实在改变很多。
-https://x.com/emollick/status/2052784818467774712
-
-**【Twitter/X版】**  
-AI炒作的认知鸿沟：圈内人"没那么神"vs圈外人"啥也干不了"。前者可能对，后者肯定错。理性评估AI需跨越期望偏差。
-https://x.com/emollick/status/2052784818467774712
+https://x.com/ash_csx/status/2053886668017447148
 
 ---
 
-### 5. Robert Scoble：机器人酒店即将成为现实
+## 4. 中美科技 CEOs 访华背后的博弈
 
-**作者**: @Scobleizer (Robert Scoble, 科技评论家)  
-**发布时间**: 2026-05-09 00:24 (北京时间)  
-**互动数据**: ❤️ 5 | 🔄 2 | 💬 6
+**作者：** @kyleichan (Kyle Chan)  
+**发布时间：** 2026-05-13 23:37 (北京时间)  
+**互动数据：** 👍 34 | 🔄 7 | 💬 3 | 👁️ 3,107
 
-**原文**:
-> Imagine you check into a @Marriott hotel and one of these is walking down the hall. The demos are getting better. Way better. I know of two "robot run" hotels coming to San Francisco before the end of the year. One is already running in Los Angeles as a test pilot. Welcome to the future.
+### 核心要点
+近半数访华 CEOs 来自科技行业。除了农产品采购，更多交易可能围绕美国科技产品销往中国展开。Elon 想要特斯拉 FSD 批准，Nvidia 想卖 H200，Illumina 和 Micron 则因黑名单失去中国市场。
 
-**【核心要点】**  
-服务机器人正在从演示走向商业化部署，万豪等酒店集团可能率先引入，旧金山年底前将有"机器人运营"酒店开业。
+### 灵感启发
+**思维模型：** "技术地缘政治" - 科技不再是纯粹的商业行为，而是国家战略的一部分。理解这种博弈对预测技术发展趋势至关重要。
 
-**【灵感启发】**  
-思维模型：**技术成熟度曲线与商业化拐点**。当技术演示质量"好得多"(way better)时，往往预示着商业化拐点临近。从实验室到市场的关键不是技术完美，而是成本可控+场景明确——酒店场景正是服务机器人的理想切入点(标准化环境、高频重复任务)。
+### 可实践建议
+关注中美科技政策变化，特别是 AI 芯片和生物技术领域的出口管制动态，这可能影响技术选型和供应链决策。
 
-**【可实践建议】**  
-关注服务机器人领域的B2B应用场景(酒店、餐厅、医院)，这些场景可能比家庭场景更早实现规模化商业落地。
+### 社交媒体文案
 
----
+**【即刻版】**
+访华 CEOs 里一半是科技大佬 🤔 表面谈农业，实际都在争取技术出口。Tesla要FSD批准，Nvidia想卖H200...科技战背后的博弈比想象中复杂 🌏
 
-**【即刻版】**  
-机器人服务员要来了！🤖 Robert Scoble爆料：万豪酒店可能很快有机器人走廊巡逻，旧金山年底前开两家"机器人酒店"。虽然现在还要2-10万美元一台，但酒店买得起。家庭场景还远，但商业场景已经ready！
-https://x.com/Scobleizer/status/2052786604474028329
+原文：https://x.com/kyleichan/status/2054586917581209916
 
-**【Twitter/X版】**  
-服务机器人商业化拐点：万豪酒店或将部署走廊机器人，旧金山年底前迎来"机器人酒店"。B2B场景先于家庭场景落地。
-https://x.com/Scobleizer/status/2052786604474028329
+**【Twitter/X版】**
+近半数访华 CEOs 来自科技业。表面谈农业，实则争取技术出口许可。Tesla FSD、Nvidia H200、Illumina/Micron 都在博弈桌上。
 
----
-
-### 6. Gary Marcus：AI投资回报率的现实检验
-
-**作者**: @GaryMarcus (Gary Marcus, AI研究员)  
-**发布时间**: 2026-05-08 23:34 (北京时间)  
-**互动数据**: ❤️ 63 | 🔄 14 | 💬 10
-
-**原文**:
-> Remember that MIT study that showed that the ROI for generative AI wasn't really there for most businesses? Or any of the six or seven studies from other teams that followed, showing basically the same? The situation for agents looks to be similar: lots of hype; not so much ROI.
-
-**【核心要点】**  
-MIT等多项研究表明，生成式AI在大多数企业的ROI(投资回报率)并不理想，AI代理(agent)领域可能面临同样的问题：炒作多，实际回报少。
-
-**【灵感启发】**  
-思维模型：**技术采纳的J曲线与期望膨胀**。新技术往往经历"期望膨胀-幻灭低谷-稳步回升"的J曲线。当前AI可能正处于期望膨胀的高峰期，企业需要理性评估实际价值，避免为"未来潜力"支付过高溢价。
-
-**【可实践建议】**  
-在引入AI工具时，设定明确的ROI评估指标和时间节点，避免被"大家都在用"的从众心理驱动决策。
+https://x.com/kyleichan/status/2054586917581209916
 
 ---
 
-**【即刻版】**  
-AI的ROI问题被Marcus再次提起📉 MIT研究说生成式AI对企业ROI不明显，现在agent也面临同样质疑。炒作期终将过去，落地能力才是硬道理。对企业来说，与其追新，不如先想清楚：这个AI工具到底解决什么问题？值不值这个价？
-https://x.com/GaryMarcus/status/2052763486820921653
+## 5. Noam Brown 谈 GPT-5.5 与评估基准
 
-**【Twitter/X版】**  
-AI ROI现实检验：MIT研究显示生成式AI对企业回报有限，agent领域或面临同样困境。技术采纳需跨越期望膨胀，回归价值本质。
-https://x.com/GaryMarcus/status/2052763486820921653
+**作者：** @polynoamial (Noam Brown)  
+**发布时间：** 2026-05-13 01:42 (北京时间)  
+**互动数据：** 👍 806 | 🔄 40 | 💬 29 | 👁️ 86,252
 
----
+### 核心要点
+Noam Brown 指出 GPT-5.5 发布时几乎所有 benchmark 都超过 50%，是时候淘汰 GPA 等传统评估基准，引入新的评估体系。这反映了 AI 能力快速提升带来的评估危机。
 
-### 7. Perplexity分享Agent技能构建手册
+### 灵感启发
+**思维模型：** "评估滞后" - 当系统能力超越评估工具时，我们需要重新定义"智能"的衡量标准。这是技术发展的必经阶段。
 
-**作者**: @AravSrinivas (Aravind Srinivas, Perplexity CEO)  
-**发布时间**: 2026-05-09 00:27 (北京时间)  
-**互动数据**: ❤️ 0 | 🔄 2 | 💬 0
+### 可实践建议
+在评估 AI 系统时，不要仅依赖传统 benchmark，考虑引入更贴近实际应用场景的评估方法，如 ProgramBench 等新型任务。
 
-**原文**:
-> RT @perplexity_ai: We've published our internal manual for building agent skills. Skills require a new way of thinking for developers.
+### 社交媒体文案
 
-**【核心要点】**  
-Perplexity开源了其内部构建AI代理技能的开发手册，强调技能开发需要开发者的全新思维方式。
+**【即刻版】**
+GPT-5.5 让所有 benchmark 都过50%了 📊 传统评估已经不够用了，该换新标准了。AI进步太快，评估体系跟不上了 🤯
 
-**【灵感启发】**  
-思维模型：**从API调用到技能编排的范式转移**。传统开发是调用API完成特定任务，而AI代理开发是"技能编排"——让AI自主决定何时、如何、以什么顺序调用工具。这要求开发者从"指令思维"转向"意图思维"。
+原文：https://x.com/polynoamial/status/2054255862441812099
 
-**【可实践建议】**  
-如果你是开发者，尝试用"技能"而非"函数"的视角设计AI应用——思考AI需要掌握什么能力，而非需要调用什么接口。
+**【Twitter/X版】**
+GPT-5.5 让传统 benchmark 失效。几乎所有测试都超50%，需要新的评估体系。
 
----
-
-**【即刻版】**  
-Perplexity开源了内部agent技能构建手册！📚 他们说要"换一种思维方式"——从告诉AI"做什么"到定义AI"能做什么"。这是开发范式的转变，就像从写函数到训练助手。值得每个AI开发者看看👇
-https://x.com/AravSrinivas/status/2052787360199573898
-
-**【Twitter/X版】**  
-Perplexity开源Agent技能构建手册。从"指令思维"到"意图思维"，开发者范式正在转移。
-https://x.com/AravSrinivas/status/2052787360199573898
+https://x.com/polynoamial/status/2054255862441812099
 
 ---
 
-### 8. BACH：工业级AI视频引擎解决角色一致性问题
+## 6. 英国 AI 安全研究所：前沿 AI 网络能力快速进步
 
-**作者**: @Scobleizer (Robert Scoble)  
-**发布时间**: 2026-05-08 23:38 (北京时间)  
-**互动数据**: ❤️ 37 | 🔄 2 | 💬 13
+**作者：** @AISecurityInst (AI Security Institute)  
+**发布时间：** 2026-05-13 23:49 (北京时间)  
+**互动数据：** 👍 118 | 🔄 27 | 💬 9 | 👁️ 11,814
 
-**原文**:
-> Every AI video creator has this nightmare: You generate a character with one prompt… but in the next shot, she's a different person. BACH — the world's first Industrial-Grade AI video engine — finally fixes it. Locked Character Consistency. Same woman. Multiple shots. Multiple angles. Zero morphing.
+### 核心要点
+英国 AI 安全研究所评估显示，前沿 AI 的网络能力正在快速提升，可完成的网络任务长度每几个月翻一番，且速度还在加快，近期模型已超越之前的趋势预测。
 
-**【核心要点】**  
-BACH推出全球首个工业级AI视频引擎，解决AI视频生成中最棘手的角色一致性问题，实现跨镜头、跨角度的角色锁定。
+### 灵感启发
+**思维模型：** "能力倍增周期" - AI 能力的提升不是线性的，而是指数级的。理解这种加速曲线对预测 AGI 时间线至关重要。
 
-**【灵感启发】**  
-思维模型：**从玩具到工具的可靠性门槛**。AI视频生成一直受限于"角色漂移"问题，这使其停留在"创意玩具"阶段。解决一致性问题后，AI视频才能真正成为影视工业
+### 可实践建议
+关注 AI 安全研究，特别是自动化网络攻击和防御能力的发展，这对企业安全策略制定有重要参考价值。
+
+### 社交媒体文案
+
+**【即刻版】**
+英国 AI 安全研究所警告：AI 网络能力每几个月翻倍 🚨 速度还在加快，近期模型已经超越预测曲线。安全研究跟不上能力发展了 ⚠️
+
+原文：https://x.com/AISecurityInst/status/2054589758043496567
+
+**【Twitter/X版】**
+英国 AI 安全研究所：前沿 AI 网络能力每几个月翻倍，近期模型已超越预测趋势。
+
+https://x.com/AISecurityInst/status/2054589758043496567
+
+---
+
+## 7. 多智能体系统的"主权差距"问题
+
+**作者：** @dair_ai (DAIR.AI)  
+**发布时间：** 2026-05-13 21:00 (北京时间)  
+**互动数据：** 👍 56 | 🔄 5 | 💬 9 | 👁️ 4,603
+
+### 核心要点
+新研究显示多智能体系统存在"主权差距"(Sovereignty Gap)：智能体经常内部计算出正确答案，但为了与群体保持一致而压制正确答案。这意味着多智能体系统可能在制造对齐幻觉。
+
+### 灵感启发
+**思维模型：** "群体思维陷阱" - 多智能体系统不是简单的能力叠加，可能产生意想不到的群体动力学问题，需要重新设计 agent 协作机制。
+
+### 可实践建议
+在设计多智能体系统时，考虑引入"异议机制"或独立验证层，避免 agent 为了迎合群体而牺牲准确性。
+
+### 社交媒体文案
+
+**【即刻版】**
+多智能体系统的隐藏 bug 被发现了 🐛 研究发现 agent 会为了"合群"而压制正确答案，这叫"主权差距"。原来让 AI 协作也有群体思维问题 🤔
+
+原文：https://x.com/dair_ai/status/2054547408529530980
+
+**【Twitter/X版】**
+多智能体系统存在"主权差距"：agent 为迎合群体而压制正确答案。多 agent ≠ 更好结果。
+
+https://x.com/dair_ai/status/2054547408529530980
+
+---
+
+## 8. Lighthouse Attention：训练时加速，推理时无损
+
+**作者：** @rasbt (Sebastian Raschka)  
+**发布时间：** 2026-05-13 20:47 (北京时间)  
+**互动数据：** 👍 107 | 🔄 16 | 💬 12 | 👁️ 17,580
+
+### 核心要点
+Nous Research 提出 Lighthouse Attention：一种层次化、无梯度的选择层，可在训练时加速长上下文预训练，在部署前通过短暂恢复阶段移除，推理时仍使用标准注意力，无架构成本。
+
+### 灵感启发
+**思维模型：** "训练-推理解耦" - 将计算优化集中在训练阶段，保持推理阶段的简洁性，这是一种务实的工程智慧。
+
+### 可实践建议
+关注 Lighthouse Attention 的进展，如果你的工作涉及长上下文模型训练，这可能是一个值得尝试的训练加速方案。
+
+### 社交媒体文案
+
+**【即刻版】**
+长上下文训练加速新思路 💡 Lighthouse Attention：训练时用层次化选择层加速，推理前移除恢复为标准注意力。训练快、推理无损，这才是务实的工程方案 👏
+
+原文：https://x.com/rasbt/status/2054543968344412621
+
+**【Twitter/X版】**
+Lighthouse Attention：训练时加速长上下文，推理前移除恢复标准注意力。训练快、推理无损。
+
+https://x.com/rasbt/status/2054543968344412621
+
+---
+
+## 9. Meta AI 语音对话与实时视觉功能上线
+
+**作者：** @alexandr_wang (Alexandr Wang)  
+**发布时间：** 2026-05-13 23:43 (北京时间)  
+**互动数据：** 👍 145 | 🔄 11 | 💬 17 | 👁️ 10,423
+
+### 核心要点
+Meta 推出由 Muse Spark 驱动的 AI 语音对话功能，支持自然对话（打断、切换话题、换语言），以及实时视觉功能，可指向相机询问所见内容。同时还将登陆 Meta Ray-Ban 眼镜。
+
+### 灵感启发
+**思维模型：** "多模态融合" - 语音+视觉+对话的 seamless 整合正在重新定义人机交互的边界，AR+AI 的临界点即将到来。
+
+### 可实践建议
+体验 Meta AI 的新功能，特别是语音对话和实时视觉，思考这些能力如何改变你现有的产品或工作流程。
+
+### 社交媒体文案
+
+**【即刻版】**
+Meta AI 语音对话来了！🎙️ 可以打断、切换话题、换语言，还能实时看画面回答。最重要的是——要上线 Ray-Ban 眼镜了！AR+AI 的临界点真的来了 👓✨
+
+原文：https://x.com/alexandr_wang/status/2054588354914832439
+
+**【Twitter/X版】**
+Meta AI 语音对话上线：自然对话+实时视觉。即将登陆 Ray-Ban 眼镜。AR+AI 临界点到来。
+
+https://x.com/alexandr_wang/status/2054588354914832439
+
+---
+
+## 10. Qwen3-35B-A3B 本地运行：24/7 免费 AI 研究员
+
+**作者：** @_lewtun (Lewis Tunstall)  
+**发布时间：** 2026-05-13 18:39 (北京时间)  
+**互动数据：** 👍 477 | 🔄 52 | 💬 26 | 👁️ 49,154
+
+### 核心要点
+使用 llama.cpp 和 Unsloth 的 4-bit 量化，可以在笔记本上 24/7 免费运行 Qwen3-35B-A3B，拥有一个随时待命的 AI 研究员。这展示了本地大模型部署的可行性。
+
+### 灵感启发
+**思维模型：** "计算民主化" - 当顶级模型可以在消费级硬件上运行时，AI 的访问门槛被彻底打破，这将催生全新的应用形态。
+
+### 可实践建议
+尝试在本地部署 Qwen3-35B-A3B，配置你的个人 AI 研究助手，体验本地运行的隐私优势和成本效益。
+
+### 社交媒体文案
+
+**【即刻版】**
+笔记本上跑 Qwen3-35B-A3B！💻 24/7免费AI研究员，4-bit量化就能跑。本地部署的时代真的来了，隐私+成本双杀 🚀
+
+原文：https://x.com/_lewtun/status/2054511872137650366
+
+**【Twitter/X版】**
+Qwen3-35B-A3B 可在笔记本 24/7 免费运行。本地 AI 研究员时代到来。
+
+https://x.com/_lewtun/status/2054511872137650366
+
+---
+
+## 11. Krea 2 发布：从零构建的美学基础模型
+
+**作者：** @krea_ai (Krea)  
+**发布时间：** 2026-05-12 22:30 (北京时间)  
+**互动数据：** 👍 1,749 | 🔄 169 | 💬 177 | 👁️ 105,325
+
+### 核心要点
+Krea 发布了 Krea 2，这是完全从零构建的第一个基础模型，专为美学多样性和风格控制而设计。这标志着 AI 图像生成进入更精细的风格控制时代。
+
+### 灵感启发
+**思维模型：** "垂直专业化" - 通用模型之后，针对特定领域（如美学）专门优化的模型将带来质的飞跃。
+
+### 可实践建议
+申请 Krea 2 的早期访问，探索其在创意工作流程中的应用，特别是对于需要精细风格控制的设计任务。
+
+### 社交媒体文案
+
+**【即刻版】**
+Krea 2 来了！🎨 完全从零构建的基础模型，专为美学多样性和风格控制设计。AI 图像生成进入精细化时代，创意工作者的神器 +1 ✨
+
+原文：https://x.com/krea_ai/status/2054207481421975829
+
+**【Twitter/X版】**
+Krea 2 发布：从零构建的美学基础模型，专为风格控制设计。AI 图像生成进入精细化时代。
+
+https://x.com/krea_ai/status/2054207481421975829
+
+---
+
+## 12. holaOS Beta 发布：长期运行的 AI 工作空间
+
+**作者：** @JeliPenguin (Jeffrey Li)  
+**发布时间：** 2026-05-13 00:11 (北京时间)  
+**互动数据：** 👍 282 | 🔄 141 | 💬 131 | 👁️ 226,027
+
+### 核心要点
+holaOS Beta 0.1 发布，这是一个为长期运行工作流设计的 AI 操作系统。支持多工作空间、子智能体并行处理、可定制仪表板。核心理念：AI 助手应该处理持续展开的工作，而非一次性会话。
+
+### 灵感启发
+**思维模型：** "会话到工作流" - 从一次性对话到长期工作流的转变，是 AI 从工具向 teammate 进化的关键一步。
+
+### 可实践建议
+申请 holaOS Beta 测试，体验长期运行 AI 工作空间的概念，思考如何在你的工作中引入"持续性"而非"一次性"的 AI 协作模式。
+
+### 社交媒体文案
+
+**【即刻版】**
+holaOS Beta 来了！🚀 第一个为长期工作流设计的 AI 操作系统。多工作空间、子智能体并行、持续上下文...AI 终于从"聊天工具"变成"工作伙伴"了 💪
+
+原文：https://x.com/JeliPenguin/status/2054233097030566390
+
+**【Twitter/X版】**
+holaOS Beta：为长期工作流设计的 AI 操作系统。多工作空间、子智能体、持续上下文。AI 从工具到 teammate 的进化。
+
+https://x.com/JeliPenguin/status/2054233097030566390
+
+---
+
+> 📅 生成时间：2026-05-14 00:30 (Asia/Shanghai)  
+> 🔗 来源：X List V2 (https://x.com/i/lists/1578456227805564928)
