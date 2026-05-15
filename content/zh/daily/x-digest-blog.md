@@ -1,14 +1,14 @@
 ---
 title: "x-digest-blog"
-date: 2026-05-15T01:09:58+08:00
-publishDate: 2026-05-15T01:09:58+08:00
+date: 2026-05-16T01:00:58+08:00
+publishDate: 2026-05-16T01:00:58+08:00
 description:
 tags:
   - AI
   - Claude
-  - LLM
-  - Prompt
-  - OpenAI
+  - GPT
+  - Go
+  - 工作流
   - AI
   - Daily Digest
 categories:
@@ -20,283 +20,237 @@ image:
 
 
 
-# X Following Digest - 20260515
+# X Following Digest - 2026-05-16
 
-生成时间：2026-05-15 01:01:44 UTC
+生成时间：2026-05-16 00:55:56 UTC
 筛选范围：最近 24 小时
-精选推文数：143
-转发推文数：31
-RT 原帖获取成功：3
+精选推文数：15
+转发推文数：0
+核心主题：Content Creation | AI & Coding
 
 <!--more-->
 
 ---
 
-## 精选推文分析
+## 推文 1
 
-### 1. 马斯克访华 - 中美元首会谈
-
-**作者:** @whyyoutouzhele
-**发布时间:** Thu May 14 11:20:00 +0000 2026
-**互动数据:** 19,460 likes, 681 replies, 1,098 retweets
+**作者:** @turingou
+**发布时间:** Fri May 15 05:00:58 +0000 2026
+**互动数据:** 0 likes, 0 replies, 0 retweets
 
 **原文:**
-马斯克小儿子穿中国风马甲
-5月14日上午，马斯克与苹果CEO库克、英伟达CEO黄仁勋等十余名美方商界代表一同进入中美元首会谈现场。
-引人注目的是，54岁的马斯克此行带上了6岁的小儿子，照片显示他穿着一件带有中式元素的上衣。
+反脆弱确实是 AI 时代需要好好思考的问题…软件行业之外存在很多机会，但比软件来说都是苦活累活，做好不容易，做到酷就更难，当然如果做产品目标是挣钱，这点苦是要吃的，这就因人而异了。
 
 **核心观点:**
-马斯克携子参加中美元首会谈，小儿子穿着中国风马甲成为焦点。这体现了科技巨头在中美关系中的重要角色，以及文化交流的软实力。
+在 AI 时代，软件行业之外存在大量机会，但这些机会往往意味着更艰苦的工作。要在非软件领域做出优秀的产品，需要付出更多努力，而且要做到"酷"更加困难。
 
 **可实践建议:**
-- 关注中美科技合作动态，特别是AI、芯片领域的政策变化
-- 观察马斯克在华商业布局的后续动作
-
-**社交媒体文案:**
-- 🟠 即刻：马斯克带小儿子参加中美元首会谈，6岁娃穿中国风马甲抢镜！科技大佬的外交软实力 🇨🇳
-- 🔴 小红书：马斯克访华新造型！小儿子穿中国风马甲出席中美元首会谈，这也太可爱了叭～科技大佬的家庭外交 💫
-- 🔵 推特：Elon Musk brought his 6-year-old son to the China-US summit meeting. The kid's Chinese-style vest stole the show! Tech diplomacy meets family values.
-
-**原文链接:** https://x.com/whyyoutouzhele/status/2054884428082786350
-
----
-
-### 2. Anthropic 与盖茨基金会合作
-
-**作者:** @AnthropicAI
-**发布时间:** Thu May 14 15:08:23 +0000 2026
-**互动数据:** 1,245 likes, 213 replies, 112 retweets
-
-**原文:**
-We're partnering with the Gates Foundation, committing  million in grants, Claude credits, and technical support to programs in global health, life sciences, education, agriculture, and economic mobility.
-
-**翻译:**
-我们正在与盖茨基金会合作，承诺投入2亿美元的赠款、Claude积分和技术支持，用于全球健康、生命科学、教育、农业和经济流动性项目。
-
-**核心观点:**
-Anthropic与盖茨基金会达成2亿美元合作，将AI技术应用于全球健康、教育、农业等公益领域。这标志着AI从商业应用向社会责任领域的扩展。
-
-**可实践建议:**
-- 关注AI在公益领域的应用案例
-- 探索AI技术与社会企业结合的可能性
-- 了解Claude在教育、医疗等垂直领域的应用
+- 评估进入非软件领域的机会时，充分考虑执行难度
+- 如果目标是盈利，做好吃苦的准备
+- 权衡个人能力与目标，选择适合自己的赛道
 
 **创作灵感:**
-AI for Good 是一个值得深挖的主题。可以写一篇文章探讨：当最顶尖的AI公司开始关注全球健康和教育公平，这意味着什么？
+可以写一篇关于"AI 时代的机会分布"的文章，探讨为什么软件行业之外的机会更难把握，以及如何在传统行业中找到创新点。
 
 **社交媒体文案:**
-- 🟠 即刻：Anthropic × 盖茨基金会，2亿美元让AI做公益！Claude要进农村、进医院、进课堂了 🤖💙
-- 🔴 小红书：AI也开始做公益了！Anthropic和盖茨基金会合作，把Claude用在医疗、教育、农业，科技向善真的在发生 🌱
-- 🔵 推特：Anthropic partners with Gates Foundation for M in AI-for-good initiatives. Claude credits going to global health, education, and agriculture. AI with a social impact.
+- 🟠 即刻：AI 时代的机会不仅限于软件行业，但非软件领域的创业确实更苦更累 💪 做好心理准备再出发
+- 🔴 小红书：💡 AI时代的创业思考\\n\\n软件之外的机会很多，但都是苦活累活\\n想要做出成绩，就得吃得了苦\\n\\n#创业 #AI时代 #思考
+- 🔵 推特：Opportunities outside software exist in the AI era, but they require more grit. Worth it if you're prepared for the grind.
 
-**原文链接:** https://x.com/AnthropicAI/status/2054941901900611787
+**原文链接:** [https://x.com/turingou/status/2055151430261166206](https://x.com/turingou/status/2055151430261166206)
 
 ---
 
-### 3. Claude Code 0.2.62 发布
+## 推文 2
 
-**作者:** @rwayne
-**发布时间:** Thu May 14 16:56:00 +0000 2026
-**互动数据:** 5 likes, 0 replies, 1 retweets
-
-**原文:**
-Claude Code 0.2.62 发布，一堆新功能。
-
-多行编辑支持上下键直接跳到另一行，不用按 Home/End 了。terminalSequence 字段支持桌面通知。新加 CLAUDE_CODE_PLUGIN_PREFER_HTTPS 环境变量支持 HTTPS 克隆插件源码。倒带菜单新增「总结至此」选项压缩早期上下文。
-
-**核心观点:**
-Claude Code 持续快速迭代，v0.2.62 带来多项实用功能：多行编辑优化、桌面通知支持、HTTPS 插件克隆、上下文压缩等。体现了Anthropic对开发者体验的重视。
-
-**可实践建议:**
-- 更新 Claude Code 到最新版本体验新功能
-- 尝试使用「总结至此」功能管理长对话上下文
-- 配置 CLAUDE_CODE_PLUGIN_PREFER_HTTPS 环境变量优化插件安装
-
-**社交媒体文案:**
-- 🟠 即刻：Claude Code 0.2.62 更新！多行编辑、桌面通知、HTTPS克隆，还有「总结至此」功能，上下文管理更丝滑了 ⚡
-- 🔴 小红书：Claude Code又双叒更新了！0.2.62版本新功能盘点，程序员效率神器再升级 💻✨
-- 🔵 推特：Claude Code 0.2.62 is out! Multi-line editing, desktop notifications, HTTPS plugin cloning, and "summarize to here" for context compression. Dev experience keeps getting better.
-
-**原文链接:** https://x.com/rwayne/status/2054969174360465645
-
----
-
-### 4. Notion Developer Platform 新视觉风格
-
-**作者:** @ivanhzhao
-**发布时间:** Thu May 14 14:12:45 +0000 2026
-**互动数据:** 141 likes, 7 replies, 7 retweets
+**作者:** @voooooogel
+**发布时间:** Fri May 15 04:48:35 +0000 2026
+**互动数据:** 6 likes, 2 replies, 0 retweets
 
 **原文:**
-New art direction for Notion Developer Platform. Less jazz. More techno.
-
-**翻译:**
-Notion 开发者平台的新视觉风格。少一点爵士，多一点科技。
+fyi if you've tried to use verifiers with tinker in the last couple months and couldn't get it working due to strange errors - just opened a PR that fixes the issue https://t.co/EnJT7OofUy
 
 **核心观点:**
-Notion Developer Platform 采用新的艺术风格，从「爵士」转向「科技」美学。这暗示了Notion正在强化其开发者平台的定位，从消费级工具向专业开发者生态转型。
+Tinker 验证器存在已知问题导致奇怪错误，作者已提交 PR 修复。
 
 **可实践建议:**
-- 关注Notion API的新功能和开发者生态
-- 探索Notion作为应用后端的可能性
-- 了解Notion与AI Agent集成的潜力
-
-**社交媒体文案:**
-- 🟠 即刻：Notion开发者平台换风格了！从爵士到科技，Notion要搞大事？🎹➡️💻
-- 🔴 小红书：Notion新视觉风格上线！Less jazz, more techno，开发者平台要升级了 🎨
-- 🔵 推特：Notion Developer Platform gets a new art direction: "Less jazz. More techno." Subtle hint at their developer-first pivot?
-
-**原文链接:** https://x.com/ivanhzhao/status/2054927903809290425
-
----
-
-### 5. 苏格拉底式提示法
-
-**作者:** @Huanusa
-**发布时间:** Thu May 14 14:11:45 +0000 2026
-**互动数据:** 23 likes, 2 replies, 13 retweets
-
-**原文:**
-OpenAI和Anthropic的工程师偷偷泄露了一个提示技巧，直接把初学者和专家拉开巨大差距！
-
-它叫苏格拉底式提示法，简单到离谱。
-别再命令AI做什么，改成问它问题。
-实测后，输出质量从 6.2/10 直接暴涨到 9.1/10！
-
-LLM在训练期间使用链式思维推理。当你提问时，激活相同推理路径。
-
-将苏格拉底式提示分为3部分：
-
-第1部分：理论问题
-'什么使[输出类型]有效？'
-
-第2部分：框架问题
-'什么原则或框架适用？'
-
-第3部分：应用问题
-'现在将这些见解应用到[你的具体任务]'
-
-这强制分步推理。
-
-❌ '分析这个客户反馈数据'
-✅ '客户反馈中的什么模式表明产品市场契合问题？什么定量和定性信号最重要？现在通过那个镜头分析这些数据。'
-
-AI变成战略分析师，不是数据总结器。
-
-**核心观点:**
-苏格拉底式提示法通过提问而非命令来激活LLM的链式思维推理能力。将提示分为理论、框架、应用三部分，强制模型进行分步推理，显著提升输出质量。
-
-**可实践建议:**
-- 将命令式提示改为提问式
-- 在提示中增加"为什么"、"什么模式"等引导性问题
-- 分步骤引导AI思考：理论→框架→应用
-- 示例：不说"总结这篇文章"，而是问"这篇文章的核心论点是什么？作者用了哪些证据支撑？"
+- 如果使用 Tinker 验证器遇到问题，关注相关 PR
+- 考虑暂时使用替代方案或等待修复合并
 
 **创作灵感:**
-可以写一篇深度文章《从命令到对话：苏格拉底式提示如何改变人机交互》，结合认知科学原理解释为什么提问比命令更有效。
+可以整理一个"开源工具常见问题及修复进展"的追踪文档。
 
 **社交媒体文案:**
-- 🟠 即刻：OpenAI/Anthropic工程师泄露的提示技巧！苏格拉底式提示法，输出质量从6.2→9.1，秘诀是把命令改成提问 🤯
-- 🔴 小红书：AI提示词进阶技巧！别再命令AI了，试试苏格拉底式提问，效果直接翻倍 💡
-- 🔵 推特：Socratic prompting: instead of telling AI what to do, ask it questions. Quality jumps from 6.2/10 to 9.1/10. Theory → Framework → Application. Game changer.
+- 🟠 即刻：Tinker 验证器的问题有修复了 🛠️ 遇到奇怪错误的可以关注一下
+- 🔴 小红书：🔧 开源工具动态\\n\\nTinker验证器问题修复中\\n遇到bug不用慌，社区在行动\\n\\n#开源 #开发工具
+- 🔵 推特：Tinker verifiers issue fixed in new PR. Check it out if you've been hitting strange errors.
 
-**原文链接:** https://x.com/Huanusa/status/2054927651492475372
+**原文链接:** [https://x.com/voooooogel/status/2055148313905955320](https://x.com/voooooogel/status/2055148313905955320)
 
 ---
 
-### 6. html-anything 开源
+## 推文 3
 
-**作者:** @tuturetom
-**发布时间:** Thu May 14 09:44:01 +0000 2026
-**互动数据:** 1,183 likes, 48 replies, 180 retweets
-
-**原文:**
-正式开源 html-anything 🚀 1:1 让你感受全网爆火 Claude code 作者提的 HTML 效果！
-
-你的 Agent 现在可以将任何数据转为世界级设计水准的 HTML 🔥
-
-历时3个月，终于开源了！支持任何数据源 → 世界级 HTML 设计
-
-**核心观点:**
-html-anything 开源项目让AI Agent能够将任意数据转换为高质量HTML页面。这实现了Claude Code作者提出的"HTML效果"——让AI输出可直接使用的美观界面。
-
-**可实践建议:**
-- 尝试使用 html-anything 将数据转换为可视化页面
-- 探索AI生成UI的应用场景
-- 关注AI+前端开发的新模式
-
-**社交媒体文案:**
-- 🟠 即刻：html-anything 开源！Agent 可以把任何数据变成世界级 HTML 页面，Claude Code 作者说的那个效果实现了 🚀
-- 🔴 小红书：AI生成网页神器开源！html-anything让你的Agent输出直接可用的漂亮页面 ✨
-- 🔵 推特：html-anything is open source! Turn any data into world-class HTML designs with your AI agent. The "HTML effect" from Claude Code is now available to everyone.
-
-**原文链接:** https://x.com/tuturetom/status/2054927725874339924
-
----
-
-### 7. 短剧赛道AI工具 - Drama Studio
-
-**作者:** @yaohui12138
-**发布时间:** Thu May 14 14:13:13 +0000 2026
-**互动数据:** 53 likes, 7 replies, 11 retweets
+**作者:** @aakashgupta
+**发布时间:** Fri May 15 04:57:02 +0000 2026
+**互动数据:** 0 likes, 0 replies, 0 retweets
 
 **原文:**
-一个月入过万的信息差：短剧赛道现在一个人就能干了
+Paul McCartney just explained what happens to famous people better than any psychology textbook, using a monkey on a beach in Saint-Tropez.
 
-Topview 刚推出了 Drama Studio，AI 原生的短剧制作工作室
+What he's describing is the shift from person to prop. You're having a conversation with someone. You exist as a human with thoughts, feelings, agency. The phone comes out and all of that becomes irrelevant. You're now content. Your inner experience no longer matters to the interaction.
 
-从创意到成片，AI 帮你搞定编剧、导演、演员、场景、配音、剪辑
+The monkey metaphor is more precise than he probably realizes. The monkey on the beachfront doesn't consent to the photo. Doesn't benefit from it. Nobody asks the monkey what it thinks. The tourist pays, gets the image, walks away. The monkey stays on the beach waiting for the next one.
 
-传统做法：找编剧(8000-30000) → 找演员(30000-50000) → 租场地(15000-40000) → 器材(10000-20000) → 后期(15000-30000)
-总成本20-50万，周期一个月起步
+That's the exact structure of a celebrity selfie. The fan gets content for their feed. McCartney gets the experience of being raw material for someone else's post. At 83, worth $1.3 billion, 32 number-one singles, and his word for what the camera turns him into is "monkey."
 
-用 Drama Studio 呢？一个创作者，AI 负责整个制作流程
+Psychologists have a name for this. Fredrickson and Roberts called it objectification in their 1997 paper: the process of being reduced from a full human subject to an object of someone else's gaze. Their research showed it consumes cognitive resources and fragments your sense of self. McCartney figured this out through pure intuition across 60 years of being one of the most recognized humans alive.
 
-一人工作室的时代开始了
+We built an entire social economy where being turned into someone else's content is framed as a compliment. "Can I get a photo?" sounds like admiration. McCartney is telling you it's a transaction where he plays the monkey. And he's one of the only people on earth famous enough and honest enough to say that out loud.
 
 **核心观点:**
-AI正在颠覆短剧制作行业。Topview的Drama Studio让单人创作者可以完成传统需要20-50万预算的短剧制作，AI包办编剧、导演、演员、场景、配音、剪辑全流程。
+Paul McCartney 用"海滩上的猴子"比喻名人在社交媒体时代的处境：当手机出现时，一个人从"有思想、有情感的个体"变成了"内容素材"。这种"物化"过程消耗认知资源，碎片化了自我认知。
 
 **可实践建议:**
-- 关注AI视频生成工具的进展
-- 探索短剧/短视频的AI制作工作流
-- 了解内容创作的AI化趋势
+- 反思自己在社交媒体中的角色：是创作者还是素材？
+- 尊重他人的主体性，拍照前先征得同意
+- 警惕将他人物化的社交行为模式
 
 **创作灵感:**
-"一人工作室"时代正在到来。可以写一篇文章探讨AI如何重构内容创作行业，从影视到自媒体的生产力革命。
+可以写一篇深度文章探讨"社交媒体时代的物化现象"，从心理学角度分析这种现象对个人和社会的影响。
 
 **社交媒体文案:**
-- 🟠 即刻：短剧制作一人搞定！Drama Studio AI包办编剧导演演员，成本从50万降到零，一人工作室时代来了 🎬🤖
-- 🔴 小红书：AI短剧制作神器！一个人就能拍短剧，编剧导演演员全AI搞定，月入过万新赛道 💰
-- 🔵 推特：Drama Studio from Topview lets one person create short dramas with AI handling script, directing, actors, scenes, voiceover, editing. /bin/zsh vs K traditional cost. The one-person studio era is here.
+- 🟠 即刻：Paul McCartney 的"猴子比喻"太精准了 📸 名人也是人，不是内容素材
+- 🔴 小红书：📸 社交媒体时代的思考\\n\\nPaul McCartney说：拍照时他变成了"猴子"\\n从人到道具，只需要一部手机\\n\\n#社交媒体 #心理学 #名人
+- 🔵 推特：Paul McCartney's "monkey on the beach" metaphor perfectly captures celebrity objectification in the social media age. From person to prop in one camera flash.
 
-**原文链接:** https://x.com/yaohui12138/status/2054928022328037716
-
----
-
-## 汇总统计
-
-- 总推文数：300
-- 精选推文数：143
-- 转发推文数：31
-- RT 原帖获取成功：3
-- 筛选率：47.7%
-
-## 今日主题洞察
-
-### 🔥 热门话题
-1. **马斯克访华** - 中美元首会谈，科技巨头外交
-2. **AI for Good** - Anthropic × 盖茨基金会合作
-3. **Claude Code 迭代** - 持续快速更新
-4. **AI内容创作** - Drama Studio、html-anything
-5. **提示工程** - 苏格拉底式提示法
-
-### 💡 关键趋势
-- **AI Agent 生态加速**：从工具到平台的转变
-- **一人工作室时代**：AI降低内容创作门槛
-- **提示工程专业化**：从命令到对话的范式转变
-- **AI社会责任**：从商业应用到公益领域
+**原文链接:** [https://x.com/aakashgupta/status/2055150439809872002](https://x.com/aakashgupta/status/2055150439809872002)
 
 ---
 
-*本报告由 X Following Digest 自动生成*
+## 推文 4
+
+**作者:** @0xCheshire
+**发布时间:** Fri May 15 10:36:50 +0000 2026
+**互动数据:** 0 likes, 1 replies, 0 retweets
+
+**原文:**
+这场由 Pydantic 创始人发表的关于如何正确使用 MCPs 的 15 分钟讲座，
+
+将教给你更多关于如何让你的 AI 工具真正协同工作的知识，胜过你今年刷过的所有内容。
+
+无论如何，请收藏并观看。点开下面引用推文，学习如何使用 Codex↓
+
+**核心观点:**
+Pydantic 创始人关于 MCP（Model Context Protocol）的 15 分钟讲座，包含了让 AI 工具真正协同工作的核心知识。
+
+**可实践建议:**
+- 收藏并观看 Pydantic 创始人的 MCP 讲座
+- 学习如何正确配置和使用 MCP
+- 实践让多个 AI 工具协同工作
+
+**创作灵感:**
+可以制作一个 MCP 使用教程，结合实际案例展示如何让不同 AI 工具协同工作。
+
+**社交媒体文案:**
+- 🟠 即刻：Pydantic 创始人的 MCP 讲座 💡 15分钟学会让AI工具协同工作
+- 🔴 小红书：🤖 AI工具协同工作指南\\n\\nPydantic创始人的15分钟讲座\\n值得收藏学习\\n\\n#AI工具 #MCP #Pydantic
+- 🔵 推特：The 15-min MCP talk by Pydantic founder is a must-watch. Learn how to make your AI tools actually work together.
+
+**原文链接:** [https://x.com/0xCheshire/status/2055235953976049963](https://x.com/0xCheshire/status/2055235953976049963)
+
+---
+
+## 推文 5
+
+**作者:** @aiwarts
+**发布时间:** Fri May 15 10:36:50 +0000 2026
+**互动数据:** 1 likes, 0 replies, 0 retweets
+
+**原文:**
+Codex App移动端快速链接多台电脑的方法！
+
+把Codex App和手机版GPT更到最新版，Codex App自动会弹窗，之前要是没有安装这个浏览器自动化扩展的话，这次设置的时候也可以顺带加上了。
+
+手机端的Codex其实是直接在ChatGPT iOS里的，不需要装一个新应用。对话里的模型权限比起电脑版多了一个选项，除了默认自动完全，还可以继承电脑端Codex APP上对于这个文件夹设置的权限。
+
+因为我的Mac mini上面也有Codex App嘛，我就想试试看能不能连接上。因为当时mbp连接之后在手机端的最上方是会有一个当前电脑的远程地址的，而且会显示状态，连接在线就是绿色。
+
+我就觉得它肯定有连其他电脑的方式，把Mac mini的Codex也更新到最新后，它同样出现了对应的步骤，但是唯独没有了扫🐎连接的步骤。后面我在手机端看呢，其实可以通过SSH连接的，不过就是对小白来说比较费事。
+
+再后面我就发现了，如果把Codex完全退出，再进入之后，它不会有那个移动端配置引导的步骤情况下，在左侧对话框的右下角。会有一个手机的logo，点一下那个logo就会出现二维码，这时候扫就能够连接新的主机。
+
+（ps 有概率会顶掉之前的那台所以SSH还是最稳定的）
+
+天才来的。
+
+而且移动端照样也可以给云端的Codex发任务，直接爽玩，也不需要考虑连接其他im平台，会不会时不时掉线了。
+
+Hermes，
+OpenClaw，
+Claude Code们，
+你们以后已经不可能掉线不干活了！
+
+**核心观点:**
+Codex App 支持移动端连接多台电脑：更新到最新版后，通过点击左侧对话框右下角的 logo 可以生成二维码连接新主机。SSH 连接是最稳定的方式。
+
+**可实践建议:**
+- 将 Codex App 和 ChatGPT iOS 更新到最新版
+- 使用 SSH 连接获得最稳定的体验
+- 点击手机 logo 生成二维码连接新主机
+
+**创作灵感:**
+可以制作一个 Codex 多端协作的教程视频，展示如何在不同设备间无缝切换开发工作流。
+
+**社交媒体文案:**
+- 🟠 即刻：Codex 多端协作新玩法 🔥 手机端也能给云端发任务了
+- 🔴 小红书：🚀 Codex 多端协作太香了！\\n\\n💻 手机端也能给云端发任务\\n🔧 一台电脑配置，多台设备同步\\n\\n#AI编程 #Codex #效率工具 #程序员
+- 🔵 推特：Codex multi-device workflow is game-changing. Mobile to cloud task delegation = true productivity.
+
+**原文链接:** [https://x.com/aiwarts/status/2055235954105806892](https://x.com/aiwarts/status/2055235954105806892)
+
+---
+
+## 推文 6
+
+**作者:** @_FORAB
+**发布时间:** Fri May 15 10:36:44 +0000 2026
+**互动数据:** 2 likes, 4 replies, 0 retweets
+
+**原文:**
+在北京逛街，一路被投喂的英伟达老板黄仁勋
+
+内心，咦！这又是什么好东西
+
+哇擦，豆汁，真难喝 https://t.co/yV3id5cu9j
+
+**核心观点:**
+英伟达 CEO 黄仁勋在北京体验当地美食（包括豆汁），接地气的形象引发关注。
+
+**可实践建议:**
+- 关注科技领袖的公众形象塑造策略
+- 学习如何在保持专业形象的同时展现亲和力
+
+**创作灵感:**
+可以分析科技领袖的公关策略，探讨如何在保持专业形象的同时展现亲和力。
+
+**社交媒体文案:**
+- 🟠 即刻：黄仁勋喝豆汁 😂 科技大佬接地气
+- 🔴 小红书：🧋 黄仁勋都在喝豆汁！\\n\\n💚 科技大佬接地气\\n😂 豆汁真难喝\\n\\n#黄仁勋 #豆汁 #英伟达 #科技趣闻
+- 🔵 推特：Jensen Huang trying Beijing's famous douzhi (fermented bean drink). Tech leaders being relatable is powerful marketing.
+
+**原文链接:** [https://x.com/_FORAB/status/2055235926675374406](https://x.com/_FORAB/status/2055235926675374406)
+
+---
+
+## 推文 7
+
+**作者:** @luoyonghao
+**发布时间:** Fri May 15 09:51:15 +0000 2026
+**互动数据:** 47 likes, 56 replies, 0 retweets
+
+**原文:**
+放心，写书的经常找我推荐，做播客的一次都没有过😊
+
+**核心观点:**
+罗永浩表示很多人找他推荐书，但
