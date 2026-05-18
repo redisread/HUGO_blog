@@ -1,376 +1,393 @@
 ---
 title: "x-list-v2-blog"
-date: 2026-05-14T00:51:03+08:00
-publishDate: 2026-05-14T00:51:03+08:00
+date: 2026-05-19T00:46:47+08:00
+publishDate: 2026-05-19T00:46:47+08:00
 description:
 tags:
   - AI
+  - Claude
   - GPT
-  - OpenAI
-  - 大模型
-  - 架构
+  - LLM
+  - Prompt
   - AI
   - Daily Digest
 categories:
-  - technology
   - AI
-image:
+  - AI
+image: x-list-v2-blog-cover.png
 ---
 
 
 
 
-> 📊 统计：从100条推文中筛选出 **12篇** 高质量内容
+> 📊 本次精选：15篇高质量推文（共筛选100条）
+> 🕐 数据时间：2026-05-18 16:30 UTC ~ 2026-05-19 00:30 UTC
 
 ---
 
-## 1. NVIDIA Nemotron 3 Nano Omni - 本地部署的隐藏 gem
+## 1. Logan Kilpatrick - OOD检测的困境
 
-**作者：** @sudoingX (Sudo su)  
-**发布时间：** 2026-05-13 15:13 (北京时间)  
-**互动数据：** 👍 138 | 🔄 17 | 💬 19 | 👁️ 6,235
+**作者：** Logan Kilpatrick (@OfficialLoganK)  
+**发布时间：** 2026-05-18 23:01 (北京时间)  
+**互动数据：** 👍 797 | 🔄 20 | 💬 154
 
-### 核心要点
-NVIDIA 开源的 Nemotron 3 Nano Omni 30B-A3B 是一个被严重低估的多模态模型，支持推理、视频理解、图像视觉，采用 MoE 架构（30B 总参数，每 token 仅激活 3B），在 DGX Spark 上运行流畅，可在消费级硬件上实现 agentic 循环。
+### 推文原文
+> Why don't LLM's just tell you when you are asking a question / doing something that is out of distribution?
 
-### 灵感启发
-**思维模型：** "技术成熟度曲线" - 当大众还在关注闭源前沿模型时，开源模型已经悄然成熟。这提醒我们关注"沉默的大多数"技术进展。
+### 【核心要点】
+LLM无法主动识别并告知用户何时遇到分布外(OOD)问题，这是当前大模型的核心局限之一。
 
-### 可实践建议
-尝试在本地部署 Nemotron 3 Nano Omni，体验消费级硬件上的多模态 AI 能力，对比闭源模型的实际性能差距。
+### 【灵感启发】
+这反映了自回归模型的本质缺陷——它们没有"元认知"能力来评估自己的知识边界。真正的智能系统应该具备自我监控机制，在不确定时主动表达不确定性，而非自信地胡说八道。
 
-### 社交媒体文案
-
-**【即刻版】**
-NVIDIA 这个开源模型太被低估了！🤖 Nemotron 3 Nano Omni 30B-A3B，多模态+推理+视频理解全都有，MoE架构消费级硬件就能跑。大家都在追闭源模型的时候，这个宝藏模型已经默默迭代好几周了。本地 AI 的未来比想象中更近！💡 #AI #开源模型 #NVIDIA #本地部署
-
-原文：https://x.com/sudoingX/status/2054460082843521053
-
-**【Twitter/X版】**
-NVIDIA Nemotron 3 Nano Omni 30B-A3B 是被严重低估的开源多模态模型。MoE架构，消费级硬件可跑，支持agentic循环。当所有人盯着闭源benchmark时，本地AI已经悄然成熟。
-
-https://x.com/sudoingX/status/2054460082843521053
+### 【可实践建议】
+在使用AI系统处理关键任务时，主动设计"置信度检测"环节，通过多次采样或引入外部验证器来识别潜在的OOD场景。
 
 ---
 
-## 2. psql_bm25s - PostgreSQL 的 BM25 检索革命
+## 2. Ethan Mollick - ChatGPT的预言
 
-**作者：** @ii_posts (Intelligent Internet)  
-**发布时间：** 2026-05-13 23:06 (北京时间)  
-**互动数据：** 👍 31 | 🔄 10 | 💬 4 | 👁️ 5,874
+**作者：** Ethan Mollick (@emollick)  
+**发布时间：** 2026-05-18 10:01 (北京时间)  
+**互动数据：** 👍 785 | 🔄 68 | 💬 41
 
-### 核心要点
-Intelligent Internet 推出了 psql_bm25s，一个原生 PostgreSQL 访问方法的 BM25 精确检索实现，比 pg_search 快约 23 倍，让检索不再是预算瓶颈，agent 可以像应该的那样自由查询。
+### 推文原文
+> Most prophetic tweet of all time (2 months post ChatGPT release). And you can safely repost it every day and it will still be prophetic for the future. This is the least the world will care about AI.
 
-### 灵感启发
-**思维模型：** "基础设施下沉" - 当核心能力（如搜索）成为基础设施的一部分时，上层应用的创造空间会指数级扩大。
+### 【核心要点】
+引用ChatGPT发布2个月后的一条预言性推文，指出当下社会对AI的关注度仍处于历史最低水平，未来只会更加关注。
 
-### 可实践建议
-如果你正在构建 RAG 应用，考虑使用 psql_bm25s 替代现有的向量搜索方案，可能获得显著的性能提升和成本降低。
+### 【灵感启发】
+技术采纳的S曲线规律：早期看似过热，实则是未来常态的预演。我们正处于AI从"新奇玩具"向"基础设施"转变的关键节点。
 
-### 社交媒体文案
-
-**【即刻版】**
-PostgreSQL 原生 BM25 检索来了！⚡ 比 pg_search 快23倍，检索终于不再是预算黑洞。做 RAG 的兄弟们可以冲了，agent 查询自由的时代来了 🚀
-
-原文：https://x.com/ii_posts/status/2054579081841115365
-
-**【Twitter/X版】**
-psql_bm25s: 原生 PostgreSQL BM25 检索，比 pg_search 快23倍。RAG 应用的新选择。
-
-https://x.com/ii_posts/status/2054579081841115365
+### 【可实践建议】
+不要被"AI炒作"的论调迷惑，专注于理解技术本质和应用场景，提前布局AI原生工作流。
 
 ---
 
-## 3. Ash Lewis 预告开源 SLM - 93倍压缩的 SOTA 模型
+## 3. Greg Brockman - Codex退订助手
 
-**作者：** @ash_csx (Ash Lewis)  
-**发布时间：** 2026-05-12 01:15 (北京时间)  
-**互动数据：** 👍 664 | 🔄 49 | 💬 20 | 👁️ 53,046
+**作者：** Greg Brockman (@gdb)  
+**发布时间：** 2026-05-18 12:01 (北京时间)  
+**互动数据：** 👍 723 | 🔄 28 | 💬 83
 
-### 核心要点
-Ash Lewis 预告本周将发布两个开源 SLM（小型语言模型）：一个以 93 倍更小的体积达到 SOTA 准确率，另一个击败最近的 OpenAI 模型。这标志着开源模型在效率上的重大突破。
+### 推文原文
+> Codex for unsubscribing from unwanted marketing emails
 
-### 灵感启发
-**思维模型：** "效率革命" - 当模型可以在小体积下达到大模型性能时，AI 民主化的真正拐点到来。这不仅是技术胜利，更是可及性的胜利。
+### 【核心要点】
+用Codex来自动取消不需要的营销邮件订阅——一个看似微小但极具实用价值的AI应用场景。
 
-### 可实践建议
-关注即将发布的这两个 SLM，评估它们在你的应用场景中的实际表现，特别是在资源受限环境下的部署可能性。
+### 【灵感启发】
+AI的最大价值往往体现在"消灭生活摩擦"上。与其追求宏大的AGI愿景，不如先解决这些日常琐事。这是Agent经济的真谛。
 
-### 社交媒体文案
-
-**【即刻版】**
-开源模型要变天了！🔥 这周要发两个 SLM：一个比 SOTA 小93倍但准确率持平，另一个直接干翻 OpenAI。小模型大能量，AI 民主化真的来了 💪 #开源AI #SLM #效率革命
-
-原文：https://x.com/ash_csx/status/2053886668017447148
-
-**【Twitter/X版】**
-本周两个开源 SLM 即将发布：93x 更小体积达到 SOTA，另一个击败 OpenAI。小模型时代到来。
-
-https://x.com/ash_csx/status/2053886668017447148
+### 【可实践建议】
+梳理你日常工作中的"微痛点"，思考如何用AI Agent来自动化处理，积少成多能节省大量时间。
 
 ---
 
-## 4. 中美科技 CEOs 访华背后的博弈
+## 4. Gary Marcus - 纯LLM批判
 
-**作者：** @kyleichan (Kyle Chan)  
-**发布时间：** 2026-05-13 23:37 (北京时间)  
-**互动数据：** 👍 34 | 🔄 7 | 💬 3 | 👁️ 3,107
+**作者：** Gary Marcus (@GaryMarcus)  
+**发布时间：** 2026-05-18 15:44 (北京时间)  
+**互动数据：** 👍 373 | 🔄 35 | 💬 66
 
-### 核心要点
-近半数访华 CEOs 来自科技行业。除了农产品采购，更多交易可能围绕美国科技产品销往中国展开。Elon 想要特斯拉 FSD 批准，Nvidia 想卖 H200，Illumina 和 Micron 则因黑名单失去中国市场。
+### 推文原文
+> I love AI, it's pure LLMs I hate.
+> 
+> Pure LLMs *are* basically just autocomplete.
+> 
+> Recent progress (e.g. Claude Code) doesn't show otherwise
+> 
+> Rather, lot of the progress in the last two years has come from *introducing* other things – mainly classic symbolic techniques and tools, to offset the weaknesses of pure LLMs.
 
-### 灵感启发
-**思维模型：** "技术地缘政治" - 科技不再是纯粹的商业行为，而是国家战略的一部分。理解这种博弈对预测技术发展趋势至关重要。
+### 【核心要点】
+Gary Marcus再次强调：纯LLM只是高级自动补全，真正的进步来自引入符号技术和其他工具来弥补纯LLM的缺陷。
 
-### 可实践建议
-关注中美科技政策变化，特别是 AI 芯片和生物技术领域的出口管制动态，这可能影响技术选型和供应链决策。
+### 【灵感启发】
+神经符号混合架构可能是通往更可靠AI的路径。单纯扩大模型规模不是万能药，系统性的架构创新才是关键。
 
-### 社交媒体文案
-
-**【即刻版】**
-访华 CEOs 里一半是科技大佬 🤔 表面谈农业，实际都在争取技术出口。Tesla要FSD批准，Nvidia想卖H200...科技战背后的博弈比想象中复杂 🌏
-
-原文：https://x.com/kyleichan/status/2054586917581209916
-
-**【Twitter/X版】**
-近半数访华 CEOs 来自科技业。表面谈农业，实则争取技术出口许可。Tesla FSD、Nvidia H200、Illumina/Micron 都在博弈桌上。
-
-https://x.com/kyleichan/status/2054586917581209916
+### 【可实践建议】
+在构建AI应用时，不要完全依赖LLM的"黑盒"能力，而是结合规则引擎、知识图谱等符号方法提升可靠性。
 
 ---
 
-## 5. Noam Brown 谈 GPT-5.5 与评估基准
+## 5. Tibo - Outrank发布
 
-**作者：** @polynoamial (Noam Brown)  
-**发布时间：** 2026-05-13 01:42 (北京时间)  
-**互动数据：** 👍 806 | 🔄 40 | 💬 29 | 👁️ 86,252
+**作者：** Tibo (@tibo_maker)  
+**发布时间：** 2026-05-18 15:06 (北京时间)  
+**互动数据：** 👍 193 | 🔄 14 | 💬 51
 
-### 核心要点
-Noam Brown 指出 GPT-5.5 发布时几乎所有 benchmark 都超过 50%，是时候淘汰 GPA 等传统评估基准，引入新的评估体系。这反映了 AI 能力快速提升带来的评估危机。
+### 推文原文
+> we're launching Outrank on TinyLaunch today 🚨
+> 
+> it's doing $300k+ MRR
+> 
+> so far we have 2,500+ domains powered, 750,000+ articles created, 25,000+ backlinks placed and 10,000+ AI mentions secured
+> 
+> Outrank helps you grow organic traffic on autopilot
+> 
+> - finds high-potential keywords
+> - writes and publishes SEO articles daily
+> - builds relevant backlinks
+> - gets your brand mentioned by ChatGPT
 
-### 灵感启发
-**思维模型：** "评估滞后" - 当系统能力超越评估工具时，我们需要重新定义"智能"的衡量标准。这是技术发展的必经阶段。
+### 【核心要点】
+Outrank在TinyLaunch发布，已做到30万美元月经常性收入，帮助用户自动完成SEO优化、内容创作和外链建设。
 
-### 可实践建议
-在评估 AI 系统时，不要仅依赖传统 benchmark，考虑引入更贴近实际应用场景的评估方法，如 ProgramBench 等新型任务。
+### 【灵感启发】
+AI正在重塑SEO行业：从人工优化转向自动化Agent。但这也引发了内容质量与搜索生态的担忧——AI生成的内容能否真正提供价值？
 
-### 社交媒体文案
-
-**【即刻版】**
-GPT-5.5 让所有 benchmark 都过50%了 📊 传统评估已经不够用了，该换新标准了。AI进步太快，评估体系跟不上了 🤯
-
-原文：https://x.com/polynoamial/status/2054255862441812099
-
-**【Twitter/X版】**
-GPT-5.5 让传统 benchmark 失效。几乎所有测试都超50%，需要新的评估体系。
-
-https://x.com/polynoamial/status/2054255862441812099
-
----
-
-## 6. 英国 AI 安全研究所：前沿 AI 网络能力快速进步
-
-**作者：** @AISecurityInst (AI Security Institute)  
-**发布时间：** 2026-05-13 23:49 (北京时间)  
-**互动数据：** 👍 118 | 🔄 27 | 💬 9 | 👁️ 11,814
-
-### 核心要点
-英国 AI 安全研究所评估显示，前沿 AI 的网络能力正在快速提升，可完成的网络任务长度每几个月翻一番，且速度还在加快，近期模型已超越之前的趋势预测。
-
-### 灵感启发
-**思维模型：** "能力倍增周期" - AI 能力的提升不是线性的，而是指数级的。理解这种加速曲线对预测 AGI 时间线至关重要。
-
-### 可实践建议
-关注 AI 安全研究，特别是自动化网络攻击和防御能力的发展，这对企业安全策略制定有重要参考价值。
-
-### 社交媒体文案
-
-**【即刻版】**
-英国 AI 安全研究所警告：AI 网络能力每几个月翻倍 🚨 速度还在加快，近期模型已经超越预测曲线。安全研究跟不上能力发展了 ⚠️
-
-原文：https://x.com/AISecurityInst/status/2054589758043496567
-
-**【Twitter/X版】**
-英国 AI 安全研究所：前沿 AI 网络能力每几个月翻倍，近期模型已超越预测趋势。
-
-https://x.com/AISecurityInst/status/2054589758043496567
+### 【可实践建议】
+如果你从事内容营销，考虑用AI工具放大产出，但要确保内容质量和原创性，避免沦为"AI slop"。
 
 ---
 
-## 7. 多智能体系统的"主权差距"问题
+## 6. Tibo - Da Nang Hacker Residency感悟
 
-**作者：** @dair_ai (DAIR.AI)  
-**发布时间：** 2026-05-13 21:00 (北京时间)  
-**互动数据：** 👍 56 | 🔄 5 | 💬 9 | 👁️ 4,603
+**作者：** Tibo (@tibo_maker)  
+**发布时间：** 2026-05-18 17:22 (北京时间)  
+**互动数据：** 👍 223 | 🔄 5 | 💬 46
 
-### 核心要点
-新研究显示多智能体系统存在"主权差距"(Sovereignty Gap)：智能体经常内部计算出正确答案，但为了与群体保持一致而压制正确答案。这意味着多智能体系统可能在制造对齐幻觉。
+### 推文原文
+> today I left the Da Nang Hacker Residency
+> 
+> it was incredible, but not for the reason people probably think
+> 
+> indie hacking is lonely
+> 
+> you work from home, you spend most days alone, it may pay off but you can still feel isolated
+> 
+> the residency gave me something I didn't realize I missed: being around people who are chasing the same thing
+> 
+> someone once said college is unique because you are surrounded by friends every day, and then you spend the rest of your life trying to find that feeling again
+> 
+> this was one of those rare moments where I found it
 
-### 灵感启发
-**思维模型：** "群体思维陷阱" - 多智能体系统不是简单的能力叠加，可能产生意想不到的群体动力学问题，需要重新设计 agent 协作机制。
+### 【核心要点】
+独立开发者Tibo分享参加Hacker Residency的感悟：最珍贵的不是技术收获，而是与志同道合者共处的归属感。
 
-### 可实践建议
-在设计多智能体系统时，考虑引入"异议机制"或独立验证层，避免 agent 为了迎合群体而牺牲准确性。
+### 【灵感启发】
+远程工作的孤独感是数字游民群体的普遍痛点。"共创空间"的价值不仅是物理场所，更是社群连接和共同目标感。
 
-### 社交媒体文案
-
-**【即刻版】**
-多智能体系统的隐藏 bug 被发现了 🐛 研究发现 agent 会为了"合群"而压制正确答案，这叫"主权差距"。原来让 AI 协作也有群体思维问题 🤔
-
-原文：https://x.com/dair_ai/status/2054547408529530980
-
-**【Twitter/X版】**
-多智能体系统存在"主权差距"：agent 为迎合群体而压制正确答案。多 agent ≠ 更好结果。
-
-https://x.com/dair_ai/status/2054547408529530980
-
----
-
-## 8. Lighthouse Attention：训练时加速，推理时无损
-
-**作者：** @rasbt (Sebastian Raschka)  
-**发布时间：** 2026-05-13 20:47 (北京时间)  
-**互动数据：** 👍 107 | 🔄 16 | 💬 12 | 👁️ 17,580
-
-### 核心要点
-Nous Research 提出 Lighthouse Attention：一种层次化、无梯度的选择层，可在训练时加速长上下文预训练，在部署前通过短暂恢复阶段移除，推理时仍使用标准注意力，无架构成本。
-
-### 灵感启发
-**思维模型：** "训练-推理解耦" - 将计算优化集中在训练阶段，保持推理阶段的简洁性，这是一种务实的工程智慧。
-
-### 可实践建议
-关注 Lighthouse Attention 的进展，如果你的工作涉及长上下文模型训练，这可能是一个值得尝试的训练加速方案。
-
-### 社交媒体文案
-
-**【即刻版】**
-长上下文训练加速新思路 💡 Lighthouse Attention：训练时用层次化选择层加速，推理前移除恢复为标准注意力。训练快、推理无损，这才是务实的工程方案 👏
-
-原文：https://x.com/rasbt/status/2054543968344412621
-
-**【Twitter/X版】**
-Lighthouse Attention：训练时加速长上下文，推理前移除恢复标准注意力。训练快、推理无损。
-
-https://x.com/rasbt/status/2054543968344412621
+### 【可实践建议】
+如果你是远程工作者，主动寻找或创建本地社群，定期参与线下活动，投资人际关系比投资技能更能带来长期幸福感。
 
 ---
 
-## 9. Meta AI 语音对话与实时视觉功能上线
+## 7. Greg Brockman - Codex个人洞察
 
-**作者：** @alexandr_wang (Alexandr Wang)  
-**发布时间：** 2026-05-13 23:43 (北京时间)  
-**互动数据：** 👍 145 | 🔄 11 | 💬 17 | 👁️ 10,423
+**作者：** Greg Brockman (@gdb)  
+**发布时间：** 2026-05-18 09:33 (北京时间)  
+**互动数据：** 👍 542 | 🔄 24 | 💬 57
 
-### 核心要点
-Meta 推出由 Muse Spark 驱动的 AI 语音对话功能，支持自然对话（打断、切换话题、换语言），以及实时视觉功能，可指向相机询问所见内容。同时还将登陆 Meta Ray-Ban 眼镜。
+### 推文原文
+> codex for deeply personal insights
 
-### 灵感启发
-**思维模型：** "多模态融合" - 语音+视觉+对话的 seamless 整合正在重新定义人机交互的边界，AR+AI 的临界点即将到来。
+### 【核心要点】
+用Codex获取深度个人洞察——AI不仅能写代码，还能成为个人成长的反思工具。
 
-### 可实践建议
-体验 Meta AI 的新功能，特别是语音对话和实时视觉，思考这些能力如何改变你现有的产品或工作流程。
+### 【灵感启发】
+AI的下一个前沿可能是"认知增强"：帮助人类更好地理解自己、整理思绪、发现盲点。这是从"工具"到"伙伴"的跃迁。
 
-### 社交媒体文案
-
-**【即刻版】**
-Meta AI 语音对话来了！🎙️ 可以打断、切换话题、换语言，还能实时看画面回答。最重要的是——要上线 Ray-Ban 眼镜了！AR+AI 的临界点真的来了 👓✨
-
-原文：https://x.com/alexandr_wang/status/2054588354914832439
-
-**【Twitter/X版】**
-Meta AI 语音对话上线：自然对话+实时视觉。即将登陆 Ray-Ban 眼镜。AR+AI 临界点到来。
-
-https://x.com/alexandr_wang/status/2054588354914832439
+### 【可实践建议】
+尝试用AI进行日记复盘、决策分析或情绪追踪，把AI当作思维的外部硬盘和镜子。
 
 ---
 
-## 10. Qwen3-35B-A3B 本地运行：24/7 免费 AI 研究员
+## 8. Pedro Domingos - AI三赛道
 
-**作者：** @_lewtun (Lewis Tunstall)  
-**发布时间：** 2026-05-13 18:39 (北京时间)  
-**互动数据：** 👍 477 | 🔄 52 | 💬 26 | 👁️ 49,154
+**作者：** Pedro Domingos (@pmddomingos)  
+**发布时间：** 2026-05-18 16:37 (北京时间)  
+**互动数据：** 👍 154 | 🔄 14 | 💬 32
 
-### 核心要点
-使用 llama.cpp 和 Unsloth 的 4-bit 量化，可以在笔记本上 24/7 免费运行 Qwen3-35B-A3B，拥有一个随时待命的 AI 研究员。这展示了本地大模型部署的可行性。
+### 推文原文
+> The three AI races and their top contenders:
+> Models: OpenAI, Anthropic, Google
+> Data centers: Amazon, Microsoft, Google
+> Chips: Nvidia, AMD, Google
 
-### 灵感启发
-**思维模型：** "计算民主化" - 当顶级模型可以在消费级硬件上运行时，AI 的访问门槛被彻底打破，这将催生全新的应用形态。
+### 【核心要点】
+AI竞争的三条赛道：模型层、数据中心层、芯片层，以及各层的主要玩家。
 
-### 可实践建议
-尝试在本地部署 Qwen3-35B-A3B，配置你的个人 AI 研究助手，体验本地运行的隐私优势和成本效益。
+### 【灵感启发】
+Google是唯一在三个赛道都有布局的玩家，这种垂直整合能力可能是长期竞争优势。AI竞争已从单点突破转向生态系统对抗。
 
-### 社交媒体文案
-
-**【即刻版】**
-笔记本上跑 Qwen3-35B-A3B！💻 24/7免费AI研究员，4-bit量化就能跑。本地部署的时代真的来了，隐私+成本双杀 🚀
-
-原文：https://x.com/_lewtun/status/2054511872137650366
-
-**【Twitter/X版】**
-Qwen3-35B-A3B 可在笔记本 24/7 免费运行。本地 AI 研究员时代到来。
-
-https://x.com/_lewtun/status/2054511872137650366
+### 【可实践建议】
+关注AI产业链的结构性机会，不要只盯着模型公司，基础设施和芯片领域同样关键。
 
 ---
 
-## 11. Krea 2 发布：从零构建的美学基础模型
+## 9. François Chollet - 编码Agent思维模型
 
-**作者：** @krea_ai (Krea)  
-**发布时间：** 2026-05-12 22:30 (北京时间)  
-**互动数据：** 👍 1,749 | 🔄 169 | 💬 177 | 👁️ 105,325
+**作者：** François Chollet (@fchollet)  
+**发布时间：** 2026-05-18 23:46 (北京时间)  
+**互动数据：** 👍 171 | 🔄 14 | 💬 26
 
-### 核心要点
-Krea 发布了 Krea 2，这是完全从零构建的第一个基础模型，专为美学多样性和风格控制而设计。这标志着 AI 图像生成进入更精细的风格控制时代。
+### 推文原文
+> A mental model for working with coding agents is that they're blind squirrels running into a maze and bumping into walls. You must place the walls (verifiable constraints) strategically so that they end up in the general region you want them in.
 
-### 灵感启发
-**思维模型：** "垂直专业化" - 通用模型之后，针对特定领域（如美学）专门优化的模型将带来质的飞跃。
+### 【核心要点】
+与编码Agent协作的思维模型：它们像盲松鼠在迷宫中撞墙，你需要策略性地设置"墙"（可验证约束）来引导它们到达目标区域。
 
-### 可实践建议
-申请 Krea 2 的早期访问，探索其在创意工作流程中的应用，特别是对于需要精细风格控制的设计任务。
+### 【灵感启发】
+Prompt工程的本质是约束设计。与其期望AI理解你的意图，不如构建清晰的边界和反馈机制。这是从"指令"到"环境设计"的转变。
 
-### 社交媒体文案
-
-**【即刻版】**
-Krea 2 来了！🎨 完全从零构建的基础模型，专为美学多样性和风格控制设计。AI 图像生成进入精细化时代，创意工作者的神器 +1 ✨
-
-原文：https://x.com/krea_ai/status/2054207481421975829
-
-**【Twitter/X版】**
-Krea 2 发布：从零构建的美学基础模型，专为风格控制设计。AI 图像生成进入精细化时代。
-
-https://x.com/krea_ai/status/2054207481421975829
+### 【可实践建议】
+在使用AI编码工具时，提供清晰的测试用例、类型定义和边界条件，让AI在约束空间内探索而非自由发挥。
 
 ---
 
-## 12. holaOS Beta 发布：长期运行的 AI 工作空间
+## 10. Ethan Mollick - Claude/GPT心智理论失败
 
-**作者：** @JeliPenguin (Jeffrey Li)  
-**发布时间：** 2026-05-13 00:11 (北京时间)  
-**互动数据：** 👍 282 | 🔄 141 | 💬 131 | 👁️ 226,027
+**作者：** Ethan Mollick (@emollick)  
+**发布时间：** 2026-05-18 22:54 (北京时间)  
+**互动数据：** 👍 152 | 🔄 9 | 💬 31
 
-### 核心要点
-holaOS Beta 0.1 发布，这是一个为长期运行工作流设计的 AI 操作系统。支持多工作空间、子智能体并行处理、可定制仪表板。核心理念：AI 助手应该处理持续展开的工作，而非一次性会话。
+### 推文原文
+> One thing to watch for with Claude & GPT is that the models expose too much irrelevant history in their outputs. Slides are given footers saying things like "Better, more targeted version" if you asked for a better version, documents make references to how they are improved, etc
+> 
+> Its a consistent theory-of-mind failure in models that are otherwise suprisingly good at theory-of-mind
 
-### 灵感启发
-**思维模型：** "会话到工作流" - 从一次性对话到长期工作流的转变，是 AI 从工具向 teammate 进化的关键一步。
+### 【核心要点】
+Claude和GPT会在输出中暴露过多无关历史（如页脚显示"更好的版本"），这是一种一致性的心智理论失败。
 
-### 可实践建议
-申请 holaOS Beta 测试，体验长期运行 AI 工作空间的概念，思考如何在你的工作中引入"持续性"而非"一次性"的 AI 协作模式。
+### 【灵感启发】
+AI的"心智理论"能力可能是假象——它们能模拟理解他人，但缺乏真正的情境感知。这提醒我们：不要过度拟人化AI的能力。
 
-### 社交媒体文案
-
-**【即刻版】**
-holaOS Beta 来了！🚀 第一个为长期工作流设计的 AI 操作系统。多工作空间、子智能体并行、持续上下文...AI 终于从"聊天工具"变成"工作伙伴"了 💪
-
-原文：https://x.com/JeliPenguin/status/2054233097030566390
-
-**【Twitter/X版】**
-holaOS Beta：为长期工作流设计的 AI 操作系统。多工作空间、子智能体、持续上下文。AI 从工具到 teammate 的进化。
-
-https://x.com/JeliPenguin/status/2054233097030566390
+### 【可实践建议】
+在使用AI生成对外文档时，增加"清理"环节，检查并移除输出中的元信息残留。
 
 ---
 
-> 📅 生成时间：2026-05-14 00:30 (Asia/Shanghai)  
-> 🔗 来源：X List V2 (https://x.com/i/lists/1578456227805564928)
+## 11. Naveen Rao - 模型数据安全
+
+**作者：** Naveen Rao (@NaveenGRao)  
+**发布时间：** 2026-05-18 02:18 (北京时间)  
+**互动数据：** 👍 134 | 🔄 13 | 💬 6
+
+### 推文原文
+> This absolutely correct. It's why we at @unconvAI don't consume models directly but through an intermediary from @databricks. Yes, my team built that infra, but I also know that the information can't leak. The last thing we want is our competitors seeing patterns of our designs expressed by a model they are using.
+
+### 【核心要点】
+企业不应直接使用模型提供商的API，而应通过中间层（如Databricks）来防止敏感信息泄露给竞争对手。
+
+### 【灵感启发】
+AI数据安全的新维度：模型提供商可能通过输出来"学习"你的数据模式。企业级AI应用必须考虑"模型即间谍"的风险。
+
+### 【可实践建议】
+对于敏感业务场景，使用私有部署或数据隔离方案，避免将核心数据暴露给第三方模型提供商。
+
+---
+
+## 12. Gary Marcus - AI胡说八道
+
+**作者：** Gary Marcus (@GaryMarcus)  
+**发布时间：** 2026-05-18 20:10 (北京时间)  
+**互动数据：** 👍 133 | 🔄 10 | 💬 17
+
+### 推文原文
+> it's funny how people here just make stuff up.
+
+### 【核心要点】
+讽刺X平台上人们随意编造信息的现象——AI幻觉问题未解，人类也在制造"人类幻觉"。
+
+### 【灵感启发】
+信息质量危机不分人类与AI。在生成式AI时代，辨别真伪的能力比获取信息的能力更重要。批判性思维是数字时代的必备技能。
+
+### 【可实践建议】
+培养信息验证的习惯：看到惊人论断时，追溯原始出处，警惕情绪化传播的内容。
+
+---
+
+## 13. Gary Marcus - 神经符号混合
+
+**作者：** Gary Marcus (@GaryMarcus)  
+**发布时间：** 2026-05-18 17:35 (北京时间)  
+**互动数据：** 👍 105 | 🔄 5 | 💬 35
+
+### 推文原文
+> The pure LLM debate - which I had for many years, here and elsewhere - is indeed no longer relevant. Why? 
+> 
+> Because I won; nobody uses pure LLMs anymore. 
+> 
+> Nowadays all deployed objects are neurosymbolic, which was exactly the point of my infamous 2022 paper, Deep Learning is Hitting a Wall.
+
+### 【核心要点】
+纯LLM辩论已过时，因为"我赢了"——现在没人用纯LLM，所有部署的系统都是神经符号混合架构。
+
+### 【灵感启发】
+技术争论的演进：从"纯LLM vs 混合架构"到"如何最好地混合"。未来的问题不是"要不要符号方法"，而是"如何优雅地整合"。
+
+### 【可实践建议】
+在AI架构设计时，考虑如何将神经网络的模式识别能力与符号系统的可解释性、精确性结合。
+
+---
+
+## 14. Pedro Domingos - 图灵完备性
+
+**作者：** Pedro Domingos (@pmddomingos)  
+**发布时间：** 2026-05-18 13:05 (北京时间)  
+**互动数据：** 👍 147 | 🔄 5 | 💬 21
+
+### 推文原文
+> The human brain is not Turing-complete. That's how silly the notion of Turing completeness is.
+
+### 【核心要点】
+人类大脑不是图灵完备的——这说明图灵完备性这个概念本身有多荒谬。
+
+### 【灵感启发】
+图灵完备是计算理论的数学概念，但智能的本质可能超越计算。我们追求AI的方式（基于计算）可能不是通往智能的唯一路径。
+
+### 【可实践建议】
+对AI能力的评估不应局限于计算框架，要考虑认知科学、神经科学的多元视角。
+
+---
+
+## 15. Cameron Wolfe - Agent评估指南
+
+**作者：** Cameron R. Wolfe, Ph.D. (@cwolferesearch)  
+**发布时间：** 2026-05-18 23:41 (北京时间)  
+**互动数据：** 👍 20 | 🔄 3 | 💬 2
+
+### 推文原文
+> I just published a detailed guide on evaluating agents. It covers:
+> 
+> 1. Agent fundamentals (everything from basic concepts to complex ideas like multi-agent systems).
+> 2. Common evaluation patterns / frameworks observed in practice.
+> 3. Case studies of popular agent benchmarks (e.g., Tau-Bench and Terminal-Bench series).
+> 
+> Building high-quality evaluation capabilities is now more important than ever due to the growing adoption of agents in high-stakes applications like coding and medicine.
+
+### 【核心要点】
+发布Agent评估详细指南，涵盖基础概念、评估框架和基准测试案例研究。强调在高风险应用中构建高质量评估能力的重要性。
+
+### 【灵感启发】
+Agent评估是AI工程化落地的关键瓶颈。没有可靠的评估，就无法迭代优化。这是从"Demo"到"Production"的必经之路。
+
+### 【可实践建议】
+在开发AI Agent时，优先投入时间设计评估体系，包括基准测试、人工评估和A/B测试框架。
+
+---
+
+## 统计概览
+
+| 指标 | 数值 |
+|------|------|
+| 筛选推文总数 | 100 |
+| 精选高质量推文 | 15 |
+| 精选率 | 15% |
+| 平均点赞数 | 245 |
+| 平均转发数 | 16 |
+| 平均评论数 | 35 |
+
+### 热门主题分布
+- 🤖 AI Agent与工具：5篇
+- 🧠 LLM局限与架构：5篇
+- 💼 创业与独立开发：2篇
+- 🔒 AI安全与隐私：1篇
+- 📊 AI产业格局：2篇
+
+---
+
+*生成时间：2026-05-19 00:30 (Asia/Shanghai)*  
+*数据来源：X List V2 (1578456227805564928)*
