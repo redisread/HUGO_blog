@@ -1,18 +1,14 @@
 ---
 title: "X-Following-Digest---2026-05-19"
-date: 2026-05-19T01:11:17+08:00
-publishDate: 2026-05-19T01:11:17+08:00
+date: 2026-05-19T18:43:56+08:00
+publishDate: 2026-05-19T18:43:56+08:00
 description:
 tags:
   - AI
-  - Twitter
-  - Digest
-  - Agent
-  - Coding
   - Claude
   - LLM
   - Prompt
-  - OpenAI
+  - Anthropic
   - AI
   - Daily Digest
 categories:
@@ -24,815 +20,392 @@ libraries: ['katex']
 
 
 
-# X Following Digest - 2026-05-19
 
-生成时间：2026-05-19 00:50:00 UTC+8
-筛选范围：最近 24 小时
-精选推文数：25
-转发推文数：8
+# X Following Digest - 20260519
 
+> 数据采集时间: 2026-05-19 12:50 CST (04:50 UTC)
+> 覆盖窗口: 最近 24 小时 (2026-05-18 04:50 ~ 2026-05-19 04:50 UTC)
 
-## 推文 2：Anthropic 发布 Claude Code 大型代码库最佳实践
+---
 
-**作者:** @frxiaobei
-**发布时间:** Mon May 18 16:45:24 +0000 2026
-**互动数据:** 87 views
+## 📊 统计信息
 
-**原文:**
-Anthropic 这篇关于 Claude Code 在大型代码库的最佳实践，几个能直接抄作业的点：
+| 指标 | 数值 |
+|------|------|
+| 总推文数 | ~150 条 |
+| 精选推文 | 14 条 |
+| 筛选率 | 9.3% |
+| 排除类型 | 纯 RT/转发(30+)、广告/推广(15+)、碎片短推(<50字, 60+)、纯新闻快讯(10+) |
 
-· CLAUDE.md 要分层。根目录那份只放整体架构和关键的坑，每个子目录再放各自的局部约定，Claude 进哪个目录就加载哪一份。
+---
 
-· 让 Claude 从子目录启动，不要从仓库根启动。它会自动往上回溯加载所有说明文件，反而上下文更准。
+## 🔥 精选内容
 
-· 测试和 lint 命令按子目录切分。别让它改了支付服务就把整个仓库的测试全跑一遍，又慢又把上下文塞满无关报错。
+---
 
-· 装 LSP（语言服务器协议，比如 Python 有 pyright，TypeScript 有 tsser）。Claude 默认是 grep 字符串找代码，同名函数一搜几千个。LSP 能让它按符号本身定位，一步直达定义。具体接法是装一个 code intelligence 插件 + 对应语言的 language server 二进制文件，Claude Code 文档里有现成的。
+### 1. 🧠 文明的约束几何：公平、正义、爱、自由、责任
 
-· 每 3-6 个月审一次配置，新模型发布后再审一次。当初为旧模型写的规则，可能会反过来束缚新模型。
+**作者:** [@naki2012](https://x.com/naki2012)  
+**原文:** [查看推文](https://x.com/naki2012/status/2056597358058836230)  
+**互动:** ❤️ 1 | 🔁 0 | 👁️ 14
 
-以及一个组织层面的提醒：哪怕不专门成立 AI 工具团队，至少要指定一个人负责管 Claude Code 的配置、权限、插件、CLAUDE.md 规范，不然大家各搞各的，好经验传不出来。
+**核心观点:**  
+用一个高维物体投影的思想实验，重新解构人类五大价值概念——公平是资源循环稳定的报警器，正义是合作秩序的修复机制，自由是系统探索新路径的变异机制，责任是让未来参与今天决策的时间跨度能力，爱是文明最底层的连接胶水。它们不是五个独立按钮，而是同一约束几何在不同角度的投影，单独拉满任何一个都会导致系统失控。
 
-**核心观点:**
-Anthropic 官方发布的 Claude Code 大型代码库最佳实践，核心思想是"分层配置 + 精准上下文"。通过 CLAUDE.md 分层、子目录启动、LSP 集成、定期审查等策略，解决 AI 辅助编程中的上下文精准度和效率问题。
+**中文翻译:** (原文为中文，无需翻译)
 
 **可实践建议:**
-- 立即重构现有 CLAUDE.md，采用分层架构：根目录放全局架构，子目录放局部约定
-- 配置 LSP 支持，让 Claude Code 从"字符串搜索"升级到"符号级理解"
-- 指定团队内的 Claude Code 负责人，建立配置规范和知识传承机制
-- 设置 3-6 个月的配置审查周期，特别是新模型发布后
+- 在做价值判断时，避免将单一价值绝对化——绝对公平压缩自由，绝对自由破坏公平
+- 设计产品/制度时，考虑多维约束的平衡，而非追求单一指标最大化
+- 用"系统可飞区域"的思维替代"非黑即白"的意识形态判断
 
 **创作灵感:**
-- 可以整理一份《Claude Code 企业级部署指南》，包含配置模板和团队管理最佳实践
-- 对比 Claude Code、Cursor、GitHub Copilot Workspace 在大型代码库场景下的差异
+- 可以用这个框架写一系列文章，每个维度单独展开
+- 把这个"投影几何"模型可视化（信息图/动画），极具传播潜力
+- 应用到 AI 伦理讨论中：AI 系统的价值观设计是否也需要这种多维约束平衡？
 
 **社交媒体文案:**
-- 🟠 即刻：Anthropic 官方 Claude Code 最佳实践来了！分层 CLAUDE.md + LSP 集成，大型代码库也能飞起来🎯
-- 🔴 小红书：Claude Code 大型项目配置秘籍📚 分层管理 + LSP 加持，AI 编程效率翻倍！
-- 🔵 推特：Anthropic's official Claude Code best practices for large codebases: layered CLAUDE.md, LSP integration, and subdir-first workflow. Essential reading for teams scaling AI coding assistants 📖
-
-**原文链接:** https://x.com/frxiaobei/status/2056415871460135321
+- **即刻:** 公平、正义、自由、爱、责任——它们看起来是五个概念，其实可能是同一个高维结构的五个投影。单独追求任何一个都会失控，真正存在的是一个"整体可飞区域"。文明不是按按钮，是驾驶飞机。
+- **小红书:** 🧠一个思想实验改变了我的思维方式：如果把公平、正义、自由、爱、责任看作同一个高维物体的投影？它们互相牵制，像飞机的升力、重力、推力——单独拉满任何一个，飞机就会失控。
+- **推特:** Fairness, justice, freedom, love, responsibility — not five separate values, but five projections of the same higher-dimensional structure. Maximize any one in isolation, and the system crashes. The real insight is finding the "flight envelope."
 
 ---
 
-## 推文 3：Figure 机器人 vs 人类实习生仓库打包挑战
+### 2. 💰 Citadel 创始人 Ken Griffin 对 AI 看法大转变
 
-**作者:** @aiedge_
-**发布时间:** Mon May 18 16:45:17 +0000 2026
-**互动数据:** 255 views
+**作者:** [@JasonZX](https://x.com/JasonZX)  
+**原文:** [查看推文](https://x.com/JasonZX/status/2056597354103570642)  
+**互动:** ❤️ 1 | 🔁 0 | 👁️ 145
 
-**原文:**
-Human intern versus Figure robot - live warehouse packing challenge.
+**核心观点:**  
+Citadel 创始人 Ken Griffin 从"AI 是泡沫"到"AI 带来阶跃式生产力提升"仅用了几个月。他在斯坦福领导论坛上表示：过去需要金融硕士团队数周数月完成的高端分析工作，AI Agent 现在数小时到数天就能完成。AI 替代的不是中层白领，而是极高技能的专业工作（复杂金融研究、分析、建模）。他比喻：在马被汽车取代的时代，人在 AI 时代连马车夫都不是——是马。
 
-Final scores:
-
-→ Robot: 12,732 packages (2.83 seconds/package)
-
-→ Intern: 12,924 packages (2.79 seconds/package)
-
-From the Figure team themselves: "This is the last time a human will ever win."
-
-**翻译:**
-人类实习生 vs Figure 机器人——实时仓库打包挑战。
-
-最终成绩：
-→ 机器人：12,732 件包裹（每件 2.83 秒）
-→ 实习生：12,924 件包裹（每件 2.79 秒）
-
-来自 Figure 团队的说法："这是人类最后一次获胜。"
-
-**核心观点:**
-Figure 机器人在仓库打包任务中几乎追平人类实习生（差距仅 1.5%），标志着人形机器人在体力劳动领域的重大突破。Figure 团队的宣言"这是人类最后一次获胜"暗示着机器人即将在物理任务中全面超越人类。
+**中文翻译:** (原文为中文，无需翻译)
 
 **可实践建议:**
-- 关注仓储物流行业的自动化趋势，评估企业供应链的机器人化准备度
-- 思考人形机器人与专用自动化设备（如机械臂、AGV）的互补关系
-- 对于体力劳动者，考虑向机器人运维、流程优化等方向转型
+- 金融/分析从业者需要正视：AI 正在替代高端专业工作，不是底层工作
+- 学习使用 AI Agent 工具链，提升自己在"方向感"和"判断力"上的价值，而非"执行"价值
+- 关注 Griffin 的完整演讲视频（[链接](https://x.com/JasonZX/status/2056597356372726066)）
 
 **创作灵感:**
-- 可以写一篇《人形机器人元年：从 Figure 到 Tesla Optimus 的竞争格局》
-- 探讨"机器人取代人类工作"的叙事陷阱，实际上创造的是新的岗位类型
+- "人在 AI 时代是马，不是马车夫"——这个比喻可以延伸为一篇文章：当你的技能从工具操作者变成工具本身
+- 对比 Griffin 前后观点变化，写一篇"为什么聪明人会改变对 AI 的判断"的分析
 
 **社交媒体文案:**
-- 🟠 即刻：Figure 机器人打包速度快追上人类了！团队说"这是人类最后一次赢"🤖
-- 🔴 小红书：机器人要逆袭了！Figure 机器人打包速度几乎追上人类实习生，以后仓库可能要变天了📦
-- 🔵 推特：Figure robot nearly matched human intern in warehouse packing speed. The team says "this is the last time a human will ever win." The age of humanoid robotics is here 🤖
-
-**原文链接:** https://x.com/aiedge_/status/2056415841068220503
+- **即刻:** Citadel 创始人年初说 AI 是泡沫，5个月后改口：AI Agent 几小时就能完成金融团队几个月的工作。他说最可怕的不是替代中层白领，而是替代高技能专家——在马被汽车取代的时代，人连马车夫都不是，是马。
+- **小红书:** 💡金融大佬的真实转变：年初说AI是泡沫，现在说AI几小时能干完金融团队几个月的工作。最扎心的一句话——在AI时代，人不是马车夫，是被替代的马🐴
+- **推特:** Ken Griffin (Citadel founder) went from "AI is a bubble" to "AI agents do in hours what took my PhD teams months" in just a few months. His take: In the AI era, humans aren't the carriage drivers. We're the horses.
 
 ---
 
-## 推文 4：AI Coding Agent 进入生产环境时代
+### 3. 📉 中年女性失业：一扇门关上后
 
-**作者:** @dabit3
-**发布时间:** Mon May 18 16:45:41 +0000 2026
-**互动数据:** 10 likes, 3 retweets, 329 views
+**作者:** [@SuisPasDaVinci](https://x.com/SuisPasDaVinci)  
+**原文:** [查看推文](https://x.com/SuisPasDaVinci/status/2056544754649763995)  
+**互动:** ❤️ 85 | 🔁 1 | 💬 28 | 👁️ 18,302
 
-**原文:**
-Most coding agents still live in the "write code" part of the SDLC.
-
-The next era of AI software development is moving agents directly into prod. Alerts come in, PRs get opened, and the system learns: full context + running memory.
-
-These types of automations save your team countless hours, harden your codebase, improve uptime, and enable engineers to focus on higher-leverage work.
-
-**翻译:**
-大多数编程代理仍停留在 SDLC 的"编写代码"阶段。
-
-AI 软件开发的下一个时代是将代理直接投入生产环境。警报进来，PR 被打开，系统学习：完整上下文 + 运行内存。
-
-这类自动化能为团队节省无数时间，加固代码库，提高正常运行时间，并让工程师专注于更高价值的工作。
-
-**核心观点:**
-AI 编程助手正在从"代码编写工具"进化为"生产环境运维助手"。未来的 AI Agent 将直接处理生产警报、自动开 PR 修复问题，形成"监控-响应-学习"的闭环，这是软件工程自动化的下一个 frontier。
+**核心观点:**  
+一个 40 出头重点大学硕士、制造业项目管理的女性被裁后，投了数百份简历几乎石沉大海。不挑 title、不挑行业、只要够交房租都愿意去。最终放弃职场，准备在小区附近卖早餐兼接外卖单。核心问题：二十多年读书、十几年工作熬出来的学历、经验、专业判断，过了某个年龄线就全部作废了？
 
 **可实践建议:**
-- 评估现有监控告警系统，识别可由 AI Agent 自动处理的常见问题
-- 建立 AI Agent 的安全边界，确保自动化操作的可控性和可回滚性
-- 培养团队的"AI 协作"能力，从"写代码"转向"设计 AI 工作流"
+- 35+ 职业人士需要提前规划第二曲线：副业、技能多元化、个人品牌
+- 不要只依赖"经验"和"资历"作为职场护城河——市场要的是能带资源、带客户的人
+- 建立跨行业可迁移的能力体系（项目管理、沟通协调、数据分析）
 
 **创作灵感:**
-- 可以设计一个"AI SRE"的概念架构，探讨如何让 AI Agent 接管部分运维工作
-- 对比 Devin、Grok Build 等产品的自动化能力差异
+- 可以写一篇"35+ 职场人生存指南"，覆盖副业方向、技能转型路径、心理建设
+- 这个话题有很强的社会共鸣，适合做系列内容
 
 **社交媒体文案:**
-- 🟠 即刻：AI Coding Agent 的下一个战场：生产环境！自动修 bug、开 PR，工程师要解放了🚀
-- 🔴 小红书：AI 不止能写代码了！以后生产环境出 bug，AI 直接自动修复开 PR，运维要变天了🔧
-- 🔵 推特：The next frontier for AI coding agents isn't writing code—it's running in production. Auto-fixing alerts, opening PRs, learning from incidents. This changes everything 🔄
-
-**原文链接:** https://x.com/dabit3/status/2056415941127524747
+- **即刻:** 40岁重点大学硕士，制造业项目管理，被裁后投了数百份简历，大部分石沉大海。最后准备在小区卖早餐。她说：二十多年读书、十几年工作经验，怎么过了某个年龄线就全作废了？这不是一个人的故事。
+- **小红书:** 💔她40岁，重点大学硕士，被裁员后投了数百份简历，最后准备在小区卖早餐。职场那扇门，对某些人来说已经关上了。这不是个例，这是我们都要面对的现实。
+- **推特:** A 40yo master's grad in project management was laid off. Hundreds of resumes later, she's opening a breakfast stall near her community. "Decades of education and experience — does it all become worthless after a certain age?" China's age discrimination in hiring is brutal.
 
 ---
 
-## 推文 5：LangChain 发布 SmithDB——Agent 可观测性专用数据层
+### 4. 💻 老派程序员的 AI 代码焦虑
 
-**作者:** @LangChain
-**发布时间:** Mon May 18 16:38:23 +0000 2026
-**互动数据:** 572 views
+**作者:** [@waylybaye](https://x.com/waylybaye)  
+**原文:** [查看推文](https://x.com/waylybaye/status/2056579067149915397)  
+**互动:** ❤️ 107 | 🔁 5 | 💬 59 | 👁️ 15,271
 
-**原文:**
-ICYMI: SmithDB is our purpose-built data layer for agent observability + eval workloads.
-
-Supporting increasingly complex query patterns at low latency, over large traces, with self-hosting + multi-cloud requirements needs a fundamentally new architecture.
-
-That's why we built SmithDB.
-
-At a high level, it consists of 3 components:
-1️⃣ Object storage for durable trace data
-2️⃣ A small Postgres metastore for segment metadata
-3️⃣ Stateless ingestion, query, + compaction services
-
-Performance
-Slow observability tools are a bottleneck in the agent development loop. Core LangSmith experiences are now up to 12x faster.
-
-Portability
-SmithDB is backed by object storage, making it easier to deploy in self-hosted + multi-cloud environments.
-
-**翻译:**
-SmithDB 是我们专为 Agent 可观测性和评估工作负载构建的数据层。
-
-支持日益复杂的查询模式、低延迟、大规模追踪，以及自托管 + 多云需求，需要一个全新的架构。
-
-这就是我们构建 SmithDB 的原因。
-
-高层次上，它由 3 个组件组成：
-1️⃣ 对象存储用于持久化追踪数据
-2️⃣ 小型 Postgres 元数据存储用于段元数据
-3️⃣ 无状态的摄取、查询和压缩服务
-
-性能
-缓慢的可观测性工具是 Agent 开发循环中的瓶颈。核心 LangSmith 体验现在快了 12 倍。
-
-可移植性
-SmithDB 由对象存储支持，使其更容易在自托管 + 多云环境中部署。
-
-**核心观点:**
-LangChain 推出 SmithDB，专门解决 Agent 可观测性的数据层问题。随着 AI Agent 应用复杂度提升，传统的日志和监控方案已无法满足需求，SmithDB 通过对象存储 + 无状态服务的架构，实现了 12 倍性能提升，标志着 Agent 基础设施的成熟化。
+**核心观点:**  
+无法接受不看 AI 写的代码——从架构到模块设计、SQL、甚至 Key 的设计都要自己把握才能心安。导致效率上不去，五小时/周限额从来没用完过。这是很多资深程序员的真实状态：信任问题 > 能力问题。
 
 **可实践建议:**
-- 评估现有 Agent 应用的可观测性方案，考虑是否需要专用数据层
-- 关注 SmithDB 的自托管能力，这对企业级部署至关重要
-- 学习 LangChain 在 Agent 可观测性领域的架构设计思路
+- 建立分层审查机制：AI 生成的代码按风险等级分类审查（核心模块逐行看，外围模块抽样看）
+- 学习 @xqliu 的方法：让 AI 隔离 context 交叉验证，Codex review Claude 的，或反过来
+- 从小模块开始信任 AI，逐步扩大信任边界
 
 **创作灵感:**
-- 可以写一篇《Agent 可观测性：为什么传统监控不够用了》
-- 对比 SmithDB 与 OpenTelemetry、Jaeger 等传统追踪方案在 Agent 场景下的差异
+- 写一篇"Vibe Coding 代码质量控制方法论"——如何建立 AI 生成代码的审查流程
+- 这个讨论引发了 59 条回复，说明共鸣很强，可以做一期播客
 
 **社交媒体文案:**
-- 🟠 即刻：LangChain 发布 SmithDB！Agent 可观测性专用数据层，性能提升 12 倍📊
-- 🔴 小红书：LangChain 放大招！SmithDB 让 AI Agent 监控飞起来，企业级部署必备🔍
-- 🔵 推特：LangChain just shipped SmithDB: a purpose-built data layer for agent observability. 12x faster traces, designed for self-hosted and multi-cloud. Agent infrastructure is maturing fast 📈
-
-**原文链接:** https://x.com/LangChain/status/2056414104445747371
+- **即刻:** "大到架构，小到 SQL 和 Key 的设计，我都要自己把握才能心安。" 五小时/周的 AI 编码额度从来没用完——不是不会用，是不敢放心用。老派程序员的信任困境，你也是这样吗？
+- **小红书:** 💻资深程序员的AI焦虑：从架构到SQL都要自己看才安心，结果5小时AI额度从来没用完过。信任问题比能力问题更难跨越。你是完全信任AI，还是跟他一样？
+- **推特:** "I can't accept not reviewing AI-written code — from architecture to SQL to key design." Uses AI coding tools but never finishes his weekly quota. Not a capability problem — a trust problem. This resonated with 59 replies. The vibe coding control dilemma is real.
 
 ---
 
-## 推文 6：Leopold Aschenbrenner 的 AI 投资策略分析
+### 5. 🤖 AI 让你更像你——极端放大器
 
-**作者:** @JasonZX
-**发布时间:** Mon May 18 15:40:09 +0000 2026
-**互动数据:** 7 likes, 3 replies, 1741 views
+**作者:** [@indigox](https://x.com/indigox)  
+**原文:** [查看推文](https://x.com/indigox/status/2056595423712977020)  
+**互动:** ❤️ 2 | 🔁 0 | 💬 0 | 👁️ 217
 
-**原文:**
-从SITUATIONAL AWARENESS在Q1 13F里的变化，我们分析Leopold Aschenbrenner的策略调整意图如下:
-
-1.他认为AI capex仍会继续，但市场已经把 NVDA、AVGO、AMD、TSM、ASML这些核心半导体资产定价得太充分。一旦出现capex放缓、毛利率压力、出口限制、客户自研芯片、融资环境收紧，半导体会先跌。
-
-2.他更偏好"AI基础设施瓶颈资产"：电力、数据中心、算力托管、能源基础设施。这解释了为什么BE、CRWV、CORZ、IREN、APLD仍在组合里。
-
-3.他的组合像是一个long AI infrastructure /hedge AI semiconductor beta的结构。也就是说，保留AI时代真正短缺资源的多头，同时用 SMH/NVDA/AVGO/AMD/TSM/ASML Put对冲市场最拥挤、最容易被杀估值的部分。
-
-4.Q1 这份 13F更像"风险管理升级"，而不是简单的"看空 AI"。如果他真的全面看空 AI，应该会大幅清掉 CRWV、BE、IREN、APLD、CORZ 这些 AI 基建多头，但事实上并没有。当然13F只到3月，现在已经5月中旬了，仅供大家参考。
-
-**核心观点:**
-前 OpenAI 研究员 Leopold Aschenbrenner（Situational Awareness LP 创始人）的 Q1 持仓显示，他采用"AI 基础设施多头 + 半导体对冲"的策略。核心逻辑是：半导体已被充分定价，而电力、数据中心等 AI 基础设施才是真正的瓶颈资源。
+**核心观点:**  
+AI 不是先造一个 AI 再赋予它性格——而是先做好你自己，然后用 AI 增强自己。未来三年是人类历史上最重要的阶段，每个人都在所有维度上被增强，尤其是你完全不懂的那些维度。AI 是一个极端放大器。
 
 **可实践建议:**
-- 关注 AI 基础设施相关标的：电力（BE）、数据中心（CRWV、CORZ）、算力托管（IREN、APLD）
-- 理解"long infrastructure / hedge semiconductor"的对冲逻辑
-- 注意 13F 数据的滞后性（截至 3 月），需结合最新市场动态判断
+- 花时间自我探索：你的核心优势、独特视角、真正擅长的事情是什么
+- 用 AI 增强已有的优势，而不是用 AI 弥补短板（弥补短板只能做到平均水平）
+- 关注 BillSun_AI 的完整对谈（视频链接在推文中）
 
 **创作灵感:**
-- 可以写一篇《AI 投资的新范式：从算力到电力》
-- 分析 AI 产业链各环节的投资机会和风险
+- "先做好你自己，再用 AI 增强"——可以展开为一个自我探索 + AI 工具实操的系列
+- 做一个"AI 放大器"测试：对比同一个人用 AI 前后的产出差异
 
 **社交媒体文案:**
-- 🟠 即刻：OpenAI 前研究员 Leopold 的 AI 投资策略：做多基础设施，对冲半导体！思路很清奇💡
-- 🔴 小红书：AI 投资新思路！前 OpenAI 研究员 Leopold 的配置：电力、数据中心才是真爱，半导体只是对冲📈
-- 🔵 推特：Former OpenAI researcher Leopold Aschenbrenner's AI investment strategy: long AI infrastructure (power, data centers), hedge semiconductors. Smart play on the real bottlenecks ⚡
-
-**原文链接:** https://x.com/JasonZX/status/2056399448075608364
+- **即刻:** AI 不是给你一个人格——它是把你已有的人格放大。未来三年，每个人都会被增强，尤其是你不懂的那些维度。所以最重要的事不是学 AI 工具，是先搞清楚"你是谁"。
+- **小红书:** 🚀AI不是一个给你性格的工具，它是把你已有的性格放大到极致。所以先做好自己，再用AI增强——这比任何AI教程都重要。
+- **推特:** AI doesn't give you a personality — it amplifies the one you already have. The next 3 years will see humans enhanced across dimensions they didn't even know they had. First, know yourself. Then, amplify.
 
 ---
 
-## 推文 7：NVIDIA 开源 SANA-WM 世界模型
+### 6. 💡 Skill 就是 Prompt 吗？——深度拆解
 
-**作者:** @rwayne
-**发布时间:** Mon May 18 16:13:08 +0000 2026
-**互动数据:** 1 like, 2 replies, 283 views
+**作者:** [@rwayne](https://x.com/rwayne)  
+**原文:** [查看推文](https://x.com/rwayne/status/2056563240201797694)  
+**互动:** ❤️ 5 | 🔁 0 | 💬 2 | 👁️ 439
 
-**原文:**
-NVIDIA 又来一笔，开源 SANA-WM，26 亿参数的世界模型，专门生成 1 分钟 720p 视频。
-
-去年世界模型还在 DeepMind 这种实验室里跑论文，今年 NVIDIA 直接挂 GitHub 给所有人下。
-
-26 亿参数对世界模型来说是小尺寸。
-
-能跑 1 分钟 720p 已经接近商用工具的下限。
-
-Hacker News 上 107 点热度。开发者等这个尺寸等很久了。
-
-**核心观点:**
-NVIDIA 开源 SANA-WM（26 亿参数），这是一个能生成 1 分钟 720p 视频的世界模型。这标志着世界模型从实验室走向开源社区，26 亿参数的"小尺寸"设计使其更接近实际部署和商用可行性。
+**核心观点:**  
+7 层拆解 Skill 本质：(1) Skill 就是 prompt；(2) 但封装好、带触发条件、带工具链的 prompt；(3) 触发逻辑是 if-then-else 匹配关键词；(4) 真正骨架是 Claude Code 的 harness——三层记忆、工具权限、熔断逻辑；(5) Skill 嫁接在 harness 上；(6) Anthropic 猛搞 harness 不是闲的——先验知识是燃料，harness 是发动机；(7) 不做第一方 harness，就别做 LLM 了。
 
 **可实践建议:**
-- 关注 SANA-WM 在 GitHub 的更新，评估在视频生成项目中的应用潜力
-- 对比 SANA-WM 与 Runway、Pika 等商业视频生成工具的差距
-- 思考世界模型在自动驾驶、机器人训练等领域的应用前景
+- 开发 AI 应用时，关注 harness 层的设计而非仅关注 prompt
+- 理解 Skill 的触发机制和封装方式，才能有效编写和调试
+- 创业方向：harness 层是 LLM 竞争的护城河，值得投入
 
 **创作灵感:**
-- 可以写一篇《世界模型开源潮：NVIDIA SANA-WM 意味着什么》
-- 探讨世界模型与视频生成模型的技术差异和应用场景
+- 这篇拆解可以直接扩展为一篇技术博客——"Skill 架构深度解析"
+- 可以画一张 Skill → Harness → LLM 的架构关系图
 
 **社交媒体文案:**
-- 🟠 即刻：NVIDIA 开源世界模型 SANA-WM！26 亿参数生成 1 分钟 720p 视频，世界模型要普及了🎬
-- 🔴 小红书：NVIDIA 又开源了！SANA-WM 世界模型能生成 1 分钟高清视频，AI 视频生成要卷起来了🎥
-- 🔵 推特：NVIDIA open-sourced SANA-WM: a 2.6B parameter world model that generates 1-minute 720p video. World models are moving from labs to GitHub 🌍
-
-**原文链接:** https://x.com/rwayne/status/2056407748817104920
+- **即刻:** Skill 就是 prompt？对，但不对。7 层拆解：Skill 是封装好的 prompt，骨架是 Claude Code 的 harness——三层记忆、工具权限、熔断逻辑。先验知识是燃料，harness 是发动机。不做第一方 harness，就别做 LLM 了。
+- **小红书:** 🔥关于 AI Skill 最透彻的拆解：它不只是 prompt，而是带触发条件+工具链的封装系统。真正厉害的是背后的 harness 架构——三层记忆、熔断逻辑。一句话总结：知识是燃料，harness 是发动机。
+- **推特:** Skill = prompt? Yes, but: it's a prompt with triggers, toolchains, 3-layer memory, and circuit-breaker logic built into the harness. "Prior knowledge is fuel, harness is the engine. Don't build first-party harness, don't build LLM." Brilliant 7-layer breakdown.
 
 ---
 
-## 推文 8：Anthropic 发布 AI 原生创业手册
+### 7. 📈 Cursor Composer 2.5：性能对标 Opus，价格便宜 30 倍
 
-**作者:** @rwayne
-**发布时间:** Mon May 18 16:08:00 +0000 2026
-**互动数据:** 3 likes, 1 retweet, 1 reply, 269 views
+**作者:** [@xiaohu](https://x.com/xiaohu)  
+**原文:** [查看推文](https://x.com/xiaohu/status/2056556014254825776)  
+**互动:** ❤️ 59 | 🔁 5 | 💬 31 | 👁️ 30,160
 
-**原文:**
-Anthropic 发了一份创业手册，专门写给 AI 原生的创始人，四个阶段覆盖完整路径，想法验证、MVP 构建、发布、规模化，正文 25000 字。
-
-最屌的一章在讲构建门槛。42% 的创业公司失败是因为做了没人要的东西。AI 把构建成本压低之后，这个比例更高。手册里专门花一整章说这件事。Claude Code 能用了，先别用。
-
-Carta Healthcare 用它处理了 22000 例手术病例，数据处理时间砍掉 66%。另有非技术创始人，直接把完整招聘平台做出来卖出去了。
-
-**核心观点:**
-Anthropic 发布 25000 字的 AI 原生创业手册，核心洞察是：AI 降低构建成本后，"做出没人要的东西"的失败风险反而更高。手册强调在动手构建前做好需求验证，并展示了 Carta Healthcare 等成功案例。
+**核心观点:**  
+Cursor 发布自研编码模型 Composer 2.5，评分全部进入 Opus 4.7 同一区间（最大差距不到 1 分），但价格便宜 10-30 倍：输入便宜 10 倍、输出便宜 30 倍。长任务能在数十万 token rollout 中持续推进，复杂指令遵循更可靠。
 
 **可实践建议:**
-- 阅读 Anthropic 创业手册，特别关注"需求验证"章节
-- 在使用 Claude Code 等 AI 工具前，先明确要解决什么问题
-- 学习 Carta Healthcare 的案例：AI 不是替代人，而是放大人的能力
+- 如果你用 Claude Code 且觉得贵，可以切换到 Cursor Composer 2.5 做对比测试
+- 关注 Cursor 自建模型的战略方向——这标志着 AI 编程工具进入模型自研竞赛
+- 长任务场景（大型代码库重构）可以重点测试 Composer 2.5 的稳定性
 
 **创作灵感:**
-- 可以写一篇《AI 时代创业的陷阱：构建成本降低，需求验证更重要》
-- 整理 AI 原生创业的成功案例和失败教训
+- 做一个 Composer 2.5 vs Opus 4.7 的实际编码对比评测
+- "AI 编码模型价格战来了"——分析 Cursor 自研模型对行业的影响
 
 **社交媒体文案:**
-- 🟠 即刻：Anthropic 发布 AI 创业手册！核心观点：AI 让构建变容易，但"做没人要的东西"风险更高🎯
-- 🔴 小红书：Anthropic 给 AI 创业者的忠告： Claude Code 能用了，先别用！先验证需求再动手📚
-- 🔵 推特：Anthropic's 25,000-word playbook for AI-native founders: the danger isn't building—it's building something nobody wants. AI lowers costs, but validation matters more than ever 📖
-
-**原文链接:** https://x.com/rwayne/status/2056406457206407219
+- **即刻:** Cursor 自研模型 Composer 2.5 发布，性能对标 Opus 4.7，价格便宜 30 倍。输入便宜 10 倍，输出便宜 30 倍。长任务能在数十万 token 中持续推进不跑偏。AI 编程工具的价格战正式开打。
+- **小红书:** 💰Cursor自家模型来了！性能打平Claude Opus，价格便宜30倍！输入便宜10倍、输出便宜30倍，长任务还能持续几十万token不跑偏。AI编程要卷价格了。
+- **推特:** Cursor's self-built Composer 2.5 scores within 1 point of Opus 4.7 across all benchmarks. Price: 10x cheaper for input, 30x cheaper for output. The AI coding model price war has officially begun.
 
 ---
 
-## 推文 9：Grok Build Agent Mode 发布
+### 8. 🏗️ Codex 正在吞噬应用层——三个维度降维打击
 
-**作者:** @elonmusk
-**发布时间:** Mon May 18 16:08:55 +0000 2026
-**互动数据:** 3454 likes, 436 retweets, 998 replies, 947165 views
+**作者:** [@yaohui12138](https://x.com/yaohui12138)  
+**原文:** [查看推文](https://x.com/yaohui12138/status/2056578290010444165)  
+**互动:** ❤️ 4 | 🔁 1 | 💬 1 | 👁️ 298
 
-**原文:**
-Grok agent mode is a major ability unlock
-
-Reminder that Grok Build is iterating extremely fast and we are highly responsive to critical feedback.
-
-Fixes & upgrades are dropping every day.
-
-Please help make Grok Build great!
-
-Much appreciated, Elon.
-
-**翻译:**
-Grok Agent 模式是一个重大能力解锁
-
-提醒：Grok Build 正在极快地迭代，我们对关键反馈高度响应。
-
-修复和升级每天都在发布。
-
-请帮助让 Grok Build 变得更好！
-
-非常感谢，Elon。
-
-**核心观点:**
-Elon Musk 亲自站台推广 Grok Build 的 Agent Mode，强调其"重大能力解锁"的定位。结合 Grok Build 的快速迭代节奏，xAI 正在全力追赶 Cursor、Claude Code 等 AI 编程助手产品。
+**核心观点:**  
+Codex 把 AI 操作电脑拆成三种能力：(1) 内置浏览器——给开发者测试本地项目；(2) Chrome 自动化——接管已登录网站，直接操作真实浏览器（法律检索、报告生成等）；(3) Computer Use——直接操作 Mac App（Finder、微信、飞书）。Codex 定位是"超级个体的操作系统"，Claude Code 更像是"程序员的编程助手"。
 
 **可实践建议:**
-- 尝试 Grok Build 的 Agent Mode，评估与竞品的差异
-- 关注 Grok Build 的迭代速度，这可能是其竞争优势
-- 向 xAI 提供反馈，参与产品改进过程
+- 非技术人员直接用 Codex 的 Chrome 自动化功能——零学习门槛，生产力翻倍
+- 开发者可以三种能力全用上，尤其 Computer Use 操控其他 AI 工具（如操控 Claude Code）
+- 不要再纠结学哪个 AI 编码工具，自己的时间成本最贵
 
 **创作灵感:**
-- 可以写一篇《Grok Build vs Claude Code vs Cursor：AI 编程助手三国杀》
-- 分析 Elon Musk 亲自推广对 Grok Build 的加成效应
+- 用 Codex Chrome 自动化做一个实际场景演示（如自动完成某项工作流）
+- "超级个体的操作系统"——这个概念可以展开为一篇文章
 
 **社交媒体文案:**
-- 🟠 即刻：Elon 亲自站台！Grok Build Agent Mode 来了，AI 编程助手又多了一个玩家🦾
-- 🔴 小红书：马斯克亲自发推！Grok Build 的 Agent Mode 要挑战 Cursor 和 Claude Code 了🚀
-- 🔵 推特：Elon Musk himself promoting Grok Build's Agent Mode: "a major ability unlock." The AI coding assistant wars are heating up with xAI entering the ring 🥊
-
-**原文链接:** https://x.com/elonmusk/status/2056406690975641608
+- **即刻:** Codex 把 AI 操作电脑拆成三种能力：内置浏览器、Chrome 自动化、Computer Use。它不是编程助手，是"超级个体的操作系统"。非技术人员光是 Chrome 自动化这一个功能，就足够让生产力翻倍。
+- **小红书:** 🤖Codex不只是编程工具，它是"超级个体的操作系统"。三种能力：浏览器测试、Chrome自动化、直接操控Mac App。非技术人员用Chrome自动化就能让生产力翻倍。别再纠结学哪个工具了！
+- **推特:** Codex has completed a 3-dimensional strike on AI automation: (1) Built-in browser for dev testing, (2) Chrome automation for real workflows, (3) Computer Use for full Mac app control. It's not a coding assistant — it's the "super individual's operating system."
 
 ---
 
-## 推文 10：系统崩溃的隐形代价
+### 9. 🏛️ AI 时代的人类价值收缩
 
-**作者:** @naki2012
-**发布时间:** Mon May 18 16:19:58 +0000 2026
-**互动数据:** 1 like, 1 retweet, 92 views
+**作者:** [@Barret_China](https://x.com/Barret_China)  
+**原文:** [查看推文](https://x.com/Barret_China/status/2056587516598436316)  
+**互动:** ❤️ 8 | 🔁 1 | 💬 5 | 👁️ 571
 
-**原文:**
-《为什么很多系统，最后都死于看不见的代价》
-
-很多系统的崩溃，一开始看起来都不像崩溃。
-
-食品安全出问题时，没有人觉得自己在毁灭行业。
-
-一家公司开始加班文化时，没有人说自己在摧毁组织。
-
-一轮金融泡沫出现时，也没有人说自己在制造危机。
-
-每个人都只是做了一件看起来合理的小事：
-
-"多赚一点。"
-
-"先别吃亏。"
-
-"别人都这样。"
-
-于是，一个诡异现象出现了：
-
-个体很理性。
-
-集体越来越疯狂。
-
-为什么？
-
-因为人类的大脑，天然偏爱短反馈。
-
-更容易处理：
-
-行动 → 奖励
-
-很难处理：
-
-行动
-→ 连锁变化
-→ 结构变化
-→ 系统反噬
-
-真正危险的东西，恰恰藏在后者。
-
-因为大部分代价，都躲在二阶后果里。
-
-...
-
-**核心观点:**
-系统崩溃往往源于"局部理性、集体疯狂"的结构性问题。人类大脑偏爱短反馈，导致我们忽视二阶、三阶后果。收益集中、损失分散、代价延迟，这三者的叠加让系统缓慢滑坡，直到崩溃。
+**核心观点:**  
+当 AI 从工具变成"连续存在"——知道你关注什么、为什么焦虑、什么在拖延、什么时候状态最好——人对"你"的了解可能超过你自己。未来人类价值会收缩到四个核心：(1) 方向感——判断什么值得投入一生；(2) 审美——判断什么是好的、有生命力的；(3) 体验——真正感受世界而非只处理信息；(4) 意志——在无限可能中依旧选择长期主义。AI 没有活着的重量——没有童年、遗憾、失去过重要的人。
 
 **可实践建议:**
-- 在做决策时强制思考"二阶后果"：这个决定 6 个月、1 年后会有什么影响？
-- 建立系统思维，关注局部优化对整体的长期影响
-- 在团队中引入"反共识"机制，避免群体思维导致的系统性风险
+- 有意识地培养这四个维度：定期反思人生方向、提升审美品味、增加真实体验、练习延迟满足
+- 把 AI 当"执行层"的同时，强化自己的"决策层"和"感受层"
+- 建立"活着记录"——记录自己的独特经历和感受，这是 AI 无法复制的东西
 
 **创作灵感:**
-- 可以写一篇《技术债的本质：软件系统的二阶后果》
-- 探讨 AI 发展中的系统性风险：个体优化 vs 集体利益
+- "AI 没有活着的重量"——可以展开为一篇关于人类独特性的哲学散文
+- 做一个"人类价值四维评估"框架
 
 **社交媒体文案:**
-- 🟠 即刻：为什么系统会死于"看不见的代价"？人类偏爱短反馈，二阶后果才是致命伤🎯
-- 🔴 小红书：深度好文！系统崩溃的真相：每个人都在做"合理的小事"，但集体却在走向疯狂🧠
-- 🔵 推特：Why systems die from invisible costs: humans prefer short feedback loops, but second-order consequences are what kill you. Individual rationality, collective madness 🎭
-
-**原文链接:** https://x.com/naki2012/status/2056409468926382551
+- **即刻:** 当 AI 对你的了解超过你自己时，人还剩下什么？方向感、审美、体验、意志——这是未来人类价值的四个核心收缩点。AI 没有活着的重量：没有童年，没有遗憾，没有失去过重要的人。
+- **小红书:** 🌟AI越来越懂你，但你有什么是AI没有的？四个答案：方向感、审美、体验、意志。AI没有童年、没有遗憾、没有失去过重要的人——这就是"活着的重量"。
+- **推特:** When AI understands you better than you understand yourself, what's left for humans? (1) Direction — what's worth a lifetime (2) Aesthetics — what's alive (3) Experience — feeling the world, not processing info (4) Will — choosing long-termism amid infinite temptation. AI has no weight of lived experience.
 
 ---
 
-## 推文 11：Claude Code 规模化最佳实践官方发布
+### 10. 🎬 Power Rangers 的内容套利机器
 
-**作者:** @ClaudeDevs
-**发布时间:** Mon May 18 15:56:02 +0000 2026
-**互动数据:** 536 likes, 44 retweets, 62 replies, 28590 views
+**作者:** [@aakashgupta](https://x.com/aakashgupta)  
+**原文:** [查看推文](https://x.com/aakashgupta/status/2056590684082368965)  
+**互动:** ❤️ 5 | 🔁 0 | 💬 1 | 👁️ 1,557
 
-**原文:**
-What are best practices for running Claude Code at scale?
-
-New blog post on what we've learned from teams running it across multi-million-line monorepos, decades-old legacy systems, and distributed microservices:
-
-https://t.co/rJUYlIUiTT
-
-**翻译:**
-规模化运行 Claude Code 的最佳实践是什么？
-
-新博客文章分享了我们从在数百万行代码的 monorepo、数十年历史的遗留系统和分布式微服务中运行它的团队中学到的经验。
-
-**核心观点:**
-Anthropic 官方发布 Claude Code 规模化部署指南，覆盖 monorepo、遗留系统、微服务等复杂场景。这标志着 Claude Code 从个人工具向企业级产品的演进，是 AI 编程助手商业化的重要里程碑。
+**核心观点:**  
+变形金刚的标志性"定格变身"场景，其实是一个价值 60 亿美元的内容套利机器的关键接缝。Haim Saban 买下日本超级战队的打斗素材，让美国演员拍摄对话场景，然后拼接——头盔掩盖了替身演员的替换。花费 15 万美元制作前几集，到 1995 年 franchise 年收入 10 亿美元，2001 年个人获利 15 亿美元（好莱坞史上最大个人现金回报）。演员是非工会的，没有分成，Red Ranger 说赚的钱不如在麦当劳打工。
 
 **可实践建议:**
-- 阅读官方博客，了解 Claude Code 在企业级场景的配置策略
-- 评估现有代码库是否适合引入 Claude Code，特别是遗留系统
-- 关注 Anthropic 的企业级产品路线图
+- 内容创作者学习"内容套利"模式：找到已有素材/格式，做本地化/差异化改编
+- 理解 IP 运作的商业本质——不是创造内容，是建立可扩展的内容生产系统
+- 创作者需要关注合同和分成条款——才华变现的前提是商业意识
+
+**创作灵感:**
+- "内容套利"模式可以应用到现在的 AI 内容生产——找到已有内容格式，用 AI 做规模化改编
+- 写一个关于好莱坞内容套利历史的系列
 
 **社交媒体文案:**
-- 🟠 即刻：Anthropic 官方发布 Claude Code 企业级指南！Monorepo、遗留系统、微服务全覆盖🏢
-- 🔴 小红书：Claude Code 企业版来了！官方分享百万行代码项目实战经验📊
-- 🔵 推特：Anthropic just published official best practices for running Claude Code at scale: monorepos, legacy systems, microservices. Enterprise AI coding is here 🏢
-
-**原文链接:** https://x.com/ClaudeDevs/status/2056403446056784288
+- **即刻:** Power Rangers 的定格变身不是制作缺陷，而是一个 60 亿美元内容套利机器的关键接缝。用日本打斗素材 + 美国演员对话拼接，15 万美元起步，年入 10 亿。演员没有分成，说赚的不如麦当劳。
+- **小红书:** 🎬你以为Power Rangers的定格变身是特效？其实是一个60亿美元生意的关键设计！用日本素材+美国演员拼接，15万美元起步做到年入10亿。创意背后的商业逻辑太精彩了。
+- **推特:** The freeze frame in Power Rangers wasn't a production quirk — it was the load-bearing joint of a $6 billion content arbitrage machine. Japanese fight footage + American teen actors, spliced together. Started at $150K, hit $1B/year by 1995. The actors made less than McDonald's wages.
 
 ---
 
-## 推文 12：Cloudflare 的 AI 驱动漏洞发现系统
+### 11. 📊 量价齐升：看得见的共识
 
-**作者:** @eugeneyan
-**发布时间:** Mon May 18 15:05:57 +0000 2026
-**互动数据:** 4 likes, 1 retweet, 2 replies, 431 views
+**作者:** [@dajingou1](https://x.com/dajingou1)  
+**原文:** [查看推文](https://x.com/dajingou1/status/2056579638990876924)  
+**互动:** ❤️ 27 | 🔁 0 | 💬 46 | 👁️ 669
 
-**原文:**
-Cloudflare on their vulnerability discovery harness
-
-• Recon: Read the codebase, return an architecture doc
-• Hunt: ~50 agents look for bugs concurrently
-• Validate: Independent agents try to disprove findings
-• Gapfill: Areas that need a 2nd pass are flagged
-• Dedup: Findings with the same root cause combined
-• Trace: Confirms if attacker input reaches the bug
-• Feedback: If reachable, becomes new hunt tasks
-• Report: Write report with predefined schema
-
-**翻译:**
-Cloudflare 的漏洞发现系统
-
-• 侦察：读取代码库，返回架构文档
-• 狩猎：约 50 个 Agent 并发寻找漏洞
-• 验证：独立 Agent 尝试证伪发现
-• 补漏：标记需要第二轮检查的区域
-• 去重：合并相同根因的发现
-• 追踪：确认攻击者输入是否能到达漏洞
-• 反馈：如果可达，成为新的狩猎任务
-• 报告：按预定义模式撰写报告
-
-**核心观点:**
-Cloudflare 展示了 AI Agent 在安全领域的应用：用约 50 个并发 Agent 进行漏洞发现，通过多阶段流水线（侦察→狩猎→验证→去重→追踪→报告）实现自动化安全审计。这是 Multi-Agent 系统在实战中的典范。
+**核心观点:**  
+用台积电 (TSM) 走势深度解析"量价齐升"交易原则。核心公式：价格告诉你方向，成交量告诉你这个方向能不能信。五个实战检查清单筛掉 90% 劣质上涨：放量突破？缩量回踩？量价同步？天量滞涨？均量线趋势上升？量价齐升衡量的是共识的厚度——真金白银投出的票。
 
 **可实践建议:**
-- 学习 Cloudflare 的多 Agent 协作模式，应用于代码审查、测试等场景
-- 探索 Agent 系统的"验证"和"证伪"机制，提高 AI 输出的可靠性
-- 关注 AI 在安全领域的应用，这可能成为新的创业方向
+- 每次交易前过一遍五个检查清单，有一个"否"就停手
+- 学会看量——它是市场的测谎仪
+- 关注台积电的量价关系作为半导体行业风向标
+
+**创作灵感:**
+- 这套框架可以应用到加密货币市场——量价分析在 24/7 市场可能更有效
+- 做一个"量价齐升"自动筛选工具
 
 **社交媒体文案:**
-- 🟠 即刻：Cloudflare 用 50 个 AI Agent 找漏洞！Multi-Agent 安全审计系统曝光🔒
-- 🔴 小红书：Cloudflare 的 AI 安全团队：50 个 Agent 协作找 bug，安全测试要变天了🛡️
-- 🔵 推特：Cloudflare's AI-powered vulnerability discovery: ~50 agents hunting bugs concurrently, with validation, dedup, and trace. Multi-agent security systems are here 🔒
-
-**原文链接:** https://x.com/eugeneyan/status/2056390842731188312
+- **即刻:** 价格告诉你方向，成交量告诉你能不能信。五个问题筛掉 90% 的劣质上涨：放量突破？缩量回踩？量价同步？天量滞涨？均量趋势？"再漂亮的 K 线，没有成交量跟上，只是一场没有观众的烟火。"
+- **小红书:** 📈一个能筛掉90%劣质上涨的交易清单：放量突破？缩量回踩？量价同步？一句话总结——价格告诉你方向，成交量告诉你能不能信。再漂亮的K线，没有成交量跟上，只是没有观众的烟火。
+- **推特:** Price tells you direction. Volume tells you whether to trust it. 5 questions to filter out 90% of fake breakouts. "No matter how beautiful the red candle is without volume following — it's just fireworks without an audience." Deep dive on TSM's price-volume patterns.
 
 ---
 
-## 推文 13：CLAUDE.md 极简配置哲学
+### 12. 🔗 代币化股票：华尔街正在吸收 Crypto
 
-**作者:** @aakashgupta
-**发布时间:** Mon May 18 16:03:05 +0000 2026
-**互动数据:** 17 likes, 1 retweet, 3 replies, 2283 views
+**作者:** [@Nicole_yang88](https://x.com/Nicole_yang88)  
+**原文:** [查看推文](https://x.com/Nicole_yang88/status/2056565243518812230)  
+**互动:** ❤️ 1 | 🔁 0 | 💬 0 | 👁️ 306
 
-**原文:**
-Your CLAUDE.md file is probably growing every week. Pawel Huryn's has six items and hasn't changed in months.
-
-His file contains a 2-3 sentence project description, a file structure map so the agent never scans blindly, identity context (role, audience, goals), knowledge routing that tells the agent where domain-specific files live, workflow pointers, and a three-line self-improving prompt. That's the entire file. Six items. A routing table.
-
-Writing style rules live in a voice file. Good and bad examples live in a patterns file. Platform instructions live in platform-specific folders (x/, linkedin/). Historical metrics live in a metrics file. Hypotheses and confirmed rules live in domain-specific knowledge files. Detailed procedures live in skills folders. The agent reads the routing table, identifies the domain, and loads only what it needs.
-
-The three-line self-improving prompt is the part you can paste into your own CLAUDE.md today:
-
-1. Before starting any task, review existing rules and hypotheses for this domain
-2. Apply confirmed rules by default to your work
-3. After completing work and receiving feedback, update rules and hypotheses based on what you learned
-
-Three sentences. Works for any domain: marketing, testing, strategy, hiring, content. The agent reviews what it knows, applies what's confirmed, and updates its knowledge after every session without you rewriting instructions.
-
-**核心观点:**
-CLAUDE.md 应该保持极简（6 项），作为"路由表"而非"百科全书"。具体规则应分散到 voice、patterns、skills 等专用文件中。关键是三行自我改进提示：审查规则→应用规则→更新规则，实现 AI 的自主学习和进化。
+**核心观点:**  
+美国 SEC 正在研究"代币化股票"创新豁免框架——未来股票可能直接在区块链上发行、流通和交易。这不是 crypto 融入华尔街，而是华尔街开始主动利用链上系统提升效率。如果连股票都开始 tokenization，债券、基金、REITs、私募份额理论上都可以逐步链上化。这是未来十年全球金融基础设施的大迁移。
 
 **可实践建议:**
-- 立即简化 CLAUDE.md，只保留 6 个核心项：项目描述、文件结构、身份上下文、知识路由、工作流指针、自我改进提示
-- 建立分散式知识库：voice/、patterns/、skills/、metrics/ 等专用目录
-- 在 CLAUDE.md 中加入三行自我改进提示，让 AI 自主学习和进化
+- 关注 SEC 框架进展，特别是有限开放试点的节奏
+- 了解链上美股平台（推文附了合集链接）
+- 为可能的代币化股票市场提前布局：了解智能合约、DeFi、链上身份等基础知识
+
+**创作灵感:**
+- "传统金融正在吸收 crypto 的技术能力"——可以写一个传统金融链上化路线图
+- 分析 Coinbase、Robinhood 等平台从"加密交易"到"数字资产券商"的角色演变
 
 **社交媒体文案:**
-- 🟠 即刻：CLAUDE.md 应该只有 6 项！Pawel Huryn 的极简配置哲学，让 AI 自己进化🧬
-- 🔴 小红书：别再让 CLAUDE.md 越来越臃肿了！6 项核心配置 + 三行自我改进提示，AI 自动学习📋
-- 🔵 推特：Your CLAUDE.md should only have 6 items. Pawel Huryn's approach: a routing table, not an encyclopedia. Plus a 3-line self-improving prompt that lets AI learn and evolve 🧬
-
-**原文链接:** https://x.com/aakashgupta/status/2056405221908394406
+- **即刻:** 美国 SEC 正在研究"代币化股票"——股票可能直接在区块链上发行和交易。不是 crypto 融入华尔街，而是华尔街在吸收 crypto 技术。债券、基金、REITs……未来十年，全球金融基础设施的大迁移已经开始。
+- **小红书:** 💡SEC认真研究"股票上链"了！不是加密圈挑战华尔街，是华尔街主动用区块链技术提升效率。未来十年，股票、债券、基金都可能链上化——这是金融基础设施的大迁移。
+- **推特:** SEC is studying "tokenized stocks" — stocks could be issued and traded directly on blockchain. This isn't crypto infiltrating Wall Street. It's Wall Street absorbing crypto tech. The next decade could see bonds, funds, REITs go on-chain. The financial infrastructure migration has begun.
 
 ---
 
-## 推文 14：X 算法更新：中长视频优先
+### 13. 🤖 吉卜力开源动画制作工具 Toonz
 
-**作者:** @Jackywine
-**发布时间:** Mon May 18 14:26:38 +0000 2026
-**互动数据:** 3 likes, 1 reply, 455 views
+**作者:** [@GitHub_Daily](https://x.com/GitHub_Daily)  
+**原文:** [查看推文](https://x.com/GitHub_Daily/status/2056585675689107662)  
+**互动:** ❤️ 5 | 🔁 1 | 💬 0 | 👁️ 516
 
-**原文:**
-推特最新开源算法，我看了一下，也看了 Grok 推荐的前 10 个帖子，我给一下最简单的总结：
-
-要：中长视频、露脸、互动
-
-不要：标题党欺骗用户、连续发布、低质量重复、数字泔水
-
-源算法链接，可以试试给 Grok build 和 Codex 看看是不是我说的这样
-https://t.co/7djbcKfUdB
-
-**核心观点:**
-X 最新开源算法显示，平台优先推荐中长视频、真人出镜、高互动内容，惩罚标题党、连续刷屏、低质量重复内容。这与短视频平台的逻辑不同，X 更看重内容深度和真实互动。
+**核心观点:**  
+吉卜力工作室多年使用的动画制作工具 Toonz 早已开源。《千与千寻》《龙猫》《幽灵公主》均使用此工具制作。内置吉卜力专属线稿扫描工具、基于深度学习的画风转换特效、模拟传统胶片质感的入射光效果。支持矢量和位图两种作画方式。
 
 **可实践建议:**
-- 调整内容策略：从短平快转向中长视频（1-3 分钟）
-- 增加真人出镜，建立个人品牌信任度
-- 避免标题党和刷屏行为，专注内容质量
-- 积极回复评论，提高互动率
+- 2D 动画创作者可以直接使用 Toonz，无需从零开始
+- 关注吉卜力开源工具链中的画风转换特效，结合 AI 可以做风格迁移
+- 学校教学可以引入 Toonz 作为动画入门工具
+
+**创作灵感:**
+- 用 Toonz + AI 画风转换，做一个"把你的画变成吉卜力风格"的教程
+- 探索开源动画工具与 AI 的结合可能性
 
 **社交媒体文案:**
-- 🟠 即刻：X 算法更新了！要中长视频、露脸、互动，不要标题党和刷屏📹
-- 🔴 小红书：X 最新算法揭秘：中长视频优先，标题党要凉凉🎬
-- 🔵 推特：X's latest algorithm favors: medium/long videos, face-on-camera, engagement. Punishes: clickbait, spam, low-quality reposts. Quality over quantity 📹
-
-**原文链接:** https://x.com/Jackywine/status/2056380949315862747
+- **即刻:** 吉卜力的动画制作工具 Toonz 早就开源了！《千与千寻》《龙猫》都是用它做的。内置专属线稿扫描、画风转换特效、胶片质感效果。想做 2D 动画的，这个值得试试。
+- **小红书:** 🎨吉卜力工作室的动画工具Toonz居然早就开源了！千与千寻、龙猫都是用它做的！专属线稿扫描+画风转换特效+胶片质感，想做动画的朋友冲！
+- **推特:** Studio Ghibli's animation tool Toonz has been open-source for years. Spirited Away, Totoro, Princess Mononoke — all made with it. Built-in Ghibli-exclusive scanning tools, deep learning style transfer, and film grain simulation. Want to make 2D animation? Start here.
 
 ---
 
-## 推文 15：AI 投资：拥抱泡沫才是安全边际
+### 14. 🏃‍♂️ 103 岁"世界最年长医生"的长寿三原则
 
-**作者:** @web3annie
-**发布时间:** Mon May 18 14:58:24 +0000 2026
-**互动数据:** 15 likes, 1 retweet, 7 replies, 1919 views
+**作者:** [@ooeli_eth](https://x.com/ooeli_eth)  
+**原文:** [查看推文](https://x.com/ooeli_eth/status/2056564954938167654)  
+**互动:** ❤️ 18 | 🔁 4 | 💬 7 | 👁️ 4,279
 
-**原文:**
-「拥抱泡沫，才是这个时代的绝对安全边际」
-
-现在科技股的位置都不低，这时候冲进去，算不算高位接盘。
-
-很多人对价值投资有致命的误解，以为买跌得透透的便宜货才叫价值投资。但在一个具有颠覆性的超级大时代面前，只有价值加上高增长，才是真正的投资。用专业的话说，你要看PEG，而不是死盯着静态的PE。
-
-当我们面临前所未有的技术奇点时，很多看似高估的硬资产，其实是在用未来的确定性消化现在的溢价。
-
-...
-
-**核心观点:**
-在 AI 技术奇点面前，"拥抱泡沫"反而是一种安全边际。AI 的颠覆性远超 PC 和移动互联网，周期至少 10 年起步。最大的风险不是被套牢，而是被甩下车。定投科技核心资产，用时间熨平波动。
+**核心观点:**  
+103 岁去世的"世界最年长医生"霍华德·塔克，做了 75 年以上医生，67 岁通过律师考试。长寿核心只有 3 点：(1) 持续让大脑保持活跃——退休也要保持学习、工作、阅读、社交；(2) 不要记恨他人——愤怒消耗的是自己的身体；(3) 凡事适度——平衡比极端更重要。
 
 **可实践建议:**
-- 建立长期视角：AI 周期至少 10 年，不要纠结短期波动
-- 采用定投策略：通过 ETF 或核心资产分散风险
-- 克服恐惧心理：市场恐慌时反而是入场机会
+- 每天保持至少 30 分钟的学习/阅读/创造性活动
+- 练习"放下"——有意识地减少对人际冲突的情绪投入
+- 用"适度"原则审视生活习惯：不苦行僧式压抑，也不放纵
+
+**创作灵感:**
+- 做一个"长寿三原则"的现代化解读版本，结合当代人生活方式
+- "保持大脑活跃"可以用 AI 辅助学习来实践——学新东西
 
 **社交媒体文案:**
-- 🟠 即刻：AI 投资新思维：拥抱泡沫才是安全边际！定投科技，拿住 10 年📈
-- 🔴 小红书：AI 时代投资心法：别怕高估值，被甩下车才是最大风险！定投科技 ETF，躺赢未来💎
-- 🔵 推特："Embracing the bubble is the real margin of safety." In the AI era, the biggest risk isn't getting trapped—it's getting left behind. DCA into tech, hold for 10 years 📈
-
-**原文链接:** https://x.com/web3annie/status/2056388940853371142
+- **即刻:** 103岁世界最年长医生去世前总结长寿三原则：1️⃣持续让大脑活跃，停止与世界互动就开始衰退；2️⃣不要记恨，愤怒消耗的是自己的身体；3️⃣凡事适度，平衡比极端更重要。做了75年医生，67岁还通过律师考试。
+- **小红书:** 🌿103岁医生总结了长寿秘诀，不是吃什么补品，而是三件事：保持大脑活跃、不记恨别人、凡事适度。平衡比极端重要，想吃牛排就吃，但懂得节制。这才是真正的生活智慧。
+- **推特:** 103yo "world's oldest doctor" Howard Tucker's longevity formula: (1) Keep your brain active — stop interacting with the world and you decline (2) Don't hold grudges — anger raises your blood pressure and stress hormones (3) Moderation — balance beats extremism. Practiced medicine 75+ years, passed the bar at 67.
 
 ---
 
-## 推文 16：OpenAI 前研究员 Leopold 持仓曝光
+## 🔍 值得关注的趋势信号
 
-**作者:** @ooeli_eth
-**发布时间:** Mon May 18 14:45:57 +0000 2026
-**互动数据:** 33 likes, 7 retweets, 5 replies, 7202 views
-
-**原文:**
-今天外媒都在转发Leopold Aschenbrenner的Q1持仓。这位24岁的德国天才，正在成为最受关注的投资新星！
-
-他19岁就从哥伦比亚大学毕业、曾在 OpenAI 当研究员，在被 OpenAI 开除后迅速转身进入投资圈，创立 AI 对冲基金 Situational Awareness LP。
-
-基金实际管理规模在2年内已经从约2.25亿美元增长到93亿美元。
-
-以下是他的前十大基金持仓：
-
-SMH（半导体 ETF）15%
-英伟达（NVIDIA） 11%
-甲骨文（Oracle）8%
-博通（Broadcom）7%
-超威半导体（AMD ）7%
-Bloom Energy（布鲁姆能源）6%
-闪迪（SanDisk）5%
-美光科技（Micron）4%
-CoreWeave（AI 云算力公司）4%
-台积电（TSMC）4%
-
-**核心观点:**
-24 岁的前 OpenAI 研究员 Leopold Aschenbrenner 创立的 AI 对冲基金 Situational Awareness LP，管理规模 2 年内从 2.25 亿美元增长到 93 亿美元。其持仓显示对 AI 基础设施的高度集中配置。
-
-**社交媒体文案:**
-- 🟠 即刻：24 岁 OpenAI 前研究员 Leopold 的 AI 基金：2 年从 2 亿到 93 亿美元！持仓曝光📊
-- 🔴 小红书：天才投资人！24 岁创立 AI 对冲基金，2 年管理 93 亿美元，重仓半导体和 AI 基建💰
-- 🔵 推特：24-year-old former OpenAI researcher Leopold Aschenbrenner's AI fund grew from $225M to $9.3B in 2 years. Top holdings: NVDA, ORCL, AMD, SMH. The new hedge fund king? 👑
-
-**原文链接:** https://x.com/ooeli_eth/status/2056385808589070641
+1. **AI 编码模型价格战**：Cursor Composer 2.5 以 30 倍价格优势挑战 Opus 4.7，标志着自研模型竞赛进入深水区
+2. **harness 层竞争**：Skill 背后的 harness 架构成为 LLM 护城河，Anthropic 持续加码
+3. **Codex vs Claude Code 分化**：应用层（Codex）与编码层（Claude）的定位差异越来越明显
+4. **内容自动化趋势**：从 Toonz 开源到 Codex 自动化视频剪辑，AI 内容生产门槛持续降低
+5. **金融链上化**：SEC 研究代币化股票，传统金融开始吸收区块链技术
 
 ---
 
-## 推文 17：NousResearch Hermes Agent 1000 贡献者里程碑
-
-**作者:** @NousResearch
-**发布时间:** Mon May 18 15:45:57 +0000 2026
-**互动数据:** 398 likes, 13 retweets, 53 replies, 11959 views
-
-**原文:**
-We have hit 1000 contributors on the repo, a nice milestone to start out the week.
-
-Thank you to all of the contributors who make the Hermes Agent magic possible!
-
-**翻译:**
-我们的仓库已达到 1000 名贡献者，这是一个开启本周的好里程碑。
-
-感谢所有让 Hermes Agent 魔法成为可能的贡献者！
-
-**核心观点:**
-NousResearch 的 Hermes Agent 项目达到 1000 名贡献者，显示开源 AI Agent 生态的蓬勃发展。Hermes 作为开源 Agent 框架，正在吸引大量开发者参与。
-
-**社交媒体文案:**
-- 🟠 即刻：Hermes Agent 1000 贡献者达成！开源 AI Agent 生态蓬勃发展🎉
-- 🔴 小红书：开源 AI Agent 项目 Hermes 破千贡献者！社区力量太强大了🚀
-- 🔵 推特：NousResearch's Hermes Agent just hit 1000 contributors. The open-source AI agent ecosystem is thriving 🎉
-
-**原文链接:** https://x.com/NousResearch/status/2056400910666883367
-
----
-
-## 推文 18：AI 不是产品，是技术
-
-**作者:** @VictorHong1022
-**发布时间:** Mon May 18 15:54:42 +0000 2026
-**互动数据:** 5 views
-
-**原文:**
-AI不是产品，是技术
-
-John Gruber观点：
-• iPod不是MP3播放器，是关于音乐
-• iPhone不是触屏设备，是移动体验
-• AI不是产品，就像WiFi不是产品
-
-警惕AI万能论
-2030年你还是会用手机叫车
-无论语音还是触屏
-
-AI将像WiFi一样无处不在
-但不会有杀手级AI设备
-
-**核心观点:**
-John Gruber 的观点：AI 不是产品，而是像 WiFi 一样的底层技术。真正的产品是"音乐"、"移动体验"，而不是技术本身。警惕 AI 万能论，2030 年我们仍会用手机叫车，AI 将无处不在但不会成为独立产品。
-
-**社交媒体文案:**
-- 🟠 即刻：AI 不是产品，是技术！像 WiFi 一样无处不在，但不会有杀手级 AI 设备🎯
-- 🔴 小红书：AI 是技术不是产品！就像 WiFi，无处不在但你看不见，真正的产品是体验💡
-- 🔵 推特："AI is not a product, it's technology." Like WiFi—it'll be everywhere, but there won't be a killer AI device. The product is the experience, not the tech 🎯
-
-**原文链接:** https://x.com/VictorHong1022/status/2056403112211190084
-
----
-
-## 推文 19：AI Coding Agent 的功能最大化主义陷阱
-
-**作者:** @VictorHong1022
-**发布时间:** Mon May 18 15:53:41 +0000 2026
-**互动数据:** 23 views
-
-**原文:**
-AI Coding Agent 正在推动"功能最大化主义"，导致系统底层失去观点鲜明的设计、极简主义和健壮性。
-
-**核心观点:**
-AI Coding Agent 的便利可能导致"功能最大化主义"陷阱：快速堆砌功能，却牺牲了设计的一致性、极简主义和系统健壮性。这是工具带来的 unintended consequence。
-
-**社交媒体文案:**
-- 🟠 即刻：AI Coding Agent 的陷阱：功能最大化主义正在杀死设计感和系统健壮性⚠️
-- 🔴 小红书：AI 写代码太方便了，但小心"功能最大化主义"陷阱！系统设计和健壮性不能丢🎨
-- 🔵 推特：AI coding agents are pushing "feature maximalism"—sacrificing design consistency, minimalism, and robustness for speed. The unintended cost of convenience ⚠️
-
-**原文链接:** https://x.com/VictorHong1022/status/2056402855024820241
-
----
-
-## 推文 20：MouseDo——Computer Use 独立 App 发布
-
-**作者:** @hwwaanng
-**发布时间:** Mon May 18 13:45:43 +0000 2026
-**互动数据:** 46 likes, 11 replies, 10159 views
-
-**原文:**
-又到了新品发布的时间（怎么晚了一天？
-
-本周的每周更新是 MouseDo —— Computer use 的独立 App！现在你可以直接让 LLM 控制你的电脑做「任何」事情了。
-
-今天 Agent 给你写代码，可以解决你 60% 的需求。
-通过定制化的 Cli，可以解决你剩下的 30% 需求。
-最后，GUI 操作，通过 Computer use 能够实现你最后 10% 的 需求。
-
-相信各位用 Claw 的都遇到过，需要配置一个什么 key，必须要的点一下电脑的情况。现在你可以通过 MouseDo 自己化完成！
-
-亮点：
-1. Codex 同款技术，不会 block 你的其他操作，Agent 用一套，你自己用一套。
-
-2. MCP 支持，你可以让 Claude Code /OpenClaw 用上 Codex 同款 Computer Use。
-
-3. 使用 Codex 订阅。
-
-4. 目前免费。
-
-**核心观点:**
-MouseDo 是一款 Computer Use 独立 App，让 LLM 可以直接控制电脑 GUI。它与 Codex 使用同款技术，支持 MCP 协议，可以让 Claude Code、OpenClaw 等工具获得 Computer Use 能力，填补 AI Agent 的最后 10% 需求。
-
-**社交媒体文案:**
-- 🟠 即刻：MouseDo 发布！让 Claude Code 也能用上 Codex 同款 Computer Use🖱️
-- 🔴 小红书：AI 控制电脑的神器来了！MouseDo 让 LLM 直接操作 GUI，Claude Code 也能用🖥️
-- 🔵 推特：MouseDo launched: a Computer Use app that brings Codex-like GUI control to Claude Code and OpenClaw via MCP. The final 10% of AI automation 🖱️
-
-**原文链接:** https://x.com/hwwaanng/status/2056370653486260449
-
----
-
-## 汇总统计
-
-- 总推文数：300
-- 精选推文数：25
-- 转发推文数：8
-- 筛选率：8.3%
-
-### 主题分布
-
-| 主题 | 数量 | 占比 |
-|------|------|------|
-| AI 编程助手/Agent | 8 | 32% |
-| AI 投资/市场 | 4 | 16% |
-| 机器人/硬件 | 2 | 8% |
-| 内容创作/算法 | 2 | 8% |
-| 系统思维/方法论 | 2 | 8% |
-| 其他 | 7 | 28% |
-
-### 核心洞察
-
-1. **AI 编程助手进入 Agent 时代**：Cursor、Claude Code、Grok Build 都在推进 Agent Mode，AI 从"写代码"进化为"自主运维"
-
-2. **基础设施成为投资焦点**：Leopold Aschenbrenner 的持仓显示，AI 基础设施（电力、数据中心）可能比半导体更具长期价值
-
-3. **开源生态蓬勃发展**：NVIDIA SANA-WM、NousResearch Hermes 等开源项目显示 AI 基础设施的民主化趋势
-
-4. **内容平台算法演变**：X 平台转向中长视频和深度内容，与短视频平台形成差异化
-
----
-
-*本报告由 x-following-digest 自动生成*
-*生成时间：2026-05-19 00:50:00 UTC+8*
+*报告生成时间: 2026-05-19 12:51 CST*
