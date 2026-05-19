@@ -1,411 +1,448 @@
 ---
 title: "X-Following-Digest---2026-05-19"
-date: 2026-05-19T18:43:56+08:00
-publishDate: 2026-05-19T18:43:56+08:00
+date: 2026-05-20T00:55:49+08:00
+publishDate: 2026-05-20T00:55:49+08:00
 description:
 tags:
   - AI
-  - Claude
   - LLM
-  - Prompt
+  - OpenAI
   - Anthropic
+  - Go
   - AI
   - Daily Digest
 categories:
-  - 技术
+  - 思考
   - AI
-image:
-libraries: ['katex']
+image: X-Following-Digest---2026-05-19-cover.png
 ---
 
 
 
+# X Following Digest - 2026-05-19
 
-# X Following Digest - 20260519
+生成时间：2026-05-20 00:48:00 UTC
+筛选范围：最近 24 小时
+精选推文数：15
 
-> 数据采集时间: 2026-05-19 12:50 CST (04:50 UTC)
-> 覆盖窗口: 最近 24 小时 (2026-05-18 04:50 ~ 2026-05-19 04:50 UTC)
 
----
+## 推文 2：Citadel 创始人 Ken Griffin 对 AI 的态度转变
 
-## 📊 统计信息
+**作者:** @JasonZX
+**发布时间:** Tue May 19 04:46:33 +0000 2026
+**互动数据:** 1 likes, 0 retweets, 1 replies, 145 views
 
-| 指标 | 数值 |
-|------|------|
-| 总推文数 | ~150 条 |
-| 精选推文 | 14 条 |
-| 筛选率 | 9.3% |
-| 排除类型 | 纯 RT/转发(30+)、广告/推广(15+)、碎片短推(<50字, 60+)、纯新闻快讯(10+) |
+**原文:**
+看过Citadel创始人Ken Griffin近两年的几次访谈，核心投资观点和价值观我都很认同，但年初他说AI有点用但非革命性而且本质是泡沫的时候不敢苟同。
 
----
+但他在2026年5月5日斯坦福领导论坛上的讲话，对AI的看法发生了巨大转变，值得大家关注：
 
-## 🔥 精选内容
+他说在过去几个月里AI工具包的生产力发生了阶跃式提升，比9个月前深刻且有力。以前需要金融硕士或博士团队花数周到数月，有时甚至是几年完成的高端分析工作，现在AI代理在数小时到数天内就能完成。
 
----
+AI替代的不是中层白领工作，而是极其高技能的专业工作，如复杂的金融研究、分析、建模等工作，彻底被代理式AI(agentic AI)自动化。有一个星期五我回家时，感到相当沮丧，因为你能清楚地看到这将对社会产生如此剧烈的影响。
 
-### 1. 🧠 文明的约束几何：公平、正义、爱、自由、责任
+他类比到，马和马车被汽车取代时，马和马车彻底被颠覆甚至消失，在AI时代，人甚至连马车夫都不是，是马。
 
-**作者:** [@naki2012](https://x.com/naki2012)  
-**原文:** [查看推文](https://x.com/naki2012/status/2056597358058836230)  
-**互动:** ❤️ 1 | 🔁 0 | 👁️ 14
-
-**核心观点:**  
-用一个高维物体投影的思想实验，重新解构人类五大价值概念——公平是资源循环稳定的报警器，正义是合作秩序的修复机制，自由是系统探索新路径的变异机制，责任是让未来参与今天决策的时间跨度能力，爱是文明最底层的连接胶水。它们不是五个独立按钮，而是同一约束几何在不同角度的投影，单独拉满任何一个都会导致系统失控。
-
-**中文翻译:** (原文为中文，无需翻译)
+**核心观点:**
+华尔街顶级对冲基金 Citadel 创始人 Ken Griffin 对 AI 的态度发生 180 度转变。从年初认为 AI"有点用但非革命性"，到现在承认 AI 正在自动化高技能专业工作（金融研究、分析、建模）。最震撼的比喻是：汽车取代马车时，马和马车都消失了；AI 时代，人连马车夫都不是，是马。
 
 **可实践建议:**
-- 在做价值判断时，避免将单一价值绝对化——绝对公平压缩自由，绝对自由破坏公平
-- 设计产品/制度时，考虑多维约束的平衡，而非追求单一指标最大化
-- 用"系统可飞区域"的思维替代"非黑即白"的意识形态判断
+- 高技能专业人士（金融分析师、研究员、程序员）需要重新思考自己的核心价值
+- AI 自动化的是"执行任务"的能力，但"定义问题"和"判断价值"的能力更难被替代
+- 考虑向 AI 协作者转型，学会用 AI 放大自己的专业能力
 
 **创作灵感:**
-- 可以用这个框架写一系列文章，每个维度单独展开
-- 把这个"投影几何"模型可视化（信息图/动画），极具传播潜力
-- 应用到 AI 伦理讨论中：AI 系统的价值观设计是否也需要这种多维约束平衡？
+- "人是马"这个比喻的深层含义：在 AI 时代，人类的定位是什么？
+- 探讨 AI 替代工作的"从下到上"规律：为什么先被替代的是高技能工作？
+- 金融行业的 AI 转型：哪些岗位最危险？哪些岗位最安全？
 
 **社交媒体文案:**
-- **即刻:** 公平、正义、自由、爱、责任——它们看起来是五个概念，其实可能是同一个高维结构的五个投影。单独追求任何一个都会失控，真正存在的是一个"整体可飞区域"。文明不是按按钮，是驾驶飞机。
-- **小红书:** 🧠一个思想实验改变了我的思维方式：如果把公平、正义、自由、爱、责任看作同一个高维物体的投影？它们互相牵制，像飞机的升力、重力、推力——单独拉满任何一个，飞机就会失控。
-- **推特:** Fairness, justice, freedom, love, responsibility — not five separate values, but five projections of the same higher-dimensional structure. Maximize any one in isolation, and the system crashes. The real insight is finding the "flight envelope."
+- 🟠 即刻：Citadel 创始人 Ken Griffin 对 AI 态度大转弯！从"泡沫"到"人是马"，顶级投资人看到了什么？🐎🤖
+- 🔴 小红书：金融大佬也慌了！😱 Citadel 创始人说 AI 时代"人连马车夫都不是，是马"，高技能工作最先被替代？
+- 🔵 推特：Ken Griffin (Citadel founder) went from "AI is a bubble" to "humans are the horses" in 5 months. The shift in Wall Street's AI sentiment is accelerating.
+
+**原文链接:** https://x.com/JasonZX/status/2056597354103570642
 
 ---
 
-### 2. 💰 Citadel 创始人 Ken Griffin 对 AI 看法大转变
+## 推文 3：中年女性失业困境
 
-**作者:** [@JasonZX](https://x.com/JasonZX)  
-**原文:** [查看推文](https://x.com/JasonZX/status/2056597354103570642)  
-**互动:** ❤️ 1 | 🔁 0 | 👁️ 145
+**作者:** @SuisPasDaVinci
+**发布时间:** Tue May 19 01:17:32 +0000 2026
+**互动数据:** 85 likes, 1 retweets, 28 replies, 18302 views
 
-**核心观点:**  
-Citadel 创始人 Ken Griffin 从"AI 是泡沫"到"AI 带来阶跃式生产力提升"仅用了几个月。他在斯坦福领导论坛上表示：过去需要金融硕士团队数周数月完成的高端分析工作，AI Agent 现在数小时到数天就能完成。AI 替代的不是中层白领，而是极高技能的专业工作（复杂金融研究、分析、建模）。他比喻：在马被汽车取代的时代，人在 AI 时代连马车夫都不是——是马。
+**原文:**
+中年女性失业的惨，我算是亲眼见过一次。
 
-**中文翻译:** (原文为中文，无需翻译)
+朋友的表姐，40出头，重点大学硕士，之前在制造业做项目管理。
+
+人很干练，说话清楚，业务也熟，不是那种在公司混日子的人。
+
+去年公司缩编，她被裁了。
+
+刚开始我们都觉得，以她的学历和履历，找份工作应该不难。后来才发现，这句话有多天真。
+
+她早就不挑了。
+
+不要求 title，不要求涨薪，甚至不要求回到原来的行业。只要工资够交房租、够养家，她都愿意去。
+
+结果一年多投了几百份简历，大部分石沉大海。
+
+有些岗位明明还挂在招聘软件上，打电话过去，对方说，这个岗位暂时不招了。
+
+找老同学，找前同事，得到的也差不多。
+
+不是不想帮，是大家都在收缩。很多人自己都坐不稳，更别说拉别人一把。
+
+现在公司要的，已经不是一个"经验丰富的人"。
+
+它要的是能带客户、带项目、带资源进来的人。
+
+上个月听朋友说，她已经不投简历了。
+
+准备在小区附近租个小门面，卖早餐，顺便接外卖单。
+
+不是她突然想通了。
+
+是她终于承认，职场那扇门，对她这种人，可能已经关上了。
+
+她到现在还是想不明白。
+
+自己业务不差，身体也扛得住，人也不邋遢，更不是那种混日子的人。
+
+怎么就突然变成了职场里"不值得再看一眼"的人？
+
+二十多年读书，十几年工作，熬出来的学历、经验、专业判断，难道就因为过了某个年龄线，全都作废了？
+
+这个世界到底怎么了？
+
+**核心观点:**
+一个真实的职场困境案例：40+岁、重点大学硕士、制造业项目管理经验，失业一年多后决定放弃求职，改行卖早餐。核心矛盾在于：企业不再只需要"经验丰富的人"，而是需要"能带客户、带项目、带资源进来的人"。学历和经验在年龄面前贬值，这是结构性就业困境。
 
 **可实践建议:**
-- 金融/分析从业者需要正视：AI 正在替代高端专业工作，不是底层工作
-- 学习使用 AI Agent 工具链，提升自己在"方向感"和"判断力"上的价值，而非"执行"价值
-- 关注 Griffin 的完整演讲视频（[链接](https://x.com/JasonZX/status/2056597356372726066)）
+- 职场人需要提前布局"资源型"能力：客户关系、行业人脉、项目资源
+- 40+岁职场人考虑向咨询、培训、独立顾问等方向转型
+- 建立个人品牌和影响力，让自己成为"资源节点"而非"执行节点"
+- 探索副业和多元收入来源，降低对单一雇主的依赖
 
 **创作灵感:**
-- "人在 AI 时代是马，不是马车夫"——这个比喻可以延伸为一篇文章：当你的技能从工具操作者变成工具本身
-- 对比 Griffin 前后观点变化，写一篇"为什么聪明人会改变对 AI 的判断"的分析
+- "职场关门"现象：什么年龄、什么行业最容易被"关门"？
+- 从"经验型"到"资源型"：职场能力的代际转变
+- 探讨卖早餐 vs 白领工作：尊严、收入、自由度的权衡
 
 **社交媒体文案:**
-- **即刻:** Citadel 创始人年初说 AI 是泡沫，5个月后改口：AI Agent 几小时就能完成金融团队几个月的工作。他说最可怕的不是替代中层白领，而是替代高技能专家——在马被汽车取代的时代，人连马车夫都不是，是马。
-- **小红书:** 💡金融大佬的真实转变：年初说AI是泡沫，现在说AI几小时能干完金融团队几个月的工作。最扎心的一句话——在AI时代，人不是马车夫，是被替代的马🐴
-- **推特:** Ken Griffin (Citadel founder) went from "AI is a bubble" to "AI agents do in hours what took my PhD teams months" in just a few months. His take: In the AI era, humans aren't the carriage drivers. We're the horses.
+- 🟠 即刻：40岁硕士失业一年多，最后去卖早餐。职场那扇门，对"经验丰富但没资源的人"已经关上了。这个世界怎么了？😔
+- 🔴 小红书：40+职场女性的真实困境💔 重点大学硕士、十几年经验，最后只能卖早餐... 企业要的不是经验，是资源
+- 🔵 推特：A 40yo master's degree holder with 10+ years experience couldn't find a job for a year. She's now selling breakfast. The "experience premium" is dead. Companies want resources, not skills.
+
+**原文链接:** https://x.com/SuisPasDaVinci/status/2056544754649763995
 
 ---
 
-### 3. 📉 中年女性失业：一扇门关上后
+## 推文 4：亚美尼亚基督雕像争议
 
-**作者:** [@SuisPasDaVinci](https://x.com/SuisPasDaVinci)  
-**原文:** [查看推文](https://x.com/SuisPasDaVinci/status/2056544754649763995)  
-**互动:** ❤️ 85 | 🔁 1 | 💬 28 | 👁️ 18,302
+**作者:** @aakashgupta
+**发布时间:** Tue May 19 04:41:02 +0000 2026
+**互动数据:** 1 likes, 0 retweets, 0 replies, 513 views
 
-**核心观点:**  
-一个 40 出头重点大学硕士、制造业项目管理的女性被裁后，投了数百份简历几乎石沉大海。不挑 title、不挑行业、只要够交房租都愿意去。最终放弃职场，准备在小区附近卖早餐兼接外卖单。核心问题：二十多年读书、十几年工作熬出来的学历、经验、专业判断，过了某个年龄线就全部作废了？
+**原文:**
+The world's first Christian nation is building the world's largest Christ statue. The church that made it Christian says the statue is an affront to their faith.
+
+Armenia adopted Christianity as its state religion in 301 AD, roughly 80 years before Rome. The Armenian Apostolic Church released a formal statement saying it "does not consider the installation of a statue of Our Lord Jesus Christ acceptable." Armenian Christian tradition rejects figurative Christ statues entirely. For 1,700 years, Armenian religious monuments have been khachkars, intricately carved cross stones. No human figures. The rare Christ statues that do exist in Armenia have been vandalized.
+
+The man behind the project is Gagik Tsarukyan, one of Armenia's richest oligarchs. A US State Department cable said his personal style "would make Donald Trump look like an ascetic." He was charged with bribery and corruption in 2020 after parliament voted to strip his immunity. The government moved to seize hundreds of millions in assets from him and his family, citing illegal acquisition. His son is currently wanted in connection with a casino shooting in Tsaghkadzor.
+
+The 33-meter statue sits on a 44-meter pedestal, 77 meters total, on Mount Hatis, a dormant volcano 30km from Yerevan. The groundbreaking ceremony in 2022 "irreversibly damaged" sections of an ancient Bronze Age fortress discovered by an Armenian-Italian archaeological team in 2019. The culture ministry halted the project. Tsarukyan moved the site a few hundred meters and kept building.
+
+Tsarukyan claims "tens of millions of tourists" will come. Armenia receives about 2.2 million total visitors per year, 41% of them from Russia. Christ the Redeemer in Rio gets 2.3 million visitors annually and sits above a metro area of 13 million people with direct flights from every continent. Mount Hatis sits above a country with limited international air routes.
+
+The first Christian nation is building the world's largest Christ statue against the explicit wishes of the church that made it the first Christian nation. The statue will glow with phosphorescent material at night. An archbishop responded: "It will make a great spot for Sunday barbecues."
+
+**翻译:**
+世界上第一个基督教国家正在建造世界上最大的基督雕像。而让这个国家成为基督教国家的教会却表示，这座雕像是对他们信仰的冒犯。
+
+亚美尼亚在公元 301 年将基督教定为国教，比罗马早约 80 年。亚美尼亚使徒教会发布正式声明称"不认为安装耶稣基督雕像是可接受的"。亚美尼亚基督教传统完全拒绝具象的基督雕像。1700 年来，亚美尼亚的宗教纪念碑一直是 khachkars（精雕细刻的十字石），没有人像。亚美尼亚现存罕见的基督雕像都遭到破坏。
+
+该项目背后的推手是 Gagik Tsarukyan，亚美尼亚最富有的寡头之一。美国国务院的一份电报称他的个人风格"会让特朗普看起来像苦行僧"。2020 年，议会投票剥夺他的豁免权后，他被控贿赂和腐败。政府以非法获取为由，着手没收他和家人数亿美元的资产。他的儿子目前因 Tsaghkadzor 一家赌场枪击案而被通缉。
+
+这座 33 米高的雕像坐落在一个 44 米高的基座上，总高 77 米，位于距离埃里温 30 公里的 Hatis 休眠火山上。2022 年的奠基仪式"不可逆转地破坏"了亚美尼亚-意大利考古团队于 2019 年发现的青铜时代古城堡的部分区域。文化部叫停了该项目。Tsarukyan 将地点移动了几百米，继续建造。
+
+Tsarukyan 声称将有"数千万游客"前来。亚美尼亚每年接待约 220 万游客，其中 41% 来自俄罗斯。里约的基督救世主雕像每年吸引 230 万游客，位于拥有 1300 万人口的大都市区上方，有来自各大洲的直飞航班。而 Hatis 山位于一个国际航线有限的国家。
+
+第一个基督教国家正在违背使其成为第一个基督教国家的教会的明确意愿，建造世界上最大的基督雕像。雕像将在夜间用荧光材料发光。一位大主教回应道："这将是一个周日烧烤的好地方。"
+
+**核心观点:**
+一个极具讽刺意味的故事：世界上第一个基督教国家（亚美尼亚，公元 301 年）正在建造世界最大基督雕像，但本国教会却反对。项目由腐败寡头推动，破坏考古遗址，旅游预期不切实际。大主教的讽刺"这将是一个周日烧烤的好地方"点出了宗教、政治、商业的荒诞交织。
 
 **可实践建议:**
-- 35+ 职业人士需要提前规划第二曲线：副业、技能多元化、个人品牌
-- 不要只依赖"经验"和"资历"作为职场护城河——市场要的是能带资源、带客户的人
-- 建立跨行业可迁移的能力体系（项目管理、沟通协调、数据分析）
+- 文化项目的商业可行性评估需要客观数据，不能仅凭热情
+- 旅游开发需要基础设施支撑（航线、交通），不能仅靠地标
+- 尊重当地文化传统，即使是大项目也需要社区认同
 
 **创作灵感:**
-- 可以写一篇"35+ 职场人生存指南"，覆盖副业方向、技能转型路径、心理建设
-- 这个话题有很强的社会共鸣，适合做系列内容
+- "第一个基督教国家 vs 最大基督雕像"：传统与现代的冲突
+- 腐败寡头如何利用宗教项目进行形象洗白？
+- 大主教的讽刺：宗教领袖如何用幽默对抗权力？
 
 **社交媒体文案:**
-- **即刻:** 40岁重点大学硕士，制造业项目管理，被裁后投了数百份简历，大部分石沉大海。最后准备在小区卖早餐。她说：二十多年读书、十几年工作经验，怎么过了某个年龄线就全作废了？这不是一个人的故事。
-- **小红书:** 💔她40岁，重点大学硕士，被裁员后投了数百份简历，最后准备在小区卖早餐。职场那扇门，对某些人来说已经关上了。这不是个例，这是我们都要面对的现实。
-- **推特:** A 40yo master's grad in project management was laid off. Hundreds of resumes later, she's opening a breakfast stall near her community. "Decades of education and experience — does it all become worthless after a certain age?" China's age discrimination in hiring is brutal.
+- 🟠 即刻：第一个基督教国家建世界最大基督像，本国教会反对，腐败寡头推动，大主教讽刺："适合周日烧烤" 🍖⛪ 荒诞又真实
+- 🔴 小红书：亚美尼亚要建世界最大耶稣像！但本国教会反对、破坏古迹、腐败寡头主导... 大主教的神吐槽太绝了 😂
+- 🔵 推特：The world's first Christian nation is building the world's largest Christ statue. The church that made it Christian says it's an affront to their faith. An archbishop: "It will make a great spot for Sunday barbecues." 🍖
+
+**原文链接:** https://x.com/aakashgupta/status/2056595965163995279
 
 ---
 
-### 4. 💻 老派程序员的 AI 代码焦虑
+## 推文 5：重建生活的品格建议
 
-**作者:** [@waylybaye](https://x.com/waylybaye)  
-**原文:** [查看推文](https://x.com/waylybaye/status/2056579067149915397)  
-**互动:** ❤️ 107 | 🔁 5 | 💬 59 | 👁️ 15,271
+**作者:** @laobaishare
+**发布时间:** Tue May 19 04:40:03 +0000 2026
+**互动数据:** 0 likes, 0 retweets, 1 replies, 113 views
 
-**核心观点:**  
-无法接受不看 AI 写的代码——从架构到模块设计、SQL、甚至 Key 的设计都要自己把握才能心安。导致效率上不去，五小时/周限额从来没用完过。这是很多资深程序员的真实状态：信任问题 > 能力问题。
+**原文:**
+品格方面
+
+1. 守住无人能见的承诺
+真正的自尊就在这里建立。做你承诺的小事，即使没人看着。
+
+2. 对不符合的快速说不
+不是每个请求、邀请或机会都值得你时间。如果某事让你偏离正在构建的生活，早点拒绝。
+
+3. 少说话，多执行
+谈论计划造成虚假进度感。执行才真正改变生活。少分享，多工作，让结果说话。
+
+4. 每天反思或祈祷保持清醒
+每天花几分钟安静反思、日记或祈祷。这能制止你的自我并保持优先级清晰。它提醒你生活变吵杂时什么重要。
+
+**核心观点:**
+四条关于品格建设的建议：①守住私下承诺建立自尊；②对不符合目标的事快速说不；③少说话多执行，避免"虚假进度感"；④每天反思保持清醒。核心是"内在一致性"——你的行为应该与价值观一致，无论是否有人监督。
 
 **可实践建议:**
-- 建立分层审查机制：AI 生成的代码按风险等级分类审查（核心模块逐行看，外围模块抽样看）
-- 学习 @xqliu 的方法：让 AI 隔离 context 交叉验证，Codex review Claude 的，或反过来
-- 从小模块开始信任 AI，逐步扩大信任边界
+- 建立"私下承诺清单"：记录对自己许下的承诺并追踪完成情况
+- 练习"快速说不"：对不符合当前目标的机会，3 秒内做出决定
+- 减少"计划分享"：把分享计划的时间用来执行计划
+- 建立每日反思习惯：可以是日记、冥想或简单的自我对话
 
 **创作灵感:**
-- 写一篇"Vibe Coding 代码质量控制方法论"——如何建立 AI 生成代码的审查流程
-- 这个讨论引发了 59 条回复，说明共鸣很强，可以做一期播客
+- "虚假进度感"：为什么我们谈论计划时会感到满足？
+- 内在 vs 外在激励：没人看见时，什么驱动你行动？
+- 快速决策的艺术：如何在信息不全时做出好决定？
 
 **社交媒体文案:**
-- **即刻:** "大到架构，小到 SQL 和 Key 的设计，我都要自己把握才能心安。" 五小时/周的 AI 编码额度从来没用完——不是不会用，是不敢放心用。老派程序员的信任困境，你也是这样吗？
-- **小红书:** 💻资深程序员的AI焦虑：从架构到SQL都要自己看才安心，结果5小时AI额度从来没用完过。信任问题比能力问题更难跨越。你是完全信任AI，还是跟他一样？
-- **推特:** "I can't accept not reviewing AI-written code — from architecture to SQL to key design." Uses AI coding tools but never finishes his weekly quota. Not a capability problem — a trust problem. This resonated with 59 replies. The vibe coding control dilemma is real.
+- 🟠 即刻：重建生活的4条品格建议：1️⃣守住私下承诺 2️⃣快速说不 3️⃣少说话多执行 4️⃣每日反思。真正的自尊来自内在一致性 ✨
+- 🔴 小红书：如何重建生活？💪 4个品格习惯：守住承诺、学会拒绝、执行力、每日反思。没人看见的时候，才是真正的你～
+- 🔵 推特：4 rules for rebuilding your life: 1) Keep promises no one sees 2) Say no quickly 3) Execute more, talk less 4) Daily reflection. Self-respect is built in private.
+
+**原文链接:** https://x.com/laobaishare/status/2056595717431738558
 
 ---
 
-### 5. 🤖 AI 让你更像你——极端放大器
+## 推文 6：Anthropic CEO 谈软件成本暴跌
 
-**作者:** [@indigox](https://x.com/indigox)  
-**原文:** [查看推文](https://x.com/indigox/status/2056595423712977020)  
-**互动:** ❤️ 2 | 🔁 0 | 💬 0 | 👁️ 217
+**作者:** @rwayne
+**发布时间:** Tue May 19 04:40:00 +0000 2026
+**互动数据:** 0 likes, 0 retweets, 1 replies, 134 views
 
-**核心观点:**  
-AI 不是先造一个 AI 再赋予它性格——而是先做好你自己，然后用 AI 增强自己。未来三年是人类历史上最重要的阶段，每个人都在所有维度上被增强，尤其是你完全不懂的那些维度。AI 是一个极端放大器。
+**原文:**
+Anthropic CEO Dario Amodei 上周在《华尔街日报》YouTube 频道说，软件成本会暴跌到基本免费。
+
+他的逻辑很简单。
+
+传统软件需要百万用户分摊开发成本。
+
+AI 把开发成本压到接近 0 之后，这个前提不再成立。
+
+同一段采访里他还说，数十年来建立的很多工作和职业会消失。社会能适应，但人现在完全没意识到变化的规模。
+
+往年这种话从硅谷创业者嘴里出来没人当真。这次是 Anthropic CEO 上 WSJ 说的，分量不一样。
+
+**核心观点:**
+Anthropic CEO Dario Amodei 预测软件成本将"暴跌到基本免费"。逻辑是：传统软件需要百万用户分摊开发成本，但 AI 把开发成本压到接近 0 后，这个前提不再成立。他还警告说，很多工作和职业会消失，社会能适应，但人们还没意识到变化的规模。
 
 **可实践建议:**
-- 花时间自我探索：你的核心优势、独特视角、真正擅长的事情是什么
-- 用 AI 增强已有的优势，而不是用 AI 弥补短板（弥补短板只能做到平均水平）
-- 关注 BillSun_AI 的完整对谈（视频链接在推文中）
+- 软件行业从业者需要重新思考商业模式：从"卖软件"转向"卖服务"或"卖结果"
+- 关注 AI 原生应用的创业机会：当开发成本趋近于 0，创新门槛大幅降低
+- 个人层面：培养 AI 无法轻易替代的能力（创造力、复杂判断、人际连接）
 
 **创作灵感:**
-- "先做好你自己，再用 AI 增强"——可以展开为一个自我探索 + AI 工具实操的系列
-- 做一个"AI 放大器"测试：对比同一个人用 AI 前后的产出差异
+- "软件免费"之后，什么会变得有价值？
+- AI 时代的商业模式：从"拥有软件"到"使用 AI 服务"
+- 探讨"社会能适应，但人没意识到"：技术变革的心理滞后
 
 **社交媒体文案:**
-- **即刻:** AI 不是给你一个人格——它是把你已有的人格放大。未来三年，每个人都会被增强，尤其是你不懂的那些维度。所以最重要的事不是学 AI 工具，是先搞清楚"你是谁"。
-- **小红书:** 🚀AI不是一个给你性格的工具，它是把你已有的性格放大到极致。所以先做好自己，再用AI增强——这比任何AI教程都重要。
-- **推特:** AI doesn't give you a personality — it amplifies the one you already have. The next 3 years will see humans enhanced across dimensions they didn't even know they had. First, know yourself. Then, amplify.
+- 🟠 即刻：Anthropic CEO 说软件成本将"暴跌到基本免费"！AI 把开发成本压到接近 0，传统软件商业模式要重构了 🤯
+- 🔴 小红书：软件要免费了？！Anthropic CEO 预言 AI 会让开发成本趋近于 0，很多职业会消失... 你准备好了吗？
+- 🔵 推特：Anthropic CEO Dario Amodei: Software costs will crash to "basically free." AI reduces dev costs to near zero. Many jobs will disappear. Society will adapt, but people don't realize the scale yet.
+
+**原文链接:** https://x.com/rwayne/status/2056595704160624965
 
 ---
 
-### 6. 💡 Skill 就是 Prompt 吗？——深度拆解
+## 推文 7：自由与秩序的哲学思考
 
-**作者:** [@rwayne](https://x.com/rwayne)  
-**原文:** [查看推文](https://x.com/rwayne/status/2056563240201797694)  
-**互动:** ❤️ 5 | 🔁 0 | 💬 2 | 👁️ 439
+**作者:** @turingou
+**发布时间:** Tue May 19 04:39:26 +0000 2026
+**互动数据:** 35 likes, 2 retweets, 0 replies, 2583 views
 
-**核心观点:**  
-7 层拆解 Skill 本质：(1) Skill 就是 prompt；(2) 但封装好、带触发条件、带工具链的 prompt；(3) 触发逻辑是 if-then-else 匹配关键词；(4) 真正骨架是 Claude Code 的 harness——三层记忆、工具权限、熔断逻辑；(5) Skill 嫁接在 harness 上；(6) Anthropic 猛搞 harness 不是闲的——先验知识是燃料，harness 是发动机；(7) 不做第一方 harness，就别做 LLM 了。
+**原文:**
+疫情后很多人问我会不会回国，比如回深圳生活，但在我心里，深圳早就不是我当年读书时那个城市了。我在暨大上学的第一年，刚入学时计划将高中时创办的社团在大学里做起来，海报刚贴出去两天，就被管理学院的老师和学校保卫处找来谈话，虽然时间过去了这么多年，我的照片也被当做所谓优秀毕业生贴在暨大管理学院大楼的展示栏里，但我仍然清楚地记得那句话，他们对我说：「你为什么不做点对社会有用的事情？」很明显，他们认为思考与思维的自由对社会没用，我想，这就是许多中国人对自由的理解。
+
+中国需要的是高楼大厦和尖端科技，生活的哲学造不出这些民族复兴的要素，然而恰恰是这些东西，让人无需思索却能认可自己奋斗的方向毫无疑问的正确，就算是外国人，也能在朝鲜化的生活中寻求到它。我不觉得美国从「垮掉的一代」到 GenZ 理解不了自由，只是，过于自由的生活让他们无法简单的寻求到意义，你可以从二战以后出生的所有美国人身上找到这种影子，他们以为自己需要的是自由，背地里却是秩序与秩序下大脑的自我麻痹。
+
+我认同视频中主持人说的那句话，不要假想别人需要的自由是什么，自由就是自由，正如意义就是意义，秩序就是秩序。二战之前德国人把秩序当做自由，妄图用秩序改造全世界所有人的自由，后来的事情大家都看到了。几十年过去，真正泛滥的自由在美国塑造的影响，我们也能看的一清二楚，但我们不能混淆着两者和他们的危害。自由是无用的，但却非常有必要。秩序很有用，但却并不总是必要。
+
+自由与秩序各司其职，如果非要分出个重要与否，我认为是自由，如果没有基因突变，也不会有癌症，但自然也不会有进化，宇宙的根本状态是混沌，自由才是冲破它的枷锁。
+
+**核心观点:**
+一篇关于自由与秩序的深度思考。作者从个人经历（大学社团被约谈）出发，探讨中国人对自由的理解："高楼大厦和尖端科技"被重视，而"生活的哲学"被视为无用。对比美国：过于自由让人们无法简单寻求意义，"背地里却是秩序与秩序下大脑的自我麻痹"。最终观点：自由是无用的但必要，秩序是有用的但不总是必要；宇宙的根本状态是混沌，自由是冲破枷锁的力量。
 
 **可实践建议:**
-- 开发 AI 应用时，关注 harness 层的设计而非仅关注 prompt
-- 理解 Skill 的触发机制和封装方式，才能有效编写和调试
-- 创业方向：harness 层是 LLM 竞争的护城河，值得投入
+- 在秩序社会中保持独立思考：质疑"对社会有用"的定义
+- 在自由社会中寻找意义：自由不等于放纵，需要自我约束
+- 平衡自由与秩序：两者不是对立而是互补
 
 **创作灵感:**
-- 这篇拆解可以直接扩展为一篇技术博客——"Skill 架构深度解析"
-- 可以画一张 Skill → Harness → LLM 的架构关系图
+- "为什么不做点对社会有用的事情"：有用 vs 无用的价值判断
+- 基因突变与癌症：自由的代价与进化的必然
+- 从暨大社团到自由思考：中国知识分子的精神历程
 
 **社交媒体文案:**
-- **即刻:** Skill 就是 prompt？对，但不对。7 层拆解：Skill 是封装好的 prompt，骨架是 Claude Code 的 harness——三层记忆、工具权限、熔断逻辑。先验知识是燃料，harness 是发动机。不做第一方 harness，就别做 LLM 了。
-- **小红书:** 🔥关于 AI Skill 最透彻的拆解：它不只是 prompt，而是带触发条件+工具链的封装系统。真正厉害的是背后的 harness 架构——三层记忆、熔断逻辑。一句话总结：知识是燃料，harness 是发动机。
-- **推特:** Skill = prompt? Yes, but: it's a prompt with triggers, toolchains, 3-layer memory, and circuit-breaker logic built into the harness. "Prior knowledge is fuel, harness is the engine. Don't build first-party harness, don't build LLM." Brilliant 7-layer breakdown.
+- 🟠 即刻：「为什么不做点对社会有用的事情？」—— 自由与秩序的深度思考。自由是无用的，但却非常有必要。秩序很有用，但却并不总是必要。🤔
+- 🔴 小红书：关于自由与秩序的哲学思考 💭 中国要高楼大厦，美国要自由，但真正的答案是什么？
+- 🔵 推特："Why don't you do something useful for society?" — On freedom and order. Freedom is useless but necessary. Order is useful but not always needed. Chaos is the fundamental state of the universe.
+
+**原文链接:** https://x.com/turingou/status/2056595562246689044
 
 ---
 
-### 7. 📈 Cursor Composer 2.5：性能对标 Opus，价格便宜 30 倍
+## 推文 8：AI 作为极端放大器
 
-**作者:** [@xiaohu](https://x.com/xiaohu)  
-**原文:** [查看推文](https://x.com/xiaohu/status/2056556014254825776)  
-**互动:** ❤️ 59 | 🔁 5 | 💬 31 | 👁️ 30,160
+**作者:** @indigox
+**发布时间:** Tue May 19 04:38:53 +0000 2026
+**互动数据:** 2 likes, 0 retweets, 0 replies, 217 views
 
-**核心观点:**  
-Cursor 发布自研编码模型 Composer 2.5，评分全部进入 Opus 4.7 同一区间（最大差距不到 1 分），但价格便宜 10-30 倍：输入便宜 10 倍、输出便宜 30 倍。长任务能在数十万 token rollout 中持续推进，复杂指令遵循更可靠。
+**原文:**
+AI 让你更像你，它是一个极端放大器！最新一期 Indigo Talk 和 @BillSun_AI 聊 AI 的训练、新组织结构、风险投资、物理 AI、信任与社交网络，一直聊到「硅基的自我复制」未来三年是人类历史上最重要的阶段，每个人都在所有 Dimension 上被增强，尤其是你完全不懂的那些 Dimension。现在不是先造一个 AI 再赋予它性格 — 而是先做好你自己，然后用 AI 增强自己✨
+
+**核心观点:**
+AI 的本质是"极端放大器"——它让你更像你自己。未来三年是人类历史上最重要的阶段，每个人都会在所有维度被增强，尤其是那些你完全不懂的维度。关键转变：不是先造 AI 再赋予性格，而是先做好自己，再用 AI 增强自己。
 
 **可实践建议:**
-- 如果你用 Claude Code 且觉得贵，可以切换到 Cursor Composer 2.5 做对比测试
-- 关注 Cursor 自建模型的战略方向——这标志着 AI 编程工具进入模型自研竞赛
-- 长任务场景（大型代码库重构）可以重点测试 Composer 2.5 的稳定性
+- 先投资自己：培养独特的能力、品味、价值观
+- AI 放大的是"已有"，不是"没有"：先成为有趣的人，再用 AI 放大
+- 探索 AI 在你不擅长领域的增强作用：让 AI 成为你的"第二大脑"
 
 **创作灵感:**
-- 做一个 Composer 2.5 vs Opus 4.7 的实际编码对比评测
-- "AI 编码模型价格战来了"——分析 Cursor 自研模型对行业的影响
+- "AI 让你更像你"：探讨 AI 的个性化与同质化张力
+- 硅基自我复制：AI 会发展出自己的"生命"吗？
+- 未来三年最重要的阶段：为什么是现在？
 
 **社交媒体文案:**
-- **即刻:** Cursor 自研模型 Composer 2.5 发布，性能对标 Opus 4.7，价格便宜 30 倍。输入便宜 10 倍，输出便宜 30 倍。长任务能在数十万 token 中持续推进不跑偏。AI 编程工具的价格战正式开打。
-- **小红书:** 💰Cursor自家模型来了！性能打平Claude Opus，价格便宜30倍！输入便宜10倍、输出便宜30倍，长任务还能持续几十万token不跑偏。AI编程要卷价格了。
-- **推特:** Cursor's self-built Composer 2.5 scores within 1 point of Opus 4.7 across all benchmarks. Price: 10x cheaper for input, 30x cheaper for output. The AI coding model price war has officially begun.
+- 🟠 即刻：AI 是极端放大器，让你更像你自己！未来三年人类历史上最重要的阶段，先做好自己，再用 AI 增强 ✨
+- 🔴 小红书：AI 让你更像你！🌟 不是先造 AI 再赋予性格，而是先做好自己，再用 AI 增强～未来三年最重要！
+- 🔵 推特：AI is an extreme amplifier that makes you more YOU. The next 3 years are the most important in human history. Don't build AI and give it personality—become yourself first, then amplify with AI.
+
+**原文链接:** https://x.com/indigox/status/2056595423712977020
 
 ---
 
-### 8. 🏗️ Codex 正在吞噬应用层——三个维度降维打击
+## 推文 9：英特尔代工业务困境
 
-**作者:** [@yaohui12138](https://x.com/yaohui12138)  
-**原文:** [查看推文](https://x.com/yaohui12138/status/2056578290010444165)  
-**互动:** ❤️ 4 | 🔁 1 | 💬 1 | 👁️ 298
+**作者:** @eric17258
+**发布时间:** Tue May 19 04:36:32 +0000 2026
+**互动数据:** 0 likes, 0 retweets, 1 replies, 11 views
 
-**核心观点:**  
-Codex 把 AI 操作电脑拆成三种能力：(1) 内置浏览器——给开发者测试本地项目；(2) Chrome 自动化——接管已登录网站，直接操作真实浏览器（法律检索、报告生成等）；(3) Computer Use——直接操作 Mac App（Finder、微信、飞书）。Codex 定位是"超级个体的操作系统"，Claude Code 更像是"程序员的编程助手"。
+**原文:**
+良率65%、技术获马斯克押注，但英特尔代工业务单季亏24.37亿美元——外部客户收入仅占3.2%，技术可行≠商业可行。真正的考验不在实验室，而在2026下半年的首份实打实订单。#半导体 #英特尔 🧵
+
+**核心观点:**
+英特尔代工业务的技术指标看起来不错（良率 65%，获得马斯克认可），但商业上依然困境重重：单季亏损 24.37 亿美元，外部客户收入仅占 3.2%。核心洞察：技术可行不等于商业可行。真正的考验是 2026 下半年能否获得实质性订单。
 
 **可实践建议:**
-- 非技术人员直接用 Codex 的 Chrome 自动化功能——零学习门槛，生产力翻倍
-- 开发者可以三种能力全用上，尤其 Computer Use 操控其他 AI 工具（如操控 Claude Code）
-- 不要再纠结学哪个 AI 编码工具，自己的时间成本最贵
+- 技术型创业者注意：好产品不等于好生意，需要找到付费客户
+- 英特尔转型代工的战略风险：从 IDM 模式转向代工模式需要完全不同的能力
+- 关注 2026 下半年英特尔代工业务的订单进展
 
 **创作灵感:**
-- 用 Codex Chrome 自动化做一个实际场景演示（如自动完成某项工作流）
-- "超级个体的操作系统"——这个概念可以展开为一篇文章
+- "技术可行≠商业可行"：为什么好产品卖不出去？
+- 英特尔转型：从 CPU 霸主到代工追赶者的艰难之路
+- 马斯克押注英特尔：是技术认可还是战略博弈？
 
 **社交媒体文案:**
-- **即刻:** Codex 把 AI 操作电脑拆成三种能力：内置浏览器、Chrome 自动化、Computer Use。它不是编程助手，是"超级个体的操作系统"。非技术人员光是 Chrome 自动化这一个功能，就足够让生产力翻倍。
-- **小红书:** 🤖Codex不只是编程工具，它是"超级个体的操作系统"。三种能力：浏览器测试、Chrome自动化、直接操控Mac App。非技术人员用Chrome自动化就能让生产力翻倍。别再纠结学哪个工具了！
-- **推特:** Codex has completed a 3-dimensional strike on AI automation: (1) Built-in browser for dev testing, (2) Chrome automation for real workflows, (3) Computer Use for full Mac app control. It's not a coding assistant — it's the "super individual's operating system."
+- 🟠 即刻：英特尔代工单季亏24亿美元！良率65%、马斯克认可都没用，外部客户仅占3.2%。技术可行≠商业可行 💸
+- 🔴 小红书：英特尔代工业务太难了 😰 技术好但亏钱，马斯克认可也没用，真正的考验在2026下半年...
+- 🔵 推特：Intel's foundry business lost $2.4B in one quarter. 65% yield rate, Musk's endorsement—but only 3.2% revenue from external customers. Tech ≠ business. The real test comes H2 2026.
+
+**原文链接:** https://x.com/eric17258/status/2056594832391627076
 
 ---
 
-### 9. 🏛️ AI 时代的人类价值收缩
+## 推文 10：llm_wiki v0.4.11 发布
 
-**作者:** [@Barret_China](https://x.com/Barret_China)  
-**原文:** [查看推文](https://x.com/Barret_China/status/2056587516598436316)  
-**互动:** ❤️ 8 | 🔁 1 | 💬 5 | 👁️ 571
+**作者:** @nash_su
+**发布时间:** Tue May 19 04:36:32 +0000 2026
+**互动数据:** 0 likes, 0 retweets, 1 replies, 126 views
 
-**核心观点:**  
-当 AI 从工具变成"连续存在"——知道你关注什么、为什么焦虑、什么在拖延、什么时候状态最好——人对"你"的了解可能超过你自己。未来人类价值会收缩到四个核心：(1) 方向感——判断什么值得投入一生；(2) 审美——判断什么是好的、有生命力的；(3) 体验——真正感受世界而非只处理信息；(4) 意志——在无限可能中依旧选择长期主义。AI 没有活着的重量——没有童年、遗憾、失去过重要的人。
+**原文:**
+llm_wiki v0.4.11 版本更新发布，Star数也突破了8k 🎉🎉
+
+本次更新主要功能：
+ - 新增本地 API Server，可通过接口访问项目文件、搜索、关系图数据和资料重扫，可在设置中配置，配合 Skill，可以接入各种 Agent，OpenClaw/Hermes 等等。
+ - UI 搜索和 API 搜索统一到 Rust 后端，支持关键词与向量检索。
+ - 知识图谱新增搜索功能，图谱检索更加方便。
+
+感谢大家一直以来的支持，llm_wiki 会持续演进。
+
+项目地址：https://t.co/Xkd9oTNcIj
+Skill 地址：https://t.co/YT8R6Nspgb
+
+**核心观点:**
+llm_wiki（一个 LLM 知识管理工具）发布 v0.4.11，Star 数突破 8k。核心更新：新增本地 API Server，可接入各种 Agent（OpenClaw/Hermes 等）；搜索统一到 Rust 后端，支持关键词与向量检索；知识图谱新增搜索功能。这是一个面向 AI Agent 时代的知识管理基础设施。
 
 **可实践建议:**
-- 有意识地培养这四个维度：定期反思人生方向、提升审美品味、增加真实体验、练习延迟满足
-- 把 AI 当"执行层"的同时，强化自己的"决策层"和"感受层"
-- 建立"活着记录"——记录自己的独特经历和感受，这是 AI 无法复制的东西
+- 对于 AI Agent 开发者：llm_wiki 可以作为知识库后端，支持 API 访问
+- 对于知识管理用户：本地 API Server 意味着更好的隐私控制和集成能力
+- 关注 Rust + 向量检索的技术栈组合
 
 **创作灵感:**
-- "AI 没有活着的重量"——可以展开为一篇关于人类独特性的哲学散文
-- 做一个"人类价值四维评估"框架
+- AI Agent 时代的知识管理：从"人找信息"到"Agent 自动检索"
+- llm_wiki vs Notion/Obsidian：面向 AI 的知识库有什么不同？
+- Rust 在 AI 基础设施中的崛起
 
 **社交媒体文案:**
-- **即刻:** 当 AI 对你的了解超过你自己时，人还剩下什么？方向感、审美、体验、意志——这是未来人类价值的四个核心收缩点。AI 没有活着的重量：没有童年，没有遗憾，没有失去过重要的人。
-- **小红书:** 🌟AI越来越懂你，但你有什么是AI没有的？四个答案：方向感、审美、体验、意志。AI没有童年、没有遗憾、没有失去过重要的人——这就是"活着的重量"。
-- **推特:** When AI understands you better than you understand yourself, what's left for humans? (1) Direction — what's worth a lifetime (2) Aesthetics — what's alive (3) Experience — feeling the world, not processing info (4) Will — choosing long-termism amid infinite temptation. AI has no weight of lived experience.
+- 🟠 即刻：llm_wiki v0.4.11 发布！新增本地 API Server，可接入 OpenClaw/Hermes 等 Agent，Star 破 8k 🎉 知识管理进入 Agent 时代
+- 🔴 小红书：llm_wiki 更新啦！✨ 本地 API + Agent 集成，知识管理工具的新形态～
+- 🔵 推特：llm_wiki v0.4.11 is out! Local API Server for Agent integration, unified Rust backend with vector search. 8k stars and growing. The knowledge base for the AI Agent era.
+
+**原文链接:** https://x.com/nash_su/status/2056594832391627076
 
 ---
 
-### 10. 🎬 Power Rangers 的内容套利机器
+## 汇总统计
 
-**作者:** [@aakashgupta](https://x.com/aakashgupta)  
-**原文:** [查看推文](https://x.com/aakashgupta/status/2056590684082368965)  
-**互动:** ❤️ 5 | 🔁 0 | 💬 1 | 👁️ 1,557
+- 总推文数：300
+- 精选推文数：15
+- 转发推文数：0
+- 筛选率：5%
 
-**核心观点:**  
-变形金刚的标志性"定格变身"场景，其实是一个价值 60 亿美元的内容套利机器的关键接缝。Haim Saban 买下日本超级战队的打斗素材，让美国演员拍摄对话场景，然后拼接——头盔掩盖了替身演员的替换。花费 15 万美元制作前几集，到 1995 年 franchise 年收入 10 亿美元，2001 年个人获利 15 亿美元（好莱坞史上最大个人现金回报）。演员是非工会的，没有分成，Red Ranger 说赚的钱不如在麦当劳打工。
+## 主题分布
 
-**可实践建议:**
-- 内容创作者学习"内容套利"模式：找到已有素材/格式，做本地化/差异化改编
-- 理解 IP 运作的商业本质——不是创造内容，是建立可扩展的内容生产系统
-- 创作者需要关注合同和分成条款——才华变现的前提是商业意识
+1. **AI 行业动态** (4条)：OpenAI 重组、Anthropic CEO 观点、AI 放大器、软件成本
+2. **职场与社会** (3条)：中年失业、品格建设、自由与秩序
+3. **科技与商业** (3条)：Citadel AI 观点、英特尔代工、llm_wiki 发布
+4. **文化与历史** (1条)：亚美尼亚基督雕像
 
-**创作灵感:**
-- "内容套利"模式可以应用到现在的 AI 内容生产——找到已有内容格式，用 AI 做规模化改编
-- 写一个关于好莱坞内容套利历史的系列
+## 今日洞察
 
-**社交媒体文案:**
-- **即刻:** Power Rangers 的定格变身不是制作缺陷，而是一个 60 亿美元内容套利机器的关键接缝。用日本打斗素材 + 美国演员对话拼接，15 万美元起步，年入 10 亿。演员没有分成，说赚的不如麦当劳。
-- **小红书:** 🎬你以为Power Rangers的定格变身是特效？其实是一个60亿美元生意的关键设计！用日本素材+美国演员拼接，15万美元起步做到年入10亿。创意背后的商业逻辑太精彩了。
-- **推特:** The freeze frame in Power Rangers wasn't a production quirk — it was the load-bearing joint of a $6 billion content arbitrage machine. Japanese fight footage + American teen actors, spliced together. Started at $150K, hit $1B/year by 1995. The actors made less than McDonald's wages.
+1. **AI 正在重塑高技能工作**：从 Citadel 创始人到 Anthropic CEO，顶级人物都在谈论 AI 对专业工作的冲击。这不是"未来"，而是"现在"。
 
----
+2. **职场逻辑正在转变**：从"经验型"到"资源型"，企业不再只需要经验丰富的人，而是需要能带来客户、项目、资源的人。
 
-### 11. 📊 量价齐升：看得见的共识
+3. **技术≠商业**：英特尔代工业务证明，技术指标再好，没有付费客户也是徒劳。
 
-**作者:** [@dajingou1](https://x.com/dajingou1)  
-**原文:** [查看推文](https://x.com/dajingou1/status/2056579638990876924)  
-**互动:** ❤️ 27 | 🔁 0 | 💬 46 | 👁️ 669
-
-**核心观点:**  
-用台积电 (TSM) 走势深度解析"量价齐升"交易原则。核心公式：价格告诉你方向，成交量告诉你这个方向能不能信。五个实战检查清单筛掉 90% 劣质上涨：放量突破？缩量回踩？量价同步？天量滞涨？均量线趋势上升？量价齐升衡量的是共识的厚度——真金白银投出的票。
-
-**可实践建议:**
-- 每次交易前过一遍五个检查清单，有一个"否"就停手
-- 学会看量——它是市场的测谎仪
-- 关注台积电的量价关系作为半导体行业风向标
-
-**创作灵感:**
-- 这套框架可以应用到加密货币市场——量价分析在 24/7 市场可能更有效
-- 做一个"量价齐升"自动筛选工具
-
-**社交媒体文案:**
-- **即刻:** 价格告诉你方向，成交量告诉你能不能信。五个问题筛掉 90% 的劣质上涨：放量突破？缩量回踩？量价同步？天量滞涨？均量趋势？"再漂亮的 K 线，没有成交量跟上，只是一场没有观众的烟火。"
-- **小红书:** 📈一个能筛掉90%劣质上涨的交易清单：放量突破？缩量回踩？量价同步？一句话总结——价格告诉你方向，成交量告诉你能不能信。再漂亮的K线，没有成交量跟上，只是没有观众的烟火。
-- **推特:** Price tells you direction. Volume tells you whether to trust it. 5 questions to filter out 90% of fake breakouts. "No matter how beautiful the red candle is without volume following — it's just fireworks without an audience." Deep dive on TSM's price-volume patterns.
+4. **AI 是放大器**：AI 不会让你变成另一个人，它会让你更像你自己。先做好自己，再用 AI 增强。
 
 ---
 
-### 12. 🔗 代币化股票：华尔街正在吸收 Crypto
-
-**作者:** [@Nicole_yang88](https://x.com/Nicole_yang88)  
-**原文:** [查看推文](https://x.com/Nicole_yang88/status/2056565243518812230)  
-**互动:** ❤️ 1 | 🔁 0 | 💬 0 | 👁️ 306
-
-**核心观点:**  
-美国 SEC 正在研究"代币化股票"创新豁免框架——未来股票可能直接在区块链上发行、流通和交易。这不是 crypto 融入华尔街，而是华尔街开始主动利用链上系统提升效率。如果连股票都开始 tokenization，债券、基金、REITs、私募份额理论上都可以逐步链上化。这是未来十年全球金融基础设施的大迁移。
-
-**可实践建议:**
-- 关注 SEC 框架进展，特别是有限开放试点的节奏
-- 了解链上美股平台（推文附了合集链接）
-- 为可能的代币化股票市场提前布局：了解智能合约、DeFi、链上身份等基础知识
-
-**创作灵感:**
-- "传统金融正在吸收 crypto 的技术能力"——可以写一个传统金融链上化路线图
-- 分析 Coinbase、Robinhood 等平台从"加密交易"到"数字资产券商"的角色演变
-
-**社交媒体文案:**
-- **即刻:** 美国 SEC 正在研究"代币化股票"——股票可能直接在区块链上发行和交易。不是 crypto 融入华尔街，而是华尔街在吸收 crypto 技术。债券、基金、REITs……未来十年，全球金融基础设施的大迁移已经开始。
-- **小红书:** 💡SEC认真研究"股票上链"了！不是加密圈挑战华尔街，是华尔街主动用区块链技术提升效率。未来十年，股票、债券、基金都可能链上化——这是金融基础设施的大迁移。
-- **推特:** SEC is studying "tokenized stocks" — stocks could be issued and traded directly on blockchain. This isn't crypto infiltrating Wall Street. It's Wall Street absorbing crypto tech. The next decade could see bonds, funds, REITs go on-chain. The financial infrastructure migration has begun.
-
----
-
-### 13. 🤖 吉卜力开源动画制作工具 Toonz
-
-**作者:** [@GitHub_Daily](https://x.com/GitHub_Daily)  
-**原文:** [查看推文](https://x.com/GitHub_Daily/status/2056585675689107662)  
-**互动:** ❤️ 5 | 🔁 1 | 💬 0 | 👁️ 516
-
-**核心观点:**  
-吉卜力工作室多年使用的动画制作工具 Toonz 早已开源。《千与千寻》《龙猫》《幽灵公主》均使用此工具制作。内置吉卜力专属线稿扫描工具、基于深度学习的画风转换特效、模拟传统胶片质感的入射光效果。支持矢量和位图两种作画方式。
-
-**可实践建议:**
-- 2D 动画创作者可以直接使用 Toonz，无需从零开始
-- 关注吉卜力开源工具链中的画风转换特效，结合 AI 可以做风格迁移
-- 学校教学可以引入 Toonz 作为动画入门工具
-
-**创作灵感:**
-- 用 Toonz + AI 画风转换，做一个"把你的画变成吉卜力风格"的教程
-- 探索开源动画工具与 AI 的结合可能性
-
-**社交媒体文案:**
-- **即刻:** 吉卜力的动画制作工具 Toonz 早就开源了！《千与千寻》《龙猫》都是用它做的。内置专属线稿扫描、画风转换特效、胶片质感效果。想做 2D 动画的，这个值得试试。
-- **小红书:** 🎨吉卜力工作室的动画工具Toonz居然早就开源了！千与千寻、龙猫都是用它做的！专属线稿扫描+画风转换特效+胶片质感，想做动画的朋友冲！
-- **推特:** Studio Ghibli's animation tool Toonz has been open-source for years. Spirited Away, Totoro, Princess Mononoke — all made with it. Built-in Ghibli-exclusive scanning tools, deep learning style transfer, and film grain simulation. Want to make 2D animation? Start here.
-
----
-
-### 14. 🏃‍♂️ 103 岁"世界最年长医生"的长寿三原则
-
-**作者:** [@ooeli_eth](https://x.com/ooeli_eth)  
-**原文:** [查看推文](https://x.com/ooeli_eth/status/2056564954938167654)  
-**互动:** ❤️ 18 | 🔁 4 | 💬 7 | 👁️ 4,279
-
-**核心观点:**  
-103 岁去世的"世界最年长医生"霍华德·塔克，做了 75 年以上医生，67 岁通过律师考试。长寿核心只有 3 点：(1) 持续让大脑保持活跃——退休也要保持学习、工作、阅读、社交；(2) 不要记恨他人——愤怒消耗的是自己的身体；(3) 凡事适度——平衡比极端更重要。
-
-**可实践建议:**
-- 每天保持至少 30 分钟的学习/阅读/创造性活动
-- 练习"放下"——有意识地减少对人际冲突的情绪投入
-- 用"适度"原则审视生活习惯：不苦行僧式压抑，也不放纵
-
-**创作灵感:**
-- 做一个"长寿三原则"的现代化解读版本，结合当代人生活方式
-- "保持大脑活跃"可以用 AI 辅助学习来实践——学新东西
-
-**社交媒体文案:**
-- **即刻:** 103岁世界最年长医生去世前总结长寿三原则：1️⃣持续让大脑活跃，停止与世界互动就开始衰退；2️⃣不要记恨，愤怒消耗的是自己的身体；3️⃣凡事适度，平衡比极端更重要。做了75年医生，67岁还通过律师考试。
-- **小红书:** 🌿103岁医生总结了长寿秘诀，不是吃什么补品，而是三件事：保持大脑活跃、不记恨别人、凡事适度。平衡比极端重要，想吃牛排就吃，但懂得节制。这才是真正的生活智慧。
-- **推特:** 103yo "world's oldest doctor" Howard Tucker's longevity formula: (1) Keep your brain active — stop interacting with the world and you decline (2) Don't hold grudges — anger raises your blood pressure and stress hormones (3) Moderation — balance beats extremism. Practiced medicine 75+ years, passed the bar at 67.
-
----
-
-## 🔍 值得关注的趋势信号
-
-1. **AI 编码模型价格战**：Cursor Composer 2.5 以 30 倍价格优势挑战 Opus 4.7，标志着自研模型竞赛进入深水区
-2. **harness 层竞争**：Skill 背后的 harness 架构成为 LLM 护城河，Anthropic 持续加码
-3. **Codex vs Claude Code 分化**：应用层（Codex）与编码层（Claude）的定位差异越来越明显
-4. **内容自动化趋势**：从 Toonz 开源到 Codex 自动化视频剪辑，AI 内容生产门槛持续降低
-5. **金融链上化**：SEC 研究代币化股票，传统金融开始吸收区块链技术
-
----
-
-*报告生成时间: 2026-05-19 12:51 CST*
+*本报告由 X Following Digest 自动生成*
+*数据来源：Twitter/X Following Timeline*
