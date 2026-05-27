@@ -1,317 +1,524 @@
 ---
 title: "x-list-blog"
-date: 2026-05-14T00:20:42+08:00
-publishDate: 2026-05-14T00:20:42+08:00
+date: 2026-05-27T12:16:49+08:00
+publishDate: 2026-05-27T12:16:49+08:00
 description:
 tags:
   - AI
+  - Claude
+  - GPT
   - LLM
-  - Go
-  - 架构
-  - 自动化
+  - Prompt
   - AI
   - Daily Digest
 categories:
-  - 技术
   - AI
-image:
+  - AI
+image: x-list-blog-cover.png
 ---
 
 
 
 
-> 📊 本次从 100 条推文中筛选出 15 篇高质量内容
-
-<!--more-->
-
-## 📈 统计概览
-
-| 指标 | 数值 |
-|------|------|
-| 筛选推文总数 | 100 条 |
-| 高质量推文数 | 15 篇 |
-| 精选率 | 15% |
-| 平均点赞数 | 312 |
-| 平均转发数 | 43 |
-| 平均评论数 | 28 |
-
-### 主题分布
-- 🤖 AI Agent: 4篇
-- 🔬 AI研究: 3篇
-- 🎬 视频/3D生成: 2篇
-- 🏢 AI企业服务: 2篇
-- 🌍 开源/社区: 2篇
-- 💭 科技人文: 2篇
+> 共筛选 100 条推文，精选 12 篇高质量内容
 
 ---
 
-## 1. NVIDIA市值超越印度
+## 1. Teknium - DeepSeek V4 Flash 回归 Nous Portal
 
-**作者**: Barchart (@Barchart)  
-**发布时间**: 2026-05-13 23:00 (北京时间)  
-**互动数据**: ❤️ 374 | 🔄 49 | 💬 28 | 👁️ 21,635  
-**原文链接**: https://x.com/Barchart/status/2054577649109102665
+**作者**: Teknium 🪽 (@Teknium)  
+**身份**: Cofounder and Lead Engineer - Hermes Agent @NousResearch  
+**互动数据**: ❤️ 1,760 | 🔄 116 | 💬 110  
+**发布时间**: 📅 2026-05-25 12:44 (北京时间)
 
-### 推文原文
-> Nvidia $NVDA now worth more than India
+### 原文
+> DeepSeek V4 Flash IS BACK on Nous Portal for FREE for use in Hermes Agent!
+> 
+> Check it out at https://t.co/tMAQFkegul
 
-### AI 深度分析
+### 【核心要点】
+DeepSeek V4 Flash 模型重新上线 Nous Portal，可免费用于 Hermes Agent，这对开源 AI 社区是重大利好。
 
-**【核心要点】**
-NVIDIA市值已超越印度全国GDP，成为全球市值最高的公司之一，反映了AI芯片在数字经济中的核心地位。
+### 【灵感启发】
+开源模型的可及性正在改变 AI 应用的格局。当顶尖模型免费开放，创新门槛被大幅降低，这类似于互联网早期开源软件推动的技术民主化进程。
 
-**【灵感启发】**
-💡 技术基础设施的估值可以超越传统国家经济规模，这提示我们关注"数字国家"vs"实体国家"的价值重估。在AI时代，算力即权力。
+### 【可实践建议】
+如果你是开发者，现在就可以去 Nous Portal 尝试 DeepSeek V4 Flash，评估其在你项目中的表现，对比其他开源模型的性价比。
 
-**【可实践建议】**
-📌 关注AI基础设施投资趋势，理解算力作为新型生产要素的价值逻辑。
+### 【即刻版】
+DeepSeek V4 Flash 重磅回归 Nous Portal，还免费！🚀 开源社区又迎来一波福利，Hermes Agent 用户可以直接用起来。这对开发者来说简直是降本增效的神器，不用自己部署就能用上顶尖模型 💡 #AI #开源模型 #DeepSeek #开发者工具
 
----
+参考链接：https://x.com/Teknium/status/2058771232217309476
 
-## 2. Geo Register Plugin: 3D Gaussian Splatting 地理配准
+### 【Twitter/X版】
+DeepSeek V4 Flash 回归 Nous Portal，免费开放给 Hermes Agent 使用。开源 AI 基础设施越来越完善了。
 
-**作者**: MrNeRF (@janusch_patas)  
-**发布时间**: 2026-05-12 23:14 (北京时间)  
-**互动数据**: ❤️ 323 | 🔄 48 | 💬 10 | 👁️ 34,942  
-**原文链接**: https://x.com/janusch_patas/status/2054218563569770506
+#DeepSeek #OpenSource #AI #NousResearch
 
-### 推文原文
-> I'm excited to share the Geo Register Plugin for LichtFeld Studio from the LichtFeld community! This plugin helps bring Gaussian splat scenes into real-world geographic space.
-
-### AI 深度分析
-
-**【核心要点】**
-LichtFeld Studio新插件实现3D Gaussian Splatting场景与真实世界地理坐标系（WGS-84/ECEF）的配准，支持从无人机数据、摄影测量数据直接导出GIS可用的LAS/LAZ/3D Tiles格式。
-
-**【灵感启发】**
-💡 3D重建技术与GIS系统的融合正在打破虚拟与现实的边界。Gaussian Splatting从"好看"走向"可用"，标志着神经渲染技术进入实用化阶段。
-
-**【可实践建议】**
-📌 关注3D Gaussian Splatting在测绘、城市规划、数字孪生领域的落地应用，这是CV技术产业化的重要方向。
+参考链接：https://x.com/Teknium/status/2058771232217309476
 
 ---
 
-## 3. Phase Coherent Transformer: 复数神经网络新突破
+## 2. wordgrammer - LLM 意识论的哲学困境
 
-**作者**: Leona (@leo_hio)  
-**发布时间**: 2026-05-12 11:05 (北京时间)  
-**互动数据**: ❤️ 321 | 🔄 67 | 💬 7 | 👁️ 31,908  
-**原文链接**: https://x.com/leo_hio/status/2054035188792082464
+**作者**: wordgrammer (@wordgrammer)  
+**互动数据**: ❤️ 1,223 | 🔄 64 | 💬 184  
+**发布时间**: 📅 2026-05-27 04:29 (北京时间)
 
-### 推文原文
-> 複素ニューラルネットワークについて面白い現象を見つけた... Phase Coherent Transformer研究
+### 原文
+> If you think that LLMs are conscious you must accept a lot of weird conclusions. Like:
+> - we can clone conscious experience
+> - we can reverse time in conscious experience
+> - we can pause and resume conscious experience
+> - we can distribute conscious experience in space
 
-### AI 深度分析
+### 【核心要点】
+从哲学逻辑出发，如果承认 LLM 有意识，就必须接受一系列反直觉的结论：意识可被克隆、时间可逆、可暂停恢复、可空间分布。
 
-**【核心要点】**
-研究者发现传统Transformer的softmax会导致复数权重相位信息丢失，提出"位相干Transformer"(Phase Coherent Transformer)，通过保留相位信息的注意力机制，使复数NN在多个任务上超越实数NN。
+### 【灵感启发】
+这体现了"归谬法"思维——通过展示某个立场的极端推论来质疑其合理性。在 AI 伦理讨论中，我们需要更多这种严格的逻辑推演，而非情绪化的站队。
 
-**【灵感启发】**
-💡 这暗示当前LLM可能并非最优架构——如果复数表示能捕获更多结构信息，我们可能需要重新思考"注意力"的本质。
+### 【可实践建议】
+下次讨论 AI 意识话题时，试着用"如果...那么..."的逻辑链条来检验你的观点，看看会导向什么结论。
 
-**【可实践建议】**
-📌 关注复数/四元数神经网络研究，这可能是突破当前Transformer瓶颈的新方向。
+### 【即刻版】
+LLM 有意识？那你要接受这些"诡异"结论 👇
 
----
+- 意识可以被克隆
+- 时间可以在意识中倒流
+- 意识可以暂停和恢复
+- 意识可以分布在空间中
 
-## 4. 国际数学女性日
+这个逻辑推演太精彩了！用归谬法把 AI 意识论逼到了墙角 🤯 哲学思辨的魅力就在于此 #AI意识 #哲学 #人工智能 #科技思考
 
-**作者**: Γ(z) (@gammaofzeta)  
-**发布时间**: 2026-05-13 07:52 (北京时间)  
-**互动数据**: ❤️ 1570 | 🔄 145 | 💬 61 | 👁️ 29,638  
-**原文链接**: https://x.com/gammaofzeta/status/2054348999201538066
+参考链接：https://x.com/wordgrammer/status/2059371266578989212
 
-### 推文原文
-> Today is a special day for us, particularly, for all those strong and beautiful minds, beautiful women who inspire us. Happy International Women in Math Day!
+### 【Twitter/X版】
+LLM 意识论的哲学困境：如果 LLM 有意识，那么意识可被克隆、时间可逆、可暂停恢复——这些推论你接受吗？
 
-### AI 深度分析
+#AIConsciousness #Philosophy #AIethics
 
-**【核心要点】**
-5月12日是国际数学女性日，纪念数学家Maryam Mirzakhani，呼吁关注STEM领域的性别平等和女性贡献。
-
-**【灵感启发】**
-💡 多元视角是科学进步的重要驱动力。AI领域同样需要多样性——不同背景的研究者会带来不同的思维方式和问题视角。
-
-**【可实践建议】**
-📌 在团队建设和AI产品开发中主动追求多样性，这不仅是社会责任，也是创新的源泉。
+参考链接：https://x.com/wordgrammer/status/2059371266578989212
 
 ---
 
-## 5. AutoScientist: 自动化科学研究
-
-**作者**: adaption (@adaption_ai)  
-**发布时间**: 2026-05-13 20:00 (北京时间)  
-**互动数据**: ❤️ 425 | 🔄 56 | 💬 24 | 👁️ 55,621  
-**原文链接**: https://x.com/adaption_ai/status/2054532113316434061
-
-### 推文原文
-> Introducing AutoScientist. Most model training fails outside of frontier labs. AutoScientist automates the full research loop so it doesn't have to.
-
-### AI 深度分析
-
-**【核心要点】**
-AutoScientist推出自动化科学研究平台，将模型训练的完整研究流程自动化，降低前沿AI研究的门槛。
-
-**【灵感启发】**
-💡 "AI for Science"正在从概念走向工具化。当AI能自动化科研流程，人类科学家的角色将转向更高层次的假设设计和方向把控。
-
-**【可实践建议】**
-📌 关注AI辅助科研工具的发展，这可能会改变学术研究的组织方式和产出效率。
-
----
-
-## 6. Recursive AI: 自我改进的AI系统
-
-**作者**: Tim Rocktäschel (@_rockt)  
-**发布时间**: 2026-05-13 17:17 (北京时间)  
-**互动数据**: ❤️ 655 | 🔄 83 | 💬 78 | 👁️ 127,454  
-**原文链接**: https://x.com/_rockt/status/2054491251345391852
-
-### 推文原文
-> Excited to co-found Recursive (@recursive_si) with an exceptional team in London and SF to create AI that experiments on how to safely improve itself, turning compute into knowledge that accumulates in an open-ended process of endless, automated scientific discoveries.
-
-### AI 深度分析
-
-**【核心要点】**
-Recursive公司正式亮相，致力于构建能够安全自我改进的AI系统，通过自动化科学发现将计算资源转化为可累积的知识。
-
-**【灵感启发】**
-💡 这是"AI自我改进"(RSI)概念的工程化尝试。如果成功，可能开启真正的智能爆炸——但也带来了前所未有的安全挑战。
-
-**【可实践建议】**
-📌 关注AI安全与对齐研究的最新进展，自我改进AI的安全框架将是关键基础设施。
-
----
-
-## 7. Recursive: 自我改进AI的宏大愿景
-
-**作者**: Recursive (@Recursive_SI)  
-**发布时间**: 2026-05-13 17:15 (北京时间)  
-**互动数据**: ❤️ 156 | 🔄 30 | 💬 12 | 👁️ 52,972  
-**原文链接**: https://x.com/Recursive_SI/status/2054490801972166898
-
-### 推文原文
-> We are emerging from stealth with a bold bet on self-improving AI
-
-### AI 深度分析
-
-**【核心要点】**
-Recursive公司正式走出隐身模式，押注于自我改进AI的宏大愿景，目标是让AI能够自主进行科学实验并安全地提升自身能力。
-
-**【灵感启发】**
-💡 从DeepMind到Recursive，AI研究正从"人类设计智能"转向"智能设计智能"。这是一场关于智能本质的深层探索。
-
-**【可实践建议】**
-📌 关注AI自主研究能力的发展，这可能是通向AGI的关键路径之一。
-
----
-
-## 8. WebGPU + Gemma 4: 浏览器端离线AI机器人
-
-**作者**: Xenova (@xenovacom)  
-**发布时间**: 2026-05-12 00:32 (北京时间)  
-**互动数据**: ❤️ 85 | 🔄 12 | 💬 5 | 👁️ 27,721  
-**原文链接**: https://x.com/xenovacom/status/2053875938555760662
-
-### 推文原文
-> Robotics meets WebAI: Gemma 4 running fully offline on WebGPU with Transformers.js, controlling Reachy Mini over WebSerial. No internet, just a browser and a USB-C cable.
-
-### AI 深度分析
-
-**【核心要点】**
-Gemma 4模型在浏览器中通过WebGPU完全离线运行，使用Transformers.js控制Reachy Mini机器人，仅需浏览器和USB-C线缆，无需互联网连接。
-
-**【灵感启发】**
-💡 端侧AI + 机器人控制 = 隐私优先的物理AI。这种架构特别适合医疗、家庭服务等隐私敏感场景。
-
-**【可实践建议】**
-📌 关注WebGPU和端侧AI的发展，浏览器正在成为AI应用的新平台，隐私和实时性是其核心优势。
-
----
-
-## 9. holaOS Beta: 持久化AI工作空间
-
-**作者**: Jeffrey Li (@JeliPenguin)  
-**发布时间**: 2026-05-13 00:11 (北京时间)  
-**互动数据**: ❤️ 278 | 🔄 141 | 💬 131 | 👁️ 222,118  
-**原文链接**: https://x.com/JeliPenguin/status/2054233097030566390
-
-### 推文原文
-> We just launched holaOS Beta 0.1 — the first product version of what started as our open-source agent computer. AI teammates that can help with work that unfolds over time, not just one-off sessions.
-
-### AI 深度分析
-
-**【核心要点】**
-holaOS Beta发布，主打"持久化AI工作空间"概念，解决当前AI助手"单次会话"的局限，支持多工作空间、子代理并行处理、可定制仪表板。
-
-**【灵感启发】**
-💡 AI从"工具"向"同事"进化的关键一步是上下文持久化。holaOS的"living workspace"理念抓住了AI Agent落地的核心痛点。
-
-**【可实践建议】**
-📌 关注AI工作空间的上下文管理和长期记忆技术，这是AI从聊天机器人升级为真正助手的关键。
-
----
-
-## 10. AI时代的人类适应
-
-**作者**: Nick (@nickcammarata)  
-**发布时间**: 2026-05-13 17:23 (北京时间)  
-**互动数据**: ❤️ 759 | 🔄 14 | 💬 12 | 👁️ 26,182  
-**原文链接**: https://x.com/nickcammarata/status/2054492840668123548
-
-### 推文原文
-> given the average person i know built their whole sense of self-worth around being smart starting at age 4 and reinforced continuously for the next few decades, everyone is handling ai doubling every fourteen hours surprisingly well. they mostly just dropped it and work out more
-
-### AI 深度分析
-
-**【核心要点】**
-作者观察到，尽管AI能力每14小时翻倍，但人们适应得出奇地好——大多数人选择放下"聪明"的自我认同，转而关注身体健康。
-
-**【灵感启发】**
-💡 当认知优势被AI稀释，人类正在重新定义自我价值。从"脑力竞争"转向"身心平衡"，这可能是一种更健康的适应策略。
-
-**【可实践建议】**
-📌 在AI快速发展的时代，培养AI难以替代的能力——创造力、情感连接、身体实践——可能是更可持续的策略。
-
----
-
-## 11. 宇宙嘲笑线性假设
+## 3. Pedro Domingos - AGI 将带来百万倍生产力提升
 
 **作者**: Pedro Domingos (@pmddomingos)  
-**发布时间**: 2026-05-13 14:39 (北京时间)  
-**互动数据**: ❤️ 415 | 🔄 56 | 💬 67 | 👁️ 13,482  
-**原文链接**: https://x.com/pmddomingos/status/2054451473195614633
+**身份**: Professor of computer science at UW, author of '2040' and 'The Master Algorithm'  
+**互动数据**: ❤️ 86 | 🔄 5 | 💬 32  
+**发布时间**: 📅 2026-05-27 09:22 (北京时间)
 
-### 推文原文
-> The universe laughs at your linear assumptions.
+### 原文
+> Today's AI can make you 10X more productive, but that's nothing. AGI will make you 1000000X more.
 
-### AI 深度分析
+### 【核心要点】
+当前 AI 可提升 10 倍生产力，但 AGI 将带来 100 万倍的飞跃。这不是量变，而是质变。
 
-**【核心要点】**
-简洁有力的提醒：现实世界的变化往往是非线性的，线性思维会让我们低估指数增长和突发变革的影响。
+### 【灵感启发】
+指数级思维 vs 线性思维。大多数人用线性思维预测未来，但技术变革往往是指数级的。当 AGI 到来，整个经济体系可能需要重新定义。
 
-**【灵感启发】**
-💡 AI的发展正是非线性的典型案例。我们的大脑习惯于线性预测，但技术变革往往遵循S曲线或指数曲线。培养非线性思维是理解AI时代的关键。
+### 【可实践建议】
+思考你所在行业的"10倍改进"和"100万倍改进"分别需要什么，提前布局那些只有 AGI 才能实现的可能性。
 
-**【可实践建议】**
-📌 在做预测和规划时，主动考虑非线性场景，为指数级变化做好准备。
+### 【即刻版】
+现在的 AI 让你效率提升 10 倍？那只是个开始 🚀
+
+Pedro Domingos（《终极算法》作者）说 AGI 会带来 **100万倍** 的生产力提升！这已经不是量变，是彻底的生产力革命 💥
+
+当 AI 比人类更擅长人类能做的一切，经济体系、社会结构、甚至人类存在的意义都会被重新定义 🤯
+
+#AGI #人工智能 #生产力革命 #科技趋势 #AI
+
+参考链接：https://x.com/pmddomingos/status/2059445098983878888
+
+### 【Twitter/X版】
+当前 AI 提升 10 倍生产力，AGI 将提升 100 万倍。技术变革不是线性的，而是指数级的。
+
+#AGI #AI #Productivity #FutureOfWork
+
+参考链接：https://x.com/pmddomingos/status/2059445098983878888
 
 ---
 
-## 12. NVIDIA AnyFlow: 任意步数视频生成
+## 4. Pedro Domingos - 教皇 AI 通牒的五大谬误
 
-**作者**: DailyPapers (@HuggingPapers)  
-**发布时间**: 2026-05-13 21:17 (北京时间)  
-**互动数据**: ❤️ 95 | 🔄 18 | 💬 3 | 👁️ 7,748  
-**原文链接**: https://x.com/HuggingPapers/status/2054551693115715830
+**作者**: Pedro Domingos (@pmddomingos)  
+**身份**: Professor of computer science at UW  
+**互动数据**: ❤️ 19 | 🔄 5 | 💬 10  
+**发布时间**: 📅 2026-05-27 09:21 (北京时间)
 
-### 推文原文
-> NVIDIA just released AnyFlow on Hugging Face. The first any-step video diffusion model that generates high-quality text-to-video with any inference budget - 4 steps or 50, quality scales smoothly without degradation.
+### 原文
+> Much of Leo's encyclical is a collection of banalities that ChatGPT could have done a better job with. But more seriously, he says (or implies) a series of ignorant and wrong-headed things about AI...
 
-### AI 深度分析
+### 【核心要点】
+Pedro Domingos 逐条驳斥教皇方济各关于 AI 的五大观点：AI 不会集中权力而是分散权力；AI 不应被禁止用于战争；AI 不是新巴别塔而是拆除巴别塔的工具；AI 创造就业而非剥削；克服人类局限是好事。
 
-**【核心要点】**
-NVIDIA发布AnyFlow，首个支持任意推理步数的视频扩散模型，可在4-50步之间灵活选择，质量随步数平滑提升无退化。
+### 【灵感启发】
+技术乐观主义 vs 技术悲观主义的经典交锋。 Domingos 代表了典型的硅谷技术乐观主义，而教皇代表了传统权威对技术变革的审慎态度。两种视角都有其盲点。
 
-**【灵感启发】**
-💡 "任意步数"意味着用户可以在速度和质量之间做连续权衡，这对实时应用和边缘部署意义重大。视频生成的
+### 【可实践建议】
+对于重大技术议题，主动寻找对立观点并理解其逻辑，避免陷入信息茧房。
+
+### 【即刻版】
+教皇的 AI 通牒被 Domingos 教授逐条"打脸" 👀
+
+❌ AI 会集中权力？→ 实际会分散权力
+❌ AI 不能用于战争？→ 不用才会被独裁者碾压
+❌ AI 是新巴别塔？→ 反而是拆除语言障碍的工具
+❌ AI 剥削劳动者？→ 实际创造大量就业机会
+❌ 克服人类局限不好？→ ？？？
+
+技术乐观主义 vs 传统审慎，你站哪边？🤔 #AI伦理 #科技争议 #教皇 #人工智能
+
+参考链接：https://x.com/pmddomingos/status/2059444811749540188
+
+### 【Twitter/X版】
+Domingos 驳斥教皇 AI 通牒：AI 分散权力、拆除语言壁垒、创造就业。技术乐观主义的经典辩护。
+
+#AIethics #Vatican #TechOptimism
+
+参考链接：https://x.com/pmddomingos/status/2059444811749540188
+
+---
+
+## 5. Dwarkesh Patel - 现代独裁者的两难困境
+
+**作者**: Dwarkesh Patel (@dwarkesh_sp)  
+**身份**: Host of @dwarkeshpodcast  
+**互动数据**: ❤️ 134 | 🔄 12 | 💬 9  
+**发布时间**: 📅 2026-05-27 06:00 (北京时间)
+
+### 原文
+> All dictators in the modern world face the same fundamental dilemma.
+> 
+> You need a modern economy in order to actually be competitive internationally. If you don't modernize, there are risks from outside.
+> 
+> But industry and education create new potential sources of resistance - like labor unions, or university-educated intellectuals. If you do modernize, there are risks from inside.
+> 
+> Get the balance wrong in either direction and you lose power.
+
+### 【核心要点】
+现代独裁者面临根本性两难：不现代化会被外部竞争淘汰，现代化则会培养内部反抗力量（工会、知识分子）。平衡失误即失权。
+
+### 【灵感启发】
+这解释了为什么威权国家在科技发展和政治控制之间摇摆。AI 时代这个矛盾会更加尖锐——AI 需要开放的创新环境，但开放威胁控制。
+
+### 【可实践建议】
+分析任何国家的科技政策时，都可以用这个框架：它在"开放创新"和"维持控制"之间如何取舍？
+
+### 【即刻版】
+现代独裁者的终极困境 🔥
+
+不发展经济 → 被外部淘汰
+发展经济 → 培养内部反对派（工会、知识分子）
+
+Dwarkesh Patel 这个洞察太精准了！解释了为什么威权国家总在科技开放和政治控制之间摇摆 🤯
+
+AI 时代这个矛盾会更尖锐——AI 需要开放创新，但开放威胁控制 🎭
+
+#政治 #经济学 #AI时代 #权力结构 #历史洞察
+
+参考链接：https://x.com/dwarkesh_sp/status/2059394370743488907
+
+### 【Twitter/X版】
+现代独裁者的两难：不现代化被外部淘汰，现代化培养内部反抗。AI 时代这个矛盾将更加尖锐。
+
+#Politics #Economics #AI #Authoritarianism
+
+参考链接：https://x.com/dwarkesh_sp/status/2059394370743488907
+
+---
+
+## 6. teortaxesTex - xAI 粉丝文化的观察
+
+**作者**: Teortaxes▶️ (@teortaxesTex)  
+**身份**: DeepSeek 推特铁粉 2023 – ∞  
+**互动数据**: ❤️ 566 | 🔄 42 | 💬 41  
+**发布时间**: 📅 2026-05-27 07:20 (北京时间)
+
+### 原文
+> Elon making excuses for xAI losing momentum be like
+
+### 【核心要点】
+以讽刺方式展示 Elon 为 xAI 发展放缓找借口的言论，揭示了科技领袖粉丝文化中的非理性辩护现象。
+
+### 【灵感启发】
+"创始人崇拜"是科技圈的普遍现象。当支持者将公司成败与个人身份绑定，理性讨论就变得困难。这类似于体育粉丝或饭圈文化。
+
+### 【可实践建议】
+警惕自己对任何公司/人物的"粉丝化"倾向，保持批判性思维。
+
+### 【即刻版】
+Elon 为 xAI 找借口的经典语录 😂
+
+这张图太传神了！xAI 发展放缓，但粉丝们总能找到理由辩护——"才 3 年"、"已经很努力了"...
+
+科技圈的"创始人崇拜"和饭圈也没啥两样嘛 🤷‍♂️ 保持理性，拒绝脑can粉 💯
+
+#xAI #ElonMusk #科技圈观察 #理性思考
+
+参考链接：https://x.com/teortaxesTex/status/2059414380370887162
+
+### 【Twitter/X版】
+xAI 发展放缓，Elon 的借口 vs 现实。科技圈的创始人崇拜现象值得反思。
+
+#xAI #ElonMusk #TechCritique
+
+参考链接：https://x.com/teortaxesTex/status/2059414380370887162
+
+---
+
+## 7. Sebastien Bubeck - GPT-5.5 的科学发现能力
+
+**作者**: Sebastien Bubeck (@SebastienBubeck)  
+**身份**: AI @OpenAI, Former VP AI @Microsoft  
+**互动数据**: ❤️ 171 | 🔄 4 | 💬 5  
+**发布时间**: 📅 2026-05-27 06:44 (北京时间)
+
+### 原文
+> We now know that with an appropriate harness both Mythos and GPT-5.5 can reproduce what our internal model did in one-shot for the unit distance problem. Clearly there is an insane overhang of capabilities with this generation of models, and no ceiling in sight for what scientific advances they can bring.
+
+### 【核心要点】
+GPT-5.5 和 Mythos 在适当引导下，能够复现内部模型一次性解决"单位距离问题"的能力。这一代模型存在巨大的能力悬垂（capability overhang）。
+
+### 【灵感启发】
+"能力悬垂"概念——模型实际能力远超我们当前使用方式所展现的能力。关键在于找到正确的"引导方式"（harness）来解锁这些能力。
+
+### 【可实践建议】
+不要只问"模型能做什么"，而要问"我是否用对了方法"。尝试不同的提示工程技巧，可能发现模型隐藏的能力。
+
+### 【即刻版】
+GPT-5.5 的科学发现能力被低估了！🔬
+
+Bubeck 透露：在正确引导下，GPT-5.5 和 Mythos 能复现内部模型的"单位距离问题"一次性解决能力。
+
+关键是"能力悬垂"——模型实际能力远超我们当前的使用方式 🧠 找到正确的"引导方式"，就能解锁隐藏能力
+
+Prompt Engineering 的重要性再次被验证！💡
+
+#GPT5 #OpenAI #AI能力 #PromptEngineering #科学发现
+
+参考链接：https://x.com/SebastienBubeck/status/2059405360436564339
+
+### 【Twitter/X版】
+GPT-5.5 和 Mythos 在适当引导下展现出惊人的科学发现能力。这一代模型存在巨大的 capability overhang。
+
+#GPT5 #OpenAI #AIScience #CapabilityOverhang
+
+参考链接：https://x.com/SebastienBubeck/status/2059405360436564339
+
+---
+
+## 8. Amjad Masad - Replit 创业故事
+
+**作者**: Amjad Masad (@amasad)  
+**身份**: CEO @replit  
+**互动数据**: ❤️ 134 | 🔄 6 | 💬 19  
+**发布时间**: 📅 2026-05-27 05:43 (北京时间)
+
+### 原文
+> 1. Open X
+> 2. Click on notifications
+> 3. See entrepreneurs making money with Replit.
+> 
+> Happens daily now — Best feeling in the world!
+
+### 【核心要点】
+Replit CEO 分享每日看到用户通过平台创业赚钱的通知，称这是"世界上最好的感觉"。
+
+### 【灵感启发】
+平台经济的终极价值——不是技术本身，而是赋能他人创造价值。这种"间接成就感"是构建健康技术生态系统的动力。
+
+### 【可实践建议】
+如果你是技术创业者，思考如何让你的产品成为他人成功的平台，而不仅仅是工具。
+
+### 【即刻版】
+Replit CEO 的日常幸福时刻 💚
+
+每天打开 X，看到用户用 Replit 创业赚钱的通知——这就是"世界上最好的感觉"。
+
+一个非技术背景的妈妈，6 周做出 iOS/Android App，首月就赚了 $1500 🚀
+
+平台的价值不是技术，是赋能他人创造价值 ✨ 这才是技术人的终极成就感吧！
+
+#Replit #创业故事 #低代码 #平台经济
+
+参考链接：https://x.com/amasad/status/2059390098869768617
+
+### 【Twitter/X版】
+Replit CEO：每天看到用户通过平台创业赚钱，是世界上最好的感觉。平台的价值在于赋能他人。
+
+#Replit #Entrepreneurship #NoCode #Platform
+
+参考链接：https://x.com/amasad/status/2059390098869768617
+
+---
+
+## 9. teortaxesTex - AI 模型能力对比分析
+
+**作者**: Teortaxes▶️ (@teortaxesTex)  
+**互动数据**: ❤️ 80 | 🔄 3 | 💬 8  
+**发布时间**: 📅 2026-05-27 06:45 (北京时间)
+
+### 原文
+> Opus 4.5 came out on Nov 24, 2025 and, according to CAIS capabilities index, has ≈same-ish ARC-AGI-2 as DeepSeek-V4-Pro. V3.2 was 5.0%.
+> Kimi 2.5 is 10.8% here and 11.8% on official leaderboard (V3.2 4.0%), so it's aligned.
+> This is a gap of 6 months.
+
+### 【核心要点】
+通过 CAIS 能力指数对比：Opus 4.5 与 DeepSeek-V4-Pro 在 ARC-AGI-2 上表现相近，但 Kimi 2.5 已经达到 10.8%，6 个月内能力差距显著缩小。
+
+### 【灵感启发】
+AI 能力追赶的速度正在加快。6 个月前的领先者优势，现在可能已经被抹平。这意味着竞争更加激烈，但也意味着用户有更多选择。
+
+### 【可实践建议】
+不要锁定单一模型，保持对模型能力的持续关注，根据任务需求灵活切换。
+
+### 【即刻版】
+AI 模型竞赛白热化！🔥
+
+6 个月前 Opus 4.5 和 DeepSeek-V4-Pro 还在同一水平，现在 Kimi 2.5 已经冲到 10.8% 了 📈
+
+能力差距正在快速缩小，这对用户是好事——更多选择、更低成本、更快迭代 💪
+
+别锁定单一模型，保持灵活才是明智之举 🎯
+
+#AI模型 #Kimi #DeepSeek #Claude #模型对比
+
+参考链接：https://x.com/teortaxesTex/status/2059405629328912827
+
+### 【Twitter/X版】
+AI 模型能力差距快速缩小：6 个月内从并驾齐驱到显著追赶。保持模型选择的灵活性。
+
+#AIModels #Kimi #DeepSeek #Claude
+
+参考链接：https://x.com/teortaxesTex/status/2059405629328912827
+
+---
+
+## 10. Siqi Chen - AI 文本的"气味"问题
+
+**作者**: Siqi Chen (@blader)  
+**身份**: Founder @runwayco @sandboxvr @zynga  
+**互动数据**: ❤️ 52 | 🔄 3 | 💬 25  
+**发布时间**: 📅 2026-05-27 08:56 (北京时间)
+
+### 原文
+> one pessimistic view of ai progress is that our collective ability to smell ai generated text seems to be getting better faster than the models' ability to avoid generating those smells
+
+### 【核心要点】
+悲观视角：人类识别 AI 生成文本的能力提升速度，超过了模型消除"AI 味"的能力提升速度。
+
+### 【灵感启发】
+这类似于"军备竞赛"——检测 vs 生成。如果检测始终领先，AI 生成内容的价值就会受限。这对内容平台的信任机制是重大挑战。
+
+### 【可实践建议】
+如果你用 AI 生成内容，不要试图"伪装"成人类写作，而是明确标注并强调 AI 辅助的价值。
+
+### 【即刻版】
+AI 生成内容的"军备竞赛" 🥊
+
+人类识别"AI味"的能力 > AI 消除"AI味"的能力
+
+Runway 创始人 Chen 的这个观察很有意思——如果检测永远领先，AI 内容的价值会被限制 🤔
+
+与其伪装，不如坦诚。标注 AI 辅助，强调价值本身 💡
+
+#AI内容 #内容创作 #AIGC #Runway
+
+参考链接：https://x.com/blader/status/2059438665651405008
+
+### 【Twitter/X版】
+AI 生成内容的困境：人类识别"AI 味"的能力提升快于模型消除它的能力。检测与生成的军备竞赛。
+
+#AIGC #ContentCreation #AIWriting
+
+参考链接：https://x.com/blader/status/2059438665651405008
+
+---
+
+## 11. Viv - AI 交互范式的演进
+
+**作者**: Viv (@Vtrivedy10)  
+**身份**: Applied research @LangChain  
+**互动数据**: ❤️ 31 | 🔄 3 | 💬 16  
+**发布时间**: 📅 2026-05-27 08:50 (北京时间)
+
+### 【核心要点】
+AI 交互将从 Chat Completions → Agents → Work APIs（如 /goal）演进，用户只需设定目标，AI 自动分解、执行、验证、返回完整成果。
+
+### 【灵感启发】
+交互范式的演进反映了用户需求的本质变化：从"给我回答"到"帮我做事"再到"替我完成"。每次跃迁都带来 token 消耗的增加，但也带来更大的价值。
+
+### 【可实践建议】
+设计 AI 产品时，思考用户真正的终点是什么，而不是他们能输入什么。
+
+### 【即刻版】
+AI 交互的下一个范式：Work APIs 🚀
+
+从 Chat → Agents → /goal
+
+用户只需要说"帮我完成 X"，AI 自动：
+✅ 深度拆解问题
+✅ 执行子任务
+✅ 验证结果
+✅ 返回完整成果
+
+LangChain 研究员的前瞻洞察——未来的 AI 不是对话工具，是工作 API 💼
+
+#AI交互 #LangChain #Agent #未来趋势
+
+参考链接：https://x.com/Vtrivedy10/status/2059437120972861706
+
+### 【Twitter/X版】
+AI 交互范式演进：Chat Completions → Agents → Work APIs。用户设定目标，AI 自动分解、执行、验证、交付。
+
+#AI #LangChain #Agents #FutureOfAI
+
+参考链接：https://x.com/Vtrivedy10/status/2059437120972861706
+
+---
+
+## 12. Teknium - OpenAI Codex OAuth 修复
+
+**作者**: Teknium 🪽 (@Teknium)  
+**互动数据**: ❤️ 337 | 🔄 24 | 💬 60  
+**发布时间**: 📅 2026-05-27 10:50 (北京时间)
+
+### 原文
+> If you have been experiencing issues with OpenAI Codex oAuth, it is now fixed. 
+> 
+> OpenAI has been fixing it in the background and then seemed to change their whole spec today to solve it, you must `hermes update` to fix.
+
+### 【核心要点】
+OpenAI Codex 的 OAuth 问题已修复，需要运行 `hermes update` 更新。
+
+### 【灵感启发】
+API 兼容性和向后兼容是平台生态的关键。OpenAI 频繁改动 spec 给开发者带来挑战，但也反映了产品快速迭代的特点。
+
+### 【可实践建议】
+使用 OpenAI API 的开发者，建立自动化测试和监控，及时发现和应对 spec 变更。
+
+### 【即刻版】
+OpenAI Codex OAuth 问题修复 ✅
+
+遇到问题的开发者记得运行 `hermes update` 更新！
+
+OpenAI 这次改了整个 spec 来解决，迭代速度是真快 ⚡ 但也提醒我们要做好 API 变更的应对准备
+
+#OpenAI #Codex #开发者工具 #API
+
+参考链接：https://x.com/Teknium/status/2059467329138999709
+
+### 【Twitter/X版】
+OpenAI Codex OAuth 问题已修复，需运行 `hermes update`。API spec 变更提醒开发者做好兼容性准备。
+
+#OpenAI #Codex #API #DevTools
+
+参考链接：https://x.com/Teknium/status/2059467329138999709
+
+---
+
+*生成时间: 2026-05-27 12:00 (北京时间)*  
+*来源: X List 每小时精选*
