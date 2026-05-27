@@ -1,10 +1,15 @@
 ---
 title: "X-Following-Digest---2026年5月27日"
-date: 2026-05-27T06:47:53+08:00
-publishDate: 2026-05-27T06:47:53+08:00
+date: 2026-05-27T12:57:27+08:00
+publishDate: 2026-05-27T12:57:27+08:00
 description:
 tags:
+  - X
+  - Twitter
+  - Digest
   - AI
+  - 科技
+  - 社会观察
   - Claude
   - GPT
   - 大模型
