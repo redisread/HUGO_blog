@@ -43,10 +43,15 @@
 
 ### 新建文章
 
-在 `content/zh` 目录下自动创建对应文件：
-
 ```bash
-hugo new posts/your-post-name.md
+# 博客文章（指定分类）
+hugo new posts/technology/my-post.md
+
+# 日报
+hugo new daily/2026-05-31.md
+
+# 周报
+hugo new weekly/weekly-log-2026-22.md
 ```
 
 ### 本地开发
@@ -57,13 +62,17 @@ hugo server -D
 
 访问 `http://localhost:1313` 预览博客。
 
-### 构建生产版本
+### 构建与发布
 
 ```bash
+# 构建生产版本（输出到 public/）
 hugo
-```
 
-构建后的文件位于 `public/` 目录。
+# 提交后 CI 自动部署
+git add content/
+git commit -m "发布: 文章标题"
+git push origin master
+```
 
 ## 🎨 主题特性
 
@@ -84,14 +93,17 @@ HUGO_blog/
 │   ├── languages.toml       # 多语言配置
 │   └── menus.*.toml         # 多语言菜单
 ├── content/zh/              # 中文内容
-│   ├── posts/               # 博客文章
+│   ├── posts/               # 博客文章（按分类子目录存放）
+│   ├── daily/               # 日报
+│   ├── weekly/              # 周报
 │   ├── talks/               # 演讲资源
 │   ├── gallery/             # 相册
 │   ├── archive/             # 归档
 │   └── publication/         # 出版物
+├── archetypes/              # 文章模板（hugo new 使用）
 ├── themes/zzo-dev/          # 主题
-├── archetypes/              # 文章模板
 ├── assets/                  # 静态资源
+├── static/                  # 静态文件
 └── .github/workflows/       # CI/CD
 ```
 

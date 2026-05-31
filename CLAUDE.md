@@ -1,5 +1,148 @@
 # CLAUDE.md
 
+## 项目概况
+
+- **路径**: `/Users/victor/Desktop/project/github/HUGO_blog`
+- **主题**: `zzo-dev`（基于 hugo-theme-zzo）
+- **部署**: GitHub Actions → `redisread/redisread.github.io`
+- **线上地址**: https://hugo.jiahongw.com
+- **Hugo 版本**: 0.110.0 extended
+- **默认语言**: 中文（`zh`）
+
+## 环境要求
+
+本地需安装 Hugo extended 0.110.0+：
+```bash
+hugo version
+```
+
+## 本地开发
+
+```bash
+# 预览（包含草稿）
+cd /Users/victor/Desktop/project/github/HUGO_blog
+hugo server -D
+
+# 构建生产版本
+hugo
+# 输出在 public/ 目录
+```
+
+## 发布流程（hugo new）
+
+### 1. 创建新文章
+
+使用 Hugo 原生命令创建文章：
+
+```bash
+# 创建 posts 文章（带分类）
+hugo new posts/technology/my-article.md
+
+# 创建 daily 日报
+hugo new daily/2026-05-31.md
+
+# 创建 weekly 周报
+hugo new weekly/weekly-log-2026-22.md
+```
+
+### 2. 编辑文章
+
+文章 front matter 模板会自动生成，参考 `archetypes/default.md`：
+```yaml
+---
+title: "文章标题"
+date: 2026-05-31T10:00:00+08:00
+publishDate: 2026-05-31T10:00:00+08:00
+draft: false
+image: "cover.png"  # 封面图文件名，放在文章同级目录
+categories: ["technology"]
+tags: ["AI", "Hugo"]
+libraries: [katex, mermaid]  # 按需启用
+---
+```
+
+### 3. 图片处理
+
+**封面图**（必须放在文章同级目录）：
+```bash
+# 1. 复制封面图到文章目录
+cp ~/Downloads/cover.png content/zh/posts/technology/my-article/
+# 或
+mv ~/Pictures/cover.png content/zh/daily/2026-05-31/
+
+# 2. front matter 中 image 填文件名
+image: "cover.png"
+```
+
+**正文图片**（推荐 R2 图床）：
+- 先上传到 R2 bucket: `hugo-blog`
+- 使用完整 URL: `https://cos.jiahongw.com/images/xxx.png`
+- 上传命令参考 `r2-uploader` skill
+
+**R2 上传命令示例**（在终端中执行）：
+```bash
+# 单张图片
+r2-upload ./my-image.png hugo-blog/images/
+
+# 获取 URL
+# https://cos.jiahongw.com/images/my-image.png
+```
+
+### 4. Git 提交
+
+```bash
+cd /Users/victor/Desktop/project/github/HUGO_blog
+git add content/
+git commit -m "发布: 文章标题"
+git push origin master
+```
+
+### 5. CI 自动部署
+
+Push 到 `master` 分支后：
+1. GitHub Actions 自动触发（`.github/workflows/hugo-blog-ci.yml`）
+2. Hugo 构建 `public/` 目录
+3. 部署到 `redisread/redisread.github.io`
+4. 线上生效（通常 1-2 分钟）
+
+## 内容分类与路径
+
+| 类型 | 物理路径 | 说明 |
+|------|----------|------|
+| 博客文章 | `content/zh/posts/<category>/` | 按分类子目录存放 |
+| 日报 | `content/zh/daily/` | AI 每日资讯摘要 |
+| 周报 | `content/zh/weekly/` | 周总结与计划 |
+| Talks | `content/zh/talks/` | 演讲、资源收集 |
+| Gallery | `content/zh/gallery/` | 相册分组 |
+
+**现有分类目录**（posts 下）：
+```bash
+ls content/zh/posts/
+# AI, ai-programming, books, life, professional, tech, technical-practice, technology, thoughts, tooling, 技术
+```
+
+## 常用命令速查
+
+```bash
+# 创建技术类文章
+hugo new posts/technology/my-article.md
+
+# 创建 AI 类文章
+hugo new posts/AI/my-article.md
+
+# 创建日报（建议带日期前缀）
+hugo new daily/$(date +%Y-%m-%d).md
+
+# 创建周报
+hugo new weekly/weekly-log-$(date +%Y-%W).md
+
+# 预览
+hugo server -D
+
+# 构建
+hugo
+```
+
 ## Shortcodes 使用
 
 zzo 主题提供了丰富的 Shortcodes，用于增强文章表现力。
@@ -52,20 +195,20 @@ This is box shortcode
 {{< tabs Windows MacOS Ubuntu >}}
   {{< tab >}}
 
-### Windows section
-Windows 相关内容
+  ### Windows section
+  Windows 相关内容
 
   {{< /tab >}}
   {{< tab >}}
 
-### MacOS section
-MacOS 相关内容
+  ### MacOS section
+  MacOS 相关内容
 
   {{< /tab >}}
   {{< tab >}}
 
-### Ubuntu section
-Ubuntu 相关内容
+  ### Ubuntu section
+  Ubuntu 相关内容
 
   {{< /tab >}}
 {{< /tabs >}}
@@ -177,33 +320,6 @@ error text
 | `img` | 需要标题和说明的图片 |
 | `button` | 行动号召按钮、链接跳转 |
 
-## 内容分类规范
-
-### 分类（Categories）
-
-| 分类 | 说明 | 示例标签 |
-|------|------|----------|
-| technology | 技术文章、编程、工具 | AI 编程、系统架构 |
-| life | 日常记录、随笔 | 旅行、读书 |
-| thoughts | 深度思考、观点 | 职业规划、方法论 |
-
-### 常用标签（Tags）
-
-- **AI/LLM**: AI, Claude, GPT, LLM, Prompt
-- **编程**: Python, Java, Go, JavaScript, 架构
-- **工具**: Obsidian, Docker, Git
-- **效率**: 工作流, 自动化, 时间管理
-- **生活**: 读书, 电影, 旅行
-
-### 特殊内容类型
-
-| 类型 | 路径 | 说明 |
-|------|------|------|
-| 日报 | `zh/daily/` | AI 每日资讯摘要 |
-| 周报 | `zh/weekly/` | 周总结与计划 |
-| Talks | `zh/talks/` | 演讲、资源收集 |
-| Gallery | `zh/gallery/` | 相册分组 |
-
 ## 技术配置
 
 ### 启用数学公式
@@ -215,6 +331,7 @@ libraries: [katex]
 
 ### 启用 Mermaid 图表
 
+在 front matter 添加：
 ```yaml
 libraries: [mermaid]
 ```
