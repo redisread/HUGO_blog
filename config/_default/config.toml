@@ -61,7 +61,7 @@ enableRobotsTXT = true
     startLevel = 2
 
 [outputs]
-  page = ["HTML", "SearchIndex"]
+  page = ["HTML"]
   home = ["HTML", "RSS", "SearchIndex"]
   section = ["HTML", "RSS", "SearchIndex"]
   taxonomyTerm = ["HTML", "RSS", "SearchIndex"]
