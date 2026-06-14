@@ -1,7 +1,7 @@
 ---
 title: "X List V2 每3小时精选 | 2026-05-11 00:05"
 date: 2026-05-11T00:05:00+08:00
-draft: false
+draft: true
 cover_image: https://cos.jiahongw.com/agent/2026-05-11/x-list-v2-hourly-cover-2026051100.png
 author: "Victor"
 tags: ["X-List", "AI", "Twitter", "精选"]

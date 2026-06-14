@@ -1,7 +1,7 @@
 ---
 title: "X List 每小时精选 | 2026-05-08 12:00"
 date: 2026-05-08T12:00:00+08:00
-draft: false
+draft: true
 cover_image: "https://cos.jiahongw.com/agent/2026-05-08/x-list-hourly-2026-05-08-12-cover.png"
 author: "Victor"
 tags: ["x-list", "twitter", "ai", "agents", "digest"]

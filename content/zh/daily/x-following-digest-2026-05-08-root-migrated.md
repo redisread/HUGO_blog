@@ -1,7 +1,7 @@
 ---
 title: "X Following Digest - 2026-05-08"
 date: 2026-05-08T10:40:00+08:00
-draft: false
+draft: true
 cover_image: https://cos.jiahongw.com/agent/20260508/x-digest-cover-20260508104000.png
 author: Victor
 tags: ["x-following", "digest", "twitter", "ai", "web3"]
