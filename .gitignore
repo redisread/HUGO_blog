@@ -17,3 +17,6 @@ textgenerator/*
 
 # Ruff cache
 .ruff_cache/
+
+# Claude Code local settings (not project rules)
+.claude/settings.local.json

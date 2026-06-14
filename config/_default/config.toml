@@ -9,7 +9,7 @@ title = "VictorHong's Blog"
 defaultContentLanguage = "zh"
 
 # 设置是否 baseURL/en/, baseURL/kr/ ...
-defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = false
 
 # Set `true` for Chinese/Japanese/Korean languages.
 hasCJKLanguage = true
