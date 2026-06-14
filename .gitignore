@@ -11,3 +11,9 @@ upload/
 
 .obsidian
 textgenerator/*
+
+# Wrangler
+.wrangler/
+
+# Ruff cache
+.ruff_cache/
