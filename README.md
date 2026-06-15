@@ -11,7 +11,7 @@
 
 ## 📚 项目介绍
 
-这是一个基于 Hugo 搭建的多语言博客项目，使用自定义主题 `zzo-dev`。
+这是一个基于 Hugo 搭建的中文单语言博客项目，使用自定义主题 `zzo-dev`。
 
 
 ### 内容分类
@@ -65,8 +65,11 @@ hugo server -D
 ### 构建与发布
 
 ```bash
+# 内容发布检查
+bash scripts/check-content.sh
+
 # 构建生产版本（输出到 public/）
-hugo
+hugo --gc --minify
 
 # 提交后 CI 自动部署
 git add content/
@@ -90,8 +93,8 @@ git push origin master
 HUGO_blog/
 ├── config/_default/          # 配置文件
 │   ├── config.toml          # 主配置
-│   ├── languages.toml       # 多语言配置
-│   └── menus.*.toml         # 多语言菜单
+│   ├── languages.toml       # 中文站点配置
+│   └── menus.zh.toml        # 中文菜单
 ├── content/zh/              # 中文内容
 │   ├── posts/               # 博客文章（按分类子目录存放）
 │   ├── daily/               # 日报
@@ -111,9 +114,10 @@ HUGO_blog/
 
 使用 GitHub Actions 自动化部署：
 
-1. 推送到 `master` 分支自动触发构建
-2. 使用 Hugo 0.110.0 extended 版本
-3. 部署到 `redisread/redisread.github.io`
+1. PR 修改 `content/**` 时自动运行内容发布检查
+2. 推送到 `master` 分支自动触发 Hugo 构建
+3. 使用 Hugo 0.110.0 extended 版本
+4. 部署到 `redisread/redisread.github.io`
 
 ## 📄 License
 

@@ -70,6 +70,19 @@ echo "[4/4] Checking frontmatter required fields..."
 
 REQUIRED_FIELDS=("title" "date")
 
+has_frontmatter_field() {
+  local file="$1"
+  local field="$2"
+
+  awk -v field="$field" '
+    NR == 1 && $0 != "---" { exit 1 }
+    NR == 1 { in_frontmatter = 1; next }
+    in_frontmatter && $0 == "---" { exit 1 }
+    in_frontmatter && $0 ~ "^" field ":" { found = 1; exit 0 }
+    END { exit found ? 0 : 1 }
+  ' "$file"
+}
+
 while IFS= read -r -d '' file; do
   # 跳过 _index.md / _index.*.md（section config pages）
   # 跳过 index.md in publication/（theme template placeholders）
@@ -89,7 +102,7 @@ while IFS= read -r -d '' file; do
 
   missing=""
   for field in "${REQUIRED_FIELDS[@]}"; do
-    if ! grep -q "^${field}:" "$file"; then
+    if ! has_frontmatter_field "$file" "$field"; then
       missing="$missing $field"
     fi
   done
@@ -106,7 +119,7 @@ while IFS= read -r -d '' file; do
   fi
 done < <(find "$CONTENT_DIR" -name "*.md" -print0)
 
-if [ $ERRORS -eq 0 ] || [ "$(find "$CONTENT_DIR" -name "*.md" -not -name "_index.md" | wc -l | tr -d ' ')" -eq 0 ]; then
+if [ $ERRORS -eq 0 ]; then
   echo "  ✅ All content files have required frontmatter"
 fi
 
