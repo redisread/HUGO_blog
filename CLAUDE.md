@@ -16,7 +16,8 @@ Personal Hugo blog.
 ```bash
 hugo version
 hugo server -D
-hugo
+bash scripts/check-content.sh
+hugo --gc --minify
 ```
 
 Use Hugo native creation commands:
@@ -92,7 +93,8 @@ Use normal Markdown by default. For zzo theme shortcodes, see:
 ## Publish Flow
 
 ```bash
-hugo
+bash scripts/check-content.sh
+hugo --gc --minify
 git add content/
 git commit -m "发布: 文章标题"
 git push origin master
@@ -104,7 +106,8 @@ Push to `master` triggers `.github/workflows/hugo-blog-ci.yml`.
 
 - Do not edit generated `public/` unless the task explicitly requires generated output.
 - Preserve UTF-8 Chinese text.
-- Before publishing, run `hugo` and inspect obvious build errors.
+- Before publishing, run `bash scripts/check-content.sh` and `hugo --gc --minify`.
+- Keep all authored content under `content/zh/`; do not add root `content/*.md` or other language directories.
 - Keep article assets close to the article when they are part of the bundle.
 - Do not put secrets or Cloudflare credentials in content or config.
 
