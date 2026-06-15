@@ -2,7 +2,9 @@
 # HUGO_blog 内容发布检查
 # 检查点：
 # 1. 禁止在 content/ 根目录（content/zh/ 之外）新增 .md 文件
-# 2. 校验所有内容文件的 frontmatter 必填字段
+# 2. 禁止 content/ 下出现非 zh 顶层目录
+# 3. 禁止 content/ 下出现 .DS_Store 等本机缓存文件
+# 4. 校验所有内容文件的 frontmatter 必填字段
 
 set -e
 
@@ -16,7 +18,7 @@ echo "=== HUGO_blog Content Check ==="
 # 检查 1：root content/ 不应有 .md 文件
 # ============================================
 echo ""
-echo "[1/2] Checking root content/ for orphan .md files..."
+echo "[1/4] Checking root content/ for orphan .md files..."
 
 ROOT_FILES=$(find "$CONTENT_DIR" -maxdepth 1 -name "*.md" 2>/dev/null)
 if [ -n "$ROOT_FILES" ]; then
@@ -29,10 +31,42 @@ else
 fi
 
 # ============================================
-# 检查 2：frontmatter 必填字段
+# 检查 2：content/ 顶层目录只能是 zh
 # ============================================
 echo ""
-echo "[2/2] Checking frontmatter required fields..."
+echo "[2/4] Checking content/ top-level directories..."
+
+INVALID_CONTENT_DIRS=$(find "$CONTENT_DIR" -mindepth 1 -maxdepth 1 -type d ! -name "zh" 2>/dev/null)
+if [ -n "$INVALID_CONTENT_DIRS" ]; then
+  echo "  ❌ ERROR: unexpected content directories found:"
+  echo "$INVALID_CONTENT_DIRS" | sed 's/^/    /'
+  echo "  This is a single-language site. All content must be under content/zh/"
+  ERRORS=$((ERRORS + 1))
+else
+  echo "  ✅ Only content/zh exists"
+fi
+
+# ============================================
+# 检查 3：禁止本机缓存文件进入内容目录
+# ============================================
+echo ""
+echo "[3/4] Checking local cache files under content/..."
+
+LOCAL_CACHE_FILES=$(git -C "$ROOT_DIR" ls-files content | grep -E '(^|/)(\.DS_Store|Thumbs\.db)$' || true)
+if [ -n "$LOCAL_CACHE_FILES" ]; then
+  echo "  ❌ ERROR: local cache files found under content/:"
+  echo "$LOCAL_CACHE_FILES" | sed 's/^/    /'
+  echo "  Remove them before committing."
+  ERRORS=$((ERRORS + 1))
+else
+  echo "  ✅ No local cache files in content/"
+fi
+
+# ============================================
+# 检查 4：frontmatter 必填字段
+# ============================================
+echo ""
+echo "[4/4] Checking frontmatter required fields..."
 
 REQUIRED_FIELDS=("title" "date")
 
@@ -60,17 +94,15 @@ while IFS= read -r -d '' file; do
     fi
   done
 
-  if [ -n "$missing" ]; then
-    # 提取 frontmatter 块（--- 之间的内容）
-    has_frontmatter=false
-    if head -1 "$file" | grep -q "^---$"; then
-      has_frontmatter=true
-    fi
+  if ! head -1 "$file" | grep -q "^---$"; then
+    echo "  ❌ $file — missing frontmatter block"
+    ERRORS=$((ERRORS + 1))
+    continue
+  fi
 
-    if $has_frontmatter; then
-      echo "  ❌ $file — missing:$missing"
-      ERRORS=$((ERRORS + 1))
-    fi
+  if [ -n "$missing" ]; then
+    echo "  ❌ $file — missing:$missing"
+    ERRORS=$((ERRORS + 1))
   fi
 done < <(find "$CONTENT_DIR" -name "*.md" -print0)
 
