@@ -5,7 +5,8 @@ description: "从 X List 最新 100 条推文中筛选出的高质量内容 --- 
 draft: false
 cover_image: https://cos.jiahongw.com/agent/2026-05-10/x-list-v2-cover-1778388470502.png
 author: Victor
----> 从 X List 最新 100 条推文中筛选出的高质量内容
+---
+> 从 X List 最新 100 条推文中筛选出的高质量内容
 
 ---
 

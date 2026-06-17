@@ -7,7 +7,8 @@ cover_image: https://cos.jiahongw.com/agent/2026-06-02/x-list-v2-cover-202606020
 author: Victor
 categories: ["daily"]
 tags: ["X List", "AI", "Twitter", "精选"]
----> 📊 共筛选 100 条推文，精选 8 篇高质量内容
+---
+> 📊 共筛选 100 条推文，精选 8 篇高质量内容
 
 ---
 

@@ -15,7 +15,8 @@ tags:
   - 子代理
   - 工作流编排
   - Anthropic
----![Claude Code Dynamic Workflows概念图](https://cos.jiahongw.com/rss-daily/20260605/cover.png)
+---
+![Claude Code Dynamic Workflows概念图](https://cos.jiahongw.com/rss-daily/20260605/cover.png)
 
 2026年5月28日，Anthropic发布Claude Opus 4.8的同时，向Claude Code注入了一个足以改变AI编程范式的功能：**Dynamic Workflows**（动态工作流）。这不是一次普通的版本迭代，而是AI编程从"Prompt编排"向"脚本编排"的范式跃迁。
 

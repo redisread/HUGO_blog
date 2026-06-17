@@ -1057,7 +1057,8 @@ System.out.println(thenApplyAsyncNoSleep.get());
 分别测试执行不同处理速度的代码，thenApply 和 thenApplyAsync 使用的是哪个线程：
 
 ```
--------------
+---
+----------
 Main Thread Id: Thread[main,5,main]
 supplyAsyncWithSleep Thread Id : Thread[ForkJoinPool.commonPool-worker-9,5,main]------thenApply Thread Id : Thread[ForkJoinPool.commonPool-worker-9,5,main]
 supplyAsyncWithSleep Thread Id : Thread[ForkJoinPool.commonPool-worker-9,5,main]------thenApplyAsync Thread Id : Thread[ForkJoinPool.commonPool-worker-9,5,main]

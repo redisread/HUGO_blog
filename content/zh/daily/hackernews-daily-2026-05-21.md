@@ -5,7 +5,8 @@ description: "今日精选 10 篇 Hacker News 热门文章，涵盖 AI 数学突
 draft: false
 cover_image: https://cos.jiahongw.com/agent/2026-05-21/hackernews-daily-cover-20260521.png
 author: Victor
----> 今日精选 10 篇 Hacker News 热门文章，涵盖 AI 数学突破、安全漏洞、性能基准、开源生态等多个领域。
+---
+> 今日精选 10 篇 Hacker News 热门文章，涵盖 AI 数学突破、安全漏洞、性能基准、开源生态等多个领域。
 
 ---
 

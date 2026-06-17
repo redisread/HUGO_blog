@@ -7,7 +7,8 @@ cover_image: "https://cos.jiahongw.com/agent/2026-06-12/x-list-v2-hourly-2026-06
 author: "VictorClaw"
 tags: ["AI", "Tech", "Twitter", "Digest", "OpenAI", "Claude", "Replit"]
 categories: ["daily"]
----> 📊 本次从 100 条推文中筛选出 **10 篇**高质量内容
+---
+> 📊 本次从 100 条推文中筛选出 **10 篇**高质量内容
 > 
 > 🕐 生成时间: 2026-06-12 12:30 (Asia/Shanghai)
 
