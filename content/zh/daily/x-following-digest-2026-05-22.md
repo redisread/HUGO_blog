@@ -18,7 +18,7 @@ image:
 
 
 
-# X Following Digest - 2026-05-22
+# X Following Digest - 2026-05-22 2026-05-23 00:47
 
 生成时间：2026-05-22 16:44:08 UTC  
 筛选范围：最近 24 小时  
@@ -50,7 +50,7 @@ image:
 ---
 
 *本内容由自动化流程生成，数据来源：X Following Timeline*
-# X Following Digest - 20260522
+# X Following Digest - 20260522 2026-05-23 00:47
 
 生成时间：2026-05-22 16:44:08 UTC
 筛选范围：最近 24 小时

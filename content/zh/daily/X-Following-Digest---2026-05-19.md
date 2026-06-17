@@ -19,7 +19,7 @@ image: X-Following-Digest---2026-05-19-cover.png
 
 
 
-# X Following Digest - 2026-05-19
+# X Following Digest - 2026-05-19 2026-05-20 00:55
 
 生成时间：2026-05-20 00:48:00 UTC
 筛选范围：最近 24 小时

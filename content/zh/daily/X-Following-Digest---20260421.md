@@ -18,7 +18,7 @@ image:
 libraries: ['katex']
 ---
 
-# X Following Digest - 20260421
+# X Following Digest - 20260421 2026-04-21 17:43
 
 生成时间：2026-04-21 17:43:24 UTC
 筛选范围：最近 24 小时

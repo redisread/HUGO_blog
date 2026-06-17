@@ -23,7 +23,7 @@ libraries: ['katex']
 
 
 
-# X Following Digest - 2026-05-25
+# X Following Digest - 2026-05-25 2026-05-25 06:45
 
 > ⚠️ **注意**：本次报告基于网络搜索的 AI/科技新闻生成，因为 autocli Twitter 工具暂时无法连接 Chrome 扩展。
 

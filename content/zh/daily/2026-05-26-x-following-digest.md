@@ -15,7 +15,7 @@ categories:
 image: https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=630&fit=crop
 ---
 
-# X Following Digest - 2026-05-26
+# X Following Digest - 2026-05-26 2026-05-26 06:40
 
 > ⚠️ **注意**：本次报告基于网络搜索的 AI/科技新闻生成，因为 autocli Twitter 工具暂时无法连接 Chrome 扩展。
 

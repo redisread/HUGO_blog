@@ -24,7 +24,7 @@ X Following Digest - 每日精选推文汇总
 
 <!--more-->
 
-# X Following Digest - 20260512
+# X Following Digest - 20260512 2026-05-12 06:46
 
 生成时间：2026-05-12 06:43:44
 筛选范围：最近 24 小时

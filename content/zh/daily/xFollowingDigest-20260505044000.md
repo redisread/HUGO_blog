@@ -17,7 +17,7 @@ image: xFollowingDigest-20260505044000-cover.png
 
 
 
-# X Following Digest - 20260505
+# X Following Digest - 20260505 2026-05-05 12:46
 
 生成时间：2026-05-05 12:41:41
 筛选范围：最近 24 小时

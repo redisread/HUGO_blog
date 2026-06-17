@@ -153,14 +153,14 @@ part2:https://i.loli.net/2020/05/30/3trKVpOMU5sTQfB.jpg
 | 启用Z Pre-Pass时执行的早期Z绘制 不绘制Tile渲染的硬件（移动设备，Android或iOS）对于 PC或PS4，将生成深度缓冲区和HiZ，因此后续绘制速度很快成为？ | DeferredShadingRenderer.cpp（768） RenderPrePass（）         |
 | 安全GBuffer                                                  | DeferredShadingRenderer.cpp（774） GSceneRenderTargets.AllocGBufferTargets（） |
 | 透明光传播量                                                 | DeferredShadingRenderer.cpp（779） ClearLPVs（）             |
-| 使用DBuffer时绘制延期贴图[单击此处](http://monsho.blog63.fc2.com/blog-entry-139.html)获取 DBuffer和延期贴图 | DeferredShadingRenderer.cpp（796） GCompositionLighting.ProcessBeforeBasePass（） |
+| 使用DBuffer时绘制延期贴图[单击此处](https://monsho.blog63.fc2.com/blog-entry-139.html)获取 DBuffer和延期贴图 | DeferredShadingRenderer.cpp（796） GCompositionLighting.ProcessBeforeBasePass（） |
 | 如有必要，请 在绘制线框图时清除GBuffer透明颜色缓冲区， 有些游戏在发行游戏时无法清除GBuffer或屏幕。 | DeferredShadingRenderer.cpp（805） SetAndClearViewGBuffer（）  DeferredShadingRenderer.cpp（816） RHICmdList.Clear（） |
 | 渲染不透明的对象渲染 项目，这些项目根据它们是Masked还是Default，是否有LightMap等按每种排序顺序进行了精细分类 | DeferredShadingRenderer.cpp（828） RenderBasePass（）        |
 | 清除 GBuffer 的未绘制部分如果事先清除GBuffer，则不必要。     | DeferredShadingRenderer.cpp（851） ClearGBufferAtMaxZ（）    |
-| 绘制 自定义深度请参见[此处](http://monsho.blog63.fc2.com/blog-entry-138.html)以获取自定义深度 | DeferredShadingRenderer.cpp（860） RenderCustomDepthPass（） |
+| 绘制 自定义深度请参见[此处](https://monsho.blog63.fc2.com/blog-entry-138.html)以获取自定义深度 | DeferredShadingRenderer.cpp（860） RenderCustomDepthPass（） |
 | 在这里再次模拟GPU粒子除了在这里 处理使用深度缓冲区执行碰撞检测的 粒子外，还对GPU粒子进行排序 | DeferredShadingRenderer.cpp（865） 场景-> FXSystem-> PostRenderOpaque（） |
 | 为SceneDepthTexture创建一个半分辨率（每个方面为1/4分辨率）的缓冲区 | DeferredShadingRenderer.cpp（875） UpdateDownsampledDepthSurface（） |
-| 执行阻塞测试 HZB的构建，执行提交 的HZB [Attotempkinder](https://twitter.com/tempkinder)的[这篇文章](http://darakemonodarake.hatenablog.jp/entry/2014/12/17/000422)指 | DeferredShadingRenderer.cpp（881） BeginOcclusionTests（）   |
+| 执行阻塞测试 HZB的构建，执行提交 的HZB [Attotempkinder](https://twitter.com/tempkinder)的[这篇文章](https://darakemonodarake.hatenablog.jp/entry/2014/12/17/000422)指 | DeferredShadingRenderer.cpp（881） BeginOcclusionTests（）   |
 | 开始写 因为有点复杂，所以要写一些细节                        | DeferredShadingRenderer.cpp（890）                           |
 | 不使用DBuffer绘制延迟的贴图                                  | CompositionLighting.cpp（293） AddDeferredDecalsBeforeLighting（） |
 | 在屏幕空间中绘制环境光遮挡                                   | CompositionLighting.cpp（300） AddPostProcessingAmbientOcclusion（） |
@@ -172,7 +172,7 @@ part2:https://i.loli.net/2020/05/30/3trKVpOMU5sTQfB.jpg
 | 如果用于半透明的体积光是有效的，则将每个光注入到体积光中 ，从而在3D纹理上绘制光效果。 | LightRendering.cpp（455） InjectTranslucentVolumeLightingArray（）  LightRendering.cpp（461） InjectSimpleTranslucentVolumeLightingArray（） |
 | 使用灯光功能投射阴影的灯光将单独处理                         | LightRendering.cpp（468-552）                                |
 | 首先，我在[投射](https://sites.google.com/site/monshonosuana/directxno-hanashi-1/directx-137)阴影时 绘制了一个阴影贴图；在这里我还绘制了一个 半透明的阴影贴图；我记得半透明的当然是[傅立叶不透明度贴图](https://sites.google.com/site/monshonosuana/directxno-hanashi-1/directx-137)。 | LightRendering.cpp（495） RenderTranslucentProjectedShadows（）  LightRendering.cpp（497） RenderProjectedShadows（） |
-| 使用LPV时绘制[反射阴影贴图](http://d.hatena.ne.jp/hanecci/20100731/1280596856) | LightRendering.cpp（508） RenderReflectiveShadowMaps（）     |
+| 使用LPV时绘制[反射阴影贴图](https://d.hatena.ne.jp/hanecci/20100731/1280596856) | LightRendering.cpp（508） RenderReflectiveShadowMaps（）     |
 | 灯光功能图 阴影指示器图                                      | LightRendering.cpp（515） RenderLightFunction（）  LightRendering.cpp（522） RenderPreviewShadowsIndicator（） |
 | 衰减缓冲器中的分辨 光的衰减信息是否曾经被吸入另一个缓冲器中？ | LightRendering.cpp（534） GSceneRenderTargets.FinishRenderingLightAttenuation（） |
 | 注入体积光以获得半透明                                       | LightRendering.cpp（541） InjectTranslucentVolumeLighting（） |

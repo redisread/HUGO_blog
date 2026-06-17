@@ -183,7 +183,7 @@ I also cover intuitions about how these models work under the hood, so you know 
 
 Along the way, you'll see flying squirrels, a creativity test, some of my old family photos, and fireworks.
 
-Join me at http://deeplearning.ai/courses/ai-prompting-for-everyone
+Join me at https://deeplearning.ai/courses/ai-prompting-for-everyone
 
 ### 核心要点
 吴恩达推出新课程《AI Prompting for Everyone》，教授 2026 年最新的提示工程技能，涵盖深度研究模式、多模态上下文、复杂决策等进阶技巧。

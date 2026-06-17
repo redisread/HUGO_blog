@@ -21,7 +21,7 @@ libraries: ['katex']
 
 
 
-# X Following Digest - 20260508
+# X Following Digest - 20260508 2026-05-09 01:08
 
 生成时间：2026-05-08 16:50:29 UTC
 筛选范围：最近 24 小时

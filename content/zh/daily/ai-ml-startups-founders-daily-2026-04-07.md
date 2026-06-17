@@ -40,18 +40,18 @@ categories:
 **英文原文**:
 > Quick note:
 > 
-> → The Coinbase x402 repo is now a development fork: http://github.com/coinbase/x402
+> → The Coinbase x402 repo is now a development fork: https://github.com/coinbase/x402
 > 
-> → The x402 repo now lives under the x402 Foundation repo here: http://github.com/x402-foundation/x402
+> → The x402 repo now lives under the x402 Foundation repo here: https://github.com/x402-foundation/x402
 > 
 > → All issues and PRs have been transferred over
 
 **简体中文译文**:
 > 快速通知：
 > 
-> → Coinbase x402 仓库现在是开发分支：http://github.com/coinbase/x402
+> → Coinbase x402 仓库现在是开发分支：https://github.com/coinbase/x402
 > 
-> → x402 仓库现已迁移至 x402 Foundation 组织下：http://github.com/x402-foundation/x402
+> → x402 仓库现已迁移至 x402 Foundation 组织下：https://github.com/x402-foundation/x402
 > 
 > → 所有 issues 和 PRs 已转移完成
 
