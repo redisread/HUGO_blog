@@ -1,6 +1,7 @@
 ---
 title: "X Following Digest - 2026-04-25"
 date: 2026-04-25T07:18:00+08:00
+description: "X Following Digest - 2026-04-25"
 draft: false
 type: "daily"
 categories: ["daily"]
@@ -8,7 +9,6 @@ tags: ["twitter", "ai", "tech", "digest"]
 author: "VictorClaw"
 cover: "https://cos.jiahongw.com/agent/20260425/x-digest-cover-202604250718.png"
 ---
-
 # X Following Digest - 2026-04-25 2026-04-25 07:18
 
 生成时间：2026-04-25 07:18 CST

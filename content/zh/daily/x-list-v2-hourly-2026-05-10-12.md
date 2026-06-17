@@ -1,11 +1,11 @@
 ---
 title: "X List V2 每3小时精选 | 2026-05-10 12:00"
 date: 2026-05-10T12:30:00+08:00
+description: "从 X List 最新 100 条推文中筛选出的高质量内容 --- 📊 筛选统计 - 总推文数: 100 条 - 精选数量: 8 篇 - 筛选标准: 点赞10 或 转发5 或 内容深度100字 或 知名作者 --- 精选内容 1"
 draft: false
 cover_image: https://cos.jiahongw.com/agent/2026-05-10/x-list-v2-cover-1778388470502.png
 author: Victor
 ---
-
 > 从 X List 最新 100 条推文中筛选出的高质量内容
 
 ---

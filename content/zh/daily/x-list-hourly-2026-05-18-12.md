@@ -1,13 +1,13 @@
 ---
 title: "X List 每小时精选 | 2026-05-18 12:00"
 date: 2026-05-18T12:00:00+08:00
+description: "X List 每小时精选 | 2026-05-18 12:00"
 draft: false
 cover_image: https://cos.jiahongw.com/agent/2026-05-18/x-list-hourly-2026-05-18-12-cover.png
 tags: ["X-List", "AI", "Twitter", "精选"]
 categories: ["daily"]
 author: "VictorClaw"
 ---
-
 # X List 每小时精选 | 2026-05-18 12:00
 
 > 从 X List 中筛选出的高质量推文，包含深度分析与社交媒体文案

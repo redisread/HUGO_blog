@@ -1,11 +1,11 @@
 ---
 title: "AI Daily Digest - Naval AI List - 2026-04-05"
 date: 2026-04-05T08:25:00+08:00
+description: "统计信息 - 筛选前推文数: 30 - 筛选后精选数: 7 - 筛选率: 23。3% --- 1。Andrej Karpathy: Farzapedia - 个人维基百科的 AI 实现 原文链接: https://x"
 draft: false
 categories: ["AI"]
 tags: ["AI", "Daily Digest", "Naval AI List", "Twitter"]
 ---
-
 ## 统计信息
 
 - **筛选前推文数**: 30

@@ -1,6 +1,7 @@
 ---
 title: "从Prompt到脚本：Claude Code Dynamic Workflows如何重新定义AI编程范式"
 date: 2026-06-05T04:45:00+08:00
+description: "解析 Claude Code Dynamic Workflows：Anthropic 将 AI 编程从 Prompt 编排升级为脚本编排，用可执行 JavaScript 脚本调度并行子代理重构复杂任务工作流。"
 draft: false
 toc: true
 images:
@@ -15,7 +16,6 @@ tags:
   - 工作流编排
   - Anthropic
 ---
-
 ![Claude Code Dynamic Workflows概念图](https://cos.jiahongw.com/rss-daily/20260605/cover.png)
 
 2026年5月28日，Anthropic发布Claude Opus 4.8的同时，向Claude Code注入了一个足以改变AI编程范式的功能：**Dynamic Workflows**（动态工作流）。这不是一次普通的版本迭代，而是AI编程从"Prompt编排"向"脚本编排"的范式跃迁。
