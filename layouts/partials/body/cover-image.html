@@ -1,0 +1,29 @@
+{{- /* cover-image: 文章封面响应式渲染。
+     先找 page resources（leaf bundle），再找 assets/images/（全局），最后 relURL fallback。
+     外部 URL 普通 img 标签。 */ -}}
+{{- $img := $.Params.image -}}
+{{- with $img -}}
+  {{- $imgStr := printf "%v" . -}}
+  {{- if or (hasPrefix $imgStr "http://") (hasPrefix $imgStr "https://") -}}
+    <div class="single__cover"><img src="{{ . }}" alt="{{ $.Title }}" loading="lazy" decoding="async"></div>
+  {{- else -}}
+    {{- $res := $.Resources.GetMatch $imgStr -}}
+    {{- if not $res -}}
+      {{- $res = resources.Get (printf "images/%s" $imgStr) -}}
+    {{- end -}}
+    {{- with $res -}}
+      {{- $w800 := .Resize "800x q75" -}}
+      {{- $w1200 := .Resize "1200x q75" -}}
+      {{- $w1600 := .Resize "1600x q75" -}}
+      <div class="single__cover">
+        <picture>
+          <source media="(max-width: 800px)" srcset="{{ $w800.RelPermalink }}">
+          <source media="(max-width: 1200px)" srcset="{{ $w1200.RelPermalink }}">
+          <img src="{{ $w1600.RelPermalink }}" alt="{{ $.Title }}" loading="lazy" decoding="async" width="{{ $w1600.Width }}" height="{{ $w1600.Height }}">
+        </picture>
+      </div>
+    {{- else -}}
+      <div class="single__cover"><img src="{{ $imgStr | relURL }}" alt="{{ $.Title }}" loading="lazy" decoding="async"></div>
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

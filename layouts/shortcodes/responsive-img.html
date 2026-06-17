@@ -1,0 +1,26 @@
+{{- /* responsive-img: 对 page bundle 本地图片生成多尺寸响应式输出。
+     外部 URL 直接 fallback 普通 img 标签。
+     用法: {{< responsive-img src="cover.png" alt="描述" >}} */ -}}
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $class := .Get "class" | default "responsive-img" -}}
+
+{{- if or (hasPrefix $src "http://") (hasPrefix $src "https://") -}}
+  {{- /* 外部 URL：不处理，直接输出 */ -}}
+  <img src="{{ $src }}" alt="{{ $alt }}" class="{{ $class }}" loading="lazy" decoding="async">
+{{- else -}}
+  {{- $res := $.Page.Resources.GetMatch $src -}}
+  {{- if $res -}}
+    {{- $w400 := $res.Resize "400x q75" -}}
+    {{- $w800 := $res.Resize "800x q75" -}}
+    {{- $w1200 := $res.Resize "1200x q75" -}}
+    <picture class="{{ $class }}">
+      <source media="(max-width: 600px)" srcset="{{ $w400.RelPermalink }}">
+      <source media="(max-width: 1000px)" srcset="{{ $w800.RelPermalink }}">
+      <img src="{{ $w1200.RelPermalink }}" alt="{{ $alt }}" loading="lazy" decoding="async" width="{{ $w1200.Width }}" height="{{ $w1200.Height }}">
+    </picture>
+  {{- else -}}
+    {{- /* 本地路径但找不到 bundle 资源，fallback */ -}}
+    <img src="{{ $src | relURL }}" alt="{{ $alt }}" class="{{ $class }}" loading="lazy" decoding="async">
+  {{- end -}}
+{{- end -}}
