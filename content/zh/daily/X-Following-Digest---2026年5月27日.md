@@ -24,7 +24,7 @@ image:
 
 
 
-# X Following Digest - 2026年5月27日
+# X Following Digest - 2026年5月27日 2026-05-27 12:57
 
 **生成时间：** 2026-05-27 06:40 (Asia/Shanghai)  
 **筛选范围：** 最近 24 小时  

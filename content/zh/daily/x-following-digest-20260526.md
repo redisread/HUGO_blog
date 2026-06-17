@@ -20,7 +20,7 @@ image: x-following-digest-20260526-cover.png
 
 
 
-# X Following Digest - 2026年5月26日
+# X Following Digest - 2026年5月26日 2026-05-26 18:48
 
 **生成时间：** 2026-05-26 12:40 (Asia/Shanghai)  
 **筛选范围：** 最近 24 小时  

@@ -8,7 +8,7 @@ description: "X平台关注列表24小时精选，涵盖7000亿AI投资、Claude
 cover: ""
 ---
 
-# X Following Digest - 2026年4月30日
+# X Following Digest - 2026年4月30日 2026-04-30 07:16
 
 > 生成时间：2026-04-30 07:16 UTC+8 | 筛选范围：最近 24 小时 | 精选推文数：10
 

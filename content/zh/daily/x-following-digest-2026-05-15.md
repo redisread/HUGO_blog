@@ -8,7 +8,7 @@ tags: ["x-following", "digest", "twitter", "ai", "anthropic", "codex"]
 categories: ["daily"]
 ---
 
-# X Following Digest - 2026-05-15
+# X Following Digest - 2026-05-15 2026-05-15 18:40
 
 生成时间：2026-05-15 18:40 (Asia/Shanghai)  
 筛选范围：最近 24 小时  

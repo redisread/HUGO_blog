@@ -22,7 +22,7 @@ image:
 
 
 
-# X Following Digest - 2026-05-17
+# X Following Digest - 2026-05-17 2026-05-17 12:55
 
 生成时间：2026-05-17 00:45:11 UTC
 筛选范围：最近 24 小时

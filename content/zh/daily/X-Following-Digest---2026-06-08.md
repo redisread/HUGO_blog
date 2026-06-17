@@ -19,7 +19,7 @@ image: https://cos.jiahongw.com/agent/20250608/x-digest-cover-20260608164138.png
 
 
 
-# X Following Digest - 20260608
+# X Following Digest - 20260608 2026-06-09 00:47
 
 生成时间：2026-06-08 16:41:38 UTC
 筛选范围：最近 72 小时（数据时间：2026-06-06）

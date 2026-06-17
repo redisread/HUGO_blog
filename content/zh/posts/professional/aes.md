@@ -1023,7 +1023,7 @@ unsigned char *CTR(unsigned char *plain, int N)
 
 * [https://www.cnblogs.com/RabbitHu/p/bitset.html](https://www.cnblogs.com/RabbitHu/p/bitset.html) bitset用法
 * [https://blog.csdn.net/liushu1231/article/details/8844631](https://blog.csdn.net/liushu1231/article/details/8844631) bitset的空间大小
-* [http://c.biancheng.net/cpp/html/2834.html](http://c.biancheng.net/cpp/html/2834.html) 文件处理
+* [https://c.biancheng.net/cpp/html/2834.html](https://c.biancheng.net/cpp/html/2834.html) 文件处理
 * [https://bbs.pediy.com/thread-253884.htm](https://bbs.pediy.com/thread-253884.htm) AES算法带图解
 * [https://blog.csdn.net/lisonglisonglisong/article/details/41909813](https://blog.csdn.net/lisonglisonglisong/article/details/41909813 ) AES算法 CSDN
 * [https://blog.csdn.net/sinat_23338865/article/details/72869841](https://blog.csdn.net/sinat_23338865/article/details/72869841) AES五种加密模式

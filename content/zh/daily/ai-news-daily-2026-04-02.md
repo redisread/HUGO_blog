@@ -262,7 +262,7 @@ Dreamina (Jimeng) official CLI and Skill are here! No more reverse proxy hacks. 
 
 **互动数据**: 57 Likes | 7 Retweets | 3 Replies | 9,810 Views | 120 Bookmarks
 
-**引用文章**: [The Ultimate Intermediate's Guide to Claude (April 2026)](http://x.com/i/article/2036119313632104449)
+**引用文章**: [The Ultimate Intermediate's Guide to Claude (April 2026)](https://x.com/i/article/2036119313632104449)
 
 ---
 

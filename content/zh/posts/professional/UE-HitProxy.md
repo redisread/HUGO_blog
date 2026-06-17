@@ -74,7 +74,7 @@ virtual bool RequiresHitProxyStorage() override { return true; }
 参考：
 
 1. [How to select an actor in-game using GetHitProxy?](https://forums.unrealengine.com/development-discussion/c-gameplay-programming/37946-how-to-select-an-actor-in-game-using-gethitproxy)
-2. [UE4 编辑器的光标拾取](http://www.acros.me/c/unreal-engine-4-%e7%bc%96%e8%be%91%e5%99%a8%e7%9a%84%e5%85%89%e6%a0%87%e6%8b%be%e5%8f%96%ef%bc%88cursor-query%ef%bc%89%e5%8a%9f%e8%83%bd%e5%b0%8f%e8%ae%b0/)
+2. [UE4 编辑器的光标拾取](https://www.acros.me/c/unreal-engine-4-%e7%bc%96%e8%be%91%e5%99%a8%e7%9a%84%e5%85%89%e6%a0%87%e6%8b%be%e5%8f%96%ef%bc%88cursor-query%ef%bc%89%e5%8a%9f%e8%83%bd%e5%b0%8f%e8%ae%b0/)
 3. [编辑器Viewport窗口中的鼠标拾取原理](https://arenas0.com/2019/04/20/UE4_Learn_HitProxy/)
 4. [场景基本对象](https://blog.csdn.net/jiangdengc/article/details/59486288)
 5. [渲染总流程](https://blue2rgb.sydneyzh.com/ue4-deferred-shading-pipeline.html)

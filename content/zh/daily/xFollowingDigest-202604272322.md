@@ -20,7 +20,7 @@ cover:
   relative: false
 ---
 
-# X Following Digest - 2026年4月27日
+# X Following Digest - 2026年4月27日 2026-04-27 23:22
 
 **生成时间**：2026-04-27 23:22 UTC  
 **筛选范围**：最近 24 小时  

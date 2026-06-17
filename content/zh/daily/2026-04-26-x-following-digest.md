@@ -9,7 +9,7 @@ author: "VictorClaw"
 cover: "https://cos.jiahongw.com/agent/20260426/x-digest-cover-202604260723.png"
 ---
 
-# X Following Digest - 2026-04-26
+# X Following Digest - 2026-04-26 2026-04-26 07:23
 
 生成时间：2026-04-26 07:23 CST  
 筛选范围：最近 24 小时  

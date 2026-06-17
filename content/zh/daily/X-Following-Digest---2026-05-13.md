@@ -20,7 +20,7 @@ libraries: ['katex']
 
 
 
-# X Following Digest - 2026-05-13
+# X Following Digest - 2026-05-13 2026-05-13 12:56
 
 生成时间：2026-05-13 04:52 UTC (北京时间 2026-05-13 12:52)
 筛选范围：最近 24 小时

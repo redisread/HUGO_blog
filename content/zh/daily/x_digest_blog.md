@@ -15,7 +15,7 @@ image:
 
 
 
-# X Following Digest - 2026-05-08
+# X Following Digest - 2026-05-08 2026-05-08 12:49
 
 生成时间：2026-05-08 12:45 CST
 筛选范围：最近 24 小时

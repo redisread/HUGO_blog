@@ -19,7 +19,7 @@ image: https://cos.jiahongw.com/agent/20250608/x-digest-cover-202506080045.png
 
 
 
-# X Following Digest - 20250607
+# X Following Digest - 20250607 2026-06-08 00:48
 
 > **报告日期**: 2025年6月7日（周日）
 > **数据窗口**: 最近24小时推文

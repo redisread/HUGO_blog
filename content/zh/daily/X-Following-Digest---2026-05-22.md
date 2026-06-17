@@ -20,7 +20,7 @@ libraries: ['katex']
 
 
 
-# X Following Digest - 2026-05-22
+# X Following Digest - 2026-05-22 2026-05-22 18:44
 
 **生成时间：** 2026-05-22 18:40 CST
 **数据时间范围：** 基于公开信息聚合（Chrome 扩展连接失败，使用搜索数据补充）
