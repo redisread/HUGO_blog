@@ -1,7 +1,7 @@
 ---
 title: "Claude Opus 4.7 深度解析：为什么你的 Prompt 突然失效了"
 date: 2026-04-25T01:00:00+00:00
-draft: true
+draft: false
 image: ""
 description: "深度解析 Claude Opus 4.7 的重大变化：API 变更、行为改变、迁移指南"
 tags: ["AI", "Claude", "Anthropic", "编程"]

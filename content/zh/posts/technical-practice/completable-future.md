@@ -2,7 +2,7 @@
 title: CompletableFuture使用笔记
 date: 2022-03-28T17:38:53+08:00
 description: CompletableFuture使用观察者模式封装了多线程的并发，方便开发人员的使用。
-draft: true
+draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
