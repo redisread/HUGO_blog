@@ -16,9 +16,9 @@ authorEmoji: 🪶
 authorImageUrl:
 tocLevels: ["h2", "h3", "h4"]
 libraries: []
-tags: [AI, 编程, Claude, Agent, 技术趋势]
+tags: ["AI", "编程", "Claude", "Agent", "技术趋势"]
 series: []
-categories: [技术]
+categories: ["技术"]
 ---
 
 > OpenAI 共同創辦人 Andrej Karpathy 從 2025 年 12 月起就沒再親手寫過一行程式碼。這位前 Tesla AI 總監把八成以上的編碼工作交給 AI Agent，自己則處於一種他稱之為「AI 狂熱症」的狀態。這不只是個人的工作方式轉變，而是整個軟體工程行業正在經歷的結構性重組的最前線切片。

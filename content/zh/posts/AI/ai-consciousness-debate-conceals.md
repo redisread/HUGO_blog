@@ -16,9 +16,9 @@ authorEmoji: 🪶
 authorImageUrl:
 tocLevels: ["h2", "h3", "h4"]
 libraries: []
-tags: [AI, 意识, 人机协作, 增强智能, 自动化, Anthropic]
+tags: ["AI", "意识", "人机协作", "增强智能", "自动化", "Anthropic"]
 series: []
-categories: [技术]
+categories: ["技术"]
 ---
 
 > 当全世界争论机器是否能感受时，我们正悄然失去人类判断力 compound 的能力

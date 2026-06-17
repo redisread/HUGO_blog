@@ -16,7 +16,7 @@ authorEmoji: 🪶
 authorImageUrl:
 tocLevels: ["h2", "h3", "h4"]
 libraries: 
-tags: [Railway, memos]
+tags: ["Railway", "memos"]
 series: [折腾计划]
 categories: ["工具折腾"]
 ---

@@ -12,7 +12,7 @@ enableTocContent: false
 tocPosition: outer
 author: VictorHong
 authorEmoji: 🪶
-tags: [知识管理, 信息源]
+tags: ["知识管理", "信息源"]
 series: []
 categories: ["工具折腾"]
 ---

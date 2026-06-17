@@ -16,7 +16,7 @@ authorEmoji: 🪶
 authorImageUrl:
 tocLevels: ["h2", "h3", "h4"]
 libraries: [katex, mathjax, mermaid, chart, flowchartjs, msc, viz, wavedrom]
-tags: [Obsidian, 笔记, 效率]
+tags: ["Obsidian", "笔记", "效率"]
 series: []
 categories: ["工具折腾"]
 ---

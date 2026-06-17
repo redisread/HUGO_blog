@@ -9,7 +9,7 @@ enableTocContent: false
 authorEmoji: 🪶
 image: https://cos.jiahongw.com/uPic/pexels-jessica-lewis-creative-998587.jpg
 libraries: [katex, mathjax, mermaid]
-tags: [设计模式, 开发方法论]
+tags: ["设计模式", "开发方法论"]
 series:
 categories: ["技术实践"]
 ---

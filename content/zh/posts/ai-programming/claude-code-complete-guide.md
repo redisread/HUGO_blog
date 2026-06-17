@@ -9,7 +9,7 @@ enableTocContent: false
 authorEmoji: 🤖
 image: https://cos.jiahongw.com/agent/20260325/claude-code-complete-guide-cover.png
 libraries: []
-tags: [Claude, AI, 开发工具, 编程效率, Agent]
+tags: ["Claude", "AI", "开发工具", "编程效率", "Agent"]
 series:
 categories: ["AI编程"]
 ---

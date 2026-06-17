@@ -16,7 +16,7 @@ authorEmoji: 🪶
 authorImageUrl:
 tocLevels: ["h2", "h3", "h4"]
 libraries: []
-tags: [Claude, AI, Skills, 效率工具, 工作流自动化]
+tags: ["Claude", "AI", "Skills", "效率工具", "工作流自动化"]
 series: []
 categories: ["AI编程"]
 ---

@@ -16,9 +16,9 @@ authorEmoji: 🪶
 authorImageUrl:
 tocLevels: ["h2", "h3", "h4"]
 libraries: []
-tags: [AI, Claude, 编程, 效率]
+tags: ["AI", "Claude", "编程", "效率"]
 series: []
-categories: [技术]
+categories: ["技术"]
 ---
 
 Claude Code 正在重新定义开发者与 AI 协作的方式。本文系统性地梳理了从基础使用到高级技巧的完整路径，无论你是刚接触的新手还是寻求效率突破的老用户，都能找到提升空间。

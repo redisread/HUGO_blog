@@ -18,7 +18,7 @@ tocLevels: ["h1","h2", "h3", "h4"]
 libraries: [katex, mathjax, mermaid, chart, flowchartjs, msc, viz, wavedrom]
 tags: ["AI", "Claude", "编程工具", "定价策略", "Anthropic"]
 series: ["AI编程"]
-categories: [技术, AI]
+categories: ["技术", "AI"]
 ---
 
 ![封面图](https://cos.jiahongw.com/rss-daily/20260422/cover.png)

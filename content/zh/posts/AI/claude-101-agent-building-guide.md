@@ -16,9 +16,9 @@ authorEmoji: 🪶
 authorImageUrl:
 tocLevels: ["h2", "h3", "h4"]
 libraries: []
-tags: [AI, Agent, LLM, Claude, Anthropic, Workflow]
+tags: ["AI", "Agent", "LLM", "Claude", "Anthropic", "Workflow"]
 series: []
-categories: [技术]
+categories: ["技术"]
 ---
 
 > 基于 Anthropic 官方最佳实践，从简单 Workflow 到自主 Agent 的完整架构设计

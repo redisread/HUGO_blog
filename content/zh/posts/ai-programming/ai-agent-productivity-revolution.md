@@ -16,7 +16,7 @@ authorEmoji: 🪶
 authorImageUrl:
 tocLevels: ["h2", "h3", "h4"]
 libraries: []
-tags: [AI, Agent, 生产力, Claude, OpenClaw, 创作者经济]
+tags: ["AI", "Agent", "生产力", "Claude", "OpenClaw", "创作者经济"]
 series: []
 categories: ["AI编程"]
 ---

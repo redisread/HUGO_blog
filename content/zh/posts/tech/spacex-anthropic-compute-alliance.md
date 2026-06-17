@@ -16,9 +16,9 @@ authorEmoji: 🪶
 authorImageUrl:
 tocLevels: ["h2", "h3", "h4"]
 libraries: [katex, mathjax, mermaid, chart, flowchartjs, msc, viz, wavedrom]
-tags: [AI, SpaceX, Anthropic, Claude, 算力, 基础设施, xAI]
+tags: ["AI", "SpaceX", "Anthropic", "Claude", "算力", "基础设施", "xAI"]
 series: []
-categories: [技术]
+categories: ["技术"]
 ---
 
 2026年5月6日，Anthropic 在旧金山开发者日上扔下一颗重磅炸弹：**与 SpaceX 达成算力合作协议，租用后者旗下 Colossus 1 数据中心的全部容量**。超过22万张 NVIDIA GPU、300MW 功率容量将在一个月内上线，Claude Pro、Max、Code 等付费方案的 rate limit 即日起翻倍。

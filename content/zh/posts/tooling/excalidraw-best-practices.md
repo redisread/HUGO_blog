@@ -12,7 +12,7 @@ tocPosition: inner
 author: VictorHong
 authorEmoji: 🪶
 tocLevels: ["h2", "h3", "h4"]
-tags: [Excalidraw, 图表工具, 手绘风格, 可视化, 生产力工具]
+tags: ["Excalidraw", "图表工具", "手绘风格", "可视化", "生产力工具"]
 categories: ["工具折腾"]
 ---
 

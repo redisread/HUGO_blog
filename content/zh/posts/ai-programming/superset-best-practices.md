@@ -12,7 +12,7 @@ tocPosition: inner
 author: VictorHong
 authorEmoji: 🪶
 tocLevels: ["h2", "h3", "h4"]
-tags: [Superset, AI Agent, Claude Code, Codex, Git Worktree, 并行开发, 效率工具]
+tags: ["Superset", "AI Agent", "Claude Code", "Codex", "Git Worktree", "并行开发", "效率工具"]
 categories: ["AI编程"]
 ---
 
