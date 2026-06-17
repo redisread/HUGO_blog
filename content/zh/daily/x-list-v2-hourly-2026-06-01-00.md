@@ -1,12 +1,11 @@
 ---
 title: "X List 每小时精选 | 2026-06-01 00:00"
 date: 2026-06-01T00:30:00+08:00
+description: "X List 每小时精选 | 2026-06-01 00:00"
 draft: false
 cover_image: https://cos.jiahongw.com/agent/2026-06-01/x-list-hourly-cover-202606010000.png
 author: Victor
----
-
-> 从 X List 最新 50 条推文中筛选出的 8 篇高质量内容
+---> 从 X List 最新 50 条推文中筛选出的 8 篇高质量内容
 
 ---
 

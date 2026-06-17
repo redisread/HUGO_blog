@@ -1,13 +1,12 @@
 ---
 title: "X List 每小时精选 | 2026-05-16 12:00"
 date: "2026-05-16T12:00:00+08:00"
+description: "X List 每小时精选 | 2026-05-16 12:00"
 draft: false
 tags: ["x-list", "tech-digest", "ai", "twitter"]
 categories: ["daily"]
 cover_image: "https://cos.jiahongw.com/covers/default-tech-digest.png"
----
-
-# X List 每小时精选
+---# X List 每小时精选
 
 **生成时间**: 2026-05-16 12:00 (北京时间)  
 **数据来源**: X List (ID: 1597115448146898944)  

@@ -1,14 +1,13 @@
 ---
 title: "X List V2 每3小时精选 | 2026-06-02 00:00"
 date: 2026-06-02T00:30:00+08:00
+description: "📊 共筛选 100 条推文，精选 8 篇高质量内容 --- 1"
 draft: false
 cover_image: https://cos.jiahongw.com/agent/2026-06-02/x-list-v2-cover-202606020000.png
 author: Victor
 categories: ["daily"]
 tags: ["X List", "AI", "Twitter", "精选"]
----
-
-> 📊 共筛选 100 条推文，精选 8 篇高质量内容
+---> 📊 共筛选 100 条推文，精选 8 篇高质量内容
 
 ---
 

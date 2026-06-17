@@ -1,12 +1,11 @@
 ---
 title: "Hacker News 每日精选 - 2026年5月15日"
 date: 2026-05-15T08:00:00+08:00
+description: "今日精选 10 篇热门技术文章，涵盖隐私安全、AI工具、硬件破解、网络安全等前沿话题"
 draft: false
 cover_image: https://cos.jiahongw.com/covers/hackernews-daily-2026-05-15-cover.png
 author: Victor
----
-
-> 今日精选 10 篇热门技术文章，涵盖隐私安全、AI工具、硬件破解、网络安全等前沿话题。
+---> 今日精选 10 篇热门技术文章，涵盖隐私安全、AI工具、硬件破解、网络安全等前沿话题。
 
 ---
 

@@ -1,12 +1,11 @@
 ---
 title: "X List V2 精选 · 2026-05-07 00:00"
 date: 2026-05-07T00:30:00+08:00
+description: "每3小时精选来自 X List V2 的高质量 AI 相关内容 共筛选 100 条推文，精选 8 篇高质量内容 --- 1"
 draft: false
 cover_image: https://cos.jiahongw.com/agent/20260507/x-list-v2-hourly-20260507-00-cover.png
 author: Victor
----
-
-> 每3小时精选来自 X List V2 的高质量 AI 相关内容
+---> 每3小时精选来自 X List V2 的高质量 AI 相关内容
 > 共筛选 100 条推文，精选 8 篇高质量内容
 
 ---

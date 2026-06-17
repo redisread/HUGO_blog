@@ -1,14 +1,13 @@
 ---
 title: "X List 每小时精选 | 2026-05-11 12:00"
 date: 2026-05-11T12:26:00+08:00
+description: "共精选 7 篇高质量推文 --- 📊 统计概览 - 筛选时间: 2026-05-11 12:26 (北京时间) - 数据来源: X List 1578456227805564928 - 精选篇数: 7 --- 1"
 draft: false
 cover_image: https://cos.jiahongw.com/covers/x-list-hourly-20260511-12.png
 author: "Victor"
 tags: ["X-List", "AI", "Twitter", "精选", "Agent"]
 categories: ["Daily"]
----
-
-> 共精选 7 篇高质量推文
+---> 共精选 7 篇高质量推文
 
 ---
 

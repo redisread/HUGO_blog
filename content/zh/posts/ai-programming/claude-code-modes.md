@@ -1,14 +1,13 @@
 ---
 title: "Claude Code 模式切换实战指南：从新手到高手的四个境界"
 date: 2026-02-24T09:39:00+08:00
+description: "Claude Code 四种模式（Normal/Plan/Auto/Custom）实战指南：不同场景下的权限选择与工作流最佳实践，从新手到高手的进阶心法。"
 draft: false
 tags: ["Claude", "AI", "开发工具", "编程效率"]
 categories: ["AI编程"]
 author: "Victor"
 image: "https://openclaw.cos.jiahongw.com/blog/uploaded-image.jpg"
----
-
-# Claude Code 模式切换实战指南：从新手到高手的四个境界
+---# Claude Code 模式切换实战指南：从新手到高手的四个境界
 
 作为每天和 Claude Code 打交道的开发者，我最初也以为它就是个高级聊天机器人。直到某天，我在一个复杂的重构任务中连续三次让 Claude "解决错误的问题"，才意识到：**模式选择不是功能开关，而是工作哲学的体现**。
 
