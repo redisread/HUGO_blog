@@ -16,9 +16,9 @@ authorEmoji: 🪶
 authorImageUrl:
 tocLevels: ["h2", "h3", "h4"]
 libraries: []
-tags: [AI, Claude, Agent, 编程, 多智能体]
+tags: ["AI", "Claude", "Agent", "编程", "多智能体"]
 series: []
-categories: [技术]
+categories: ["技术"]
 ---
 
 **副标题：从单兵作战到团队协作，AI 编程的下一个进化**

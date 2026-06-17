@@ -16,7 +16,7 @@ authorEmoji: 🪶
 authorImageUrl:
 tocLevels: ["h2", "h3", "h4"]
 libraries: 
-tags: [Claude, Anthropic, AI, 代码审查, Code Review]
+tags: ["Claude", "Anthropic", "AI", "代码审查", "Code Review"]
 series: [折腾计划]
 categories: ["AI编程"]
 ---

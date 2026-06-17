@@ -12,7 +12,7 @@ tocPosition: inner
 author: VictorHong
 authorEmoji: 🪶
 tocLevels: ["h2", "h3", "h4"]
-tags: [AI自动研究, 性能优化, Shopify, Liquid, 编码智能体, Tobi Lütke]
+tags: ["AI自动研究", "性能优化", "Shopify", "Liquid", "编码智能体", "Tobi Lütke"]
 categories: ["AI编程"]
 ---
 

@@ -15,9 +15,9 @@ author: VictorHong
 authorEmoji: 🪶
 tocLevels: ["h2", "h3", "h4"]
 libraries: []
-tags: [AI, Google, Gemini, Veo, NotebookLM, Antigravity, 工具图谱，生产力]
+tags: ["AI", "Google", "Gemini", "Veo", "NotebookLM", "Antigravity", "工具图谱，生产力"]
 series: []
-categories: [技术]
+categories: ["技术"]
 ---
 
 当 OpenAI 的 Sora 在 2026 年 3 月悄然退场，Google 的 AI 生态已经悄然构建起一座完整的能力金字塔。从普通用户的日常办公，到创作者的视觉表达，再到开发者的全栈构建 —— Google 不再只是一家搜索引擎公司，它正在重新定义"AI 原生"的工作方式。

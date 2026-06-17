@@ -16,7 +16,7 @@ authorEmoji: 🪶
 authorImageUrl:
 tocLevels: ["h2", "h3", "h4"]
 libraries: []
-tags: [AI, 工程实践, 软件开发, Vibe-Coding, Agent]
+tags: ["AI", "工程实践", "软件开发", "Vibe-Coding", "Agent"]
 series: []
 categories: ["AI编程"]
 ---

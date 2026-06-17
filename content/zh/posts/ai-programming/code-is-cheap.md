@@ -9,7 +9,7 @@ enableTocContent: false
 authorEmoji: 🪶
 image: https://cos.jiahongw.com/posts/code-is-cheap/cover.jpg
 libraries: []
-tags: [AI, 编程, 开发方法论, Agentic Engineering]
+tags: ["AI", "编程", "开发方法论", "Agentic Engineering"]
 series:
 categories: ["AI编程"]
 ---

@@ -12,7 +12,7 @@ tocPosition: inner
 author: VictorHong
 authorEmoji: 🪶
 tocLevels: ["h2", "h3", "h4"]
-tags: [产品经理, AI时代, Taste at Speed, Claude Code, 快速原型, 产品决策]
+tags: ["产品经理", "AI时代", "Taste at Speed", "Claude Code", "快速原型", "产品决策"]
 categories: ["AI编程"]
 ---
 

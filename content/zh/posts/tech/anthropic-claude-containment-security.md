@@ -16,9 +16,9 @@ authorEmoji: 🪶
 authorImageUrl:
 tocLevels: ["h2", "h3", "h4"]
 libraries: []
-tags: [AI, Claude, 安全, Agent, Anthropic]
+tags: ["AI", "Claude", "安全", "Agent", "Anthropic"]
 series: []
-categories: [技术]
+categories: ["技术"]
 ---
 
 2026年5月25日，Anthropic 发布了一篇技术博客《How we contain Claude across products》，首次系统性地披露了 Claude 系列产品的安全 containment（隔离）架构。这篇文章的含金量极高——它不仅公开了两个真实的内部安全事件，还详细解释了 Anthropic 如何在模型能力飞速提升的同时，用三层防御体系将 AI Agent 的"爆炸半径"控制在可接受范围内。

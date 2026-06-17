@@ -12,7 +12,7 @@ tocPosition: inner
 author: VictorHong
 authorEmoji: 🪶
 tocLevels: ["h2", "h3", "h4"]
-tags: [Pencil, 设计工具, AI编程, VS Code, Cursor, Design Token, 设计到代码]
+tags: ["Pencil", "设计工具", "AI编程", "VS Code", "Cursor", "Design Token", "设计到代码"]
 categories: ["AI编程"]
 ---
 

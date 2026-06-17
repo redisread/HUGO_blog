@@ -12,7 +12,7 @@ tocPosition: inner
 author: VictorHong
 authorEmoji: 🪶
 tocLevels: ["h2", "h3", "h4"]
-tags: [MCP, Model Context Protocol, Claude, AI协议, LLM集成, 技术架构]
+tags: ["MCP", "Model Context Protocol", "Claude", "AI协议", "LLM集成", "技术架构"]
 categories: ["AI编程"]
 ---
 
