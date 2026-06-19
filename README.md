@@ -22,11 +22,7 @@
 
 | 目录 | 内容 |
 |------|------|
-| `posts/技术/` | AI、编程、架构等技术文章 |
-| `posts/AI/` | AI 工具、模型评测、应用实践 |
-| `posts/books/` | 读书笔记与书评 |
-| `posts/thoughts/` | 随笔与思考 |
-| `daily/` | 每日精选（自动化生成） |
+| `posts/` | 博客文章（AI、编程实践、读书、生活、职场、技术实践、工具等分类） |
 | `weekly/` | 周记回顾 |
 | `gallery/` | 旅行与生活相册 |
 | `talks/` | 演讲与分享资料 |
@@ -36,7 +32,7 @@
 - **构建**: Hugo 0.110.0 extended
 - **主题**: zzo-dev（基于 hugo-theme-zzo 定制）
 - **部署**: GitHub Actions → GitHub Pages
-- **图床**: Cloudflare R2 + 腾讯云 COS
+- **图床**: Cloudflare R2（`cos.jiahongw.com`）
 
 ## 📝 快速开始
 
@@ -44,13 +40,12 @@
 
 ```bash
 # 技术文章
-hugo new posts/technology/my-post.md
+hugo new posts/technical-practice/my-post.md
 
 # AI 相关
-hugo new posts/AI/my-post.md
+hugo new posts/ai-programming/my-post.md
 
-# 每日/周记
-hugo new daily/$(date +%Y-%m-%d).md
+# 周记
 hugo new weekly/weekly-log-$(date +%Y-%W).md
 ```
 

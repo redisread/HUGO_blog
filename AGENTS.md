@@ -33,16 +33,15 @@ hugo new weekly/weekly-log-$(date +%Y-%W).md          # 创建周记
 | 类型 | 路径 |
 |---|---|
 | 博客文章 | `content/zh/posts/<category>/` |
-| 每日笔记 | `content/zh/daily/` |
+| 每日笔记 | `content/zh/daily/`（archetype 模板存在，目录按需创建） |
 | 周记 | `content/zh/weekly/` |
 | 演讲/分享 | `content/zh/talks/` |
 | 相册 | `content/zh/gallery/` |
 
-现有文章分类：
+现有文章分类（`content/zh/posts/` 下实际目录）：
 
 ```
-AI, ai-programming, books, life, professional, tech,
-technical-practice, technology, thoughts, tooling, 技术
+AI, ai-programming, books, life, professional, technical-practice, tooling
 ```
 
 ## Front Matter 格式
@@ -87,7 +86,7 @@ r2-upload ./my-image.png hugo-blog/images/
 
 默认使用标准 Markdown。zzo 主题的 shortcodes 请参考：
 
-- `.Codex/rules/hugo-shortcodes.md`
+- `.claude/rules/hugo-shortcodes.md`
 
 ## 发布流程
 
@@ -105,6 +104,7 @@ git push origin master      # 推送
 - 除非明确要求，否则不要编辑生成的 `public/` 目录
 - 保留 UTF-8 中文文本
 - 所有原创内容放在 `content/zh/` 下；不要在根目录 `content/*.md` 或其他语言目录添加内容
+- `about`、`contact`、`memos`、`now`、`archive`、`presentation`、`resume`、`showcase` 等为主题功能页，一般不新增文章内容
 - 文章资源（图片等）与文章放在一起
 - 不要在内容或配置中放置密钥或 Cloudflare 凭证
 
