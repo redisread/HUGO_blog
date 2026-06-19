@@ -3,126 +3,85 @@
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/redisread/HUGO_BLOG/.github/workflows/hugo-blog-ci.yml?branch=master&HUGO_CI?label=hugo_CI)](https://github.com/redisread/HUGO_BLOG/actions)
 [![Hugo](https://img.shields.io/badge/Hugo-%5E0.110.0-orange)](https://gohugo.io/)
 
-> VictorHong 的技术博客，记录技术分享、生活随笔和学习笔记。
+> 个人数字花园，记录技术探索、阅读思考与生活碎片。
 
-## 🌐 博客地址
+## 🌐 在线访问
 
-- **主站**: https://hugo.jiahongw.com
+**https://hugo.jiahongw.com**
 
-## 📚 项目介绍
+## ✨ 博客定位
 
-这是一个基于 Hugo 搭建的中文单语言博客项目，使用自定义主题 `zzo-dev`。
+这是一个由 Hugo 驱动的中文博客，专注于：
 
+- **AI 与编程** - AI 工具、编程实践、工程思维
+- **技术深度** - 架构设计、工具链、最佳实践
+- **阅读与思考** - 读书笔记、行业观察、个人成长
+- **生活记录** - 旅行相册、日常随笔、周记回顾
 
-### 内容分类
+## 📂 内容结构
 
-| 分类 | 说明 |
+| 目录 | 内容 |
 |------|------|
-| **Posts** | 技术文章、学习笔记 |
-| **Talks** | 演讲资料、分享资源 |
-| **Gallery** | 生活、影视、旅行相册 |
-| **Publication** | 出版物、书籍笔记 |
-| **Archive** | 文章归档 |
-
-### 主要主题
-
-- **AI** - 人工智能、机器学习相关
-- **dev** - 软件开发（设计模式、算法等）
-- **Hugo** - 博客搭建相关
+| `posts/技术/` | AI、编程、架构等技术文章 |
+| `posts/AI/` | AI 工具、模型评测、应用实践 |
+| `posts/books/` | 读书笔记与书评 |
+| `posts/thoughts/` | 随笔与思考 |
+| `daily/` | 每日精选（自动化生成） |
+| `weekly/` | 周记回顾 |
+| `gallery/` | 旅行与生活相册 |
+| `talks/` | 演讲与分享资料 |
 
 ## 🛠 技术栈
 
-| 技术 | 版本/说明 |
-|------|-----------|
-| Hugo | 0.110.0 |
-| 主题 | zzo-dev (基于 hugo-theme-zzo) |
-| 部署 | GitHub Actions + GitHub Pages |
-| 编辑 | Obsidian/任何 Markdown 编辑器 |
+- **构建**: Hugo 0.110.0 extended
+- **主题**: zzo-dev（基于 hugo-theme-zzo 定制）
+- **部署**: GitHub Actions → GitHub Pages
+- **图床**: Cloudflare R2 + 腾讯云 COS
 
-## 📝 使用方法
+## 📝 快速开始
 
 ### 新建文章
 
 ```bash
-# 博客文章（指定分类）
+# 技术文章
 hugo new posts/technology/my-post.md
 
-# 日报
-hugo new daily/2026-05-31.md
+# AI 相关
+hugo new posts/AI/my-post.md
 
-# 周报
-hugo new weekly/weekly-log-2026-22.md
+# 每日/周记
+hugo new daily/$(date +%Y-%m-%d).md
+hugo new weekly/weekly-log-$(date +%Y-%W).md
 ```
 
-### 本地开发
+### 本地预览
 
 ```bash
 hugo server -D
+# 访问 http://localhost:1313
 ```
 
-访问 `http://localhost:1313` 预览博客。
-
-### 构建与发布
+### 构建与部署
 
 ```bash
-# 内容发布检查
-bash scripts/check-content.sh
-
-# 构建生产版本（输出到 public/）
 hugo --gc --minify
-
-# 提交后 CI 自动部署
 git add content/
 git commit -m "发布: 文章标题"
 git push origin master
 ```
 
+推送到 `master` 后，GitHub Actions 自动构建并部署。
+
 ## 🎨 主题特性
 
-- 多皮肤支持（深色/浅色/Solarized）
-- 内置搜索功能
+- 深色/浅色主题切换
+- 内置全文搜索
 - 响应式设计
-- 图片画廊
-- 代码高亮
-- 数学公式支持（KaTeX/MathJax/Mermaid）
-- 多语言支持
-
-## 📂 目录结构
-
-```
-HUGO_blog/
-├── config/_default/          # 配置文件
-│   ├── config.toml          # 主配置
-│   ├── languages.toml       # 中文站点配置
-│   └── menus.zh.toml        # 中文菜单
-├── content/zh/              # 中文内容
-│   ├── posts/               # 博客文章（按分类子目录存放）
-│   ├── daily/               # 日报
-│   ├── weekly/              # 周报
-│   ├── talks/               # 演讲资源
-│   ├── gallery/             # 相册
-│   ├── archive/             # 归档
-│   └── publication/         # 出版物
-├── archetypes/              # 文章模板（hugo new 使用）
-├── themes/zzo-dev/          # 主题
-├── assets/                  # 静态资源
-├── static/                  # 静态文件
-└── .github/workflows/       # CI/CD
-```
-
-## 🔧 CI/CD
-
-使用 GitHub Actions 自动化部署：
-
-1. PR 修改 `content/**` 时自动运行内容发布检查
-2. 推送到 `master` 分支自动触发 Hugo 构建
-3. 使用 Hugo 0.110.0 extended 版本
-4. 部署到 `redisread/redisread.github.io`
+- 图片画廊支持
+- 代码高亮与复制
+- KaTeX/MathJax 数学公式
+- Mermaid 图表渲染
 
 ## 📄 License
 
-MIT License
-
-## 👤 Author
-
-**VictorHong** - © 2026-present
+MIT License © 2026 VictorHong
