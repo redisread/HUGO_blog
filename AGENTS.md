@@ -1,53 +1,53 @@
 # HUGO_blog
 
-## Project
+## 项目
 
-Personal Hugo blog.
+个人 Hugo 博客。
 
-- Path: `/Users/victor/Desktop/project/github/HUGO_blog`
-- Theme: `zzo-dev` based on hugo-theme-zzo
-- Production: `https://hugo.jiahongw.com`
-- Deploy: GitHub Actions to `redisread/redisread.github.io`
-- Default language: Chinese (`zh`)
-- Required Hugo: extended `0.110.0+`
+- 路径：`/Users/victor/Desktop/project/github/HUGO_blog`
+- 主题：`zzo-dev`（基于 hugo-theme-zzo）
+- 生产环境：`https://hugo.jiahongw.com`
+- 部署：GitHub Actions 到 `redisread/redisread.github.io`
+- 默认语言：中文（`zh`）
+- Hugo 版本要求：extended `0.110.0+`
 
-## Commands
-
-```bash
-hugo version
-hugo server -D
-hugo --gc --minify
-```
-
-Use Hugo native creation commands:
+## 常用命令
 
 ```bash
-hugo new posts/technology/my-article.md
-hugo new posts/AI/my-article.md
-hugo new daily/$(date +%Y-%m-%d).md
-hugo new weekly/weekly-log-$(date +%Y-%W).md
+hugo version          # 查看版本
+hugo server -D        # 本地预览（包含草稿）
+hugo --gc --minify    # 构建（清理缓存并压缩）
 ```
 
-## Content Paths
+Hugo 原生创建命令：
 
-| Type | Path |
+```bash
+hugo new posts/technology/my-article.md              # 创建技术文章
+hugo new posts/AI/my-article.md                      # 创建 AI 文章
+hugo new daily/$(date +%Y-%m-%d).md                   # 创建每日笔记
+hugo new weekly/weekly-log-$(date +%Y-%W).md          # 创建周记
+```
+
+## 内容路径
+
+| 类型 | 路径 |
 |---|---|
-| Blog posts | `content/zh/posts/<category>/` |
-| Daily notes | `content/zh/daily/` |
-| Weekly notes | `content/zh/weekly/` |
-| Talks | `content/zh/talks/` |
-| Gallery | `content/zh/gallery/` |
+| 博客文章 | `content/zh/posts/<category>/` |
+| 每日笔记 | `content/zh/daily/` |
+| 周记 | `content/zh/weekly/` |
+| 演讲/分享 | `content/zh/talks/` |
+| 相册 | `content/zh/gallery/` |
 
-Existing post categories include:
+现有文章分类：
 
-```text
+```
 AI, ai-programming, books, life, professional, tech,
 technical-practice, technology, thoughts, tooling, 技术
 ```
 
-## Front Matter
+## Front Matter 格式
 
-New articles should follow the archetype shape:
+新文章应遵循以下格式：
 
 ```yaml
 ---
@@ -62,22 +62,22 @@ libraries: [katex, mermaid]
 ---
 ```
 
-Only enable `katex` or `mermaid` when the article actually needs them.
+**注意**：只有当文章确实需要时才启用 `katex` 或 `mermaid`。
 
-## Images
+## 图片处理
 
-Cover image:
+封面图：
 
-- Put the file next to the article bundle.
-- Use only the filename in front matter: `image: "cover.png"`.
+- 将图片放在文章同级目录下
+- front matter 中只使用文件名：`image: "cover.png"`
 
-Body images:
+正文图片：
 
-- Prefer R2 bucket `hugo-blog`.
-- Public domain: `https://cos.jiahongw.com`.
-- Use the `r2-uploader` workflow/skill for uploads.
+- 优先使用 R2 存储桶 `hugo-blog`
+- 公共域名：`https://cos.jiahongw.com`
+- 使用 `r2-uploader` workflow/skill 上传
 
-Example:
+示例：
 
 ```bash
 r2-upload ./my-image.png hugo-blog/images/
@@ -85,27 +85,27 @@ r2-upload ./my-image.png hugo-blog/images/
 
 ## Shortcodes
 
-Use normal Markdown by default. For zzo theme shortcodes, see:
+默认使用标准 Markdown。zzo 主题的 shortcodes 请参考：
 
 - `.Codex/rules/hugo-shortcodes.md`
 
-## Publish Flow
+## 发布流程
 
 ```bash
-hugo --gc --minify
-git add content/
-git commit -m "发布: 文章标题"
-git push origin master
+hugo --gc --minify          # 构建
+git add content/            # 添加内容
+git commit -m "发布: 文章标题"  # 提交
+git push origin master      # 推送
 ```
 
-Push to `master` triggers `.github/workflows/hugo-blog-ci.yml`.
+推送到 `master` 分支会触发 `.github/workflows/hugo-blog-ci.yml` 自动部署。
 
-## Review Rules
+## 审核规则
 
-- Do not edit generated `public/` unless the task explicitly requires generated output.
-- Preserve UTF-8 Chinese text.
-- Keep all authored content under `content/zh/`; do not add root `content/*.md` or other language directories.
-- Keep article assets close to the article when they are part of the bundle.
-- Do not put secrets or Cloudflare credentials in content or config.
+- 除非明确要求，否则不要编辑生成的 `public/` 目录
+- 保留 UTF-8 中文文本
+- 所有原创内容放在 `content/zh/` 下；不要在根目录 `content/*.md` 或其他语言目录添加内容
+- 文章资源（图片等）与文章放在一起
+- 不要在内容或配置中放置密钥或 Cloudflare 凭证
 
-Keep this file short. Move long shortcode examples or theme-specific notes into `.Codex/rules/` or docs.
+保持本文件简洁。详细的 shortcode 示例或主题相关说明请移至 `.Codex/rules/` 或文档目录。
