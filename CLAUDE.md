@@ -1,1 +1,1 @@
-参考 Agent.md
+参考 AGENTS.md
