@@ -10,11 +10,11 @@ tocPosition: outer
 author: Victor
 authorEmoji: 📚
 image: https://cos.jiahongw.com/uPic/2025100901.png
-Tags:
+tags:
 - 读书笔记
-Series:
-Categories:
-- 每周一书
+series:
+categories:
+- 书籍
 ---
 
 

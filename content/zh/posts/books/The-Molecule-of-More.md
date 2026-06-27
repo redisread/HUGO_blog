@@ -9,11 +9,11 @@ tocPosition: outer
 author: Victor
 authorEmoji: 📚
 image: https://cos.jiahongw.com/uPic/The-Molecule-of-More.png
-Tags:
+tags:
 - 读书笔记
-Series:
-Categories:
-- 每周一书
+series:
+categories:
+- 书籍
 ---
 
 <br/>
