@@ -99,6 +99,22 @@ git push origin master      # 推送
 
 推送到 `master` 分支会触发 `.github/workflows/hugo-blog-ci.yml` 自动部署。
 
+## 链接格式
+
+博客使用**日期-based URL 结构**，而非分类路径。
+
+**格式**: `https://hugo.jiahongw.com/YYYYMMDD/post-slug/`
+
+**示例**:
+- `hugo new posts/ai-programming/my-article.md`
+- 发布日期：2026-07-04
+- 访问 URL：`https://hugo.jiahongw.com/20260704/my-article/`
+
+**注意**：
+- ❌ 错误：`/posts/ai-programming/my-article/`
+- ✅ 正确：`/20260704/my-article/`
+- 日期从文章的 `date` front matter 字段获取
+
 ## 审核规则
 
 - 除非明确要求，否则不要编辑生成的 `public/` 目录
