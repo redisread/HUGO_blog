@@ -24,11 +24,11 @@
   weight = 4
 
 
-[[main]]
-  identifier = "presentation"
-  name = "🔮幻灯"
-  url = "presentation"
-  weight = 5
+# [[main]]
+#   identifier = "presentation"
+#   name = "🔮幻灯"
+#   url = "presentation"
+#   weight = 5
 
 [[main]]
   identifier = "gallery"
