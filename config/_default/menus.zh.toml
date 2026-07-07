@@ -84,7 +84,7 @@
 
 [[main]]
   identifier = "weekly"
-  name = "⏳weekly"
+  name = "⏳周刊"
   url = "weekly"
   weight = 8
 

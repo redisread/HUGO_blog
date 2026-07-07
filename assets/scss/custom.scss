@@ -111,3 +111,79 @@
     max-width: 100%;
   }
 }
+
+// HUGO_blog task #23：文章列表卡片密度优化
+.summary-classic {
+  padding: 0 1rem;
+
+  &__flex-box {
+    gap: 12px;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  &__content {
+    padding: 0;
+  }
+
+  &__image-container {
+    margin: 0 !important;
+    padding: 0;
+    border-radius: 8px;
+  }
+
+  &__image-wrapper {
+    max-width: 120px;
+    min-width: 120px;
+    overflow: hidden;
+    border-radius: 8px;
+    align-self: center;
+
+    @media only screen and (max-width: 769px) {
+      max-width: 100px;
+      min-width: 100px;
+    }
+  }
+
+  &__image {
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 8px;
+
+    @media only screen and (max-width: 769px) {
+      width: 100px;
+      height: 75px;
+    }
+  }
+
+  header {
+    margin-bottom: 8px;
+  }
+
+  .title {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .subtitle {
+    font-size: 0.875rem;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  &__text {
+    margin-top: 8px;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  hr {
+    margin-bottom: 20px !important;
+  }
+}
