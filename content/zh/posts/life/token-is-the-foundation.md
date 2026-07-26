@@ -4,7 +4,7 @@ description: "你在智能层争辩 prompt 的好坏，有人在 token 层已经
 date: 2026-07-26T00:00:00+08:00
 draft: false
 author: VictorHong
-cover: https://cos.jiahongw.com/posts/life/20260726/cover.png
+image: "https://cos.jiahongw.com/posts/life/20260726/cover.png"
 tags:
   - AI
   - Agent
