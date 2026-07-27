@@ -27,14 +27,19 @@
     
     {{- $limit := .Site.Config.Services.RSS.Limit -}}
 
+    {{- /* DRY: 统一 item 列表（home 过滤 type，section 直接取 Pages） */ -}}
+    {{ $pages := .Site.RegularPages }}
+    {{ if not .IsHome }}
+      {{ $pages = .Pages }}
+    {{ end }}
+    {{ $pages = $pages | first $limit }}
     {{ if .IsHome }}
-      
-      {{ $filteredPages := .Site.RegularPages | first $limit }}
       {{ range $.Param "notAllowedTypesInHomeFeed" }}
-        {{ $filteredPages = (where $filteredPages "Type" "!=" (lower .)) }}
+        {{ $pages = (where $pages "Type" "!=" (lower .)) }}
       {{ end }}
+    {{ end }}
 
-      {{ range $filteredPages }}
+    {{ range $pages }}
       <item>
         <title>{{ .Title }}</title>
         <link>{{ .Permalink }}</link>
@@ -45,6 +50,8 @@
         <description>{{ .Summary | html }}</description>
         {{ if .Site.Params.fullContents }}<content:encoded>{{ .Content | html }}</content:encoded>{{end}}
         {{ if .Params.author }}<dc:creator>{{ .Params.author }}</dc:creator>{{ else if .Site.Params.myname }}<dc:creator>{{ .Site.Params.myname }}</dc:creator>{{end}}
+        {{- /* <enclosure> — RSS 2.0 标准封面，多数阅读器内联显示 */ -}}
+        {{ if .Params.featured_image }}<enclosure url="{{ $.Site.BaseURL }}image/{{ .Params.featured_image }}" type="image/jpeg" length="0" />{{ end }}
         {{ if .Params.image }}<media:content url="{{ .Site.BaseURL }}{{ .Params.image }}" medium="image"><media:title type="html">featured image</media:title></media:content>{{end}}
         {{ if .Params.featured_image }}<media:content url="{{ .Site.BaseURL }}image/{{ .Params.featured_image }}" medium="image"><media:title type="html">featured image</media:title></media:content>{{end}}
         {{ if .Params.meta_image }}<media:content url="{{ .Site.BaseURL }}{{ .Params.meta_image }}" medium="image"><media:title type="html">meta image</media:title></media:content>{{end}}
@@ -70,48 +77,6 @@
           {{ end }}
         {{ end }}
       </item>
-      {{ end }}
-
-    {{ else }}
-
-      {{ range (.Pages | first $limit) }}
-      <item>
-        <title>{{ .Title }}</title>
-        <link>{{ .Permalink }}</link>
-        <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
-        {{ with .Site.Params.email }}<author>{{.}}{{ with $.Site.Params.myname }} ({{.}}){{end}}</author>{{end}}
-        {{ with .Params.Lastmod }}<atom:modified>{{ .Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</atom:modified>{{end}}
-        <guid>{{ .Permalink }}</guid>
-        <description>{{ .Summary | html }}</description>
-        {{ if .Site.Params.fullContents }}<content:encoded>{{ .Content | html }}</content:encoded>{{end}}
-        {{ if .Params.author }}<dc:creator>{{ .Params.author }}</dc:creator>{{ else if .Site.Params.myname }}<dc:creator>{{ .Site.Params.myname }}</dc:creator>{{end}}
-        {{ if .Params.image }}<media:content url="{{ .Site.BaseURL }}{{ .Params.image }}" medium="image"><media:title type="html">featured image</media:title></media:content>{{end}}
-        {{ if .Params.featured_image }}<media:content url="{{ .Site.BaseURL }}image/{{ .Params.featured_image }}" medium="image"><media:title type="html">featured image</media:title></media:content>{{end}}
-        {{ if .Params.meta_image }}<media:content url="{{ .Site.BaseURL }}{{ .Params.meta_image }}" medium="image"><media:title type="html">meta image</media:title></media:content>{{end}}
-        {{ with .Params.tags }}
-          {{ range . }}
-            {{ with . }}
-              <category>{{.}}</category>
-            {{ end }}
-          {{ end }}
-        {{ end }}
-        {{ with .Params.categories }}
-          {{ range . }}
-            {{ with . }}
-              <category>{{.}}</category>
-            {{ end }}
-          {{ end }}
-        {{ end }}
-        {{ with .Params.series }}
-          {{ range . }}
-            {{ with . }}
-              <category>{{.}}</category>
-            {{ end }}
-          {{ end }}
-        {{ end }}
-      </item>
-      {{ end }}
-
     {{ end }}
   </channel>
 </rss>

@@ -44,6 +44,9 @@ enableUiAnimation = true
 # 如果为 true，当在浏览器中禁用 javascript 时，博客内容将被隐藏。
 hideSingleContentsWhenJSDisabled = false
 
+# Hugo RSS 全文输出（task #26）
+fullContents = true
+
 # tag标记数量在5以上才展示
 minItemsToShowInTagCloud = 2 # Minimum items to show in tag cloud
 
