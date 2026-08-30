@@ -1,0 +1,88 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+R2_BUCKET="hugo-blog"
+R2_DOMAIN="https://cos.jiahongw.com"
+R2_ACCOUNT_ID="e3afbb613458022947cd9dc9f5bd6334"
+MAX_BYTES=$((300 * 1024 * 1024))
+
+usage() {
+  echo "Usage: $0 <image-file> [object-key-or-prefix]" >&2
+  exit 2
+}
+
+[ "$#" -ge 1 ] && [ "$#" -le 2 ] || usage
+
+image_path=$1
+[ -f "$image_path" ] || {
+  echo "Image file not found: $image_path" >&2
+  exit 1
+}
+
+[ -n "${CLOUDFLARE_API_TOKEN:-}" ] || {
+  echo "CLOUDFLARE_API_TOKEN is not set" >&2
+  exit 1
+}
+
+mime_type=$(file --brief --mime-type -- "$image_path")
+case "$mime_type" in
+  image/*) ;;
+  *)
+    echo "Not an image file: $image_path ($mime_type)" >&2
+    exit 1
+    ;;
+esac
+
+file_size=$(wc -c < "$image_path" | tr -d ' ')
+[ "$file_size" -le "$MAX_BYTES" ] || {
+  echo "Image exceeds the 300 MB upload limit: $image_path" >&2
+  exit 1
+}
+
+file_name=$(basename "$image_path")
+object_key=${2:-"images/$(date +%Y%m%d)/$file_name"}
+case "$object_key" in
+  */) object_key="${object_key}${file_name}" ;;
+esac
+
+[ -n "$object_key" ] && [ "${object_key#/}" = "$object_key" ] || {
+  echo "Object key must be non-empty and relative: $object_key" >&2
+  exit 1
+}
+
+encoded_key=$(python3 - "$object_key" <<'PY'
+import sys
+from urllib.parse import quote
+
+print(quote(sys.argv[1], safe="/"))
+PY
+)
+
+response_file=$(mktemp)
+trap 'rm -f "$response_file"' EXIT
+
+api_url="https://api.cloudflare.com/client/v4/accounts/${R2_ACCOUNT_ID}/r2/buckets/${R2_BUCKET}/objects/${encoded_key}"
+if ! curl --silent --show-error --fail-with-body \
+  --request PUT \
+  --url "$api_url" \
+  --header "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+  --header "Content-Type: ${mime_type}" \
+  --data-binary "@${image_path}" \
+  --output "$response_file"; then
+  [ ! -s "$response_file" ] || sed 's/^/Cloudflare: /' "$response_file" >&2
+  exit 1
+fi
+
+python3 - "$response_file" <<'PY'
+import json
+import sys
+
+with open(sys.argv[1], encoding="utf-8") as response:
+    payload = json.load(response)
+
+if payload.get("success") is not True:
+    messages = [item.get("message", "unknown error") for item in payload.get("errors", [])]
+    raise SystemExit("R2 upload failed: " + "; ".join(messages))
+PY
+
+printf '%s/%s\n' "${R2_DOMAIN%/}" "$encoded_key"
