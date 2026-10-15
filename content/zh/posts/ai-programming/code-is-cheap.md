@@ -7,7 +7,7 @@ hideToc: false
 enableToc: true
 enableTocContent: false
 authorEmoji: 🪶
-image: https://cos.jiahongw.com/posts/code-is-cheap/cover.jpg
+image: https://cos.jiahongw.com/posts/code-is-cheap/cover-20261016-d3.png
 libraries: []
 tags: ["AI", "编程", "开发方法论", "Agentic Engineering"]
 series:
