@@ -5,7 +5,7 @@ date: 2026-07-26T21:35:00+08:00
 publishDate: 2026-07-26T21:35:00+08:00
 aliases:
 description: "AI 让我疲劳，但实际产生的价值很少。我想把屏幕留在玄关，回归生活本身。"
-image: "https://cos.jiahongw.com/posts/life/20260726/cover.png"
+image: "https://cos.jiahongw.com/posts/life/20260726/stop-working-for-the-system-cover-20261016-a2.png"
 draft: false
 hideToc: false
 enableToc: true
