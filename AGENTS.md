@@ -1,127 +1,20 @@
 # HUGO_blog
 
-## 项目
+## 内容约定
 
-个人 Hugo 博客。
+- 原创内容放在 `content/zh/`，按类型选择目录，见 [内容结构](docs/content-structure.md)。主题功能页保持原用途。
+- 新文章的 front matter 参考 [archetypes/](archetypes/)，仅按需启用 `libraries` 中的渲染库。
+- 默认使用标准 Markdown；需要主题 shortcode 时，先读 [用法与限制](.claude/rules/hugo-shortcodes.md)。
+- 生成文章链接时遵循 [站点配置](config/_default/config.toml) 的 `Permalinks`：日期取 `date`，路径末段取文件名。
 
-- 路径：`/Users/victor/Desktop/project/github/HUGO_blog`
-- 主题：`zzo-dev`（基于 hugo-theme-zzo）
-- 生产环境：`https://hugo.jiahongw.com`
-- 部署：GitHub Actions 到 `redisread/redisread.github.io`
-- 默认语言：中文（`zh`）
-- Hugo 版本要求：extended `0.110.0+`
+## 图片
 
-## 常用命令
+- 封面使用 `image` 字段：远程图片填写公开 URL；统一使用远程图片 URL（必要上传到远程 cos ），不要使用本地图片。
+- 正文图片优先使用图床；上传到 cos 时，先读 [r2-uploader](.agents/skills/r2-uploader/SKILL.md)，按技能执行并使用返回的公开 URL。
 
-```bash
-hugo version          # 查看版本
-hugo server -D        # 本地预览（包含草稿）
-hugo --gc --minify    # 构建（清理缓存并压缩）
-```
+## 验证与部署
 
-Hugo 原生创建命令：
-
-```bash
-hugo new posts/technology/my-article.md              # 创建技术文章
-hugo new posts/AI/my-article.md                      # 创建 AI 文章
-hugo new daily/$(date +%Y-%m-%d).md                   # 创建每日笔记
-hugo new weekly/weekly-log-$(date +%Y-%W).md          # 创建周记
-```
-
-## 内容路径
-
-| 类型 | 路径 |
-|---|---|
-| 博客文章 | `content/zh/posts/<category>/` |
-| 每日笔记 | `content/zh/daily/`（archetype 模板存在，目录按需创建） |
-| 周记 | `content/zh/weekly/` |
-| 演讲/分享 | `content/zh/talks/` |
-| 相册 | `content/zh/gallery/` |
-
-现有文章分类（`content/zh/posts/` 下实际目录）：
-
-```
-AI, ai-programming, books, life, professional, technical-practice, tooling
-```
-
-## Front Matter 格式
-
-新文章应遵循以下格式：
-
-```yaml
----
-title: "文章标题"
-date: 2026-05-31T10:00:00+08:00
-publishDate: 2026-05-31T10:00:00+08:00
-draft: false
-image: "cover.png"
-categories: ["technology"]
-tags: ["AI", "Hugo"]
-libraries: [katex, mermaid]
----
-```
-
-**注意**：只有当文章确实需要时才启用 `katex` 或 `mermaid`。
-
-## 图片处理
-
-封面图：
-
-- 将图片放在文章同级目录下
-- front matter 中只使用文件名：`image: "cover.png"`
-
-正文图片：
-
-- 优先使用 R2 存储桶 `hugo-blog`
-- 公共域名：`https://cos.jiahongw.com`
-- 使用 `r2-uploader` workflow/skill 上传
-
-示例：
-
-```bash
-r2-upload ./my-image.png hugo-blog/images/
-```
-
-## Shortcodes
-
-默认使用标准 Markdown。zzo 主题的 shortcodes 请参考：
-
-- `.claude/rules/hugo-shortcodes.md`
-
-## 发布流程
-
-```bash
-hugo --gc --minify          # 构建
-git add content/            # 添加内容
-git commit -m "发布: 文章标题"  # 提交
-git push origin master      # 推送
-```
-
-推送到 `master` 分支会触发 `.github/workflows/hugo-blog-ci.yml` 自动部署。
-
-## 链接格式
-
-博客使用**日期-based URL 结构**，而非分类路径。
-
-**格式**: `https://hugo.jiahongw.com/YYYYMMDD/post-slug/`
-
-**示例**:
-- `hugo new posts/ai-programming/my-article.md`
-- 发布日期：2026-07-04
-- 访问 URL：`https://hugo.jiahongw.com/20260704/my-article/`
-
-**注意**：
-- ❌ 错误：`/posts/ai-programming/my-article/`
-- ✅ 正确：`/20260704/my-article/`
-- 日期从文章的 `date` front matter 字段获取
-
-## 审核规则
-
-- 除非明确要求，否则不要编辑生成的 `public/` 目录
-- 保留 UTF-8 中文文本
-- 所有原创内容放在 `content/zh/` 下；不要在根目录 `content/*.md` 或其他语言目录添加内容
-- `about`、`contact`、`memos`、`now`、`archive`、`presentation`、`resume`、`showcase` 等为主题功能页，一般不新增文章内容
-- 文章资源（图片等）与文章放在一起
-- 不要在内容或配置中放置密钥或 Cloudflare 凭证
-
-保持本文件简洁。详细的 shortcode 示例或主题相关说明请移至 `.Codex/rules/` 或文档目录。
+- 构建、主题和部署入口见 [技术栈](docs/tech-stack.md)；Hugo 版本以 [CI 工作流](.github/workflows/hugo-blog-ci.yml) 为准。
+- 交付前执行 `hugo --gc --minify` 和 `git diff --check`。
+- `public/` 是构建产物，除非明确要求，否则不手工修改。
+- 凭证通过环境变量提供，不写入内容或配置。
