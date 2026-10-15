@@ -215,9 +215,9 @@ commento = false
 
 [copyrightOptions]
   enableCopyrightLink = false
-  copyrightLink = "https://creativecommons.org/licenses/by-nc/4.0/"
-  copyrightLinkImage = "/images/CC BY-NC.svg"
-  copyrightLinkText = "CC BY-NC 4.0"
+  copyrightLink = "https://creativecommons.org/licenses/by/4.0/"
+  copyrightLinkImage = "https://licensebuttons.net/l/by/4.0/88x31.png"
+  copyrightLinkText = "CC BY 4.0"
 
 # possible share name: ["facebook","twitter", "reddit", "linkedin", "tumblr", "weibo", "douban", "line"]
 # [[share]]

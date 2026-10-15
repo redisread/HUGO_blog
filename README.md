@@ -1,82 +1,19 @@
-# VictorHong's Blog 🪶
+<h1 align="center">VictorHong's Blog 🪶</h1>
 
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/redisread/HUGO_BLOG/.github/workflows/hugo-blog-ci.yml?branch=master&HUGO_CI?label=hugo_CI)](https://github.com/redisread/HUGO_BLOG/actions)
-[![Hugo](https://img.shields.io/badge/Hugo-%5E0.110.0-orange)](https://gohugo.io/)
+<p align="center">个人数字花园，记录技术探索、阅读思考与生活碎片。</p>
 
-> 个人数字花园，记录技术探索、阅读思考与生活碎片。
+<p align="center">
+  <a href="https://github.com/redisread/HUGO_BLOG/actions/workflows/hugo-blog-ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/redisread/HUGO_BLOG/hugo-blog-ci.yml?branch=master&amp;label=Hugo%20CI" alt="Hugo CI 状态"></a>
+  <a href="https://gohugo.io/"><img src="https://img.shields.io/badge/Hugo-extended-orange" alt="Hugo extended"></a>
+</p>
 
-## 🌐 在线访问
+<p align="center"><a href="https://hugo.jiahongw.com">访问博客 ↗</a></p>
 
-**https://hugo.jiahongw.com**
+## 📚 项目文档
 
-## ✨ 博客定位
-
-这是一个由 Hugo 驱动的中文博客，专注于：
-
-- **AI 与编程** - AI 工具、编程实践、工程思维
-- **技术深度** - 架构设计、工具链、最佳实践
-- **阅读与思考** - 读书笔记、行业观察、个人成长
-- **生活记录** - 旅行相册、日常随笔、周记回顾
-
-## 📂 内容结构
-
-| 目录 | 内容 |
-|------|------|
-| `posts/` | 博客文章（AI、编程实践、读书、生活、职场、技术实践、工具等分类） |
-| `weekly/` | 周记回顾 |
-| `gallery/` | 旅行与生活相册 |
-| `talks/` | 演讲与分享资料 |
-
-## 🛠 技术栈
-
-- **构建**: Hugo 0.110.0 extended
-- **主题**: zzo-dev（基于 hugo-theme-zzo 定制）
-- **部署**: GitHub Actions → GitHub Pages
-- **图床**: Cloudflare R2（`cos.jiahongw.com`）
-
-## 📝 快速开始
-
-### 新建文章
-
-```bash
-# 技术文章
-hugo new posts/technical-practice/my-post.md
-
-# AI 相关
-hugo new posts/ai-programming/my-post.md
-
-# 周记
-hugo new weekly/weekly-log-$(date +%Y-%W).md
-```
-
-### 本地预览
-
-```bash
-hugo server -D
-# 访问 http://localhost:1313
-```
-
-### 构建与部署
-
-```bash
-hugo --gc --minify
-git add content/
-git commit -m "发布: 文章标题"
-git push origin master
-```
-
-推送到 `master` 后，GitHub Actions 自动构建并部署。
-
-## 🎨 主题特性
-
-- 深色/浅色主题切换
-- 内置全文搜索
-- 响应式设计
-- 图片画廊支持
-- 代码高亮与复制
-- KaTeX/MathJax 数学公式
-- Mermaid 图表渲染
+- [内容结构](docs/content-structure.md)：查找文章、周记、相册与分享资料。
+- [技术栈](docs/tech-stack.md)：了解构建、主题、部署与图片存储。
 
 ## 📄 License
 
-MIT License © 2026 VictorHong
+除另有说明外，本博客原创内容采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 许可协议。© 2026 VictorHong
