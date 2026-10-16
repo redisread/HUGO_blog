@@ -85,4 +85,9 @@ if payload.get("success") is not True:
     raise SystemExit("R2 upload failed: " + "; ".join(messages))
 PY
 
+rm -- "$image_path" || {
+  echo "Image uploaded but failed to delete local file: $image_path" >&2
+  exit 1
+}
+
 printf '%s/%s\n' "${R2_DOMAIN%/}" "$encoded_key"
