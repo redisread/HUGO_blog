@@ -4,12 +4,9 @@ date: 2019-10-31T10:20:16+09:00
 description: 记录电影精彩瞬间
 type: gallery
 mode: remote # at-once or one-by-one
-tags:
--
-series:
--
-categories:
--
+tags: []
+series: []
+categories: []
 image: https://cos.jiahongw.com/uPic/pexels-tima-miroshnichenko-5662857.jpg
 images: 
   - image: https://cos.jiahongw.com/uPic/GVKYv5.jpg

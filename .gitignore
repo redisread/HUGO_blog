@@ -20,3 +20,6 @@ textgenerator/*
 
 # Claude Code local settings (not project rules)
 .claude/settings.local.json
+
+.validation/
+.build/

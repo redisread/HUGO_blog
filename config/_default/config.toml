@@ -30,7 +30,7 @@ timeout = 10000
 enableEmoji = true
 
 # 每个页面展示的文章数量
-paginate = 10
+pagination.pagerSize = 10
 
 # RSS数量限制
 rssLimit = 100
@@ -39,7 +39,7 @@ rssLimit = 100
 enableGitInfo = false
 
 # 谷歌分析，暂不配置
-googleAnalytics = "G-E1HT976P00"
+services.googleAnalytics.ID = "G-E1HT976P00"
 
 # 是否生成 robots.txt 文件
 enableRobotsTXT = true
@@ -64,8 +64,8 @@ enableRobotsTXT = true
   page = ["HTML"]
   home = ["HTML", "RSS", "SearchIndex"]
   section = ["HTML", "RSS", "SearchIndex"]
-  taxonomyTerm = ["HTML", "RSS", "SearchIndex"]
   taxonomy = ["HTML", "RSS", "SearchIndex"]
+  term = ["HTML", "RSS", "SearchIndex"]
 
 [outputFormats]
   [outputFormats.SearchIndex]

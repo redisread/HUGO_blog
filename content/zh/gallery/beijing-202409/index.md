@@ -4,12 +4,9 @@ date: 2024-10-09T10:20:16+09:00
 description: 记录北京的照片生活
 type: gallery
 mode: remote # at-once or one-by-one
-tags:
--
-series:
--
-categories:
--
+tags: []
+series: []
+categories: []
 image: https://cos.jiahongw.com/album/beijing-202409/202409-%E4%BB%B0%E5%B1%B1%E5%9C%B0%E6%9D%BF.jpg
 images:
   - image: https://cos.jiahongw.com/album/beijing-202409/202409-soho%E5%A4%9C%E6%99%AF2.jpg

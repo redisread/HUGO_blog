@@ -25,7 +25,7 @@ items:
         startDate: 2017-09-01T20:13:59+09:00
         endDateText: Others
         endDate: 2021-06-10T20:13:59+09:00
-        contents: | 
+        contents: ""
 
   - title: 工作经历
     sections:

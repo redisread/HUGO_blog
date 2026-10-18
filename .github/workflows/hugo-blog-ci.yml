@@ -1,6 +1,9 @@
 name: HUGO_CI
 
 on:
+  pull_request:
+    branches:
+      - master
   push:
     branches:
       - master
@@ -9,6 +12,9 @@ on:
 concurrency:
   group: deploy-${{ github.ref }}
   cancel-in-progress: true
+
+permissions:
+  contents: read
 
 jobs:
   build:
@@ -20,16 +26,37 @@ jobs:
           submodules: true
           fetch-depth: 0
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
+      - uses: actions/setup-node@v6
         with:
-          hugo-version: '0.110.0'
-          extended: true
+          node-version: '24'
 
-      - name: Build
-        run: hugo --gc --minify
+      - name: Install pinned Hugo and Dart Sass
+        run: |
+          themes/zzo-dev/scripts/install-tools.sh "$RUNNER_TEMP/zzo-toolchain"
+          echo "$RUNNER_TEMP/zzo-toolchain" >> "$GITHUB_PATH"
+          echo "$RUNNER_TEMP/zzo-toolchain/dart-sass" >> "$GITHUB_PATH"
+
+      - name: Build production site
+        run: |
+          hugo --gc --minify --panicOnWarning
+          python3 themes/zzo-dev/scripts/verify-output.py public
+
+      - name: Validate browser behavior
+        env:
+          ZZO_SITE_DIR: ${{ github.workspace }}/.validation/public
+          ZZO_HOME: /
+          ZZO_ARTICLE: /20200304/scrapy-exercise/
+          ZZO_QUERY: Scrapy
+          ZZO_ROUTES: /gallery/,/resume/,/presentation/ue/ue-city/,/tags/scrapy/
+        run: |
+          hugo --baseURL http://127.0.0.1:4173/ --destination .validation/public --gc --minify --panicOnWarning
+          npm ci --prefix themes/zzo-dev
+          cd themes/zzo-dev
+          npx playwright install --with-deps chromium
+          npm test
 
       - name: Deploy
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         uses: peaceiris/actions-gh-pages@v4
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}

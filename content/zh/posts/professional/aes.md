@@ -14,8 +14,7 @@ libraries:
 tags:
 - AES
 - 密码学
-series:
-- 
+series: []
 categories: ["技术实践"]
 ---
 
