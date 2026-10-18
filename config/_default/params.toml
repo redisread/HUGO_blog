@@ -81,7 +81,8 @@ pubPaginate = 20
 # whoami 个人信息
 myname = "VictorHong"
 email = "wujiahong2013@gmail.com"
-whoami = "🔩工具控,⌨️ 后端程序员,🧪AI 探索者"
+whoami = """未来是无序的;智能是预测.
+It's different, I like at！"""
 bioImageUrl = "/images/whoami/VictorHongAvatar.png"  # 相对于 static 目录的路径
 useGravatar = false
 location = "Shenzhen, China"
